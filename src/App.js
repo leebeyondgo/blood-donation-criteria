@@ -73,18 +73,18 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App text-center p-5 space-y-4">
+      <div className="App text-center p-8 space-y-6 max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
 
         <button
           onClick={toggleTheme}
           aria-label="테마 토글"
-          className="theme-toggle border border-gray-300 dark:border-gray-600 rounded p-2 inline-flex items-center justify-center"
+          className="theme-toggle border border-gray-300 dark:border-gray-600 rounded p-2 inline-flex items-center justify-center bg-primary text-white dark:bg-secondary"
         >
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </button>
 
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex justify-center items-center gap-3">
           <FiSearch />
           <input
             type="text"
@@ -102,7 +102,7 @@ function App() {
           onChange={(e) => setEventDate(e.target.value)}
         />
 
-        <ul className="result-list list-none mt-5 flex flex-col items-center space-y-3">
+        <ul className="result-list list-none mt-8 flex flex-col items-center space-y-4">
           {results.map((item) => {
             const period = item.restriction_period_days;
             const type = item.restriction_type;
