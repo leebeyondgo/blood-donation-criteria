@@ -1,0 +1,179 @@
+[
+  {
+    "id": "c1",
+    "type": "약물",
+    "name": "Albendazole",
+    "aliases": [
+      "알벤다졸",
+      "Zentel"
+    ],
+    "restriction_period_days": 1,
+    "restriction": "복용 당일 헌혈 금지",
+    "notes": "구충제"
+  },
+  {
+    "id": "c2",
+    "type": "약물",
+    "name": "Doxycycline",
+    "aliases": [
+      "독시사이클린"
+    ],
+    "restriction_period_days": 7,
+    "restriction": "복용 종료 후 7일간 헌혈 금지",
+    "notes": "말라리아 예방약"
+  },
+  {
+    "id": "c3",
+    "type": "약물",
+    "name": "Finasteride",
+    "aliases": [
+      "피나스테리드",
+      "프로페시아"
+    ],
+    "restriction_period_days": 30,
+    "restriction": "복용 종료 후 1개월간 헌혈 금지",
+    "notes": "여성 수혈 시 기형 유발 위험"
+  },
+  {
+    "id": "c100",
+    "type": "약물",
+    "name": "에트레티네이트",
+    "aliases": [
+      "에트레티네이트",
+      "티가손",
+      "타가손",
+      "테가손"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "복용 이력 있는 경우 영구 헌혈 금지",
+    "restriction_type": "permanent",
+    "notes": "태아기형 우려 (건선 치료제)"
+  },
+  {
+    "id": "c101",
+    "type": "약물",
+    "name": "아시트레틴",
+    "aliases": [
+      "아시트레틴",
+      "네오티가손",
+      "소리아탄"
+    ],
+    "restriction_period_days": 1095,
+    "restriction": "복용 종료 후 3년간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "건선 치료제"
+  },
+  {
+    "id": "c102",
+    "type": "약물",
+    "name": "두타스테리드",
+    "aliases": [
+      "두타스테리드",
+      "네오타드",
+      "두비캡",
+      "투스카",
+      "아보다트",
+      "아보스타",
+      "투테론",
+      "두테드",
+      "두테스올",
+      "아보피나",
+      "아보레드"
+    ],
+    "restriction_period_days": 180,
+    "restriction": "복용 종료 후 6개월간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "전립선비대증 치료제"
+  },
+  {
+    "id": "c103",
+    "type": "약물",
+    "name": "피나스테리드",
+    "aliases": [
+      "피나스테리드",
+      "프로페시아",
+      "피나스테리드정",
+      "그로모정",
+      "파나정",
+      "피나로정",
+      "유레드정",
+      "씨엠피정",
+      "엔쎄스정",
+      "프루스타정"
+    ],
+    "restriction_period_days": 28,
+    "restriction": "복용 종료 후 4주간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "탈모증 및 전립선 치료제"
+  },
+  {
+    "id": "c104",
+    "type": "약물",
+    "name": "이소트레티노인",
+    "aliases": [
+      "이소트레티노인",
+      "뉴트논",
+      "니메겐",
+      "레세벨",
+      "로아큐탄",
+      "로이탄",
+      "아큐레탄",
+      "아그날",
+      "아기놀",
+      "이스트렌",
+      "이스트이나",
+      "제로큐탄",
+      "체크큐탄",
+      "클레어",
+      "트레틴",
+      "핀풀"
+    ],
+    "restriction_period_days": 28,
+    "restriction": "복용 종료 후 4주간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "여드름 치료제"
+  },
+  {
+    "id": "c105",
+    "type": "약물",
+    "name": "알리트레티노인",
+    "aliases": [
+      "알리트레티노인",
+      "알리톡"
+    ],
+    "restriction_period_days": 30,
+    "restriction": "복용 종료 후 1개월간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "손습진 치료제"
+  },
+  {
+    "id": "c106",
+    "type": "약물",
+    "name": "탈리도마이드",
+    "aliases": [
+      "탈리도마이드",
+      "세엘잘탈리도마이드",
+      "알보젠탈리도마이드",
+      "탈라이드",
+      "탈로마",
+      "탈리고브"
+    ],
+    "restriction_period_days": 30,
+    "restriction": "복용 종료 후 1개월간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "항암성중양/나병결절홍반 치료제"
+  },
+  {
+    "id": "c107",
+    "type": "약물",
+    "name": "비스모데립",
+    "aliases": [
+      "비스모데립",
+      "에리벳지"
+    ],
+    "restriction_period_days": 730,
+    "restriction": "복용 종료 후 24개월간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "항암성중양 치료제"
+  }
+]

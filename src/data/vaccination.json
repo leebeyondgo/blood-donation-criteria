@@ -1,0 +1,68 @@
+[
+  {
+    "id": "d1",
+    "type": "백신",
+    "name": "MMR",
+    "aliases": [
+      "홍역",
+      "볼거리",
+      "풍진"
+    ],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "notes": "생백신",
+    "restriction_type": "temporal"
+  },
+  {
+    "id": "d2",
+    "type": "백신",
+    "name": "코로나19 백신",
+    "aliases": [
+      "COVID-19 vaccine"
+    ],
+    "restriction_period_days": 0,
+    "restriction": "접종 당일 헌혈 금지, 다음날부터 가능",
+    "notes": "mRNA 백신 포함",
+    "restriction_type": "temporal"
+  },
+  {
+    "id": "d100",
+    "type": "백신",
+    "name": "MMR",
+    "aliases": [
+      "홍역",
+      "볼거리",
+      "풍진",
+      "MMR"
+    ],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "생백신류"
+  },
+  {
+    "id": "d101",
+    "type": "백신",
+    "name": "BCG",
+    "aliases": [
+      "BCG",
+      "결핵 예방접종"
+    ],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "비경구 생백신"
+  },
+  {
+    "id": "d102",
+    "type": "백신",
+    "name": "A형 간염",
+    "aliases": [
+      "A형 간염 백신"
+    ],
+    "restriction_period_days": 1,
+    "restriction": "접종 후 24시간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "불활화 백신"
+  }
+]

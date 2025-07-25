@@ -1,0 +1,92 @@
+[
+  {
+    "id": "b1",
+    "type": "지역",
+    "name": "베트남",
+    "restriction_period_days": 365,
+    "restriction": "일부 지역 제외, 기타 지역은 헌혈 금지",
+    "exceptions": [
+      "호치민시",
+      "하노이",
+      "다낭"
+    ],
+    "notes": "말라리아 위험 지역",
+    "restriction_type": "temporal"
+  },
+  {
+    "id": "b2",
+    "type": "지역",
+    "name": "필리핀",
+    "restriction_period_days": 365,
+    "restriction": "모든 지역 헌혈 금지",
+    "exceptions": [],
+    "notes": "열대열 발생 국가",
+    "restriction_type": "temporal"
+  },
+  {
+    "id": "b3",
+    "type": "지역",
+    "name": "인도네시아",
+    "restriction_period_days": 365,
+    "restriction": "발리 제외, 대부분 헌혈 금지",
+    "exceptions": [
+      "발리 (Bali)"
+    ],
+    "notes": "자카르타 포함 대부분 지역은 제한",
+    "restriction_type": "temporal"
+  },
+  {
+    "id": "b100",
+    "type": "지역",
+    "name": "영국",
+    "aliases": [
+      "잉글랜드",
+      "스코틀랜드",
+      "웨일즈",
+      "북아일랜드"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "1980년~1996년까지 3개월 이상 거주 시 헌혈 금지",
+    "restriction_type": "permanent",
+    "notes": "vCJD 위험 지역 (변종 크로이츠펠트-야콥병)"
+  },
+  {
+    "id": "b101",
+    "type": "지역",
+    "name": "프랑스",
+    "aliases": [
+      "프랑스",
+      "아일랜드"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "1980년~2001년까지 5년 이상 거주 시 헌혈 금지",
+    "restriction_type": "permanent",
+    "notes": "vCJD 위험 지역"
+  },
+  {
+    "id": "b102",
+    "type": "지역",
+    "name": "경기도 파주시",
+    "aliases": [
+      "파주시"
+    ],
+    "restriction_period_days": 365,
+    "restriction": "1박 이상 숙박 시 1년간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "국내 말라리아 위험 지역"
+  },
+  {
+    "id": "b103",
+    "type": "지역",
+    "name": "필리핀",
+    "aliases": [
+      "필리핀",
+      "세부",
+      "보홀"
+    ],
+    "restriction_period_days": 365,
+    "restriction": "1박 이상 체류 시 1년간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "해외 말라리아 위험 지역"
+  }
+]
