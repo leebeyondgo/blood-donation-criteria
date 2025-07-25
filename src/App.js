@@ -60,7 +60,7 @@ function App() {
   };
 
   const results = useMemo(() => {
-    if (!query && !filterType) return [];
+    // if (!query && !filterType) return [];
     const lower = query.toLowerCase();
     return allData.filter((item) => {
       if (filterType && item.type !== filterType) return false;
