@@ -12,11 +12,13 @@ html.dark {
   color: white;
 }
 
+/* 재사용 가능한 인풋 스타일 */
+.input-style {
+  @apply border-2 border-gray-300 dark:border-gray-600 rounded-md p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
 /* Light and dark theme styles for form inputs */
 .search-input::placeholder {
   @apply text-gray-500 dark:text-gray-400;
 }
-
 .date-input {
   @apply text-black dark:text-white;
 }
