@@ -71,3 +71,10 @@ test('테마 토글 버튼 클릭 시 document 클래스가 변경된다', async
   await userEvent.click(button);
   expect(document.documentElement.classList.contains('dark')).toBe(false);
 });
+
+test('카테고리 필터 선택 시 해당 항목이 표시된다', async () => {
+  render(<App />);
+  const select = screen.getByLabelText(/카테고리 필터/i);
+  await userEvent.selectOptions(select, '질병');
+  expect(screen.getByText('C형 간염')).toBeInTheDocument();
+});
