@@ -1,3 +1,19 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+.dark {
+  --bg-color: #222;
+  --text-color: #fff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .App {
   text-align: center;
   padding: 20px;
@@ -14,13 +30,34 @@
   list-style: none;
   padding: 0;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .result-item {
-  text-align: left;
+  text-align: center;
   margin-bottom: 12px;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    width: 100%;
+  }
+
+  .result-item {
+    max-width: none;
+  }
 }
 
 .no-result {
   color: #888;
+}
+
+.theme-toggle {
+  margin-bottom: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
 }
