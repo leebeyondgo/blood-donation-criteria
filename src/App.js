@@ -145,7 +145,7 @@ function App() {
             } else if (period === 0) {
               message = '즉시 가능';
             } else if (period > 0) {
-              const base = eventDate ? new Date(eventDate) : new Date();
+              const base = new Date();
               base.setDate(base.getDate() + period);
               message = formatDate(base);
             } else {
