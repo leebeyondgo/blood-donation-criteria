@@ -5,6 +5,8 @@ import {
   IconButton,
   ToggleButton,
   ToggleButtonGroup,
+  FormControl,
+  InputLabel,
 } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
@@ -120,23 +122,28 @@ function App() {
           />
         </div>
 
-        <ToggleButtonGroup
-          exclusive
+        <FormControl
           size="small"
-          value={filterType}
-          onChange={(e, newType) => {
-            if (newType !== null) setFilterType(newType);
-          }}
           aria-label="카테고리 필터"
           className={query ? 'invisible mt-3 sm:mt-0' : 'mt-3 sm:mt-0'}
         >
-          <ToggleButton value="">전체</ToggleButton>
-          <ToggleButton value="질병">질병</ToggleButton>
-          <ToggleButton value="지역">지역</ToggleButton>
-          <ToggleButton value="약물">약물</ToggleButton>
-          <ToggleButton value="백신">백신</ToggleButton>
-          <ToggleButton value="기타">기타</ToggleButton>
-        </ToggleButtonGroup>
+          <InputLabel shrink>카테고리 필터</InputLabel>
+          <ToggleButtonGroup
+            exclusive
+            size="small"
+            value={filterType}
+            onChange={(e, newType) => {
+              if (newType !== null) setFilterType(newType);
+            }}
+          >
+            <ToggleButton value="">전체</ToggleButton>
+            <ToggleButton value="질병">질병</ToggleButton>
+            <ToggleButton value="지역">지역</ToggleButton>
+            <ToggleButton value="약물">약물</ToggleButton>
+            <ToggleButton value="백신">백신</ToggleButton>
+            <ToggleButton value="기타">기타</ToggleButton>
+          </ToggleButtonGroup>
+        </FormControl>
 
 
 
