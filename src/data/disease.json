@@ -92,5 +92,60 @@
     "restriction_type": "temporal",
     "notes": "감염병",
     "keywords": []
+  },
+  {
+    "id": "a104",
+    "type": "질병",
+    "name": "HIV/AIDS",
+    "aliases": [
+      "HIV",
+      "에이즈"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "감염 이력 있는 경우 영구 헌혈 금지",
+    "restriction_type": "permanent",
+    "notes": "혈액전파 감염병",
+    "keywords": []
+  },
+  {
+    "id": "a105",
+    "type": "질병",
+    "name": "B형 간염",
+    "aliases": [
+      "HBV"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "감염 이력 있는 경우 영구 헌혈 금지",
+    "restriction_type": "permanent",
+    "notes": "혈액전파 감염병",
+    "keywords": []
+  },
+  {
+    "id": "a106",
+    "type": "질병",
+    "name": "결핵",
+    "aliases": [
+      "폐결핵",
+      "TB"
+    ],
+    "restriction_period_days": 730,
+    "restriction": "완치 후 2년 경과 시 헌혈 가능",
+    "restriction_type": "temporal",
+    "notes": "감염병 완치 후 제한",
+    "keywords": []
+  },
+  {
+    "id": "a107",
+    "type": "질병",
+    "name": "암",
+    "aliases": [
+      "악성종양",
+      "Cancer"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "대부분의 암 치료 이력 시 영구 헌혈 금지 (의사 판단)",
+    "restriction_type": "permanent",
+    "notes": "종양 전이 가능성 등",
+    "keywords": []
   }
 ]

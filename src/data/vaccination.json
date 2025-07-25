@@ -69,5 +69,45 @@
     "restriction_type": "temporal",
     "notes": "불활화 백신",
     "keywords": []
+  },
+  {
+    "id": "d103",
+    "type": "백신",
+    "name": "수두 백신",
+    "aliases": [
+      "수두",
+      "Varicella"
+    ],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "생백신",
+    "keywords": []
+  },
+  {
+    "id": "d104",
+    "type": "백신",
+    "name": "황열 백신",
+    "aliases": [
+      "Yellow Fever"
+    ],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "생백신",
+    "keywords": []
+  },
+  {
+    "id": "d105",
+    "type": "백신",
+    "name": "장티푸스 (경구형)",
+    "aliases": [
+      "Typhoid oral"
+    ],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "생백신 (경구)",
+    "keywords": []
   }
 ]

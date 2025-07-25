@@ -79,5 +79,46 @@
     "restriction": "치료 후 3개월간 헌혈 금지",
     "restriction_type": "temporal",
     "notes": "완치 후 헌혈 가능"
+  },
+  {
+    "id": "e104",
+    "type": "기타",
+    "name": "피어싱 시술",
+    "aliases": [
+      "귀걸이",
+      "피어싱"
+    ],
+    "restriction_period_days": 365,
+    "restriction": "시술 후 1년간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "비멸균 기구 사용 가능성",
+    "keywords": []
+  },
+  {
+    "id": "e105",
+    "type": "기타",
+    "name": "침술 치료",
+    "aliases": [
+      "침 시술",
+      "한방 침"
+    ],
+    "restriction_period_days": 365,
+    "restriction": "시술 후 1년간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "비멸균 기구 사용 가능성",
+    "keywords": []
+  },
+  {
+    "id": "e106",
+    "type": "기타",
+    "name": "헌혈 간격 제한",
+    "aliases": [
+      "헌혈 주기"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "전혈은 2개월, 성분헌혈은 2주 간격 유지 필요",
+    "restriction_type": "conditional",
+    "notes": "혈액량 회복 고려",
+    "keywords": []
   }
 ]

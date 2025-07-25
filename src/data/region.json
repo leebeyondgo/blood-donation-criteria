@@ -95,5 +95,25 @@
     "restriction_type": "temporal",
     "notes": "해외 말라리아 위험 지역",
     "keywords": []
+  },
+  {
+    "id": "b104",
+    "type": "지역",
+    "name": "케냐",
+    "restriction_period_days": 365,
+    "restriction": "1박 이상 체류 시 1년간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "말라리아 및 풍토병 유행 지역",
+    "keywords": []
+  },
+  {
+    "id": "b105",
+    "type": "지역",
+    "name": "브라질 아마존",
+    "restriction_period_days": 365,
+    "restriction": "1박 이상 체류 시 1년간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "말라리아 및 풍토병 유행 지역",
+    "keywords": []
   }
 ]

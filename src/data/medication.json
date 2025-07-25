@@ -202,5 +202,32 @@
     "restriction": "복용 종료 후 7일간 헌혈 금지",
     "restriction_type": "temporal",
     "notes": "항생제"
+  },
+  {
+    "id": "c109",
+    "type": "약물",
+    "name": "Warfarin",
+    "aliases": [
+      "와파린",
+      "쿠마딘"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "복용 중이거나 이력 있는 경우 헌혈 금지",
+    "restriction_type": "permanent",
+    "notes": "항응고제",
+    "keywords": []
+  },
+  {
+    "id": "c110",
+    "type": "약물",
+    "name": "Aspirin",
+    "aliases": [
+      "아스피린"
+    ],
+    "restriction_period_days": 3,
+    "restriction": "복용 후 3일간 혈소판 헌혈 금지 (전혈은 가능)",
+    "restriction_type": "temporal",
+    "notes": "혈소판 기능 억제",
+    "keywords": []
   }
 ]
