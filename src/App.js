@@ -63,11 +63,13 @@ function App() {
   };
 
   const results = useMemo(() => {
-    // if (!query && !filterType) return [];
     const lower = query.toLowerCase();
     return allData.filter((item) => {
-      if (filterType && item.type !== filterType) return false;
-      if (!query) return true;
+      if (!query) {
+        if (filterType && item.type !== filterType) return false;
+        return true;
+      }
+
       const nameMatch = item.name.toLowerCase().includes(lower);
       const aliasMatch = (item.aliases || []).some((alias) =>
         alias.toLowerCase().includes(lower)
@@ -100,6 +102,21 @@ function App() {
           />
         </div>
 
+        {!query && (
+          <select
+            aria-label="카테고리 필터"
+            value={filterType}
+            onChange={(e) => setFilterType(e.target.value)}
+            className="input-style w-full max-w-xs"
+          >
+            <option value="">전체</option>
+            <option value="질병">질병</option>
+            <option value="지역">지역</option>
+            <option value="약물">약물</option>
+            <option value="백신">백신</option>
+            <option value="기타">기타</option>
+          </select>
+        )}
         <input
           type="date"
           className="input-style date-input"
@@ -108,19 +125,6 @@ function App() {
           placeholder="기준 날짜 선택"
         />
 
-        <select
-          aria-label="카테고리 필터"
-          value={filterType}
-          onChange={(e) => setFilterType(e.target.value)}
-          className="input-style w-full max-w-xs"
-        >
-          <option value="">전체</option>
-          <option value="질병">질병</option>
-          <option value="지역">지역</option>
-          <option value="약물">약물</option>
-          <option value="백신">백신</option>
-          <option value="기타">기타</option>
-        </select>
 
 
         <ul className="result-list list-none mt-8 flex flex-col items-center space-y-4">

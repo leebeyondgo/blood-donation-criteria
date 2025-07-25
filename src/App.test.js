@@ -67,3 +67,13 @@ test('카테고리 필터 선택 시 해당 항목이 표시된다', async () =>
   await userEvent.selectOptions(select, '질병');
   expect(screen.getByText('C형 간염')).toBeInTheDocument();
 });
+
+test('검색어 입력 시 필터가 숨겨지고 전체 검색이 수행된다', async () => {
+  render(<App />);
+  const select = screen.getByLabelText(/카테고리 필터/i);
+  await userEvent.selectOptions(select, '질병');
+  const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
+  await userEvent.type(input, '문신');
+  expect(screen.queryByLabelText(/카테고리 필터/i)).toBeNull();
+  expect(screen.getByText('문신 시술')).toBeInTheDocument();
+});
