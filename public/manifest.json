@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "헌혈 DB",
+  "name": "헌혈 기준 데이터베이스",
   "icons": [
     {
       "src": "favicon.ico",
