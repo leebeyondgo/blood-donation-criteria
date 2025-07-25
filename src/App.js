@@ -1,14 +1,20 @@
 import { useState, useMemo, useEffect, createContext } from 'react';
 import { FiSearch, FiSun, FiMoon } from 'react-icons/fi';
-import dataA from './data/donation_a.json';
-import dataB from './data/donation_b.json';
-import dataC from './data/donation_c.json';
-import dataD from './data/donation_d.json';
-import dataE from './data/donation_e.json';
+import diseaseData from './data/disease.json';
+import regionData from './data/region.json';
+import medicationData from './data/medication.json';
+import vaccinationData from './data/vaccination.json';
+import etcData from './data/etc.json';
 
 export const ThemeContext = createContext();
 
-const allData = [...dataA, ...dataB, ...dataC, ...dataD, ...dataE];
+const allData = [
+  ...diseaseData,
+  ...regionData,
+  ...medicationData,
+  ...vaccinationData,
+  ...etcData,
+];
 
 function App() {
   const [query, setQuery] = useState('');
