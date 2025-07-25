@@ -145,7 +145,9 @@ function App() {
               message = '헌혈 불가';
             }
 
-            const colorClass = message === '헌혈 불가' ? 'text-red-500' : 'text-green-500';
+            const colorClass = message === '헌혈 불가'
+              ? 'text-red-500 dark:text-red-400'
+              : 'text-green-500 dark:text-green-400';
 
             return (
               <li key={item.id} className="result-item">
