@@ -100,42 +100,43 @@ function App() {
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </IconButton>
 
-        <div className="flex flex-wrap justify-center items-center gap-3">
-          <FiSearch />
-          <TextField
-            variant="outlined"
-            placeholder="검색어를 입력하세요"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            size="small"
-          />
-          <ToggleButtonGroup
-            exclusive
-            size="small"
-            value={filterType}
-            onChange={(e, newType) => {
-              if (newType !== null) setFilterType(newType);
-            }}
-            aria-label="카테고리 필터"
-            className={query ? 'invisible' : ''}
-          >
-            <ToggleButton value="">전체</ToggleButton>
-            <ToggleButton value="질병">질병</ToggleButton>
-            <ToggleButton value="지역">지역</ToggleButton>
-            <ToggleButton value="약물">약물</ToggleButton>
-            <ToggleButton value="백신">백신</ToggleButton>
-            <ToggleButton value="기타">기타</ToggleButton>
-          </ToggleButtonGroup>
-        </div>
-
-        <div className="flex justify-center items-center gap-3">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+          <div className="flex items-center gap-3">
+            <FiSearch />
+            <TextField
+              variant="outlined"
+              placeholder="검색어를 입력하세요"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              size="small"
+            />
+          </div>
           <TextField
             type="date"
             value={baseDate}
             onChange={(e) => setBaseDate(e.target.value)}
             size="small"
+            inputProps={{ 'aria-label': '기준 날짜' }}
           />
         </div>
+
+        <ToggleButtonGroup
+          exclusive
+          size="small"
+          value={filterType}
+          onChange={(e, newType) => {
+            if (newType !== null) setFilterType(newType);
+          }}
+          aria-label="카테고리 필터"
+          className={query ? 'invisible mt-3 sm:mt-0' : 'mt-3 sm:mt-0'}
+        >
+          <ToggleButton value="">전체</ToggleButton>
+          <ToggleButton value="질병">질병</ToggleButton>
+          <ToggleButton value="지역">지역</ToggleButton>
+          <ToggleButton value="약물">약물</ToggleButton>
+          <ToggleButton value="백신">백신</ToggleButton>
+          <ToggleButton value="기타">기타</ToggleButton>
+        </ToggleButtonGroup>
 
 
 
