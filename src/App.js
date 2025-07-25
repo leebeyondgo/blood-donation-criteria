@@ -18,7 +18,6 @@ const allData = [
 
 function App() {
   const [query, setQuery] = useState('');
-  const [eventDate, setEventDate] = useState('');
   const [filterType, setFilterType] = useState('');
 
   const formatDate = (date) => {
@@ -111,13 +110,6 @@ function App() {
           <option value="기타">기타</option>
         </select>
 
-        <input
-          className="date-input input-style"
-          type="date"
-          aria-label="이벤트 날짜"
-          value={eventDate}
-          onChange={(e) => setEventDate(e.target.value)}
-        />
 
         <ul className="result-list list-none mt-8 flex flex-col items-center space-y-4">
           {results.map((item) => {
