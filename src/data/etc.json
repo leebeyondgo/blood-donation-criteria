@@ -61,5 +61,18 @@
     "restriction": "투여 후 1주일간 헌혈 금지",
     "restriction_type": "temporal",
     "notes": "면역억제제 포함 약물"
+  },
+  {
+    "id": "e103",
+    "type": "기타",
+    "name": "골절 또는 깁스 착용",
+    "aliases": [
+      "골절",
+      "깁스 착용"
+    ],
+    "restriction_period_days": 90,
+    "restriction": "치료 후 3개월간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "완치 후 헌혈 가능"
   }
 ]
