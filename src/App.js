@@ -21,9 +21,27 @@ function App() {
     return `${yyyy}년${mm}월${dd}일`;
   };
 
-  const [theme, setTheme] = useState(() =>
-    localStorage.getItem('theme') || 'light'
-  );
+  const getInitialTheme = () => {
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  };
+
+  const [theme, setTheme] = useState(getInitialTheme);
+
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    const systemChange = () => {
+      const stored = localStorage.getItem('theme');
+      if (!stored) {
+        setTheme(media.matches ? 'dark' : 'light');
+      }
+    };
+    media.addEventListener('change', systemChange);
+    return () => media.removeEventListener('change', systemChange);
+  }, []);
 
   useEffect(() => {
     document.documentElement.classList.remove('light', 'dark');
