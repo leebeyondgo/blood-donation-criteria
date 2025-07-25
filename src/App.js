@@ -115,10 +115,11 @@ function App() {
 
         <div className="flex justify-center items-center gap-3">
           <FormControl size="small" className={query ? 'invisible' : ''}>
-            <InputLabel id="filter-label">카테고리</InputLabel>
+            <InputLabel id="filter-label">카테고리 필터</InputLabel>
             <MUISelect
               labelId="filter-label"
-              label="카테고리"
+              label="카테고리 필터"
+              aria-label="카테고리 필터"
               value={filterType}
               onChange={(e) => setFilterType(e.target.value)}
             >
