@@ -1,5 +1,18 @@
 import { createTheme } from '@mui/material/styles';
 
+const typography = {
+  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  fontSize: 14,
+  h1: {
+    fontSize: '2.125rem',
+    fontWeight: 500,
+  },
+  h2: {
+    fontSize: '1.75rem',
+    fontWeight: 500,
+  },
+};
+
 export const lightTheme = createTheme({
   palette: {
     mode: 'light',
@@ -16,6 +29,7 @@ export const lightTheme = createTheme({
       paper: '#fffbfe',
     },
   },
+  typography,
 });
 
 export const darkTheme = createTheme({
@@ -32,4 +46,5 @@ export const darkTheme = createTheme({
       paper: '#1c1b1f',
     },
   },
+  typography,
 });
