@@ -24,6 +24,7 @@
     "restriction_type": "conditional"
   },
   {
+    "id": "a3",
     "type": "질병",
     "name": "코로나19",
     "aliases": [
