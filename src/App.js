@@ -18,7 +18,6 @@ const allData = [
 
 function App() {
   const [query, setQuery] = useState('');
-  const [eventDate, setEventDate] = useState('');
 
   const formatDate = (date) => {
     const yyyy = date.getFullYear();
@@ -94,13 +93,6 @@ function App() {
           />
         </div>
 
-        <input
-          className="date-input input-style"
-          type="date"
-          aria-label="이벤트 날짜"
-          value={eventDate}
-          onChange={(e) => setEventDate(e.target.value)}
-        />
 
         <ul className="result-list list-none mt-5 flex flex-col items-center space-y-3">
           {results.map((item) => {
@@ -128,7 +120,7 @@ function App() {
             } else if (period === 0) {
               message = '즉시 가능';
             } else if (period > 0) {
-              const base = eventDate ? new Date(eventDate) : new Date();
+              const base = new Date();
               base.setDate(base.getDate() + period);
               message = formatDate(base);
             } else {

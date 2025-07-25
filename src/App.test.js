@@ -12,17 +12,6 @@ test('검색어 입력 시 해당 제한 조건이 표시된다', async () => {
   ).toBeInTheDocument();
 });
 
-// 양성 제한 기간이 있는 항목은 기간 텍스트와 날짜를 계산한다
-test('양성 제한 기간이 있는 항목은 기간 텍스트와 날짜를 계산한다', async () => {
-  render(<App />);
-  const queryInput = screen.getByPlaceholderText(/검색어를 입력하세요/i);
-  const dateInput = screen.getByLabelText('이벤트 날짜');
-  await userEvent.type(dateInput, '2024-01-01');
-  await userEvent.type(queryInput, 'Doxy');
-  expect(screen.getByText('금지 기간: 7일')).toBeInTheDocument();
-  expect(screen.getByText('2024년01월08일')).toBeInTheDocument();
-});
-
 // 영구 제한 타입은 영구 금지와 헌혈 불가로 표시한다
 test('영구 제한 타입은 영구 금지와 헌혈 불가로 표시한다', async () => {
   render(<App />);
