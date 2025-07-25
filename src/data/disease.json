@@ -9,7 +9,8 @@
     "restriction_period_days": -1,
     "restriction": "감염 이력 있는 경우 영구 헌혈 금지",
     "notes": "혈액전파 위험",
-    "restriction_type": "permanent"
+    "restriction_type": "permanent",
+    "keywords": []
   },
   {
     "id": "a2",
@@ -21,7 +22,8 @@
     "restriction_period_days": -1,
     "restriction": "완치 전 까지 헌혈 불가",
     "notes": "헌혈자 보호",
-    "restriction_type": "conditional"
+    "restriction_type": "conditional",
+    "keywords": []
   },
   {
     "id": "a3",
@@ -33,7 +35,8 @@
     "restriction_period_days": 30,
     "restriction": "완치 후 30일 경과 시 헌혈 가능",
     "notes": "격리 및 증상 회복 후",
-    "restriction_type": "temporal"
+    "restriction_type": "temporal",
+    "keywords": []
   },
   {
     "id": "a100",
@@ -45,7 +48,8 @@
     "restriction_period_days": 60,
     "restriction": "진단 후 2개월간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "감염병"
+    "notes": "감염병",
+    "keywords": []
   },
   {
     "id": "a101",
@@ -60,7 +64,8 @@
     "restriction_period_days": 365,
     "restriction": "치료 후 1년간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "성병 진단 이력"
+    "notes": "성병 진단 이력",
+    "keywords": []
   },
   {
     "id": "a102",
@@ -72,7 +77,8 @@
     "restriction_period_days": 730,
     "restriction": "진단 후 2년간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "감염병"
+    "notes": "감염병",
+    "keywords": []
   },
   {
     "id": "a103",
@@ -84,6 +90,7 @@
     "restriction_period_days": 1095,
     "restriction": "감염 이력 있는 경우 3년간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "감염병"
+    "notes": "감염병",
+    "keywords": []
   }
 ]

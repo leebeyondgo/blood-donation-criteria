@@ -9,7 +9,8 @@
     ],
     "restriction_period_days": 1,
     "restriction": "복용 당일 헌혈 금지",
-    "notes": "구충제"
+    "notes": "구충제",
+    "keywords": []
   },
   {
     "id": "c2",
@@ -20,7 +21,8 @@
     ],
     "restriction_period_days": 7,
     "restriction": "복용 종료 후 7일간 헌혈 금지",
-    "notes": "말라리아 예방약"
+    "notes": "말라리아 예방약",
+    "keywords": []
   },
   {
     "id": "c3",
@@ -32,7 +34,8 @@
     ],
     "restriction_period_days": 30,
     "restriction": "복용 종료 후 1개월간 헌혈 금지",
-    "notes": "여성 수혈 시 기형 유발 위험"
+    "notes": "여성 수혈 시 기형 유발 위험",
+    "keywords": []
   },
   {
     "id": "c100",
@@ -47,7 +50,8 @@
     "restriction_period_days": -1,
     "restriction": "복용 이력 있는 경우 영구 헌혈 금지",
     "restriction_type": "permanent",
-    "notes": "태아기형 우려 (건선 치료제)"
+    "notes": "태아기형 우려 (건선 치료제)",
+    "keywords": []
   },
   {
     "id": "c101",
@@ -61,7 +65,8 @@
     "restriction_period_days": 1095,
     "restriction": "복용 종료 후 3년간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "건선 치료제"
+    "notes": "건선 치료제",
+    "keywords": []
   },
   {
     "id": "c102",
@@ -83,7 +88,8 @@
     "restriction_period_days": 180,
     "restriction": "복용 종료 후 6개월간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "전립선비대증 치료제"
+    "notes": "전립선비대증 치료제",
+    "keywords": []
   },
   {
     "id": "c103",
@@ -104,7 +110,10 @@
     "restriction_period_days": 28,
     "restriction": "복용 종료 후 4주간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "탈모증 및 전립선 치료제"
+    "notes": "탈모증 및 전립선 치료제",
+    "keywords": [
+      "탈모약"
+    ]
   },
   {
     "id": "c104",
@@ -131,7 +140,10 @@
     "restriction_period_days": 28,
     "restriction": "복용 종료 후 4주간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "여드름 치료제"
+    "notes": "여드름 치료제",
+    "keywords": [
+      "여드름약"
+    ]
   },
   {
     "id": "c105",
@@ -144,7 +156,8 @@
     "restriction_period_days": 30,
     "restriction": "복용 종료 후 1개월간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "손습진 치료제"
+    "notes": "손습진 치료제",
+    "keywords": []
   },
   {
     "id": "c106",
@@ -161,7 +174,8 @@
     "restriction_period_days": 30,
     "restriction": "복용 종료 후 1개월간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "항암성중양/나병결절홍반 치료제"
+    "notes": "항암성중양/나병결절홍반 치료제",
+    "keywords": []
   },
   {
     "id": "c107",
@@ -174,7 +188,8 @@
     "restriction_period_days": 730,
     "restriction": "복용 종료 후 24개월간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "항암성중양 치료제"
+    "notes": "항암성중양 치료제",
+    "keywords": []
   },
   {
     "id": "c108",

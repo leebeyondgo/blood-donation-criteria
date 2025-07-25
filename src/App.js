@@ -84,7 +84,10 @@ function App() {
       const aliasMatch = (item.aliases || []).some((alias) =>
         alias.toLowerCase().includes(lower)
       );
-      return nameMatch || aliasMatch;
+      const keywordMatch = (item.keywords || []).some((keyword) =>
+        keyword.toLowerCase().includes(lower)
+      );
+      return nameMatch || aliasMatch || keywordMatch;
     });
   }, [query, filterType]);
 
