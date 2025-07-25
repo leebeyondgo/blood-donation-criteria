@@ -1,0 +1,22 @@
+[
+  {
+    "type": "질병",
+    "name": "C형 간염",
+    "aliases": [
+      "HCV"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "감염 이력 있는 경우 영구 헌혈 금지",
+    "notes": "혈액전파 위험"
+  },
+  {
+    "type": "질병",
+    "name": "코로나19",
+    "aliases": [
+      "COVID-19"
+    ],
+    "restriction_period_days": 30,
+    "restriction": "완치 후 30일 경과 시 헌혈 가능",
+    "notes": "격리 및 증상 회복 후"
+  }
+]

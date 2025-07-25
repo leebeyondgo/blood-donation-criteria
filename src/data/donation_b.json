@@ -1,0 +1,32 @@
+[
+  {
+    "type": "지역",
+    "name": "베트남",
+    "restriction_period_days": 365,
+    "restriction": "일부 지역 제외, 기타 지역은 헌혈 금지",
+    "exceptions": [
+      "호치민시",
+      "하노이",
+      "다낭"
+    ],
+    "notes": "말라리아 위험 지역"
+  },
+  {
+    "type": "지역",
+    "name": "필리핀",
+    "restriction_period_days": 365,
+    "restriction": "모든 지역 헌혈 금지",
+    "exceptions": [],
+    "notes": "열대열 발생 국가"
+  },
+  {
+    "type": "지역",
+    "name": "인도네시아",
+    "restriction_period_days": 365,
+    "restriction": "발리 제외, 대부분 헌혈 금지",
+    "exceptions": [
+      "발리 (Bali)"
+    ],
+    "notes": "자카르타 포함 대부분 지역은 제한"
+  }
+]

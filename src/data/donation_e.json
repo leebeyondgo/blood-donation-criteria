@@ -1,0 +1,22 @@
+[
+  {
+    "type": "기타",
+    "name": "문신 시술",
+    "aliases": [
+      "타투"
+    ],
+    "restriction_period_days": 365,
+    "restriction": "시술 후 1년간 헌혈 금지",
+    "notes": "감염 위험"
+  },
+  {
+    "type": "기타",
+    "name": "임신 중",
+    "aliases": [
+      "임산부"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "임신 중 헌혈 금지",
+    "notes": "모체와 태아 보호 목적"
+  }
+]
