@@ -58,6 +58,22 @@ function App() {
         >
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </button>
+      <input
+        className="search-input"
+        type="text"
+        placeholder="검색어를 입력하세요"
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+      />
+      <input
+        className="date-input"
+        type="date"
+        aria-label="이벤트 날짜"
+        value={eventDate}
+        onChange={e => setEventDate(e.target.value)}
+      />
+      <ul className="result-list">
+        {results.map(item => {
         <div className="flex justify-center items-center gap-2">
           <FiSearch />
           <input
@@ -89,7 +105,7 @@ function App() {
             message = formatDate(base);
           }
           return (
-            <li key={index} className="result-item">
+            <li key={item.id} className="result-item">
               <strong>{item.name}</strong> ({item.type}) - {item.restriction}
               <div className="eligible-date">{message}</div>
             </li>

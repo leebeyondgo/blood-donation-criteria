@@ -1,5 +1,6 @@
 [
   {
+    "id": "c1",
     "type": "약물",
     "name": "Albendazole",
     "aliases": [
@@ -11,6 +12,7 @@
     "notes": "구충제"
   },
   {
+    "id": "c2",
     "type": "약물",
     "name": "Doxycycline",
     "aliases": [
@@ -21,6 +23,7 @@
     "notes": "말라리아 예방약"
   },
   {
+    "id": "c3",
     "type": "약물",
     "name": "Finasteride",
     "aliases": [
