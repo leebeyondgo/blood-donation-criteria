@@ -1,10 +1,10 @@
 import { useState, useMemo, useEffect, createContext } from 'react';
+import { FiSearch, FiSun, FiMoon } from 'react-icons/fi';
 import dataA from './data/donation_a.json';
 import dataB from './data/donation_b.json';
 import dataC from './data/donation_c.json';
 import dataD from './data/donation_d.json';
 import dataE from './data/donation_e.json';
-import './App.css';
 
 export const ThemeContext = createContext();
 
@@ -49,10 +49,14 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App">
-        <h1>헌혈 제한 조건 검색</h1>
-        <button onClick={toggleTheme} className="theme-toggle">
-          테마 토글
+      <div className="App text-center p-5 space-y-4">
+        <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
+        <button
+          onClick={toggleTheme}
+          aria-label="테마 토글"
+          className="theme-toggle border rounded p-2 inline-flex items-center justify-center"
+        >
+          {theme === 'light' ? <FiMoon /> : <FiSun />}
         </button>
       <input
         className="search-input"
@@ -70,6 +74,25 @@ function App() {
       />
       <ul className="result-list">
         {results.map(item => {
+        <div className="flex justify-center items-center gap-2">
+          <FiSearch />
+          <input
+            className="search-input border p-2 w-80 max-w-full"
+            type="text"
+            placeholder="검색어를 입력하세요"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+          />
+        </div>
+        <input
+          className="date-input border p-2"
+          type="date"
+          aria-label="이벤트 날짜"
+          value={eventDate}
+          onChange={e => setEventDate(e.target.value)}
+        />
+        <ul className="result-list list-none mt-5 flex flex-col items-center space-y-3">
+        {results.map((item, index) => {
           const period = item.restriction_period_days;
           let message;
           if (period < 0) {
@@ -87,7 +110,7 @@ function App() {
               <div className="eligible-date">{message}</div>
             </li>
           );
-        })}
+        })
         {query && results.length === 0 && (
           <li className="no-result">검색 결과가 없습니다.</li>
         )}
