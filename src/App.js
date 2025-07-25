@@ -19,6 +19,9 @@ const allData = [
 function App() {
   const [query, setQuery] = useState('');
   const [filterType, setFilterType] = useState('');
+  const [baseDate, setBaseDate] = useState(() =>
+    new Date().toISOString().split('T')[0]
+  );
 
   const formatDate = (date) => {
     const yyyy = date.getFullYear();
@@ -114,6 +117,14 @@ function App() {
             <option value="기타">기타</option>
           </select>
         )}
+        <input
+          type="date"
+          className="input-style date-input"
+          value={baseDate}
+          onChange={(e) => setBaseDate(e.target.value)}
+          placeholder="기준 날짜 선택"
+        />
+
 
 
         <ul className="result-list list-none mt-8 flex flex-col items-center space-y-4">
@@ -142,14 +153,16 @@ function App() {
             } else if (period === 0) {
               message = '즉시 가능';
             } else if (period > 0) {
-              const base = new Date();
+              const base = new Date(baseDate);
               base.setDate(base.getDate() + period);
               message = formatDate(base);
             } else {
               message = '헌혈 불가';
             }
 
-            const colorClass = message === '헌혈 불가' ? 'text-red-500' : 'text-green-500';
+            const colorClass = message === '헌혈 불가'
+              ? 'text-red-500 dark:text-red-400'
+              : 'text-green-500 dark:text-green-400';
 
             return (
               <li key={item.id} className="result-item">
