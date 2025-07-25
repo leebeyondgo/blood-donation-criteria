@@ -10,3 +10,26 @@ test('검색어 입력 시 해당 제한 조건이 표시된다', async () => {
     screen.getByText(/감염 이력 있는 경우 영구 헌혈 금지/i)
   ).toBeInTheDocument();
 });
+
+test('양성 제한 기간이 있는 항목은 날짜를 계산한다', async () => {
+  render(<App />);
+  const queryInput = screen.getByPlaceholderText(/검색어를 입력하세요/i);
+  const dateInput = screen.getByLabelText('이벤트 날짜');
+  await userEvent.type(dateInput, '2024-01-01');
+  await userEvent.type(queryInput, 'Doxy');
+  expect(screen.getByText('2024년01월08일')).toBeInTheDocument();
+});
+
+test('음수 제한 기간은 헌혈 불가로 표시한다', async () => {
+  render(<App />);
+  const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
+  await userEvent.type(input, 'HCV');
+  expect(screen.getByText('헌혈 불가')).toBeInTheDocument();
+});
+
+test('제한 기간이 0이면 즉시 가능으로 표시한다', async () => {
+  render(<App />);
+  const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
+  await userEvent.type(input, '코로나19 백신');
+  expect(screen.getByText('즉시 가능')).toBeInTheDocument();
+});
