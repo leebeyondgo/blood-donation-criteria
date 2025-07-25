@@ -94,6 +94,15 @@ function App() {
         <ul className="result-list list-none mt-5 flex flex-col items-center space-y-3">
         {results.map((item, index) => {
           const period = item.restriction_period_days;
+          let periodText;
+          if (period < 0) {
+            periodText = '영구 금지';
+          } else if (period === 0) {
+            periodText = '금지 기간 없음';
+          } else {
+            periodText = `금지 기간: ${period}일`;
+          }
+
           let message;
           if (period < 0) {
             message = '헌혈 불가';
@@ -104,9 +113,11 @@ function App() {
             base.setDate(base.getDate() + period);
             message = formatDate(base);
           }
+
           return (
             <li key={item.id} className="result-item">
               <strong>{item.name}</strong> ({item.type}) - {item.restriction}
+              <div className="period-text">{periodText}</div>
               <div className="eligible-date">{message}</div>
             </li>
           );
