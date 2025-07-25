@@ -9,7 +9,8 @@
     "restriction_period_days": 365,
     "restriction": "시술 후 1년간 헌혈 금지",
     "notes": "감염 위험",
-    "restriction_type": "temporal"
+    "restriction_type": "temporal",
+    "keywords": []
   },
   {
     "id": "e2",
@@ -21,7 +22,8 @@
     "restriction_period_days": -1,
     "restriction": "임신 중 헌혈 금지",
     "notes": "모체와 태아 보호 목적",
-    "restriction_type": "conditional"
+    "restriction_type": "conditional",
+    "keywords": []
   },
   {
     "id": "e100",
@@ -33,7 +35,8 @@
     "restriction_period_days": -1,
     "restriction": "회복 후 일정 기간까지 헌혈 금지 (의사 판단)",
     "restriction_type": "conditional",
-    "notes": "회복 여부에 따른 제한"
+    "notes": "회복 여부에 따른 제한",
+    "keywords": []
   },
   {
     "id": "e101",
@@ -46,7 +49,8 @@
     "restriction_period_days": 7,
     "restriction": "검사 후 1주일간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "감염 위험"
+    "notes": "감염 위험",
+    "keywords": []
   },
   {
     "id": "e102",
@@ -60,6 +64,7 @@
     "restriction_period_days": 7,
     "restriction": "투여 후 1주일간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "면역억제제 포함 약물"
+    "notes": "면역억제제 포함 약물",
+    "keywords": []
   }
 ]

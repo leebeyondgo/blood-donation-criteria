@@ -11,7 +11,8 @@
     "restriction_period_days": 28,
     "restriction": "접종 후 4주간 헌혈 금지",
     "notes": "생백신",
-    "restriction_type": "temporal"
+    "restriction_type": "temporal",
+    "keywords": []
   },
   {
     "id": "d2",
@@ -23,7 +24,8 @@
     "restriction_period_days": 0,
     "restriction": "접종 당일 헌혈 금지, 다음날부터 가능",
     "notes": "mRNA 백신 포함",
-    "restriction_type": "temporal"
+    "restriction_type": "temporal",
+    "keywords": []
   },
   {
     "id": "d100",
@@ -38,7 +40,8 @@
     "restriction_period_days": 28,
     "restriction": "접종 후 4주간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "생백신류"
+    "notes": "생백신류",
+    "keywords": []
   },
   {
     "id": "d101",
@@ -51,7 +54,8 @@
     "restriction_period_days": 28,
     "restriction": "접종 후 4주간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "비경구 생백신"
+    "notes": "비경구 생백신",
+    "keywords": []
   },
   {
     "id": "d102",
@@ -63,6 +67,7 @@
     "restriction_period_days": 1,
     "restriction": "접종 후 24시간 헌혈 금지",
     "restriction_type": "temporal",
-    "notes": "불활화 백신"
+    "notes": "불활화 백신",
+    "keywords": []
   }
 ]
