@@ -94,7 +94,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <div className="App relative text-center p-8 space-y-6 max-w-3xl mx-auto">
+      <div className="App relative text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
 
         <IconButton
