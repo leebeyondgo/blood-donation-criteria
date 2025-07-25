@@ -19,6 +19,9 @@ const allData = [
 function App() {
   const [query, setQuery] = useState('');
   const [filterType, setFilterType] = useState('');
+  const [baseDate, setBaseDate] = useState(() =>
+    new Date().toISOString().split('T')[0]
+  );
 
   const formatDate = (date) => {
     const yyyy = date.getFullYear();
@@ -97,6 +100,14 @@ function App() {
           />
         </div>
 
+        <input
+          type="date"
+          className="input-style date-input"
+          value={baseDate}
+          onChange={(e) => setBaseDate(e.target.value)}
+          placeholder="기준 날짜 선택"
+        />
+
         <select
           aria-label="카테고리 필터"
           value={filterType}
@@ -138,7 +149,7 @@ function App() {
             } else if (period === 0) {
               message = '즉시 가능';
             } else if (period > 0) {
-              const base = new Date();
+              const base = new Date(baseDate);
               base.setDate(base.getDate() + period);
               message = formatDate(base);
             } else {
