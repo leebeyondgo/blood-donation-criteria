@@ -18,6 +18,8 @@ const allData = [
 
 function App() {
   const [query, setQuery] = useState('');
+  const [eventDate, setEventDate] = useState('');
+  const [filterType, setFilterType] = useState('');
 
   const formatDate = (date) => {
     const yyyy = date.getFullYear();
@@ -59,16 +61,18 @@ function App() {
   };
 
   const results = useMemo(() => {
-    if (!query) return [];
+    if (!query && !filterType) return [];
     const lower = query.toLowerCase();
     return allData.filter((item) => {
+      if (filterType && item.type !== filterType) return false;
+      if (!query) return true;
       const nameMatch = item.name.toLowerCase().includes(lower);
       const aliasMatch = (item.aliases || []).some((alias) =>
         alias.toLowerCase().includes(lower)
       );
       return nameMatch || aliasMatch;
     });
-  }, [query]);
+  }, [query, filterType]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -93,6 +97,27 @@ function App() {
           />
         </div>
 
+        <select
+          aria-label="카테고리 필터"
+          value={filterType}
+          onChange={(e) => setFilterType(e.target.value)}
+          className="input-style"
+        >
+          <option value="">전체</option>
+          <option value="질병">질병</option>
+          <option value="지역">지역</option>
+          <option value="약물">약물</option>
+          <option value="백신">백신</option>
+          <option value="기타">기타</option>
+        </select>
+
+        <input
+          className="date-input input-style"
+          type="date"
+          aria-label="이벤트 날짜"
+          value={eventDate}
+          onChange={(e) => setEventDate(e.target.value)}
+        />
 
         <ul className="result-list list-none mt-5 flex flex-col items-center space-y-3">
           {results.map((item) => {
