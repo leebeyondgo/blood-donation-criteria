@@ -102,12 +102,12 @@ function App() {
           />
         </div>
 
-        {!query && (
+        <div className="flex justify-center items-center gap-3">
           <select
             aria-label="카테고리 필터"
             value={filterType}
             onChange={(e) => setFilterType(e.target.value)}
-            className="input-style w-full max-w-xs"
+            className={`input-style w-40${query ? ' invisible' : ''}`}
           >
             <option value="">전체</option>
             <option value="질병">질병</option>
@@ -116,14 +116,14 @@ function App() {
             <option value="백신">백신</option>
             <option value="기타">기타</option>
           </select>
-        )}
-        <input
-          type="date"
-          className="input-style date-input"
-          value={baseDate}
-          onChange={(e) => setBaseDate(e.target.value)}
-          placeholder="기준 날짜 선택"
-        />
+          <input
+            type="date"
+            className="input-style date-input"
+            value={baseDate}
+            onChange={(e) => setBaseDate(e.target.value)}
+            placeholder="기준 날짜 선택"
+          />
+        </div>
 
 
 
