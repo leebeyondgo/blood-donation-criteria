@@ -17,13 +17,15 @@ html.dark {
 }
 
 .result-item {
-  @apply bg-gray-100 dark:bg-gray-700 p-4 rounded-md w-full max-w-2xl mx-auto text-left;
+  /* 다크 모드에서 배경을 한 단계 밝게 조정하고 그림자와 테두리를 추가 */
+  @apply bg-gray-100 dark:bg-gray-600 dark:shadow-md dark:border dark:border-gray-500 p-4 rounded-md w-full max-w-2xl mx-auto text-left;
 }
 .no-result {
   @apply text-red-500 p-4;
 }
 .period-text {
-  @apply text-sm text-gray-700 dark:text-gray-300;
+  /* 다크 모드에서 가독성을 높이도록 글자색을 한 단계 밝게 */
+  @apply text-sm text-gray-700 dark:text-gray-200;
 }
 .eligible-date {
   @apply text-sm;
