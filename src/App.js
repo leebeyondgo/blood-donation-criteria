@@ -93,6 +93,7 @@ function App() {
             placeholder="검색어를 입력하세요"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            className="input-style"
           />
         </div>
 
@@ -100,7 +101,7 @@ function App() {
           aria-label="카테고리 필터"
           value={filterType}
           onChange={(e) => setFilterType(e.target.value)}
-          className="input-style"
+          className="input-style w-full max-w-xs"
         >
           <option value="">전체</option>
           <option value="질병">질병</option>
