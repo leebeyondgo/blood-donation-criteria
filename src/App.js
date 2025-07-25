@@ -87,7 +87,7 @@ function App() {
               <div className="eligible-date">{message}</div>
             </li>
           );
-        })}
+        })
         {query && results.length === 0 && (
           <li className="no-result">검색 결과가 없습니다.</li>
         )}
