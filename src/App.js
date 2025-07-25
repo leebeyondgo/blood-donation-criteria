@@ -69,7 +69,7 @@ function App() {
         onChange={e => setEventDate(e.target.value)}
       />
       <ul className="result-list">
-        {results.map((item, index) => {
+        {results.map(item => {
           const period = item.restriction_period_days;
           let message;
           if (period < 0) {
@@ -82,7 +82,7 @@ function App() {
             message = formatDate(base);
           }
           return (
-            <li key={index} className="result-item">
+            <li key={item.id} className="result-item">
               <strong>{item.name}</strong> ({item.type}) - {item.restriction}
               <div className="eligible-date">{message}</div>
             </li>
