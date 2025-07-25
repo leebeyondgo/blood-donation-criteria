@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, createContext } from 'react';
 import dataA from './data/donation_a.json';
 import dataB from './data/donation_b.json';
 import dataC from './data/donation_c.json';
@@ -6,10 +6,25 @@ import dataD from './data/donation_d.json';
 import dataE from './data/donation_e.json';
 import './App.css';
 
+export const ThemeContext = createContext();
+
 const allData = [...dataA, ...dataB, ...dataC, ...dataD, ...dataE];
 
 function App() {
   const [query, setQuery] = useState('');
+  const [theme, setTheme] = useState(() =>
+    localStorage.getItem('theme') || 'light'
+  );
+
+  useEffect(() => {
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
 
   const results = useMemo(() => {
     if (!query) return [];
@@ -24,8 +39,12 @@ function App() {
   }, [query]);
 
   return (
-    <div className="App">
-      <h1>헌혈 제한 조건 검색</h1>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="App">
+        <h1>헌혈 제한 조건 검색</h1>
+        <button onClick={toggleTheme} className="theme-toggle">
+          테마 토글
+        </button>
       <input
         className="search-input"
         type="text"
@@ -42,8 +61,9 @@ function App() {
         {query && results.length === 0 && (
           <li className="no-result">검색 결과가 없습니다.</li>
         )}
-      </ul>
-    </div>
+        </ul>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
