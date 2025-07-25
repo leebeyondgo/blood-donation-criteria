@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply text-gray-800 dark:text-white;
+}
+
 html.light {
   background-color: white;
   color: black;
