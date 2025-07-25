@@ -79,7 +79,7 @@ function App() {
         <button
           onClick={toggleTheme}
           aria-label="테마 토글"
-          className="theme-toggle border rounded p-2 inline-flex items-center justify-center"
+          className="theme-toggle border border-gray-300 dark:border-gray-600 rounded p-2 inline-flex items-center justify-center"
         >
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </button>
@@ -87,7 +87,7 @@ function App() {
         <div className="flex justify-center items-center gap-2">
           <FiSearch />
           <input
-            className="search-input border p-2 w-80 max-w-full"
+            className="search-input border border-gray-300 dark:border-gray-600 p-2 w-80 max-w-full"
             type="text"
             placeholder="검색어를 입력하세요"
             value={query}
@@ -96,7 +96,7 @@ function App() {
         </div>
 
         <input
-          className="date-input border p-2"
+          className="date-input border border-gray-300 dark:border-gray-600 p-2"
           type="date"
           aria-label="이벤트 날짜"
           value={eventDate}

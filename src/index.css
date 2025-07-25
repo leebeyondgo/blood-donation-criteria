@@ -11,3 +11,12 @@ html.dark {
   background-color: #1f2937; /* gray-800 */
   color: white;
 }
+
+/* Light and dark theme styles for form inputs */
+.search-input::placeholder {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+.date-input {
+  @apply text-black dark:text-white;
+}
