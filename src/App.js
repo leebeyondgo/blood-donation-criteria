@@ -188,9 +188,14 @@ function App() {
               : 'text-green-500 dark:text-green-400';
 
             return (
-              <li key={item.id} className="result-item">
-                <strong>{item.name}</strong> ({item.type}) - {item.restriction}
-                <div className="period-text">{periodText}</div>
+              <li
+                key={item.id}
+                className="result-item flex flex-col sm:flex-row sm:justify-between"
+              >
+                <div>
+                  <strong>{item.name}</strong> ({item.type}) - {item.restriction}
+                  <div className="period-text">{periodText}</div>
+                </div>
                 <div className={`eligible-date ${colorClass}`}>{message}</div>
               </li>
             );
