@@ -190,5 +190,17 @@
     "restriction_type": "temporal",
     "notes": "항암성중양 치료제",
     "keywords": []
+  },
+  {
+    "id": "c108",
+    "type": "약물",
+    "name": "Amoxicillin",
+    "aliases": [
+      "아목시실린"
+    ],
+    "restriction_period_days": 7,
+    "restriction": "복용 종료 후 7일간 헌혈 금지",
+    "restriction_type": "temporal",
+    "notes": "항생제"
   }
 ]
