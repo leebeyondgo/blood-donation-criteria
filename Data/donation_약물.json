@@ -1,0 +1,74 @@
+[
+  {
+    "type": "약물",
+    "name": "Albendazole",
+    "aliases": ["알벤다졸", "구충제", "Zentel"],
+    "restriction_period_days": 1,
+    "restriction": "복용 당일 헌혈 금지",
+    "notes": "예방적 복용 포함"
+  },
+  {
+    "type": "약물",
+    "name": "Metronidazole",
+    "aliases": ["메트로니다졸", "플라질"],
+    "restriction_period_days": 7,
+    "restriction": "복용 후 7일간 헌혈 금지",
+    "notes": "항원충제 / 체내 대사에 시간 필요"
+  },
+  {
+    "type": "약물",
+    "name": "Amoxicillin",
+    "aliases": ["아목시실린", "페니실린계 항생제"],
+    "restriction_period_days": 3,
+    "restriction": "복용 종료 후 3일 경과 시 헌혈 가능",
+    "notes": "가벼운 감염 치료 목적"
+  },
+  {
+    "type": "약물",
+    "name": "Doxycycline",
+    "aliases": ["독시사이클린", "테트라사이클린계 항생제"],
+    "restriction_period_days": 7,
+    "restriction": "복용 종료 후 7일간 헌혈 금지",
+    "notes": "말라리아 예방약으로도 사용"
+  },
+  {
+    "type": "약물",
+    "name": "Isotretinoin",
+    "aliases": ["이소트레티노인", "아큐탄", "로아큐탄"],
+    "restriction_period_days": 30,
+    "restriction": "복용 종료 후 1개월간 헌혈 금지",
+    "notes": "기형 유발 가능성 있는 비타민A 유도체"
+  },
+  {
+    "type": "약물",
+    "name": "Finasteride",
+    "aliases": ["피나스테리드", "프로페시아"],
+    "restriction_period_days": 30,
+    "restriction": "복용 종료 후 1개월간 헌혈 금지",
+    "notes": "남성형 탈모 치료제 / 여성 수혈 시 기형 유발 가능"
+  },
+  {
+    "type": "약물",
+    "name": "Dutasteride",
+    "aliases": ["두타스테리드", "아보다트"],
+    "restriction_period_days": 180,
+    "restriction": "복용 종료 후 6개월간 헌혈 금지",
+    "notes": "남성 전립선 치료제 / 장기 체내 잔존"
+  },
+  {
+    "type": "약물",
+    "name": "Warfarin",
+    "aliases": ["와파린", "쿠마딘"],
+    "restriction_period_days": -1,
+    "restriction": "복용 중 및 이후 헌혈 불가",
+    "notes": "항응고제 / 출혈 위험"
+  },
+  {
+    "type": "약물",
+    "name": "Methotrexate",
+    "aliases": ["메토트렉세이트"],
+    "restriction_period_days": -1,
+    "restriction": "복용 이력 있는 경우 영구 헌혈 금지",
+    "notes": "항암제/면역억제제"
+  }
+]

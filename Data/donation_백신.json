@@ -1,0 +1,82 @@
+[
+  {
+    "type": "백신",
+    "name": "홍역-볼거리-풍진 혼합백신",
+    "aliases": ["MMR", "홍역", "볼거리", "풍진"],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "notes": "생백신 / 체내 바이러스 활성화 가능성"
+  },
+  {
+    "type": "백신",
+    "name": "수두 백신",
+    "aliases": ["Varicella", "수두"],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "notes": "생백신"
+  },
+  {
+    "type": "백신",
+    "name": "BCG 결핵 백신",
+    "aliases": ["BCG", "결핵 백신"],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "notes": "생백신"
+  },
+  {
+    "type": "백신",
+    "name": "노로바이러스 백신",
+    "aliases": ["Norovirus"],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "notes": "생백신 계열"
+  },
+  {
+    "type": "백신",
+    "name": "A형 간염 백신",
+    "aliases": ["Hepatitis A vaccine", "A형 간염"],
+    "restriction_period_days": 0,
+    "restriction": "접종 당일 헌혈 불가, 다음날부터 가능",
+    "notes": "불활성화 백신"
+  },
+  {
+    "type": "백신",
+    "name": "B형 간염 백신",
+    "aliases": ["Hepatitis B vaccine", "B형 간염"],
+    "restriction_period_days": 0,
+    "restriction": "접종 당일 헌혈 불가, 다음날부터 가능",
+    "notes": "불활성화 백신"
+  },
+  {
+    "type": "백신",
+    "name": "인플루엔자 백신",
+    "aliases": ["독감 백신", "flu shot", "influenza"],
+    "restriction_period_days": 0,
+    "restriction": "접종 당일 헌혈 금지, 다음날부터 가능",
+    "notes": "불활성화 백신"
+  },
+  {
+    "type": "백신",
+    "name": "코로나19 백신",
+    "aliases": ["COVID-19 vaccine", "코로나 백신", "mRNA 백신"],
+    "restriction_period_days": 0,
+    "restriction": "접종 당일 헌혈 금지, 다음날부터 가능",
+    "notes": "mRNA 백신 또는 바이럴 벡터 백신 모두 포함"
+  },
+  {
+    "type": "백신",
+    "name": "광견병 백신",
+    "aliases": ["Rabies vaccine"],
+    "restriction_period_days": 0,
+    "restriction": "접종 당일 헌혈 금지, 다음날부터 가능",
+    "notes": "불활성화 백신"
+  },
+  {
+    "type": "백신",
+    "name": "황열 백신",
+    "aliases": ["Yellow fever vaccine"],
+    "restriction_period_days": 28,
+    "restriction": "접종 후 4주간 헌혈 금지",
+    "notes": "생백신 / 해외여행자 접종 다수"
+  }
+]

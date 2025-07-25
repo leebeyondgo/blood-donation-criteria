@@ -1,0 +1,89 @@
+[
+  {
+    "type": "지역",
+    "name": "베트남",
+    "restriction_period_days": 365,
+    "restriction": "일부 지역 제외, 기타 지역은 헌혈 금지",
+    "exceptions": [
+      "호치민시 (Ho Chi Minh City)",
+      "하노이 (Hanoi)",
+      "다낭 (Da Nang)"
+    ],
+    "notes": "말라리아 위험지역 방문 시 헌혈 금지 / 주요 대도시는 예외"
+  },
+  {
+    "type": "지역",
+    "name": "필리핀",
+    "restriction_period_days": 365,
+    "restriction": "모든 지역 헌혈 금지",
+    "exceptions": [],
+    "notes": "열대열 발생 국가"
+  },
+  {
+    "type": "지역",
+    "name": "태국",
+    "restriction_period_days": 365,
+    "restriction": "방콕 등 일부 지역만 예외",
+    "exceptions": [
+      "방콕 (Bangkok)",
+      "파타야 (Pattaya)"
+    ],
+    "notes": "관광 지역은 예외 / 기타 지역은 말라리아 위험 존재"
+  },
+  {
+    "type": "지역",
+    "name": "경기도 연천군",
+    "restriction_period_days": 365,
+    "restriction": "국내 말라리아 위험지역",
+    "exceptions": [],
+    "notes": "국내에서도 일부 지역은 제한됨"
+  },
+  {
+    "type": "지역",
+    "name": "인도네시아",
+    "restriction_period_days": 365,
+    "restriction": "발리 제외, 대부분 헌혈 금지",
+    "exceptions": [
+      "발리 (Bali)"
+    ],
+    "notes": "자카르타 포함 대부분 지역은 제한"
+  },
+  {
+    "type": "지역",
+    "name": "말레이시아",
+    "restriction_period_days": 365,
+    "restriction": "쿠알라룸푸르 등 대도시 예외",
+    "exceptions": [
+      "쿠알라룸푸르 (Kuala Lumpur)",
+      "조호바루 (Johor Bahru)"
+    ],
+    "notes": "동부 사바/사라왁 지역은 제한됨"
+  },
+  {
+    "type": "지역",
+    "name": "라오스",
+    "restriction_period_days": 365,
+    "restriction": "모든 지역 헌혈 금지",
+    "exceptions": [],
+    "notes": "말라리아 위험국가"
+  },
+  {
+    "type": "지역",
+    "name": "캄보디아",
+    "restriction_period_days": 365,
+    "restriction": "모든 지역 헌혈 금지",
+    "exceptions": [],
+    "notes": "국가 전체가 고위험군"
+  },
+  {
+    "type": "지역",
+    "name": "중국",
+    "restriction_period_days": 365,
+    "restriction": "광둥성, 하이난성 등 일부 지역 방문 시 제한",
+    "exceptions": [
+      "베이징 (Beijing)",
+      "상하이 (Shanghai)"
+    ],
+    "notes": "말라리아 위험 지역 한정"
+  }
+]
