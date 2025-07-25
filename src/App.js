@@ -111,6 +111,14 @@ function App() {
             onChange={(e) => setQuery(e.target.value)}
             size="small"
           />
+          <TextField
+            type="date"
+            aria-label="기준 날짜"
+            value={baseDate}
+            onChange={(e) => setBaseDate(e.target.value)}
+            size="small"
+            className="ml-2"
+          />
         </div>
 
         <div className="flex justify-center items-center gap-3">
@@ -121,6 +129,7 @@ function App() {
               label="카테고리"
               value={filterType}
               onChange={(e) => setFilterType(e.target.value)}
+              inputProps={{ 'aria-label': '카테고리 필터' }}
             >
               <MenuItem value="">전체</MenuItem>
               <MenuItem value="질병">질병</MenuItem>
@@ -130,12 +139,6 @@ function App() {
               <MenuItem value="기타">기타</MenuItem>
             </MUISelect>
           </FormControl>
-          <TextField
-            type="date"
-            value={baseDate}
-            onChange={(e) => setBaseDate(e.target.value)}
-            size="small"
-          />
         </div>
 
 

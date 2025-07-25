@@ -77,3 +77,13 @@ test('검색어 입력 시 필터가 숨겨지고 전체 검색이 수행된다'
   expect(screen.queryByLabelText(/카테고리 필터/i)).toBeNull();
   expect(screen.getByText('문신 시술')).toBeInTheDocument();
 });
+
+test('날짜 입력을 변경하면 계산된 날짜가 표시된다', async () => {
+  render(<App />);
+  const dateInput = screen.getByLabelText(/기준 날짜/i);
+  await userEvent.clear(dateInput);
+  await userEvent.type(dateInput, '2024-01-01');
+  const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
+  await userEvent.type(input, '코로나19');
+  expect(screen.getByText('2024년01월31일')).toBeInTheDocument();
+});
