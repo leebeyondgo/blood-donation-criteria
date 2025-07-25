@@ -11,6 +11,16 @@
   },
   {
     "type": "질병",
+    "name": "감기",
+    "aliases": [
+      "몸살"
+    ],
+    "restriction_period_days": -1,
+    "restriction": "완치 전 까지 헌혈 불가",
+    "notes": "헌혈자 보호"
+  },
+  {
+    "type": "질병",
     "name": "코로나19",
     "aliases": [
       "COVID-19"
