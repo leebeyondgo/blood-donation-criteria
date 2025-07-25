@@ -58,22 +58,6 @@ function App() {
         >
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </button>
-      <input
-        className="search-input"
-        type="text"
-        placeholder="검색어를 입력하세요"
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-      />
-      <input
-        className="date-input"
-        type="date"
-        aria-label="이벤트 날짜"
-        value={eventDate}
-        onChange={e => setEventDate(e.target.value)}
-      />
-      <ul className="result-list">
-        {results.map(item => {
         <div className="flex justify-center items-center gap-2">
           <FiSearch />
           <input
@@ -92,12 +76,12 @@ function App() {
           onChange={e => setEventDate(e.target.value)}
         />
         <ul className="result-list list-none mt-5 flex flex-col items-center space-y-3">
-        {results.map((item, index) => {
-          const period = item.restriction_period_days;
-          let periodText;
-          if (period < 0) {
-            periodText = '영구 금지';
-          } else if (period === 0) {
+          {results.map((item, index) => {
+            const period = item.restriction_period_days;
+            let periodText;
+            if (period < 0) {
+              periodText = '영구 금지';
+            } else if (period === 0) {
             periodText = '금지 기간 없음';
           } else {
             periodText = `금지 기간: ${period}일`;
@@ -122,9 +106,9 @@ function App() {
             </li>
           );
         })
-        {query && results.length === 0 && (
-          <li className="no-result">검색 결과가 없습니다.</li>
-        )}
+          {query && results.length === 0 && (
+            <li className="no-result">검색 결과가 없습니다.</li>
+          )}
         </ul>
       </div>
     </ThemeContext.Provider>
