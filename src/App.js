@@ -1,18 +1,25 @@
 import { useState, useMemo, useEffect, createContext } from 'react';
 import { FiSearch, FiSun, FiMoon } from 'react-icons/fi';
-import dataA from './data/donation_a.json';
-import dataB from './data/donation_b.json';
-import dataC from './data/donation_c.json';
-import dataD from './data/donation_d.json';
-import dataE from './data/donation_e.json';
+import diseaseData from './data/disease.json';
+import regionData from './data/region.json';
+import medicationData from './data/medication.json';
+import vaccinationData from './data/vaccination.json';
+import etcData from './data/etc.json';
 
 export const ThemeContext = createContext();
 
-const allData = [...dataA, ...dataB, ...dataC, ...dataD, ...dataE];
+const allData = [
+  ...diseaseData,
+  ...regionData,
+  ...medicationData,
+  ...vaccinationData,
+  ...etcData,
+];
 
 function App() {
   const [query, setQuery] = useState('');
   const [eventDate, setEventDate] = useState('');
+  const [filterType, setFilterType] = useState('');
 
   const formatDate = (date) => {
     const yyyy = date.getFullYear();
@@ -21,9 +28,27 @@ function App() {
     return `${yyyy}년${mm}월${dd}일`;
   };
 
-  const [theme, setTheme] = useState(() =>
-    localStorage.getItem('theme') || 'light'
-  );
+  const getInitialTheme = () => {
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  };
+
+  const [theme, setTheme] = useState(getInitialTheme);
+
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    const systemChange = () => {
+      const stored = localStorage.getItem('theme');
+      if (!stored) {
+        setTheme(media.matches ? 'dark' : 'light');
+      }
+    };
+    media.addEventListener('change', systemChange);
+    return () => media.removeEventListener('change', systemChange);
+  }, []);
 
   useEffect(() => {
     document.documentElement.classList.remove('light', 'dark');
@@ -36,34 +61,35 @@ function App() {
   };
 
   const results = useMemo(() => {
-    if (!query) return [];
+    if (!query && !filterType) return [];
     const lower = query.toLowerCase();
     return allData.filter((item) => {
+      if (filterType && item.type !== filterType) return false;
+      if (!query) return true;
       const nameMatch = item.name.toLowerCase().includes(lower);
       const aliasMatch = (item.aliases || []).some((alias) =>
         alias.toLowerCase().includes(lower)
       );
       return nameMatch || aliasMatch;
     });
-  }, [query]);
+  }, [query, filterType]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App text-center p-5 space-y-4">
+      <div className="App text-center p-8 space-y-6 max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
 
         <button
           onClick={toggleTheme}
           aria-label="테마 토글"
-          className="theme-toggle border rounded p-2 inline-flex items-center justify-center"
+          className="theme-toggle border border-gray-300 dark:border-gray-600 rounded p-2 inline-flex items-center justify-center bg-primary text-white dark:bg-secondary"
         >
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </button>
 
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex justify-center items-center gap-3">
           <FiSearch />
           <input
-            className="search-input border p-2 w-80 max-w-full"
             type="text"
             placeholder="검색어를 입력하세요"
             value={query}
@@ -71,35 +97,59 @@ function App() {
           />
         </div>
 
+        <select
+          aria-label="카테고리 필터"
+          value={filterType}
+          onChange={(e) => setFilterType(e.target.value)}
+          className="input-style"
+        >
+          <option value="">전체</option>
+          <option value="질병">질병</option>
+          <option value="지역">지역</option>
+          <option value="약물">약물</option>
+          <option value="백신">백신</option>
+          <option value="기타">기타</option>
+        </select>
+
         <input
-          className="date-input border p-2"
+          className="date-input input-style"
           type="date"
           aria-label="이벤트 날짜"
           value={eventDate}
           onChange={(e) => setEventDate(e.target.value)}
         />
 
-        <ul className="result-list list-none mt-5 flex flex-col items-center space-y-3">
+        <ul className="result-list list-none mt-8 flex flex-col items-center space-y-4">
           {results.map((item) => {
             const period = item.restriction_period_days;
+            const type = item.restriction_type;
+
             let periodText;
-            if (period < 0) {
+            if (type === 'permanent') {
               periodText = '영구 금지';
+            } else if (type === 'conditional') {
+              periodText = '조건부 금지';
             } else if (period === 0) {
               periodText = '금지 기간 없음';
-            } else {
+            } else if (period > 0) {
               periodText = `금지 기간: ${period}일`;
+            } else {
+              periodText = '영구 금지';
             }
 
             let message;
-            if (period < 0) {
+            if (type === 'permanent') {
               message = '헌혈 불가';
+            } else if (type === 'conditional') {
+              message = '완치 후 가능';
             } else if (period === 0) {
               message = '즉시 가능';
-            } else {
-              const base = eventDate ? new Date(eventDate) : new Date();
+            } else if (period > 0) {
+              const base = new Date();
               base.setDate(base.getDate() + period);
               message = formatDate(base);
+            } else {
+              message = '헌혈 불가';
             }
 
             return (

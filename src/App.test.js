@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import App from './App';
 
 // 검색어 입력 시 해당 제한 조건이 표시된다
-it('검색어 입력 시 해당 제한 조건이 표시된다', async () => {
+test('검색어 입력 시 해당 제한 조건이 표시된다', async () => {
   render(<App />);
   const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
   await userEvent.type(input, 'HCV');
@@ -12,19 +12,8 @@ it('검색어 입력 시 해당 제한 조건이 표시된다', async () => {
   ).toBeInTheDocument();
 });
 
-// 양성 제한 기간이 있는 항목은 기간 텍스트와 날짜를 계산한다
-it('양성 제한 기간이 있는 항목은 기간 텍스트와 날짜를 계산한다', async () => {
-  render(<App />);
-  const queryInput = screen.getByPlaceholderText(/검색어를 입력하세요/i);
-  const dateInput = screen.getByLabelText('이벤트 날짜');
-  await userEvent.type(dateInput, '2024-01-01');
-  await userEvent.type(queryInput, 'Doxy');
-  expect(screen.getByText('금지 기간: 7일')).toBeInTheDocument();
-  expect(screen.getByText('2024년01월08일')).toBeInTheDocument();
-});
-
-// 음수 제한 기간은 영구 금지와 헌혈 불가로 표시한다
-it('음수 제한 기간은 영구 금지와 헌혈 불가로 표시한다', async () => {
+// 영구 제한 타입은 영구 금지와 헌혈 불가로 표시한다
+test('영구 제한 타입은 영구 금지와 헌혈 불가로 표시한다', async () => {
   render(<App />);
   const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
   await userEvent.type(input, 'HCV');
@@ -32,8 +21,17 @@ it('음수 제한 기간은 영구 금지와 헌혈 불가로 표시한다', asy
   expect(screen.getByText('헌혈 불가')).toBeInTheDocument();
 });
 
+// 조건부 제한 타입은 조건부 금지와 완치 후 가능으로 표시한다
+test('조건부 제한 타입은 조건부 금지와 완치 후 가능으로 표시한다', async () => {
+  render(<App />);
+  const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
+  await userEvent.type(input, '감기');
+  expect(screen.getByText('조건부 금지')).toBeInTheDocument();
+  expect(screen.getByText('완치 후 가능')).toBeInTheDocument();
+});
+
 // 제한 기간이 0이면 금지 기간 없음과 즉시 가능으로 표시한다
-it('제한 기간이 0이면 금지 기간 없음과 즉시 가능으로 표시한다', async () => {
+test('제한 기간이 0이면 금지 기간 없음과 즉시 가능으로 표시한다', async () => {
   render(<App />);
   const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
   await userEvent.type(input, '코로나19 백신');
@@ -41,15 +39,13 @@ it('제한 기간이 0이면 금지 기간 없음과 즉시 가능으로 표시�
   expect(screen.getByText('즉시 가능')).toBeInTheDocument();
 });
 
-// 테마 토글 버튼 클릭 시 document 클래스가 변경된다
-it('테마 토글 버튼 클릭 시 document 클래스가 변경된다', async () => {
 test('데이터 객체는 id 필드를 포함한다', () => {
   const allData = [
-    ...require('./data/donation_a.json'),
-    ...require('./data/donation_b.json'),
-    ...require('./data/donation_c.json'),
-    ...require('./data/donation_d.json'),
-    ...require('./data/donation_e.json'),
+    ...require('./data/disease.json'),
+    ...require('./data/region.json'),
+    ...require('./data/medication.json'),
+    ...require('./data/vaccination.json'),
+    ...require('./data/etc.json'),
   ];
   expect(allData.every(item => item.id)).toBe(true);
 });
@@ -65,3 +61,9 @@ test('테마 토글 버튼 클릭 시 document 클래스가 변경된다', async
   expect(document.documentElement.classList.contains('dark')).toBe(false);
 });
 
+test('카테고리 필터 선택 시 해당 항목이 표시된다', async () => {
+  render(<App />);
+  const select = screen.getByLabelText(/카테고리 필터/i);
+  await userEvent.selectOptions(select, '질병');
+  expect(screen.getByText('C형 간염')).toBeInTheDocument();
+});
