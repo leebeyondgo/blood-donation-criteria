@@ -43,6 +43,18 @@ it('제한 기간이 0이면 금지 기간 없음과 즉시 가능으로 표시�
 
 // 테마 토글 버튼 클릭 시 document 클래스가 변경된다
 it('테마 토글 버튼 클릭 시 document 클래스가 변경된다', async () => {
+test('데이터 객체는 id 필드를 포함한다', () => {
+  const allData = [
+    ...require('./data/donation_a.json'),
+    ...require('./data/donation_b.json'),
+    ...require('./data/donation_c.json'),
+    ...require('./data/donation_d.json'),
+    ...require('./data/donation_e.json'),
+  ];
+  expect(allData.every(item => item.id)).toBe(true);
+});
+
+test('테마 토글 버튼 클릭 시 document 클래스가 변경된다', async () => {
   localStorage.clear();
   render(<App />);
   const button = screen.getByRole('button', { name: /테마 토글/i });
@@ -52,3 +64,4 @@ it('테마 토글 버튼 클릭 시 document 클래스가 변경된다', async (
   await userEvent.click(button);
   expect(document.documentElement.classList.contains('dark')).toBe(false);
 });
+

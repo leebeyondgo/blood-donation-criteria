@@ -1,5 +1,6 @@
 [
   {
+    "id": "d1",
     "type": "백신",
     "name": "MMR",
     "aliases": [
@@ -12,6 +13,7 @@
     "notes": "생백신"
   },
   {
+    "id": "d2",
     "type": "백신",
     "name": "코로나19 백신",
     "aliases": [
