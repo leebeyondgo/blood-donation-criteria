@@ -2,11 +2,9 @@ import { useState, useMemo, useEffect, createContext } from 'react';
 import { FiSearch, FiSun, FiMoon } from 'react-icons/fi';
 import {
   TextField,
-  Select as MUISelect,
-  MenuItem,
-  FormControl,
-  InputLabel,
   IconButton,
+  ToggleButton,
+  ToggleButtonGroup,
 } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
@@ -102,7 +100,7 @@ function App() {
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </IconButton>
 
-        <div className="flex justify-center items-center gap-3">
+        <div className="flex flex-wrap justify-center items-center gap-3">
           <FiSearch />
           <TextField
             variant="outlined"
@@ -111,25 +109,26 @@ function App() {
             onChange={(e) => setQuery(e.target.value)}
             size="small"
           />
+          <ToggleButtonGroup
+            exclusive
+            size="small"
+            value={filterType}
+            onChange={(e, newType) => {
+              if (newType !== null) setFilterType(newType);
+            }}
+            aria-label="카테고리 필터"
+            className={query ? 'invisible' : ''}
+          >
+            <ToggleButton value="">전체</ToggleButton>
+            <ToggleButton value="질병">질병</ToggleButton>
+            <ToggleButton value="지역">지역</ToggleButton>
+            <ToggleButton value="약물">약물</ToggleButton>
+            <ToggleButton value="백신">백신</ToggleButton>
+            <ToggleButton value="기타">기타</ToggleButton>
+          </ToggleButtonGroup>
         </div>
 
         <div className="flex justify-center items-center gap-3">
-          <FormControl size="small" className={query ? 'invisible' : ''}>
-            <InputLabel id="filter-label">카테고리</InputLabel>
-            <MUISelect
-              labelId="filter-label"
-              label="카테고리"
-              value={filterType}
-              onChange={(e) => setFilterType(e.target.value)}
-            >
-              <MenuItem value="">전체</MenuItem>
-              <MenuItem value="질병">질병</MenuItem>
-              <MenuItem value="지역">지역</MenuItem>
-              <MenuItem value="약물">약물</MenuItem>
-              <MenuItem value="백신">백신</MenuItem>
-              <MenuItem value="기타">기타</MenuItem>
-            </MUISelect>
-          </FormControl>
           <TextField
             type="date"
             value={baseDate}
