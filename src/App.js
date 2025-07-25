@@ -1,5 +1,13 @@
 import { useState, useMemo, useEffect, createContext } from 'react';
 import { FiSearch, FiSun, FiMoon } from 'react-icons/fi';
+import {
+  TextField,
+  Select as MUISelect,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  IconButton,
+} from '@mui/material';
 import diseaseData from './data/disease.json';
 import regionData from './data/region.json';
 import medicationData from './data/medication.json';
@@ -83,45 +91,47 @@ function App() {
       <div className="App relative text-center p-8 space-y-6 max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
 
-        <button
+        <IconButton
           onClick={toggleTheme}
           aria-label="테마 토글"
-          className="theme-toggle absolute top-4 right-4 p-2 inline-flex items-center justify-center"
+          className="theme-toggle absolute top-4 right-4"
         >
           {theme === 'light' ? <FiMoon /> : <FiSun />}
-        </button>
+        </IconButton>
 
         <div className="flex justify-center items-center gap-3">
           <FiSearch />
-          <input
-            type="text"
+          <TextField
+            variant="outlined"
             placeholder="검색어를 입력하세요"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="input-style"
+            size="small"
           />
         </div>
 
         <div className="flex justify-center items-center gap-3">
-          <select
-            aria-label="카테고리 필터"
-            value={filterType}
-            onChange={(e) => setFilterType(e.target.value)}
-            className={`input-style w-40${query ? ' invisible' : ''}`}
-          >
-            <option value="">전체</option>
-            <option value="질병">질병</option>
-            <option value="지역">지역</option>
-            <option value="약물">약물</option>
-            <option value="백신">백신</option>
-            <option value="기타">기타</option>
-          </select>
-          <input
+          <FormControl size="small" className={query ? 'invisible' : ''}>
+            <InputLabel id="filter-label">카테고리</InputLabel>
+            <MUISelect
+              labelId="filter-label"
+              label="카테고리"
+              value={filterType}
+              onChange={(e) => setFilterType(e.target.value)}
+            >
+              <MenuItem value="">전체</MenuItem>
+              <MenuItem value="질병">질병</MenuItem>
+              <MenuItem value="지역">지역</MenuItem>
+              <MenuItem value="약물">약물</MenuItem>
+              <MenuItem value="백신">백신</MenuItem>
+              <MenuItem value="기타">기타</MenuItem>
+            </MUISelect>
+          </FormControl>
+          <TextField
             type="date"
-            className="input-style date-input"
             value={baseDate}
             onChange={(e) => setBaseDate(e.target.value)}
-            placeholder="기준 날짜 선택"
+            size="small"
           />
         </div>
 
