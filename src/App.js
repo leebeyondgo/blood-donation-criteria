@@ -79,7 +79,7 @@ function App() {
         <button
           onClick={toggleTheme}
           aria-label="테마 토글"
-          className="theme-toggle border rounded p-2 inline-flex items-center justify-center"
+          className="theme-toggle border border-gray-300 dark:border-gray-600 rounded p-2 inline-flex items-center justify-center"
         >
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </button>
@@ -87,7 +87,6 @@ function App() {
         <div className="flex justify-center items-center gap-2">
           <FiSearch />
           <input
-            className="search-input input-style w-80 max-w-full"
             type="text"
             placeholder="검색어를 입력하세요"
             value={query}
@@ -106,24 +105,34 @@ function App() {
         <ul className="result-list list-none mt-5 flex flex-col items-center space-y-3">
           {results.map((item) => {
             const period = item.restriction_period_days;
+            const type = item.restriction_type;
+
             let periodText;
-            if (period < 0) {
+            if (type === 'permanent') {
               periodText = '영구 금지';
+            } else if (type === 'conditional') {
+              periodText = '조건부 금지';
             } else if (period === 0) {
               periodText = '금지 기간 없음';
-            } else {
+            } else if (period > 0) {
               periodText = `금지 기간: ${period}일`;
+            } else {
+              periodText = '영구 금지';
             }
 
             let message;
-            if (period < 0) {
+            if (type === 'permanent') {
               message = '헌혈 불가';
+            } else if (type === 'conditional') {
+              message = '완치 후 가능';
             } else if (period === 0) {
               message = '즉시 가능';
-            } else {
+            } else if (period > 0) {
               const base = eventDate ? new Date(eventDate) : new Date();
               base.setDate(base.getDate() + period);
               message = formatDate(base);
+            } else {
+              message = '헌혈 불가';
             }
 
             return (

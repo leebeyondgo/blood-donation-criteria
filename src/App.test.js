@@ -23,13 +23,22 @@ test('양성 제한 기간이 있는 항목은 기간 텍스트와 날짜를 계
   expect(screen.getByText('2024년01월08일')).toBeInTheDocument();
 });
 
-// 음수 제한 기간은 영구 금지와 헌혈 불가로 표시한다
-test('음수 제한 기간은 영구 금지와 헌혈 불가로 표시한다', async () => {
+// 영구 제한 타입은 영구 금지와 헌혈 불가로 표시한다
+test('영구 제한 타입은 영구 금지와 헌혈 불가로 표시한다', async () => {
   render(<App />);
   const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
   await userEvent.type(input, 'HCV');
   expect(screen.getByText('영구 금지')).toBeInTheDocument();
   expect(screen.getByText('헌혈 불가')).toBeInTheDocument();
+});
+
+// 조건부 제한 타입은 조건부 금지와 완치 후 가능으로 표시한다
+test('조건부 제한 타입은 조건부 금지와 완치 후 가능으로 표시한다', async () => {
+  render(<App />);
+  const input = screen.getByPlaceholderText(/검색어를 입력하세요/i);
+  await userEvent.type(input, '감기');
+  expect(screen.getByText('조건부 금지')).toBeInTheDocument();
+  expect(screen.getByText('완치 후 가능')).toBeInTheDocument();
 });
 
 // 제한 기간이 0이면 금지 기간 없음과 즉시 가능으로 표시한다
