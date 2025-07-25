@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Roboto', 'ui-sans-serif', 'system-ui'],
+      },
       colors: {
         primary: '#4b5563',
         secondary: '#f43f5e',
