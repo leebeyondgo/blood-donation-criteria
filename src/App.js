@@ -145,11 +145,13 @@ function App() {
               message = '헌혈 불가';
             }
 
+            const colorClass = message === '헌혈 불가' ? 'text-red-500' : 'text-green-500';
+
             return (
               <li key={item.id} className="result-item">
                 <strong>{item.name}</strong> ({item.type}) - {item.restriction}
                 <div className="period-text">{periodText}</div>
-                <div className="eligible-date">{message}</div>
+                <div className={`eligible-date ${colorClass}`}>{message}</div>
               </li>
             );
           })}
