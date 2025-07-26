@@ -65,7 +65,6 @@ const allData = [
         restrictionPeriodDays = 0;
     }
   } else {
-    // restriction이 null이거나 없는 경우 (예: 일반 허용 약물)
     restrictionType = 'none';
   }
 
@@ -95,27 +94,19 @@ function App() {
 
   const results = useMemo(() => {
     const lower = query.toLowerCase();
-
     let filteredData = allData;
-
     if (filterType) {
-      filteredData = filteredData.filter(
-        (item) => item.category === filterType
-      );
+      filteredData = filteredData.filter((item) => item.category === filterType);
     }
-
     if (!query) {
       return filteredData.map((item) => ({ ...item, matchInfo: null }));
     }
-
     return filteredData
       .map((item) => {
         const matchInfo = [];
-
         if (item.name.toLowerCase().includes(lower)) {
           matchInfo.push({ type: 'name', value: item.name });
         }
-
         const matchingAliases = (item.aliases || []).filter((alias) =>
           alias.toLowerCase().includes(lower)
         );
@@ -124,7 +115,6 @@ function App() {
             matchInfo.push({ type: 'alias', value: alias })
           );
         }
-
         const matchingKeywords = (item.keywords || []).filter((keyword) =>
           keyword.toLowerCase().includes(lower)
         );
@@ -133,11 +123,9 @@ function App() {
             matchInfo.push({ type: 'keyword', value: keyword })
           );
         }
-
         if (matchInfo.length > 0) {
           return { ...item, matchInfo };
         }
-
         return null;
       })
       .filter(Boolean);
@@ -145,75 +133,71 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      {/* 이 div는 'w-screen'으로 화면 전체 너비를 차지하고 'relative'로 위치 기준점이 됩니다.
-        'overflow-x-hidden'은 가로 스크롤바가 생기는 것을 방지합니다.
+      {/* 모든 복잡한 wrapper div를 제거하고, 콘텐츠 컨테이너만 남깁니다.
+        이렇게 하면 레이아웃이 훨씬 명확해지고 버그 발생 가능성이 줄어듭니다.
       */}
-      <div className="relative w-screen overflow-x-hidden">
-        {/* 버튼은 이제 화면 전체 너비를 기준으로 'absolute' 위치가 지정됩니다.
-          z-10으로 다른 요소 위에 표시되도록 합니다.
+      <div className="App text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
+        {/* 1. header 태그를 사용해 제목과 버튼을 그룹화합니다.
+          2. 'flex', 'justify-between', 'items-center'를 사용해
+             제목은 왼쪽에, 버튼은 오른쪽에 배치합니다.
+             이것이 가장 안정적이고 표준적인 방법입니다.
         */}
-        <IconButton
-          onClick={toggleTheme}
-          aria-label="테마 토글"
-          className="absolute top-4 right-4 z-10"
-        >
-          {theme === 'light' ? <FiMoon /> : <FiSun />}
-        </IconButton>
-        
-        {/* 콘텐츠 영역은 이전과 같이 'mx-auto'로 중앙 정렬됩니다. */}
-        <div className="App text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
+        <header className="flex justify-between items-center">
           <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
+          <IconButton onClick={toggleTheme} aria-label="테마 토글">
+            {theme === 'light' ? <FiMoon /> : <FiSun />}
+          </IconButton>
+        </header>
 
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-            <div className="flex items-center gap-3">
-              <FiSearch />
-              <TextField
-                variant="outlined"
-                placeholder="검색어를 입력하세요"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                size="small"
-              />
-            </div>
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+          <div className="flex items-center gap-3">
+            <FiSearch />
             <TextField
-              type="date"
-              value={baseDate}
-              onChange={(e) => setBaseDate(e.target.value)}
+              variant="outlined"
+              placeholder="검색어를 입력하세요"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               size="small"
-              inputProps={{ 'aria-label': '기준 날짜' }}
             />
           </div>
-
-          <FormControl
+          <TextField
+            type="date"
+            value={baseDate}
+            onChange={(e) => setBaseDate(e.target.value)}
             size="small"
-            aria-label="카테고리 필터"
-            className={query ? 'invisible mt-3 sm:mt-0' : 'mt-3 sm:mt-0'}
-          >
-            <InputLabel shrink>카테고리 필터</InputLabel>
-            <ToggleButtonGroup
-              exclusive
-              size="small"
-              value={filterType}
-              onChange={(e, newType) => {
-                setFilterType(newType || '');
-              }}
-            >
-              <ToggleButton value="">전체</ToggleButton>
-              <ToggleButton value="질병">질병</ToggleButton>
-              <ToggleButton value="지역">지역</ToggleButton>
-              <ToggleButton value="약물">약물</ToggleButton>
-              <ToggleButton value="백신">백신</ToggleButton>
-              <ToggleButton value="기타">기타</ToggleButton>
-            </ToggleButtonGroup>
-          </FormControl>
-
-          <ResultList
-            results={results}
-            query={query}
-            baseDate={baseDate}
-            formatDate={formatDate}
+            inputProps={{ 'aria-label': '기준 날짜' }}
           />
         </div>
+
+        <FormControl
+          size="small"
+          aria-label="카테고리 필터"
+          className={query ? 'invisible mt-3 sm:mt-0' : 'mt-3 sm:mt-0'}
+        >
+          <InputLabel shrink>카테고리 필터</InputLabel>
+          <ToggleButtonGroup
+            exclusive
+            size="small"
+            value={filterType}
+            onChange={(e, newType) => {
+              setFilterType(newType || '');
+            }}
+          >
+            <ToggleButton value="">전체</ToggleButton>
+            <ToggleButton value="질병">질병</ToggleButton>
+            <ToggleButton value="지역">지역</ToggleButton>
+            <ToggleButton value="약물">약물</ToggleButton>
+            <ToggleButton value="백신">백신</ToggleButton>
+            <ToggleButton value="기타">기타</ToggleButton>
+          </ToggleButtonGroup>
+        </FormControl>
+
+        <ResultList
+          results={results}
+          query={query}
+          baseDate={baseDate}
+          formatDate={formatDate}
+        />
       </div>
     </MuiThemeProvider>
   );
