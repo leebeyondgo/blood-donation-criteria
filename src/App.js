@@ -145,9 +145,13 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      {/* 1. 이 div가 페이지 전체 너비의 'relative' 컨테이너 역할을 하여 위치 기준이 됩니다. */}
-      <div className="relative">
-        {/* 2. 버튼은 이제 페이지 너비 기준 'absolute'로 우측 상단에 위치합니다. */}
+      {/* 이 div는 'w-screen'으로 화면 전체 너비를 차지하고 'relative'로 위치 기준점이 됩니다.
+        'overflow-x-hidden'은 가로 스크롤바가 생기는 것을 방지합니다.
+      */}
+      <div className="relative w-screen overflow-x-hidden">
+        {/* 버튼은 이제 화면 전체 너비를 기준으로 'absolute' 위치가 지정됩니다.
+          z-10으로 다른 요소 위에 표시되도록 합니다.
+        */}
         <IconButton
           onClick={toggleTheme}
           aria-label="테마 토글"
@@ -156,7 +160,7 @@ function App() {
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </IconButton>
         
-        {/* 3. 이 div는 콘텐츠를 중앙 정렬하는 역할만 합니다. */}
+        {/* 콘텐츠 영역은 이전과 같이 'mx-auto'로 중앙 정렬됩니다. */}
         <div className="App text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
           <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
 
