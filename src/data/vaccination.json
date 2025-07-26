@@ -1,7 +1,7 @@
 [
   {
     "id": "vac-001",
-    "category": "inactivated_recombinant_vaccine",
+    "category": "vaccination",
     "name": "사백신 또는 재조합 백신",
     "keywords": [
       "인플루엔자", "독감", "B형간염", "A형간염", "파상풍", "디프테리아", "백일해", 
@@ -19,7 +19,7 @@
   },
   {
     "id": "vac-002",
-    "category": "live_attenuated_vaccine",
+    "category": "vaccination",
     "name": "생백신 (MMR, 수두, BCG 등)",
     "keywords": [
       "홍역", "유행성이하선염", "풍진", "MMR", "수두", "대상포진", "경구용 소아마비", 
@@ -36,7 +36,7 @@
   },
   {
     "id": "vac-003",
-    "category": "live_attenuated_vaccine",
+    "category": "vaccination",
     "name": "두창(천연두) 백신",
     "keywords": ["두창", "천연두"],
     "description": "두창(천연두) 백신을 접종한 경우, 접종 후 8주가 경과해야 헌혈이 가능합니다.",
@@ -50,7 +50,7 @@
   },
   {
     "id": "vac-004",
-    "category": "special_vaccination",
+    "category": "vaccination",
     "name": "면역글로불린 또는 동물교상 후 접종",
     "keywords": ["B형간염 면역글로불린", "HBIG", "광견병", "동물교상"],
     "description": "B형간염 면역글로불린(HBIG)을 투여받았거나, 동물에게 물린 후 광견병 예방접종을 한 경우, 마지막 접종일로부터 1년이 경과해야 헌혈이 가능합니다.",

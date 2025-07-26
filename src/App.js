@@ -18,6 +18,14 @@ import medicationData from './data/medication.json';
 import vaccinationData from './data/vaccination.json';
 import etcData from './data/etc.json';
 
+const categoryMap = {
+  disease: '질병',
+  medication: '약물',
+  vaccination: '백신',
+  etc: '기타',
+  region: '지역',
+};
+
 const allData = [
   ...diseaseData,
   ...medicationData,
@@ -25,7 +33,7 @@ const allData = [
   ...etcData,
   ...regionData,
 ].map((item) => {
-  const { restriction } = item;
+  const { restriction, category } = item;
   let restrictionType = 'default';
   let restrictionPeriodDays = 0;
   let condition = '';
@@ -60,6 +68,7 @@ const allData = [
 
   return {
     ...item,
+    category: categoryMap[category] || '기타',
     restrictionType,
     restrictionPeriodDays,
     condition,
@@ -175,15 +184,15 @@ function App() {
             size="small"
             value={filterType}
             onChange={(e, newType) => {
-              if (newType !== null) setFilterType(newType);
+              setFilterType(newType || '');
             }}
           >
             <ToggleButton value="">전체</ToggleButton>
-            <ToggleButton value="disease">질병</ToggleButton>
-            <ToggleButton value="region">지역</ToggleButton>
-            <ToggleButton value="medication">약물</ToggleButton>
-            <ToggleButton value="vaccination">백신</ToggleButton>
-            <ToggleButton value="etc">기타</ToggleButton>
+            <ToggleButton value="질병">질병</ToggleButton>
+            <ToggleButton value="지역">지역</ToggleButton>
+            <ToggleButton value="약물">약물</ToggleButton>
+            <ToggleButton value="백신">백신</ToggleButton>
+            <ToggleButton value="기타">기타</ToggleButton>
           </ToggleButtonGroup>
         </FormControl>
 

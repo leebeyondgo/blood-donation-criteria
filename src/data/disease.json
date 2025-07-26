@@ -1,7 +1,7 @@
 [
   {
     "id": "disease-001",
-    "category": "common_illness",
+    "category": "disease",
     "name": "감기/몸살/두통 등 경미한 증상",
     "keywords": ["감기", "몸살", "두통", "인후통", "발열", "오한"],
     "description": "감기, 몸살, 두통 등 경미한 질병으로 약을 복용했거나 치료(주사 포함)를 받은 경우, 증상이 모두 사라지고 완치된 후 헌혈이 가능합니다. 단, 해열제나 진통제만 복용한 경우는 당일 헌혈이 가능할 수 있으니 문진 시 꼭 알려주세요.",
@@ -15,7 +15,7 @@
   },
   {
     "id": "disease-002",
-    "category": "inflammatory_disease",
+    "category": "disease",
     "name": "일반적인 염증성 질환",
     "keywords": ["장염", "방광염", "신우신염", "편도선염", "기관지염", "폐렴"],
     "description": "장염, 방광염, 폐렴 등 염증성 질환은 완치될 때까지 헌혈할 수 없습니다. 항생제 복용이 끝난 후 헌혈에 참여해주세요.",
@@ -29,7 +29,7 @@
   },
   {
     "id": "disease-003",
-    "category": "infectious_disease",
+    "category": "disease",
     "name": "코로나바이러스감염증-19 (COVID-19)",
     "keywords": ["코로나", "코로나19", "COVID-19"],
     "description": "코로나19 확진 후 격리 해제일(증상 소실일)로부터 10일이 경과해야 헌혈할 수 있습니다.",
@@ -43,7 +43,7 @@
   },
   {
     "id": "disease-004",
-    "category": "infectious_disease",
+    "category": "disease",
     "name": "뎅기열/지카바이러스/치쿤구니야열 등",
     "keywords": ["뎅기열", "지카바이러스", "치쿤구니야열", "웨스트나일열"],
     "description": "뎅기열, 지카바이러스 감염증, 치쿤구니야열, 웨스트나일열 진단 및 치료 후 완치일로부터 6개월간 헌혈할 수 없습니다.",
@@ -57,7 +57,7 @@
   },
   {
     "id": "disease-005",
-    "category": "std",
+    "category": "disease",
     "name": "매독/임질/클라미디아 등",
     "keywords": ["매독", "임질", "클라미디아", "연성하감", "성기단순포진", "첨규콘딜롬"],
     "description": "매독, 임질 등 성매개감염병은 완치일로부터 1년간 헌혈할 수 없습니다.",
@@ -71,7 +71,7 @@
   },
   {
     "id": "disease-006",
-    "category": "infectious_disease",
+    "category": "disease",
     "name": "A형 간염, 급성 B형 간염",
     "keywords": ["A형간염", "급성B형간염"],
     "description": "A형 간염 또는 급성 B형 간염으로 진단받고 완치된 날로부터 1년간 헌혈할 수 없습니다.",
@@ -85,7 +85,7 @@
   },
   {
     "id": "disease-007",
-    "category": "infectious_disease",
+    "category": "disease",
     "name": "말라리아",
     "keywords": ["말라리아"],
     "description": "말라리아로 진단받고 치료가 종료된 날로부터 3년간 헌혈할 수 없습니다.",
@@ -99,7 +99,7 @@
   },
   {
     "id": "disease-008",
-    "category": "infectious_disease",
+    "category": "disease",
     "name": "결핵",
     "keywords": ["결핵"],
     "description": "결핵 치료가 완전히 종료된 후 2년간 헌혈할 수 없습니다.",
@@ -113,7 +113,7 @@
   },
   {
     "id": "disease-009",
-    "category": "infectious_disease",
+    "category": "disease",
     "name": "브루셀라증",
     "keywords": ["브루셀라증"],
     "description": "브루셀라증으로 진단받고 완치된 날로부터 2년간 헌혈할 수 없습니다.",
@@ -127,7 +127,7 @@
   },
   {
     "id": "disease-010",
-    "category": "permanent_ban_disease",
+    "category": "disease",
     "name": "영구 헌혈 금지 질병",
     "keywords": ["만성B형간염", "C형간염", "후천성면역결핍증", "AIDS", "HTLV", "바베스열원충증", "샤가스병", "리슈만편모충증", "변종 크로이츠펠트-야콥병", "CJD", "vCJD", "한센병", "큐열", "톡소포자충증"],
     "description": "특정 감염병(만성 B형간염, C형간염, AIDS 등) 또는 변종 크로이츠펠트-야콥병(vCJD) 관련 위험 요인이 있는 경우 영구적으로 헌혈에 참여할 수 없습니다.",
@@ -141,7 +141,7 @@
   },
   {
     "id": "disease-011",
-    "category": "allergy",
+    "category": "disease",
     "name": "비염/알레르기",
     "keywords": ["비염", "알레르기", "알러지", "아토피", "두드러기", "건선"],
     "description": "알레르기 증상이 심하지 않고, 약물 복용 시 항히스타민제 등 헌혈에 지장이 없는 약을 복용한 경우 헌혈이 가능합니다. 단, 스테로이드 성분이 포함된 약을 복용하거나 주사를 맞은 경우 일정 기간 헌혈이 제한될 수 있으므로 문진 시 꼭 알려주세요.",
