@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.match-info {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.match-tag {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-right: 4px;
+}
+
+.suggestions {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
 body {
   @apply text-gray-800 dark:text-white;
 }

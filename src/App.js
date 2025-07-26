@@ -74,21 +74,45 @@ function App() {
 
   const results = useMemo(() => {
     const lower = query.toLowerCase();
-    return allData.filter((item) => {
-      if (!query) {
-        if (filterType && item.type !== filterType) return false;
-        return true;
-      }
+    if (!query) {
+      return allData
+        .filter((item) => !filterType || item.type === filterType)
+        .map((item) => ({ ...item, matchInfo: null }));
+    }
 
-      const nameMatch = item.name.toLowerCase().includes(lower);
-      const aliasMatch = (item.aliases || []).some((alias) =>
-        alias.toLowerCase().includes(lower)
-      );
-      const keywordMatch = (item.keywords || []).some((keyword) =>
-        keyword.toLowerCase().includes(lower)
-      );
-      return nameMatch || aliasMatch || keywordMatch;
-    });
+    return allData
+      .map((item) => {
+        const matchInfo = [];
+
+        if (item.name.toLowerCase().includes(lower)) {
+          matchInfo.push({ type: 'name', value: item.name });
+        }
+
+        const matchingAliases = (item.aliases || []).filter((alias) =>
+          alias.toLowerCase().includes(lower)
+        );
+        if (matchingAliases.length > 0) {
+          matchingAliases.forEach((alias) =>
+            matchInfo.push({ type: 'alias', value: alias })
+          );
+        }
+
+        const matchingKeywords = (item.keywords || []).filter((keyword) =>
+          keyword.toLowerCase().includes(lower)
+        );
+        if (matchingKeywords.length > 0) {
+          matchingKeywords.forEach((keyword) =>
+            matchInfo.push({ type: 'keyword', value: keyword })
+          );
+        }
+
+        if (matchInfo.length > 0) {
+          return { ...item, matchInfo };
+        }
+
+        return null;
+      })
+      .filter(Boolean);
   }, [query, filterType]);
 
   return (
@@ -194,6 +218,15 @@ function App() {
               >
                 <div>
                   <strong>{item.name}</strong> ({item.type}) - {item.restriction}
+                  {item.matchInfo && (
+                    <div className="match-info">
+                      {item.matchInfo.map((match, i) => (
+                        <span key={i} className="match-tag">
+                          {match.value} ({match.type})
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <div className="period-text">{periodText}</div>
                 </div>
                 <div className={`eligible-date ${colorClass}`}>{message}</div>
@@ -205,6 +238,15 @@ function App() {
             <li className="no-result">검색 결과가 없습니다.</li>
           )}
         </ul>
+
+        <div className="suggestions">
+          <h2>개선 제안</h2>
+          <ul>
+            <li>검색 시 일치하는 키워드/별명 표시</li>
+            <li>사용자 피드백 기능</li>
+            <li>PWA 지원</li>
+          </ul>
+        </div>
       </div>
       </ThemeProvider>
     </ThemeContext.Provider>
