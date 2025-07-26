@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 .match-info {
-  font-size: 0.8rem;
-  color: #888;
+  @apply mt-1;
 }
 
 .match-tag {
-  background-color: #eee;
-  border-radius: 4px;
-  padding: 2px 4px;
-  margin-right: 4px;
+  @apply text-xs inline-block rounded-full px-2 py-1 mr-1 mb-1;
+  @apply bg-gray-200 text-gray-700;
+}
+
+.dark .match-tag {
+  @apply bg-gray-700 text-gray-200;
 }
 
 .suggestions {
