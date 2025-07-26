@@ -50,3 +50,7 @@ html.dark {
 .eligible-date {
   @apply text-sm sm:text-right;
 }
+.theme-toggle {
+  @apply fixed z-50;
+}
+
