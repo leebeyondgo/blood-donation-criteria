@@ -145,16 +145,14 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <IconButton
+        onClick={toggleTheme}
+        aria-label="테마 토글"
+        className="theme-toggle absolute top-4 right-4">
+        {theme === 'light' ? <FiMoon /> : <FiSun />}
+      </IconButton>
       <div className="App relative text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
-
-        <IconButton
-          onClick={toggleTheme}
-          aria-label="테마 토글"
-          className="theme-toggle absolute top-4 right-4"
-        >
-          {theme === 'light' ? <FiMoon /> : <FiSun />}
-        </IconButton>
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
           <div className="flex items-center gap-3">
