@@ -18,7 +18,7 @@ html.dark {
 
 .result-item {
   /* Material Design 3 스타일 카드 */
-  @apply bg-[#f4eff4] dark:bg-[#1c1b1f] dark:shadow-md p-4 rounded-lg w-full max-w-2xl mx-auto text-left flex flex-col sm:flex-row sm:items-center sm:justify-between;
+  @apply bg-[#f4eff4] dark:bg-[#1c1b1f] dark:shadow-md p-3 sm:p-4 rounded-lg w-full max-w-2xl mx-auto text-left;
 }
 .no-result {
   @apply text-red-500 p-4;
