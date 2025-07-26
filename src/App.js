@@ -133,21 +133,28 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      {/* 모든 복잡한 wrapper div를 제거하고, 콘텐츠 컨테이너만 남깁니다.
-        이렇게 하면 레이아웃이 훨씬 명확해지고 버그 발생 가능성이 줄어듭니다.
+      {/*
+        1. 메인 콘텐츠 컨테이너에 'relative'를 추가해 위치 기준점으로 만듭니다.
+           이제 이 안의 'absolute' 요소들은 이 div를 기준으로 움직입니다.
       */}
-      <div className="App text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
-        {/* 1. header 태그를 사용해 제목과 버튼을 그룹화합니다.
-          2. 'flex', 'justify-between', 'items-center'를 사용해
-             제목은 왼쪽에, 버튼은 오른쪽에 배치합니다.
-             이것이 가장 안정적이고 표준적인 방법입니다.
+      <div className="App relative text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
+        {/*
+          2. 버튼에 'absolute'를 주고 우측 상단으로 보냅니다.
+             padding 값과 동일하게 'top-4 right-4' (sm 이상에서는 'top-8 right-8')를 주어
+             콘텐츠 영역의 우측 상단에 예쁘게 위치하도록 합니다.
         */}
-        <header className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
-          <IconButton onClick={toggleTheme} aria-label="테마 토글">
-            {theme === 'light' ? <FiMoon /> : <FiSun />}
-          </IconButton>
-        </header>
+        <IconButton
+          onClick={toggleTheme}
+          aria-label="테마 토글"
+          className="absolute top-4 right-4 sm:top-8 sm:right-8"
+        >
+          {theme === 'light' ? <FiMoon /> : <FiSun />}
+        </IconButton>
+
+        {/*
+          3. 제목은 'text-center' 클래스 덕분에 여전히 중앙 정렬을 유지합니다.
+        */}
+        <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
           <div className="flex items-center gap-3">
