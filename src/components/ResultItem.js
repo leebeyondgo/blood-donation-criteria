@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tooltip } from '@mui/material';
+import { FaInfoCircle } from 'react-icons/fa';
 
 const ResultItem = ({ item, baseDate, formatDate }) => {
   const {
@@ -51,19 +52,17 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
     <li className="result-item flex flex-col p-4 rounded-lg shadow-md bg-white dark:bg-gray-800 w-full">
       <div className="flex justify-between items-start">
         <div className="flex-grow text-left">
-          <strong className="font-bold text-lg">{name}</strong>
+          <strong className="font-bold text-lg">
+            {name}
+            <Tooltip title={description} arrow>
+              <span className="ml-2">
+                <FaInfoCircle className="inline text-gray-400" />
+              </span>
+            </Tooltip>
+          </strong>
           <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
             ({category})
           </span>
-          <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-            {description.length > 50 ? (
-              <Tooltip title={description} arrow>
-                <span>{`${description.substring(0, 50)}...`}</span>
-              </Tooltip>
-            ) : (
-              description
-            )}
-          </div>
           {periodText && (
             <div className="period-text text-sm text-gray-600 dark:text-gray-300 mt-1">
               {periodText}
