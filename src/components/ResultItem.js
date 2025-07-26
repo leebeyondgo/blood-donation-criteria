@@ -13,6 +13,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
     allowable,
     restriction,
     category,
+    condition,
   } = item;
 
   let periodText = '';
@@ -45,7 +46,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
     eligibilityMessage = `${formatDate(eligibilityDate)}부터 가능`;
     colorClass = 'text-orange-500 dark:text-orange-400';
   } else {
-    eligibilityMessage = '조건부 가능';
+    eligibilityMessage = condition || '의사와의 상담 후 가능';
     colorClass = 'text-blue-500 dark:text-blue-400';
   }
 
