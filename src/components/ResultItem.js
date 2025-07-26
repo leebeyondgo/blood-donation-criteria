@@ -22,7 +22,6 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
     restrictionType,
     condition,
     name,
-    type,
     description,
     matchInfo,
     allowable,
