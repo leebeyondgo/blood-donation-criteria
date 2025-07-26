@@ -1,8 +1,7 @@
-import React from 'react';
-import { Tooltip } from '@mui/material';
-import { FaInfoCircle } from 'react-icons/fa';
+import React, { useState } from 'react';
 
 const ResultItem = ({ item, baseDate, formatDate }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const {
     restrictionPeriodDays,
     restrictionType,
@@ -54,15 +53,15 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
         <div className="flex-grow text-left">
           <strong className="font-bold text-lg">
             {name}
-            <Tooltip title={description} arrow>
-              <span className="ml-2">
-                <FaInfoCircle className="inline text-gray-400" />
-              </span>
-            </Tooltip>
           </strong>
           <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
             ({category})
           </span>
+          {description && (
+            <button onClick={() => setIsExpanded(!isExpanded)} className="ml-2 text-sm text-blue-500 hover:underline">
+              {isExpanded ? '숨기기' : '더보기'}
+            </button>
+          )}
           {periodText && (
             <div className="period-text text-sm text-gray-600 dark:text-gray-300 mt-1">
               {periodText}
@@ -75,6 +74,11 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
           {eligibilityMessage}
         </div>
       </div>
+      {isExpanded && description && (
+        <div className="description mt-2 text-left text-sm text-gray-600 dark:text-gray-300">
+          {description}
+        </div>
+      )}
       {matchInfo && (
         <div className="match-info mt-2 text-left">
           {matchInfo.map((match, i) => (
