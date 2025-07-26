@@ -145,69 +145,71 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <div className="App relative text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
-        {/* IconButton을 div 안으로 이동시키고, 'absolute'로 변경합니다. */}
+      {/* 1. 새로운 relative div로 전체를 감싸 위치 기준을 만듭니다. */}
+      <div className="relative">
+        {/* 2. IconButton을 새로운 div 바로 아래에 두어 페이지 너비 기준으로 위치시킵니다. */}
         <IconButton
           onClick={toggleTheme}
           aria-label="테마 토글"
-          className="absolute top-4 right-4"
+          className="absolute top-4 right-4 z-10"
         >
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </IconButton>
 
-        <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
+        {/* 3. 기존 App div는 더 이상 relative일 필요가 없습니다. */}
+        <div className="App text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
+          <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
 
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-          <div className="flex items-center gap-3">
-            <FiSearch />
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div className="flex items-center gap-3">
+              <FiSearch />
+              <TextField
+                variant="outlined"
+                placeholder="검색어를 입력하세요"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                size="small"
+              />
+            </div>
             <TextField
-              variant="outlined"
-              placeholder="검색어를 입력하세요"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              type="date"
+              value={baseDate}
+              onChange={(e) => setBaseDate(e.target.value)}
               size="small"
+              inputProps={{ 'aria-label': '기준 날짜' }}
             />
           </div>
-          <TextField
-            type="date"
-            value={baseDate}
-            onChange={(e) => setBaseDate(e.target.value)}
+
+          <FormControl
             size="small"
-            inputProps={{ 'aria-label': '기준 날짜' }}
+            aria-label="카테고리 필터"
+            className={query ? 'invisible mt-3 sm:mt-0' : 'mt-3 sm:mt-0'}
+          >
+            <InputLabel shrink>카테고리 필터</InputLabel>
+            <ToggleButtonGroup
+              exclusive
+              size="small"
+              value={filterType}
+              onChange={(e, newType) => {
+                setFilterType(newType || '');
+              }}
+            >
+              <ToggleButton value="">전체</ToggleButton>
+              <ToggleButton value="질병">질병</ToggleButton>
+              <ToggleButton value="지역">지역</ToggleButton>
+              <ToggleButton value="약물">약물</ToggleButton>
+              <ToggleButton value="백신">백신</ToggleButton>
+              <ToggleButton value="기타">기타</ToggleButton>
+            </ToggleButtonGroup>
+          </FormControl>
+
+          <ResultList
+            results={results}
+            query={query}
+            baseDate={baseDate}
+            formatDate={formatDate}
           />
         </div>
-
-        <FormControl
-          size="small"
-          aria-label="카테고리 필터"
-          className={query ? 'invisible mt-3 sm:mt-0' : 'mt-3 sm:mt-0'}
-        >
-          <InputLabel shrink>카테고리 필터</InputLabel>
-          <ToggleButtonGroup
-            exclusive
-            size="small"
-            value={filterType}
-            onChange={(e, newType) => {
-              setFilterType(newType || '');
-            }}
-          >
-            <ToggleButton value="">전체</ToggleButton>
-            <ToggleButton value="질병">질병</ToggleButton>
-            <ToggleButton value="지역">지역</ToggleButton>
-            <ToggleButton value="약물">약물</ToggleButton>
-            <ToggleButton value="백신">백신</ToggleButton>
-            <ToggleButton value="기타">기타</ToggleButton>
-          </ToggleButtonGroup>
-        </FormControl>
-
-
-
-        <ResultList
-          results={results}
-          query={query}
-          baseDate={baseDate}
-          formatDate={formatDate}
-        />
       </div>
     </MuiThemeProvider>
   );
