@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 
 const ResultItem = ({ item, baseDate, formatDate }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -58,8 +60,8 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
             ({category})
           </span>
           {description && (
-            <button onClick={() => setIsExpanded(!isExpanded)} className="ml-2 text-sm text-blue-500 hover:underline">
-              {isExpanded ? '숨기기' : '더보기'}
+            <button onClick={() => setIsExpanded(!isExpanded)} className="ml-2 text-sm text-blue-500">
+              {isExpanded ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
             </button>
           )}
           {periodText && (
