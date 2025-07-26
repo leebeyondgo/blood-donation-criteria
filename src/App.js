@@ -145,9 +145,9 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      {/* 1. 새로운 relative div로 전체를 감싸 위치 기준을 만듭니다. */}
+      {/* 1. 이 div가 페이지 전체 너비의 'relative' 컨테이너 역할을 하여 위치 기준이 됩니다. */}
       <div className="relative">
-        {/* 2. IconButton을 새로운 div 바로 아래에 두어 페이지 너비 기준으로 위치시킵니다. */}
+        {/* 2. 버튼은 이제 페이지 너비 기준 'absolute'로 우측 상단에 위치합니다. */}
         <IconButton
           onClick={toggleTheme}
           aria-label="테마 토글"
@@ -155,8 +155,8 @@ function App() {
         >
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </IconButton>
-
-        {/* 3. 기존 App div는 더 이상 relative일 필요가 없습니다. */}
+        
+        {/* 3. 이 div는 콘텐츠를 중앙 정렬하는 역할만 합니다. */}
         <div className="App text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
           <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
 
