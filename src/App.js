@@ -238,15 +238,6 @@ function App() {
             <li className="no-result">검색 결과가 없습니다.</li>
           )}
         </ul>
-
-        <div className="suggestions">
-          <h2>개선 제안</h2>
-          <ul>
-            <li>검색 시 일치하는 키워드/별명 표시</li>
-            <li>사용자 피드백 기능</li>
-            <li>PWA 지원</li>
-          </ul>
-        </div>
       </div>
       </ThemeProvider>
     </ThemeContext.Provider>
