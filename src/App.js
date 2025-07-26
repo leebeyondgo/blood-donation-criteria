@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useContext } from 'react';
+import { useState, useMemo, useContext } from 'react';
 import { FiSearch, FiSun, FiMoon } from 'react-icons/fi';
 import {
   TextField,
@@ -7,7 +7,6 @@ import {
   ToggleButtonGroup,
   FormControl,
   InputLabel,
-  Tooltip,
 } from '@mui/material';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
