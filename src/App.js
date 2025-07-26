@@ -20,10 +20,13 @@ import etcData from './data/etc.json';
 
 const categoryMap = {
   disease: '질병',
+  region: '지역',
   medication: '약물',
   vaccination: '백신',
+  malaria_domestic: '지역',
+  malaria_international: '지역',
+  vcjd: '지역',
   etc: '기타',
-  region: '지역',
 };
 
 const allData = [
