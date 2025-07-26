@@ -70,7 +70,6 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
               {periodText}
             </div>
           )}
-          </div>
         </div>
         <div
           className={`eligible-date ${colorClass} font-semibold whitespace-nowrap`}
