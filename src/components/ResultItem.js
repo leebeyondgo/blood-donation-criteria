@@ -5,7 +5,6 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
   const {
     restrictionPeriodDays,
     restrictionType,
-    condition,
     name,
     description,
     matchInfo,
