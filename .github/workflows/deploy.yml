@@ -1,7 +1,10 @@
 name: Deploy to GitHub Pages
 
+# main 브랜치에 push 이벤트가 발생했을 때 워크플로우를 실행합니다.
 on:
-  workflow_dispatch:        # 수동 실행 전용
+  push:
+    branches:
+      - main  # 또는 'master' 등 기본 브랜치 이름
 
 permissions:
   contents: write
@@ -13,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with: { node-version: 18 }
-      - run: npm ci          # install 보다 빠르고 재현성 ↑
+      - run: npm ci
       - run: npm run build
       - uses: peaceiris/actions-gh-pages@v3
         with:
