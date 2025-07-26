@@ -1,119 +1,103 @@
 [
   {
-    "id": "b1",
-    "type": "지역",
-    "name": "베트남",
-    "restriction_period_days": 365,
-    "restriction": "일부 지역 제외, 기타 지역은 헌혈 금지",
-    "exceptions": [
-      "호치민시",
-      "하노이",
-      "다낭"
-    ],
-    "notes": "말라리아 위험 지역",
-    "restriction_type": "temporal",
-    "keywords": []
+    "id": "region-001",
+    "category": "malaria_domestic",
+    "name": "국내 말라리아 헌혈 제한지역",
+    "keywords": ["파주", "연천", "강화", "철원", "말라리아", "군복무"],
+    "description": "국내 말라리아 위험지역(파주시, 연천군, 인천 강화군, 강원 철원군)에서 1박 이상 숙박했거나, 해당 지역에서 군 복무를 한 경우, 마지막 방문(거주)일로부터 1년간 전혈헌혈 및 혈소판성분헌혈을 할 수 없습니다. 단, 혈장성분헌혈은 언제나 가능하며, 위험지역에 방문했더라도 4월부터 10월 사이에 방문한 경우에만 제한이 적용됩니다. (11월~3월 방문은 제한 없음)",
+    "allowable": false,
+    "restriction": {
+      "type": "period_for_whole_platelet",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "해당 지역 최종 방문(거주)일로부터 (전혈, 혈소판성분헌혈만 제한)",
+      "exception": {
+        "type": "seasonal",
+        "period": "11월-3월",
+        "note": "동절기(11월~3월)에 방문한 경우는 헌혈 제한에 해당하지 않습니다."
+      }
+    }
   },
   {
-    "id": "b2",
-    "type": "지역",
-    "name": "필리핀",
-    "restriction_period_days": 365,
-    "restriction": "모든 지역 헌혈 금지",
-    "exceptions": [],
-    "notes": "열대열 발생 국가",
-    "restriction_type": "temporal",
-    "keywords": []
+    "id": "region-002",
+    "category": "malaria_international",
+    "name": "국외 말라리아 위험지역 (단기 체류: 1일 이상 6개월 미만)",
+    "keywords": ["국외 말라리아", "해외 말라리아", "여행", "체류", "가나", "중국", "태국", "필리핀", "베트남", "인도"],
+    "description": "국외 말라리아 위험지역에서 1일 이상 6개월 미만 체류한 경우, 귀국일로부터 1년간 전혈헌혈 및 혈소판성분헌혈을 할 수 없습니다. 단, 혈장성분헌혈은 가능하며, 방문 지역에 따라 헌혈 가능 여부가 다를 수 있습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period_for_whole_platelet",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "귀국일로부터 (전혈, 혈소판성분헌혈만 제한)"
+    },
+    "countries": [
+      {"countryName": "중국", "ruleType": "inclusion", "areas": ["윈난성", "하이난성"], "note": "윈난성, 하이난성만 위험지역입니다."},
+      {"countryName": "태국", "ruleType": "exclusion", "areas": ["방콕", "파타야", "푸켓", "치앙마이"], "note": "방콕, 파타야, 푸켓, 치앙마이 등 주요 도시 지역은 위험지역에서 제외됩니다."},
+      {"countryName": "필리핀", "ruleType": "exclusion", "areas": ["마닐라", "세부"], "note": "마닐라, 세부 등 주요 도시 지역은 위험지역에서 제외됩니다."},
+      {"countryName": "말레이시아", "ruleType": "inclusion", "areas": ["사라왁", "사바"], "note": "사라왁, 사바 주 등 내륙 정글 지역이 위험지역에 해당합니다."},
+      {"countryName": "남아프리카공화국", "ruleType": "inclusion", "areas": ["크루거 국립공원", "림포포 주", "음푸말랑가 주"], "note": "크루거 국립공원을 포함한 동부 지역(림포포 주, 음푸말랑가 주)이 위험지역입니다."},
+      {"countryName": "케냐", "ruleType": "exclusion", "areas": ["나이로비"], "note": "수도 나이로비는 위험지역에서 제외됩니다."},
+      {"countryName": "에티오피아", "ruleType": "exclusion", "areas": ["아디스아바바"], "note": "수도 아디스아바바는 위험지역에서 제외됩니다."},
+      {"countryName": "에리트레아", "ruleType": "exclusion", "areas": ["아스마라"], "note": "수도 아스마라는 위험지역에서 제외됩니다."},
+      {"countryName": "사우디아라비아", "ruleType": "inclusion", "areas": ["예멘 국경"], "note": "예멘과의 국경 지역만 위험지역입니다."},
+      {"countryName": "오만", "ruleType": "inclusion", "areas": ["무산담 주"], "note": "무산담 주만 위험지역입니다."},
+      {"countryName": "아메리카/아프리카/기타 아시아 국가", "ruleType": "all", "areas": [], "note": "방문하신 국가의 대부분 지역이 위험지역일 수 있습니다. 위에 명시되지 않은 국가는 전 지역이 위험지역으로 간주될 수 있으니 문진 시 꼭 확인해주세요."}
+    ]
   },
   {
-    "id": "b3",
-    "type": "지역",
-    "name": "인도네시아",
-    "restriction_period_days": 365,
-    "restriction": "발리 제외, 대부분 헌혈 금지",
-    "exceptions": [
-      "발리 (Bali)"
-    ],
-    "notes": "자카르타 포함 대부분 지역은 제한",
-    "restriction_type": "temporal",
-    "keywords": []
+    "id": "region-003",
+    "category": "malaria_international",
+    "name": "국외 말라리아 위험지역 (장기 체류: 6개월 이상)",
+    "keywords": ["국외 말라리아", "해외 말라리아", "거주", "유학", "파견", "가나", "중국", "태국", "필리핀", "베트남", "인도"],
+    "description": "국외 말라리아 위험지역에서 6개월 이상 거주(체류)한 경우, 귀국일로부터 3년간 전혈헌혈 및 혈소판성분헌혈을 할 수 없습니다. 단, 혈장성분헌혈은 가능하며, 거주 지역에 따라 헌혈 가능 여부가 다를 수 있습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period_for_whole_platelet",
+      "periodValue": 3,
+      "periodUnit": "year",
+      "condition": "귀국일로부터 (전혈, 혈소판성분헌혈만 제한)"
+    },
+    "countries": [
+      {"countryName": "중국", "ruleType": "inclusion", "areas": ["윈난성", "하이난성"], "note": "윈난성, 하이난성만 위험지역입니다."},
+      {"countryName": "태국", "ruleType": "exclusion", "areas": ["방콕", "파타야", "푸켓", "치앙마이"], "note": "방콕, 파타야, 푸켓, 치앙마이 등 주요 도시 지역은 위험지역에서 제외됩니다."},
+      {"countryName": "필리핀", "ruleType": "exclusion", "areas": ["마닐라", "세부"], "note": "마닐라, 세부 등 주요 도시 지역은 위험지역에서 제외됩니다."},
+      {"countryName": "말레이시아", "ruleType": "inclusion", "areas": ["사라왁", "사바"], "note": "사라왁, 사바 주 등 내륙 정글 지역이 위험지역에 해당합니다."},
+      {"countryName": "남아프리카공화국", "ruleType": "inclusion", "areas": ["크루거 국립공원", "림포포 주", "음푸말랑가 주"], "note": "크루거 국립공원을 포함한 동부 지역(림포포 주, 음푸말랑가 주)이 위험지역입니다."},
+      {"countryName": "케냐", "ruleType": "exclusion", "areas": ["나이로비"], "note": "수도 나이로비는 위험지역에서 제외됩니다."},
+      {"countryName": "에티오피아", "ruleType": "exclusion", "areas": ["아디스아바바"], "note": "수도 아디스아바바는 위험지역에서 제외됩니다."},
+      {"countryName": "에리트레아", "ruleType": "exclusion", "areas": ["아스마라"], "note": "수도 아스마라는 위험지역에서 제외됩니다."},
+      {"countryName": "사우디아라비아", "ruleType": "inclusion", "areas": ["예멘 국경"], "note": "예멘과의 국경 지역만 위험지역입니다."},
+      {"countryName": "오만", "ruleType": "inclusion", "areas": ["무산담 주"], "note": "무산담 주만 위험지역입니다."},
+      {"countryName": "아메리카/아프리카/기타 아시아 국가", "ruleType": "all", "areas": [], "note": "거주하신 국가의 대부분 지역이 위험지역일 수 있습니다. 위에 명시되지 않은 국가는 전 지역이 위험지역으로 간주될 수 있으니 문진 시 꼭 확인해주세요."}
+    ]
   },
   {
-    "id": "b100",
-    "type": "지역",
-    "name": "영국",
-    "aliases": [
-      "잉글랜드",
-      "스코틀랜드",
-      "웨일즈",
-      "북아일랜드"
-    ],
-    "restriction_period_days": -1,
-    "restriction": "1980년~1996년까지 3개월 이상 거주 시 헌혈 금지",
-    "restriction_type": "permanent",
-    "notes": "vCJD 위험 지역 (변종 크로이츠펠트-야콥병)",
-    "keywords": []
+    "id": "region-004",
+    "category": "vcjd",
+    "name": "변종 크로이츠펠트-야콥병(vCJD) 위험지역 (영국)",
+    "keywords": ["영국", "스코틀랜드", "웨일스", "북아일랜드", "잉글랜드", "맨섬", "채널제도", "지브롤터"],
+    "description": "1980년부터 1996년까지 영국에서 총 3개월 이상 거주(체류)한 경우 영구적으로 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "1980-1996년 사이 총 3개월 이상 체류 이력"
+    }
   },
   {
-    "id": "b101",
-    "type": "지역",
-    "name": "프랑스",
-    "aliases": [
-      "프랑스",
-      "아일랜드"
-    ],
-    "restriction_period_days": -1,
-    "restriction": "1980년~2001년까지 5년 이상 거주 시 헌혈 금지",
-    "restriction_type": "permanent",
-    "notes": "vCJD 위험 지역",
-    "keywords": []
-  },
-  {
-    "id": "b102",
-    "type": "지역",
-    "name": "경기도 파주시",
-    "aliases": [
-      "파주시"
-    ],
-    "restriction_period_days": 365,
-    "restriction": "1박 이상 숙박 시 1년간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "국내 말라리아 위험 지역",
-    "keywords": []
-  },
-  {
-    "id": "b103",
-    "type": "지역",
-    "name": "필리핀",
-    "aliases": [
-      "필리핀",
-      "세부",
-      "보홀"
-    ],
-    "restriction_period_days": 365,
-    "restriction": "1박 이상 체류 시 1년간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "해외 말라리아 위험 지역",
-    "keywords": []
-  },
-  {
-    "id": "b104",
-    "type": "지역",
-    "name": "케냐",
-    "restriction_period_days": 365,
-    "restriction": "1박 이상 체류 시 1년간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "말라리아 및 풍토병 유행 지역",
-    "keywords": []
-  },
-  {
-    "id": "b105",
-    "type": "지역",
-    "name": "브라질 아마존",
-    "restriction_period_days": 365,
-    "restriction": "1박 이상 체류 시 1년간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "말라리아 및 풍토병 유행 지역",
-    "keywords": []
+    "id": "region-005",
+    "category": "vcjd",
+    "name": "변종 크로이츠펠트-야콥병(vCJD) 위험지역 (프랑스, 아일랜드)",
+    "keywords": ["프랑스", "아일랜드"],
+    "description": "1980년부터 2001년까지 프랑스 또는 아일랜드에서 총 5년 이상 거주(체류)한 경우 영구적으로 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "1980-2001년 사이 총 5년 이상 체류 이력"
+    }
   }
 ]

@@ -1,113 +1,65 @@
 [
   {
-    "id": "d1",
-    "type": "백신",
-    "name": "MMR",
-    "aliases": [
-      "홍역",
-      "볼거리",
-      "풍진"
+    "id": "vac-001",
+    "category": "inactivated_recombinant_vaccine",
+    "name": "사백신 또는 재조합 백신",
+    "keywords": [
+      "인플루엔자", "독감", "B형간염", "A형간염", "파상풍", "디프테리아", "백일해", 
+      "Tdap", "자궁경부암", "사람유두종바이러스", "HPV", "가다실", "서바릭스", 
+      "일본뇌염 사백신", "폐렴구균", "수막구균", "주사용 장티푸스", "콜레라"
     ],
-    "restriction_period_days": 28,
-    "restriction": "접종 후 4주간 헌혈 금지",
-    "notes": "생백신",
-    "restriction_type": "temporal",
-    "keywords": []
+    "description": "독감, B형/A형 간염, 파상풍, 자궁경부암 백신 등 일반적인 사백신 또는 재조합 백신을 접종한 경우, 접종 후 24시간이 경과하면 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 24,
+      "periodUnit": "hour",
+      "condition": "접종일로부터"
+    }
   },
   {
-    "id": "d2",
-    "type": "백신",
-    "name": "코로나19 백신",
-    "aliases": [
-      "COVID-19 vaccine"
+    "id": "vac-002",
+    "category": "live_attenuated_vaccine",
+    "name": "생백신 (MMR, 수두, BCG 등)",
+    "keywords": [
+      "홍역", "유행성이하선염", "풍진", "MMR", "수두", "대상포진", "경구용 소아마비", 
+      "폴리오", "BCG", "결핵", "황열", "경구용 장티푸스"
     ],
-    "restriction_period_days": 0,
-    "restriction": "접종 당일 헌혈 금지, 다음날부터 가능",
-    "notes": "mRNA 백신 포함",
-    "restriction_type": "temporal",
-    "keywords": []
+    "description": "홍역, 풍진, 수두, BCG 등 약독화된 바이러스를 사용하는 생백신을 접종한 경우, 접종 후 4주가 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종일로부터"
+    }
   },
   {
-    "id": "d100",
-    "type": "백신",
-    "name": "MMR",
-    "aliases": [
-      "홍역",
-      "볼거리",
-      "풍진",
-      "MMR"
-    ],
-    "restriction_period_days": 28,
-    "restriction": "접종 후 4주간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "생백신류",
-    "keywords": []
+    "id": "vac-003",
+    "category": "live_attenuated_vaccine",
+    "name": "두창(천연두) 백신",
+    "keywords": ["두창", "천연두"],
+    "description": "두창(천연두) 백신을 접종한 경우, 접종 후 8주가 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 8,
+      "periodUnit": "week",
+      "condition": "접종일로부터"
+    }
   },
   {
-    "id": "d101",
-    "type": "백신",
-    "name": "BCG",
-    "aliases": [
-      "BCG",
-      "결핵 예방접종"
-    ],
-    "restriction_period_days": 28,
-    "restriction": "접종 후 4주간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "비경구 생백신",
-    "keywords": []
-  },
-  {
-    "id": "d102",
-    "type": "백신",
-    "name": "A형 간염",
-    "aliases": [
-      "A형 간염 백신"
-    ],
-    "restriction_period_days": 1,
-    "restriction": "접종 후 24시간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "불활화 백신",
-    "keywords": []
-  },
-  {
-    "id": "d103",
-    "type": "백신",
-    "name": "수두 백신",
-    "aliases": [
-      "수두",
-      "Varicella"
-    ],
-    "restriction_period_days": 28,
-    "restriction": "접종 후 4주간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "생백신",
-    "keywords": []
-  },
-  {
-    "id": "d104",
-    "type": "백신",
-    "name": "황열 백신",
-    "aliases": [
-      "Yellow Fever"
-    ],
-    "restriction_period_days": 28,
-    "restriction": "접종 후 4주간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "생백신",
-    "keywords": []
-  },
-  {
-    "id": "d105",
-    "type": "백신",
-    "name": "장티푸스 (경구형)",
-    "aliases": [
-      "Typhoid oral"
-    ],
-    "restriction_period_days": 28,
-    "restriction": "접종 후 4주간 헌혈 금지",
-    "restriction_type": "temporal",
-    "notes": "생백신 (경구)",
-    "keywords": []
+    "id": "vac-004",
+    "category": "special_vaccination",
+    "name": "면역글로불린 또는 동물교상 후 접종",
+    "keywords": ["B형간염 면역글로불린", "HBIG", "광견병", "동물교상"],
+    "description": "B형간염 면역글로불린(HBIG)을 투여받았거나, 동물에게 물린 후 광견병 예방접종을 한 경우, 마지막 접종일로부터 1년이 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "마지막 접종일로부터"
+    }
   }
 ]
