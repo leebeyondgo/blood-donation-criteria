@@ -7,6 +7,7 @@ import {
   ToggleButtonGroup,
   FormControl,
   InputLabel,
+  Tooltip,
 } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
@@ -220,8 +221,17 @@ function App() {
                   <div className="flex-grow">
                     <strong className="font-bold text-lg">{item.name}</strong>
                     <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
-                      ({item.type}) - {item.restriction}
+                      ({item.type})
                     </span>
+                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                      {item.description.length > 50 ? (
+                        <Tooltip title={item.description} arrow>
+                          <span>{`${item.description.substring(0, 50)}...`}</span>
+                        </Tooltip>
+                      ) : (
+                        item.description
+                      )}
+                    </div>
                     <div className="period-text text-sm text-gray-600 dark:text-gray-300 mt-1">
                       {periodText}
                     </div>
