@@ -133,28 +133,29 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      {/*
-        1. 메인 콘텐츠 컨테이너에 'relative'를 추가해 위치 기준점으로 만듭니다.
-           이제 이 안의 'absolute' 요소들은 이 div를 기준으로 움직입니다.
-      */}
-      <div className="App relative text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
+      <div className="App p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
         {/*
-          2. 버튼에 'absolute'를 주고 우측 상단으로 보냅니다.
-             padding 값과 동일하게 'top-4 right-4' (sm 이상에서는 'top-8 right-8')를 주어
-             콘텐츠 영역의 우측 상단에 예쁘게 위치하도록 합니다.
+          가장 안정적인 Grid 레이아웃을 사용해 문제를 해결합니다.
+          1. 'grid'와 'grid-cols-3'로 헤더 영역을 3개의 컬럼으로 나눕니다.
+          2. 'items-center'로 내용물을 수직 중앙 정렬합니다.
         */}
-        <IconButton
-          onClick={toggleTheme}
-          aria-label="테마 토글"
-          className="absolute top-4 right-4 sm:top-8 sm:right-8"
-        >
-          {theme === 'light' ? <FiMoon /> : <FiSun />}
-        </IconButton>
+        <header className="grid grid-cols-3 items-center">
+          {/* 1번(왼쪽) 컬럼: 비워둠으로써 2번 컬럼인 제목이 중앙에 오도록 합니다. */}
+          <div></div>
 
-        {/*
-          3. 제목은 'text-center' 클래스 덕분에 여전히 중앙 정렬을 유지합니다.
-        */}
-        <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
+          {/* 2번(중앙) 컬럼: 제목을 중앙에 배치합니다. */}
+          <h1 className="text-2xl font-bold text-center">헌혈 제한 조건 검색</h1>
+
+          {/* 3번(오른쪽) 컬럼: 버튼을 오른쪽 끝으로 보냅니다. */}
+          <div className="flex justify-end">
+            <IconButton
+              onClick={toggleTheme}
+              aria-label="테마 토글"
+            >
+              {theme === 'light' ? <FiMoon /> : <FiSun />}
+            </IconButton>
+          </div>
+        </header>
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
           <div className="flex items-center gap-3">
