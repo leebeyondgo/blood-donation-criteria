@@ -45,12 +45,12 @@
     "category": "acne_treatment",
     "name": "여드름 치료제 (이소트레티노인 계열)",
     "keywords": ["이소트레티노인", "Isotretinoin", "로아큐탄", "니메겐", "레씨범", "핀플", "이소티논", "트레인", "아크네틴", "이소트렌", "오피큐탄", "제로큐탄", "트레논", "이소니플", "아키놀", "이소나", "이소탐", "트레티바"],
-    "description": "태아에 영향을 줄 수 있는 여드름 치료제(이소트레티노인 성분)는 복용 중이거나 복용 후 4주(1개월)가 경과해야 헌혈이 가능합니다.",
+    "description": "태아에 영향을 줄 수 있는 여드름 치료제(이소트레티노인 성분)는 복용 중이거나 복용 후 4주가 경과해야 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
+      "periodValue": 4,
+      "periodUnit": "week",
       "condition": "마지막 복용일로부터"
     }
   },
@@ -59,12 +59,12 @@
     "category": "hair_loss_treatment",
     "name": "탈모증 치료제 (피나스테리드 계열)",
     "keywords": ["피나스테리드", "Finasteride", "프로페시아", "피나pecia"],
-    "description": "태아에 영향을 줄 수 있는 탈모증 치료제(피나스테리드 성분)는 복용 중이거나 복용 후 4주(1개월)가 경과해야 헌혈이 가능합니다.",
+    "description": "태아에 영향을 줄 수 있는 탈모증 치료제(피나스테리드 성분)는 복용 중이거나 복용 후 4주가 경과해야 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
+      "periodValue": 4,
+      "periodUnit": "week",
       "condition": "마지막 복용일로부터"
     }
   },
@@ -73,12 +73,12 @@
     "category": "prostate_treatment",
     "name": "전립선비대증 치료제 (피나스테리드 계열)",
     "keywords": ["피나스테리드", "Finasteride", "프로스카", "피나드론", "피나스타", "피나테드", "피나필", "네오페시아", "알파피나", "유로피나", "피나프로", "한올피나스테리드정", "대웅바이오피나스테리드정"],
-    "description": "태아에 영향을 줄 수 있는 전립선비대증 치료제(피나스테리드 성분)는 복용 중이거나 복용 후 4주(1개월)가 경과해야 헌혈이 가능합니다.",
+    "description": "태아에 영향을 줄 수 있는 전립선비대증 치료제(피나스테리드 성분)는 복용 중이거나 복용 후 4주가 경과해야 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
+      "periodValue": 4,
+      "periodUnit": "week",
       "condition": "마지막 복용일로부터"
     }
   },
@@ -129,7 +129,7 @@
     "category": "cancer_immunomodulator",
     "name": "항암제 (비스모데깁 계열)",
     "keywords": ["비스모데깁", "Vismodegib", "에리벳지"],
-    "description": "태아에 영향을 줄 수 있는 항암제(비스모데깁 성분)는 복용 중이거나 복용 후 24개월(2년)이 경과해야 헌혈이 가능합니다.",
+    "description": "태아에 영향을 줄 수 있는 항암제(비스모데깁 성분)는 복용 중이거나 복용 후 24개월이 경과해야 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
