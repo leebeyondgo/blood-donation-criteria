@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, createContext } from 'react';
+import { useState, useMemo, useEffect, useContext } from 'react';
 import { FiSearch, FiSun, FiMoon } from 'react-icons/fi';
 import {
   TextField,
@@ -9,23 +9,63 @@ import {
   InputLabel,
   Tooltip,
 } from '@mui/material';
-import { ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
+import { ThemeContext } from './contexts/ThemeContext';
+import ResultList from './components/ResultList';
 import diseaseData from './data/disease.json';
 import regionData from './data/region.json';
 import medicationData from './data/medication.json';
 import vaccinationData from './data/vaccination.json';
 import etcData from './data/etc.json';
 
-export const ThemeContext = createContext();
-
 const allData = [
   ...diseaseData,
-  ...regionData,
   ...medicationData,
   ...vaccinationData,
   ...etcData,
-];
+  ...regionData,
+].map((item) => {
+  const { restriction } = item;
+  let restrictionType = 'default';
+  let restrictionPeriodDays = 0;
+  let condition = '';
+
+  if (restriction) {
+    restrictionType = restriction.type;
+    condition = restriction.condition || '';
+
+    switch (restriction.periodUnit) {
+      case 'day':
+        restrictionPeriodDays = restriction.periodValue;
+        break;
+      case 'week':
+        restrictionPeriodDays = restriction.periodValue * 7;
+        break;
+      case 'month':
+        restrictionPeriodDays = restriction.periodValue * 30; // Approximation
+        break;
+      case 'year':
+        restrictionPeriodDays = restriction.periodValue * 365; // Approximation
+        break;
+      case 'permanent':
+        restrictionPeriodDays = -1;
+        break;
+      default:
+        restrictionPeriodDays = 0;
+    }
+  } else {
+    // restriction이 null이거나 없는 경우 (예: 일반 허용 약물)
+    restrictionType = 'none';
+  }
+
+  return {
+    ...item,
+    restrictionType,
+    restrictionPeriodDays,
+    condition,
+  };
+});
 
 function App() {
   const [query, setQuery] = useState('');
@@ -33,6 +73,7 @@ function App() {
   const [baseDate, setBaseDate] = useState(() =>
     new Date().toISOString().split('T')[0]
   );
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const formatDate = (date) => {
     const yyyy = date.getFullYear();
@@ -41,43 +82,11 @@ function App() {
     return `${yyyy}년${mm}월${dd}일`;
   };
 
-  const getInitialTheme = () => {
-    const stored = localStorage.getItem('theme');
-    if (stored) return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
-  };
-
-  const [theme, setTheme] = useState(getInitialTheme);
-
-  useEffect(() => {
-    const media = window.matchMedia('(prefers-color-scheme: dark)');
-    const systemChange = () => {
-      const stored = localStorage.getItem('theme');
-      if (!stored) {
-        setTheme(media.matches ? 'dark' : 'light');
-      }
-    };
-    media.addEventListener('change', systemChange);
-    return () => media.removeEventListener('change', systemChange);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.remove('light', 'dark');
-    document.documentElement.classList.add(theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
-
   const results = useMemo(() => {
     const lower = query.toLowerCase();
     if (!query) {
       return allData
-        .filter((item) => !filterType || item.type === filterType)
+        .filter((item) => !filterType || item.category === filterType)
         .map((item) => ({ ...item, matchInfo: null }));
     }
 
@@ -117,8 +126,7 @@ function App() {
   }, [query, filterType]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <div className="App relative text-center p-4 sm:p-8 space-y-6 max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold">헌혈 제한 조건 검색</h1>
 
@@ -165,101 +173,24 @@ function App() {
             }}
           >
             <ToggleButton value="">전체</ToggleButton>
-            <ToggleButton value="질병">질병</ToggleButton>
-            <ToggleButton value="지역">지역</ToggleButton>
-            <ToggleButton value="약물">약물</ToggleButton>
-            <ToggleButton value="백신">백신</ToggleButton>
-            <ToggleButton value="기타">기타</ToggleButton>
+            <ToggleButton value="disease">질병</ToggleButton>
+            <ToggleButton value="region">지역</ToggleButton>
+            <ToggleButton value="medication">약물</ToggleButton>
+            <ToggleButton value="vaccination">백신</ToggleButton>
+            <ToggleButton value="etc">기타</ToggleButton>
           </ToggleButtonGroup>
         </FormControl>
 
 
 
-        <ul className="result-list list-none mt-8 flex flex-col items-center space-y-4">
-          {results.map((item) => {
-            const period = item.restriction_period_days;
-            const type = item.restriction_type;
-
-            let periodText;
-            if (type === 'permanent') {
-              periodText = '영구 금지';
-            } else if (type === 'conditional') {
-              periodText = '조건부 금지';
-            } else if (period === 0) {
-              periodText = '금지 기간 없음';
-            } else if (period > 0) {
-              periodText = `금지 기간: ${period}일`;
-            } else {
-              periodText = '영구 금지';
-            }
-
-            let message;
-            if (type === 'permanent') {
-              message = '헌혈 불가';
-            } else if (type === 'conditional') {
-              message = '완치 후 가능';
-            } else if (period === 0) {
-              message = '즉시 가능';
-            } else if (period > 0) {
-              const base = new Date(baseDate);
-              base.setDate(base.getDate() + period);
-              message = formatDate(base);
-            } else {
-              message = '헌혈 불가';
-            }
-
-            const colorClass = message === '헌혈 불가'
-              ? 'text-red-500 dark:text-red-400'
-              : 'text-green-500 dark:text-green-400';
-
-            return (
-              <li
-                key={item.id}
-                className="result-item flex flex-col p-4 rounded-lg shadow-md bg-white dark:bg-gray-800"
-              >
-                <div className="flex justify-between items-start">
-                  <div className="flex-grow">
-                    <strong className="font-bold text-lg">{item.name}</strong>
-                    <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
-                      ({item.type})
-                    </span>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                      {item.description.length > 50 ? (
-                        <Tooltip title={item.description} arrow>
-                          <span>{`${item.description.substring(0, 50)}...`}</span>
-                        </Tooltip>
-                      ) : (
-                        item.description
-                      )}
-                    </div>
-                    <div className="period-text text-sm text-gray-600 dark:text-gray-300 mt-1">
-                      {periodText}
-                    </div>
-                  </div>
-                  <div className={`eligible-date ${colorClass} font-semibold`}>
-                    {message}
-                  </div>
-                </div>
-                {item.matchInfo && (
-                  <div className="match-info mt-2">
-                    {item.matchInfo.map((match, i) => (
-                      <span key={i} className="match-tag">
-                        {match.value}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </li>
-            );
-          })}
-
-          {query && results.length === 0 && (
-            <li className="no-result">검색 결과가 없습니다.</li>
-          )}
-        </ul>
+        <ResultList
+          results={results}
+          query={query}
+          baseDate={baseDate}
+          formatDate={formatDate}
+        />
       </div>
-      </ThemeProvider>
-    </ThemeContext.Provider>
+    </MuiThemeProvider>
   );
 }
 
