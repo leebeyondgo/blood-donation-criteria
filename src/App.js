@@ -214,22 +214,31 @@ function App() {
             return (
               <li
                 key={item.id}
-                className="result-item flex flex-col sm:flex-row sm:justify-between"
+                className="result-item flex flex-col p-4 rounded-lg shadow-md bg-white dark:bg-gray-800"
               >
-                <div>
-                  <strong>{item.name}</strong> ({item.type}) - {item.restriction}
-                  {item.matchInfo && (
-                    <div className="match-info">
-                      {item.matchInfo.map((match, i) => (
-                        <span key={i} className="match-tag">
-                          {match.value} ({match.type})
-                        </span>
-                      ))}
+                <div className="flex justify-between items-start">
+                  <div className="flex-grow">
+                    <strong className="font-bold text-lg">{item.name}</strong>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
+                      ({item.type}) - {item.restriction}
+                    </span>
+                    <div className="period-text text-sm text-gray-600 dark:text-gray-300 mt-1">
+                      {periodText}
                     </div>
-                  )}
-                  <div className="period-text">{periodText}</div>
+                  </div>
+                  <div className={`eligible-date ${colorClass} font-semibold`}>
+                    {message}
+                  </div>
                 </div>
-                <div className={`eligible-date ${colorClass}`}>{message}</div>
+                {item.matchInfo && (
+                  <div className="match-info mt-2">
+                    {item.matchInfo.map((match, i) => (
+                      <span key={i} className="match-tag">
+                        {match.value}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </li>
             );
           })}
