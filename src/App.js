@@ -83,13 +83,20 @@ function App() {
 
   const results = useMemo(() => {
     const lower = query.toLowerCase();
-    if (!query) {
-      return allData
-        .filter((item) => !filterType || item.category === filterType)
-        .map((item) => ({ ...item, matchInfo: null }));
+
+    let filteredData = allData;
+
+    if (filterType) {
+      filteredData = filteredData.filter(
+        (item) => item.category === filterType
+      );
     }
 
-    return allData
+    if (!query) {
+      return filteredData.map((item) => ({ ...item, matchInfo: null }));
+    }
+
+    return filteredData
       .map((item) => {
         const matchInfo = [];
 

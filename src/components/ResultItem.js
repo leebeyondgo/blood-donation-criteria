@@ -1,20 +1,5 @@
 import React from 'react';
 import { Tooltip } from '@mui/material';
-import {
-  FaSyringe,
-  FaMapMarkerAlt,
-  FaPills,
-  FaStethoscope,
-  FaPlusCircle,
-} from 'react-icons/fa';
-
-const categoryIcons = {
-  disease: <FaStethoscope />,
-  region: <FaMapMarkerAlt />,
-  medication: <FaPills />,
-  vaccination: <FaSyringe />,
-  etc: <FaPlusCircle />,
-};
 
 const ResultItem = ({ item, baseDate, formatDate }) => {
   const {
@@ -28,8 +13,6 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
     restriction,
     category,
   } = item;
-
-  const icon = categoryIcons[category] || <FaPlusCircle />;
 
   let periodText = '';
   if (restrictionType === 'permanent') {
@@ -68,14 +51,12 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
   return (
     <li className="result-item flex flex-col p-4 rounded-lg shadow-md bg-white dark:bg-gray-800 w-full">
       <div className="flex justify-between items-start">
-        <div className="flex-grow text-left flex items-center">
-          <div className="mr-4 text-2xl text-gray-400">{icon}</div>
-          <div>
-            <strong className="font-bold text-lg">{name}</strong>
-            <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
-              ({category})
-            </span>
-            <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+        <div className="flex-grow text-left">
+          <strong className="font-bold text-lg">{name}</strong>
+          <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
+            ({category})
+          </span>
+          <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">
             {description.length > 50 ? (
               <Tooltip title={description} arrow>
                 <span>{`${description.substring(0, 50)}...`}</span>
@@ -86,7 +67,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
           </div>
           {periodText && (
             <div className="period-text text-sm text-gray-600 dark:text-gray-300 mt-1">
-              {periodText} ({condition})
+              {periodText}
             </div>
           )}
           </div>
