@@ -14,6 +14,7 @@ import {
   CancelRounded,
   InfoRounded,
   ExpandMore as ExpandMoreIcon,
+  LabelImportantRounded,
 } from '@mui/icons-material';
 
 const ResultItem = ({ item, baseDate, formatDate }) => {
@@ -172,13 +173,21 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
             {description}
           </Typography>
           {matchedKeyword && (
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{ mt: 1 }}
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                color: 'text.secondary',
+                mt: 1,
+              }}
             >
-              ✔️ 일치 키워드: {matchedKeyword}
-            </Typography>
+              <LabelImportantRounded
+                sx={{ mr: 0.5, fontSize: '1rem', color: 'inherit' }}
+              />
+              <Typography variant="body2" sx={{ color: 'inherit' }}>
+                일치 키워드: {matchedKeyword}
+              </Typography>
+            </Box>
           )}
           {note && (
             <Typography
