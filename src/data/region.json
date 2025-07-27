@@ -1,7 +1,7 @@
 [
   {
     "id": "region-001",
-    "category": "region_travel",
+    "category": "region",
     "name": "일반 해외 여행",
     "keywords": ["해외", "여행", "외국", "공통"],
     "description": "특정 위험 지역이 아니더라도, 모든 해외 여행 후에는 귀국일로부터 1개월(4주)이 경과해야 헌혈이 가능합니다. 이는 해외 유행 감염병의 잠복기를 고려한 조치입니다.",
@@ -13,7 +13,7 @@
   },
   {
     "id": "region-002",
-    "category": "region_domestic_malaria",
+    "category": "region",
     "name": "국내 말라리아 위험 지역",
     "keywords": ["말라리아", "국내", "파주", "연천", "강화", "철원", "경기도", "인천시", "강원도"],
     "description": "국내 말라리아 위험 지역(매년 변경될 수 있음)에서 1박 이상 숙박한 경우, 마지막 숙박일로부터 1년간 전혈 및 혈소판 성분헌혈이 제한됩니다. (단, 혈장 성분헌혈은 가능)",
@@ -30,7 +30,7 @@
   },
   {
     "id": "region-003",
-    "category": "region_vcjd",
+    "category": "region",
     "name": "vCJD(인간 광우병) 관련 지역",
     "keywords": ["vCJD", "인간광우병", "광우병", "영국", "프랑스", "아일랜드", "유럽"],
     "description": "vCJD(변종 크로이츠펠트-야콥병) 전파 위험으로 인해, 아래 지역에 특정 기간 동안 체류한 경우 영구적으로 헌혈이 금지됩니다.",
@@ -47,7 +47,7 @@
   },
   {
     "id": "region-malaria-asia",
-    "category": "region_malaria",
+    "category": "region",
     "name": "아시아 말라리아 위험 국가",
     "keywords": ["말라리아", "아시아"],
     "description": "아시아의 특정 국가 및 지역은 말라리아 위험으로 인해 헌혈이 제한될 수 있습니다. 여행 시 1년, 6개월 이상 거주 시 3년간 헌혈이 불가합니다.",
@@ -78,7 +78,7 @@
   },
   {
     "id": "region-malaria-america",
-    "category": "region_malaria",
+    "category": "region",
     "name": "아메리카 말라리아 위험 국가",
     "keywords": ["말라리아", "아메리카"],
     "description": "아메리카의 특정 국가 및 지역은 말라리아 위험으로 인해 헌혈이 제한될 수 있습니다. 여행 시 1년, 6개월 이상 거주 시 3년간 헌혈이 불가합니다.",
@@ -106,7 +106,7 @@
   },
   {
     "id": "region-malaria-africa-middle-east",
-    "category": "region_malaria",
+    "category": "region",
     "name": "아프리카/중동 말라리아 위험 국가",
     "keywords": ["말라리아", "아프리카", "중동"],
     "description": "아프리카/중동의 특정 국가는 말라리아 위험으로 인해 헌혈이 제한될 수 있습니다. 여행 시 1년, 6개월 이상 거주 시 3년간 헌혈이 불가합니다.",
