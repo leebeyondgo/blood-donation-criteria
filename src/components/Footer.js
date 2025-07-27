@@ -14,7 +14,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="hover:underline"
           >
-            피드백 보내기 (GitHub)
+            피드백 및 기여
           </a>
           <a
             href="https://www.bloodinfo.net/main.do"
