@@ -95,7 +95,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
         overflow: 'hidden',
       }}
       variant="elevation"
-      elevation={1}
+      elevation={0}
     >
       <CardActionArea onClick={() => setIsExpanded(!isExpanded)}>
         <CardContent sx={{ p: 2 }}>
