@@ -134,7 +134,6 @@ function App() {
       // 검색어가 있으면 카테고리 필터 없이 전체 데이터에서 검색
       return allData.reduce((acc, item) => {
         const lowerName = item.name.toLowerCase();
-        const keywords = (item.keywords || []).map((k) => k.toLowerCase());
 
         if (lowerName.includes(lowerQuery)) {
           acc.push({ ...item, matchedKeyword: item.name });
