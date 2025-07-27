@@ -21,7 +21,7 @@ const Footer = () => {
         </p>
         <div className="flex justify-center items-center space-x-4">
           <a
-            href="https://github.com/leebeyondgo/blood-donation-criteria/issues"
+            href="https://github.com/leebeyondgo/blood-donation-criteria"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
