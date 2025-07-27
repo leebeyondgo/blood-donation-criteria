@@ -54,7 +54,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
     <li className="result-item flex flex-col p-4 rounded-lg shadow-md bg-white dark:bg-gray-800 w-full relative min-h-[5rem]">
       <div className="flex justify-between items-start">
         <div className="flex-grow text-left">
-          <strong className="font-bold text-lg">{name}</strong>
+          <strong className="font-bold text-base sm:text-lg">{name}</strong>
           <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
             ({category})
           </span>
