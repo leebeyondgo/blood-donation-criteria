@@ -1,470 +1,394 @@
 [
   {
     "id": "region-001",
-    "category": "region_travel",
-    "name": "일반 해외 여행",
-    "keywords": ["해외", "여행", "외국", "공통"],
-    "description": "특정 위험 지역이 아니더라도, 모든 해외 여행 후에는 귀국일로부터 1개월(4주)이 경과해야 헌혈이 가능합니다. 이는 해외 유행 감염병의 잠복기를 고려한 조치입니다.",
+    "category": "malaria_international",
+    "name": "국외 말라리아 위험지역",
+    "keywords": ["말라리아", "해외", "여행", "외국"],
+    "description": "전 세계 말라리아 위험 지역 및 헌혈 제한 기간에 대한 안내입니다. 국가별, 지역별 정책이 상이하므로 방문하시는 국가를 검색하여 확인하시기 바랍니다. 일반적으로 위험 지역 여행 후 1년간 헌혈이 제한되며, 6개월 이상 체류 시 3년간 제한될 수 있습니다.",
     "allowable": false,
-    "restriction": { "type": "period", "periodValue": 1, "periodUnit": "month", "condition": "귀국일로부터" },
-    "continent": "전세계",
-    "risk_areas": null,
-    "exception_areas": null
+    "restriction": {
+      "type": "period_multi",
+      "periods": [
+        { "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },
+        { "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }
+      ]
+    },
+    "countries": [
+      {
+        "countryName": "네팔",
+        "ruleType": "exclusion",
+        "areas": ["카트만두", "히말라야 트레킹 코스"],
+        "note": "카트만두, 히말라야 트레킹 코스 등 해발 2,000m 이상 지역은 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "동티모르",
+        "ruleType": "all",
+        "areas": [],
+        "note": "동티모르는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "라오스",
+        "ruleType": "exclusion",
+        "areas": ["비엔티안"],
+        "note": "수도 비엔티안은 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "말레이시아",
+        "ruleType": "inclusion",
+        "areas": ["사바주 내륙", "사라왁주 내륙"],
+        "note": "사바주, 사라왁주 내륙 등 일부 지역만 위험지역으로 간주됩니다."
+      },
+      {
+        "countryName": "미얀마",
+        "ruleType": "exclusion",
+        "areas": ["해발 1,000m 이상 지역"],
+        "note": "해발 1,000m 이상 고지대는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "방글라데시",
+        "ruleType": "inclusion",
+        "areas": ["치타공주", "콕스바자르주", "랑가마티", "카그라차리", "반다르반"],
+        "note": "치타공, 콕스바자르 주 등 일부 지역이 위험지역으로 간주됩니다."
+      },
+      {
+        "countryName": "베트남",
+        "ruleType": "exclusion",
+        "areas": ["하노이", "호치민", "다낭", "나트랑", "하이퐁", "푸꾸옥"],
+        "note": "하노이, 호치민, 다낭 등 주요 도시 및 관광지는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "부탄",
+        "ruleType": "exclusion",
+        "areas": ["팀푸", "파로"],
+        "note": "팀푸, 파로 등 주요 도시는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "사우디아라비아",
+        "ruleType": "inclusion",
+        "areas": ["아시르주", "지잔주"],
+        "note": "남서부 아시르, 지잔 주가 위험지역으로 간주됩니다."
+      },
+      {
+        "countryName": "아프가니스탄",
+        "ruleType": "exclusion",
+        "areas": ["카불", "해발 2,000m 이상 지역"],
+        "note": "수도 카불 및 해발 2,000m 이상 고지대는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "예멘",
+        "ruleType": "exclusion",
+        "areas": ["사나", "해발 2,000m 이상 지역"],
+        "note": "수도 사나 및 해발 2,000m 이상 고지대는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "이란",
+        "ruleType": "inclusion",
+        "areas": ["시스탄-발루체스탄주", "호르모즈간주", "케르만주 남부"],
+        "note": "동남부 일부 주(시스탄-발루체스탄, 호르모즈간 등)가 위험지역으로 간주됩니다."
+      },
+      {
+        "countryName": "인도",
+        "ruleType": "inclusion",
+        "areas": ["안다만 니코바르 섬", "오디샤주", "차티스가르주", "자르칸드주", "마디아프라데시주", "마하라슈트라주", "서벵골주", "동북부 주"],
+        "note": "동북부 주를 포함한 일부 주와 안다만 니코바르 섬이 위험 지역입니다."
+      },
+      {
+        "countryName": "인도네시아",
+        "ruleType": "inclusion",
+        "areas": ["파푸아주", "서파푸아주", "동부 누사텡가라주", "말루쿠주", "북말루쿠주"],
+        "note": "파푸아 등 동부 5개 주가 위험지역으로 간주됩니다. 자카르타, 발리 등은 제외됩니다."
+      },
+      {
+        "countryName": "중국",
+        "ruleType": "inclusion",
+        "areas": ["윈난성", "티베트 자치구"],
+        "note": "윈난성, 티베트 자치구 일부 지역이 위험지역으로 간주됩니다. 대부분의 도시 지역은 제외됩니다."
+      },
+      {
+        "countryName": "캄보디아",
+        "ruleType": "exclusion",
+        "areas": ["프놈펜", "시엠립", "앙코르와트", "톤레삽 호수"],
+        "note": "프놈펜, 시엠립(앙코르와트 포함) 등 주요 관광지는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "태국",
+        "ruleType": "exclusion",
+        "areas": ["방콕", "파타야", "푸켓", "치앙마이", "코사무이"],
+        "note": "방콕, 파타야, 푸켓, 치앙마이 등 주요 도시 및 관광지는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "파키스탄",
+        "ruleType": "exclusion",
+        "areas": ["해발 2,000m 이상 지역"],
+        "note": "해발 2,000m 이상 고지대는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "파푸아뉴기니",
+        "ruleType": "exclusion",
+        "areas": ["해발 1,800m 이상 지역"],
+        "note": "해발 1,800m 이상 고지대는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "필리핀",
+        "ruleType": "inclusion",
+        "areas": ["팔라완섬", "푸에르토 프린세사", "엘니도", "코론"],
+        "note": "팔라완 섬(푸에르토 프린세사, 엘니도, 코론 포함)이 위험지역으로 간주됩니다. 마닐라, 세부, 보라카이 등은 제외됩니다."
+      },
+      {
+        "countryName": "가이아나",
+        "ruleType": "all",
+        "areas": [],
+        "note": "가이아나는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "과테말라",
+        "ruleType": "exclusion",
+        "areas": ["과테말라 시티", "안티과", "아티틀란 호수"],
+        "note": "과테말라 시티, 안티과 등 주요 관광지는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "니카라과",
+        "ruleType": "inclusion",
+        "areas": ["북대서양자치구(RAAN)", "남대서양자치구(RAAS)"],
+        "note": "북/남 대서양자치구(RAAN/RAAS)가 위험지역으로 간주됩니다."
+      },
+      {
+        "countryName": "도미니카 공화국",
+        "ruleType": "inclusion",
+        "areas": ["아이티 국경 인근 주"],
+        "note": "아이티 국경 인근 주가 위험지역으로 간주됩니다. 푼타카나, 산토도밍고 등은 제외됩니다."
+      },
+      {
+        "countryName": "멕시코",
+        "ruleType": "inclusion",
+        "areas": ["치아파스주", "치와와주", "두랑고주", "나야리트주", "시날로아주"],
+        "note": "치아파스, 치와와 주 등 일부 주가 위험지역으로 간주됩니다. 칸쿤, 멕시코시티 등은 제외됩니다."
+      },
+      {
+        "countryName": "베네수엘라",
+        "ruleType": "exclusion",
+        "areas": ["카라카스", "마르가리타섬", "해발 1,700m 이상 지역"],
+        "note": "수도 카라카스 및 고지대는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "벨리즈",
+        "ruleType": "inclusion",
+        "areas": ["스탄크리크주", "털리도주"],
+        "note": "스탄크리크, 털리도 주가 위험지역으로 간주됩니다. 벨리즈시티, 키코커섬 등은 제외됩니다."
+      },
+      {
+        "countryName": "볼리비아",
+        "ruleType": "exclusion",
+        "areas": ["라파스", "수크레", "우유니 소금사막", "티티카카 호수"],
+        "note": "라파스, 수크레 및 우유니 소금사막 등 고지대는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "브라질",
+        "ruleType": "inclusion",
+        "areas": ["아마조나스", "호라이마", "아크리", "혼도니아", "아마파", "파라", "토칸칭스", "마라냥", "마투그로수"],
+        "note": "아마존 분지에 속한 9개 주가 위험지역으로 간주됩니다. 리우데자네이루, 상파울루, 이과수 폭포 등은 제외됩니다."
+      },
+      {
+        "countryName": "수리남",
+        "ruleType": "inclusion",
+        "areas": ["내륙 지역"],
+        "note": "내륙 지역이 위험지역으로 간주됩니다. 수도 파라마리보 및 해안 지역은 제외됩니다."
+      },
+      {
+        "countryName": "아이티",
+        "ruleType": "all",
+        "areas": [],
+        "note": "아이티는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "에콰도르",
+        "ruleType": "exclusion",
+        "areas": ["키토", "과야킬", "갈라파고스 제도"],
+        "note": "키토, 과야킬 및 갈라파고스 제도는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "온두라스",
+        "ruleType": "exclusion",
+        "areas": ["테구시갈파", "산페드로술라", "코판 유적", "로아탄섬"],
+        "note": "주요 도시와 로아탄 섬 등은 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "콜롬비아",
+        "ruleType": "exclusion",
+        "areas": ["보고타", "메데인", "칼리", "카르타헤나"],
+        "note": "보고타, 메데인 등 주요 도시는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "파나마",
+        "ruleType": "exclusion",
+        "areas": ["파나마시티", "파나마 운하", "산블라스섬"],
+        "note": "파나마시티, 운하 지역, 산블라스 섬 등은 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "페루",
+        "ruleType": "exclusion",
+        "areas": ["리마", "쿠스코", "마추픽추", "아레키파", "티티카카 호수"],
+        "note": "리마, 쿠스코, 마추픽추 등 주요 관광지는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "프랑스령 기아나",
+        "ruleType": "all",
+        "areas": [],
+        "note": "프랑스령 기아나는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "가나", "ruleType": "all", "areas": [], "note": "가나는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "가봉", "ruleType": "all", "areas": [], "note": "가봉은 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "감비아", "ruleType": "all", "areas": [], "note": "감비아는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "기니", "ruleType": "all", "areas": [], "note": "기니는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "기니비사우", "ruleType": "all", "areas": [], "note": "기니비사우는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "나미비아", "ruleType": "inclusion", "areas": ["북부 지역"], "note": "북부 지역이 위험지역으로 간주됩니다."
+      },
+      {
+        "countryName": "나이지리아", "ruleType": "all", "areas": [], "note": "나이지리아는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "남수단", "ruleType": "all", "areas": [], "note": "남수단은 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "니제르", "ruleType": "all", "areas": [], "note": "니제르는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "라이베리아", "ruleType": "all", "areas": [], "note": "라이베리아는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "마다가스카르", "ruleType": "all", "areas": [], "note": "마다가스카르는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "말라위", "ruleType": "all", "areas": [], "note": "말라위는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "말리", "ruleType": "all", "areas": [], "note": "말리는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "모리타니", "ruleType": "exclusion", "areas": ["북부 사막지역"], "note": "북부 사막지역은 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "모잠비크", "ruleType": "all", "areas": [], "note": "모잠비크는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "베냉", "ruleType": "all", "areas": [], "note": "베냉은 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "보츠와나", "ruleType": "inclusion", "areas": ["북부 지역"], "note": "북부 지역이 위험지역으로 간주됩니다."
+      },
+      {
+        "countryName": "부룬디", "ruleType": "all", "areas": [], "note": "부룬디는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "부르키나파소", "ruleType": "all", "areas": [], "note": "부르키나파소는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "상투메 프린시페", "ruleType": "all", "areas": [], "note": "상투메 프린시페는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "세네갈", "ruleType": "all", "areas": [], "note": "세네갈은 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "소말리아", "ruleType": "all", "areas": [], "note": "소말리아는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "수단", "ruleType": "all", "areas": [], "note": "수단은 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "시에라리온", "ruleType": "all", "areas": [], "note": "시에라리온은 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "앙골라", "ruleType": "all", "areas": [], "note": "앙골라는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "에리트레아", "ruleType": "inclusion", "areas": ["해안 평야 지역"], "note": "해안 평야 지역이 위험지역으로 간주됩니다."
+      },
+      {
+        "countryName": "에티오피아", "ruleType": "exclusion", "areas": ["아디스아바바", "해발 2,000m 이상 지역"], "note": "수도 아디스아바바 및 고지대는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "우간다", "ruleType": "all", "areas": [], "note": "우간다는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "잠비아", "ruleType": "all", "areas": [], "note": "잠비아는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "적도 기니", "ruleType": "all", "areas": [], "note": "적도 기니는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "중앙아프리카공화국", "ruleType": "all", "areas": [], "note": "중앙아프리카공화국은 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "지부티", "ruleType": "all", "areas": [], "note": "지부티는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "짐바브웨", "ruleType": "inclusion", "areas": ["잠베지강 유역"], "note": "잠베지강 유역이 위험지역으로 간주됩니다."
+      },
+      {
+        "countryName": "차드", "ruleType": "all", "areas": [], "note": "차드는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "카메룬", "ruleType": "all", "areas": [], "note": "카메룬은 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "케냐", "ruleType": "exclusion", "areas": ["나이로비", "고원지대"], "note": "수도 나이로비 및 고원지대는 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "코모로", "ruleType": "all", "areas": [], "note": "코모로는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "코트디부아르", "ruleType": "all", "areas": [], "note": "코트디부아르는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "콩고", "ruleType": "all", "areas": [], "note": "콩고는 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "콩고민주공화국", "ruleType": "all", "areas": [], "note": "콩고민주공화국은 전 지역이 말라리아 위험 지역입니다."
+      },
+      {
+        "countryName": "탄자니아", "ruleType": "exclusion", "areas": ["킬리만자로", "잔지바르섬", "다르에스살람"], "note": "킬리만자로, 잔지바르 섬 등은 위험지역에서 제외됩니다."
+      },
+      {
+        "countryName": "토고", "ruleType": "all", "areas": [], "note": "토고는 전 지역이 말라리아 위험 지역입니다."
+      }
+    ]
   },
   {
     "id": "region-002",
-    "category": "region_domestic_malaria",
+    "category": "malaria_domestic",
     "name": "국내 말라리아 위험 지역",
     "keywords": ["말라리아", "국내", "파주", "연천", "강화", "철원", "경기도", "인천시", "강원도"],
     "description": "국내 말라리아 위험 지역(매년 변경될 수 있음)에서 1박 이상 숙박한 경우, 마지막 숙박일로부터 1년간 전혈 및 혈소판 성분헌혈이 제한됩니다. (단, 혈장 성분헌혈은 가능)",
     "allowable": false,
-    "restriction": { "type": "period", "periodValue": 1, "periodUnit": "year", "condition": "마지막 숙박일로부터 (전혈, 혈소판 성분헌혈만 해당)" },
-    "continent": "대한민국",
-    "risk_areas": [
-      {"type": "city/county", "name": "파주시"},
-      {"type": "city/county", "name": "연천군"},
-      {"type": "city/county", "name": "강화군"},
-      {"type": "city/county", "name": "철원군"}
-    ],
-    "exception_areas": null
+    "restriction": { "type": "period", "periodValue": 1, "periodUnit": "year", "condition": "마지막 숙박일로부터 (전혈, 혈소판 성분헌혈만 해당)" }
   },
   {
     "id": "region-003",
-    "category": "region_vcjd",
+    "category": "vcjd",
     "name": "vCJD(인간 광우병) 관련 지역",
     "keywords": ["vCJD", "인간광우병", "광우병", "영국", "프랑스", "아일랜드", "유럽"],
     "description": "vCJD(변종 크로이츠펠트-야콥병) 전파 위험으로 인해, 아래 지역에 특정 기간 동안 체류한 경우 영구적으로 헌혈이 금지됩니다.",
     "allowable": false,
-    "restriction": { "type": "permanent", "periodValue": -1, "periodUnit": "permanent", "condition": "위험 지역 내 특정 기간 체류 시" },
-    "continent": "유럽",
-    "risk_areas": [
-      {"type": "country", "name": "영국", "condition": "1980년~1996년 사이 1개월 이상 또는 1997년 이후 3개월 이상 체류"},
-      {"type": "country", "name": "프랑스", "condition": "1980년 이후 통산 5년 이상 체류"},
-      {"type": "country", "name": "아일랜드", "condition": "1980년 이후 통산 5년 이상 체류"},
-      {"type": "country_group", "name": "기타 유럽 22개국", "condition": "1980년 이후 통산 5년 이상 체류"}
-    ],
-    "exception_areas": null
-  },
-  {
-    "id": "region-malaria-004", "category": "region_malaria", "name": "말라리아 위험 국가: 네팔", "keywords": ["말라리아", "아시아", "네팔", "카트만두", "히말라야"], "continent": "아시아", "description": "네팔은 고지대를 제외한 대부분 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 2,000m 이상 지역 제외 전 지역"}],
-    "exception_areas": [{"type": "city", "name": "카트만두"}, {"type": "area", "name": "히말라야 트레킹 코스"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-005", "category": "region_malaria", "name": "말라리아 위험 국가: 동티모르", "keywords": ["말라리아", "아시아", "동티모르"], "continent": "아시아", "description": "동티모르는 전 지역이 말라리아 위험 지역으로 분류됩니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-006", "category": "region_malaria", "name": "말라리아 위험 국가: 라오스", "keywords": ["말라리아", "아시아", "라오스", "비엔티안"], "continent": "아시아", "description": "라오스는 수도 비엔티안을 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide_except_capital", "name": "수도 제외 전 지역"}], "exception_areas": [{"type": "city", "name": "비엔티안"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-007", "category": "region_malaria", "name": "말라리아 위험 국가: 말레이시아", "keywords": ["말라리아", "아시아", "말레이시아", "사바", "사라왁", "쿠알라룸푸르", "페낭"], "continent": "아시아", "description": "말레이시아는 사바주, 사라왁주 등 일부 내륙지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "사바주 내륙"}, {"type": "province", "name": "사라왁주 내륙"}],
-    "exception_areas": [{"type": "city", "name": "쿠알라룸푸르"}, {"type": "area", "name": "페낭"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-008", "category": "region_malaria", "name": "말라리아 위험 국가: 미얀마", "keywords": ["말라리아", "아시아", "미얀마"], "continent": "아시아", "description": "미얀마는 고지대를 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 1,000m 이상 지역 제외 전 지역"}], "exception_areas": [{"type": "altitude", "name": "해발 1,000m 이상 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-009", "category": "region_malaria", "name": "말라리아 위험 국가: 방글라데시", "keywords": ["말라리아", "아시아", "방글라데시", "치타공", "콕스바자르", "다카", "랑가마티", "카그라차리", "반다르반"], "continent": "아시아", "description": "방글라데시는 치타공, 콕스바자르 주가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "치타공주", "cities": ["랑가마티", "카그라차리", "반다르반"]}, {"type": "province", "name": "콕스바자르주", "cities": ["콕스바자르", "테크나프", "우키아"]}],
-    "exception_areas": [{"type": "city", "name": "다카"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-010", "category": "region_malaria", "name": "말라리아 위험 국가: 베트남", "keywords": ["말라리아", "아시아", "베트남", "하노이", "호치민", "다낭", "나트랑", "하이퐁", "푸꾸옥"], "continent": "아시아", "description": "베트남은 일부 성(省)의 농촌지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "까마우성"}, {"type": "province", "name": "박리에우성"}, {"type": "province", "name": "속짱성"}, {"type": "province", "name": "짜빈성"}, {"type": "province", "name": "끼엔장성"}, {"type": "province", "name": "닌투언성"}, {"type": "province", "name": "럼동성"}, {"type": "province", "name": "빈프억성"}, {"type": "province", "name": "닥농성"}, {"type": "province", "name": "닥락성"}, {"type": "province", "name": "잘라이성"}, {"type": "province", "name": "꼰뚬성"}, {"type": "province_partial", "name": "푸옌성 농촌"}, {"type": "province_partial", "name": "칸호아성 농촌"}, {"type": "province_partial", "name": "꽝찌성 농촌"}, {"type": "province_partial", "name": "꽝남성 농촌"}],
-    "exception_areas": [{"type": "city", "name": "하노이"}, {"type": "city", "name": "호치민"}, {"type": "city", "name": "다낭"}, {"type": "city", "name": "나트랑"}, {"type": "city", "name": "하이퐁"}, {"type": "island", "name": "푸꾸옥"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-011", "category": "region_malaria", "name": "말라리아 위험 국가: 부탄", "keywords": ["말라리아", "아시아", "부탄", "팀푸", "파로"], "continent": "아시아", "description": "부탄은 남부 국경지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "남부 국경지역"}], "exception_areas": [{"type": "city", "name": "팀푸"}, {"type": "city", "name": "파로"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-012", "category": "region_malaria", "name": "말라리아 위험 국가: 사우디아라비아", "keywords": ["말라리아", "아시아", "사우디아라비아", "메카", "메디나", "리야드", "제다"], "continent": "아시아", "description": "사우디아라비아는 남서부 아시르, 지잔 주가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "아시르주"}, {"type": "province", "name": "지잔주"}],
-    "exception_areas": [{"type": "city", "name": "메카"}, {"type": "city", "name": "메디나"}, {"type": "city", "name": "리야드"}, {"type": "city", "name": "제다"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-013", "category": "region_malaria", "name": "말라리아 위험 국가: 아프가니스탄", "keywords": ["말라리아", "아시아", "아프가니스탄", "카불"], "continent": "아시아", "description": "아프가니스탄은 수도와 고지대를 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 2,000m 이상 지역 제외 전 지역"}],
-    "exception_areas": [{"type": "city", "name": "카불"}, {"type": "altitude", "name": "해발 2,000m 이상 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-014", "category": "region_malaria", "name": "말라리아 위험 국가: 예멘", "keywords": ["말라리아", "아시아", "예멘", "사나"], "continent": "아시아", "description": "예멘은 수도와 고지대를 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 2,000m 이상 지역 제외 전 지역"}],
-    "exception_areas": [{"type": "city", "name": "사나"}, {"type": "altitude", "name": "해발 2,000m 이상 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-015", "category": "region_malaria", "name": "말라리아 위험 국가: 이란", "keywords": ["말라리아", "아시아", "이란", "시스탄", "발루체스탄", "호르모즈간", "케르만"], "continent": "아시아", "description": "이란은 시스탄-발루체스탄주 등 일부 동남부 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "시스탄-발루체스탄주"}, {"type": "province", "name": "호르모즈간주"}, {"type": "province_partial", "name": "케르만주 남부"}], "exception_areas": [{"type": "area", "name": "주요 도시 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-016", "category": "region_malaria", "name": "말라리아 위험 국가: 인도", "keywords": ["말라리아", "아시아", "인도", "안다만", "니코바르", "오디샤", "차티스가르", "자르칸드"], "continent": "아시아", "description": "인도는 동북부 주를 포함한 일부 주와 안다만 니코바르 섬이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "island", "name": "안다만 니코바르 섬"}, {"type": "area", "name": "동북부 주"}, {"type": "province", "name": "오디샤주"}, {"type": "province", "name": "차티스가르주"}, {"type": "province", "name": "자르칸드주"}, {"type": "province", "name": "마디아프라데시주"}, {"type": "province", "name": "마하라슈트라주"}, {"type": "province", "name": "서벵골주"}],
-    "exception_areas": [{"type": "province", "name": "히마찰프라데시주"}, {"type": "province", "name": "잠무 카슈미르주"}, {"type": "province", "name": "시킴주"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-017", "category": "region_malaria", "name": "말라리아 위험 국가: 인도네시아", "keywords": ["말라리아", "아시아", "인도네시아", "파푸아", "자카르타", "발리", "롬복"], "continent": "아시아", "description": "인도네시아는 파푸아 등 동부 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "파푸아주"}, {"type": "province", "name": "서파푸아주"}, {"type": "province", "name": "동부 누사텡가라주"}, {"type": "province", "name": "말루쿠주"}, {"type": "province", "name": "북말루쿠주"}],
-    "exception_areas": [{"type": "city", "name": "자카르타"}, {"type": "island", "name": "발리섬"}, {"type": "island", "name": "길리섬"}, {"type": "island", "name": "롬복섬"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-018", "category": "region_malaria", "name": "말라리아 위험 국가: 중국", "keywords": ["말라리아", "아시아", "중국", "윈난성", "티베트"], "continent": "아시아", "description": "중국은 윈난성, 티베트 자치구 일부 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province_partial", "name": "윈난성 일부"}, {"type": "province_partial", "name": "티베트 자치구 일부"}], "exception_areas": [{"type": "area", "name": "대부분의 도시 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-019", "category": "region_malaria", "name": "말라리아 위험 국가: 캄보디아", "keywords": ["말라리아", "아시아", "캄보디아", "프놈펜", "시엠립", "앙코르와트"], "continent": "아시아", "description": "캄보디아는 프놈펜, 시엠립 등을 제외한 대부분 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide_except", "name": "프놈펜, 톤레삽 호수 인근 제외 전 지역"}],
-    "exception_areas": [{"type": "city", "name": "프놈펜"}, {"type": "city", "name": "시엠립", "sub_areas": ["앙코르와트"]}, {"type": "area", "name": "톤레삽 호수"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-020", "category": "region_malaria", "name": "말라리아 위험 국가: 태국", "keywords": ["말라리아", "아시아", "태국", "방콕", "치앙마이", "파타야", "푸켓", "코사무이"], "continent": "아시아", "description": "태국은 주요 국경 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "미얀마 국경"}, {"type": "area", "name": "캄보디아 국경"}, {"type": "area", "name": "라오스 국경"}, {"type": "area", "name": "말레이시아 국경"}],
-    "exception_areas": [{"type": "city", "name": "방콕"}, {"type": "city", "name": "치앙마이"}, {"type": "city", "name": "파타야"}, {"type": "island", "name": "푸켓"}, {"type": "island", "name": "코사무이"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-021", "category": "region_malaria", "name": "말라리아 위험 국가: 파키스탄", "keywords": ["말라리아", "아시아", "파키스탄"], "continent": "아시아", "description": "파키스탄은 고지대를 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 2,000m 이상 지역 제외 전 지역"}], "exception_areas": [{"type": "altitude", "name": "해발 2,000m 이상 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-022", "category": "region_malaria", "name": "말라리아 위험 국가: 파푸아뉴기니", "keywords": ["말라리아", "아시아", "파푸아뉴기니"], "continent": "아시아", "description": "파푸아뉴기니는 고지대를 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 1,800m 이상 지역 제외 전 지역"}], "exception_areas": [{"type": "altitude", "name": "해발 1,800m 이상 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-023", "category": "region_malaria", "name": "말라리아 위험 국가: 필리핀", "keywords": ["말라리아", "아시아", "필리핀", "팔라완", "푸에르토프린세사", "엘니도", "코론", "마닐라", "세부", "보라카이", "보홀"], "continent": "아시아", "description": "필리핀은 팔라완 섬이 말라리아 위험 지역으로 분류됩니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "island", "name": "팔라완섬", "cities": ["푸에르토 프린세사", "엘니도", "코론", "브룩스 포인트"]}],
-    "exception_areas": [{"type": "city", "name": "마닐라"}, {"type": "island", "name": "세부섬"}, {"type": "island", "name": "보라카이섬"}, {"type": "island", "name": "보홀섬"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-024", "category": "region_malaria", "name": "말라리아 위험 국가: 가이아나", "keywords": ["말라리아", "아메리카", "가이아나"], "continent": "아메리카", "description": "가이아나는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-025", "category": "region_malaria", "name": "말라리아 위험 국가: 과테말라", "keywords": ["말라리아", "아메리카", "과테말라", "안티과", "아티틀란"], "continent": "아메리카", "description": "과테말라는 에스퀸틀라, 산타로사 주 등 일부가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "에스퀸틀라주"}, {"type": "province", "name": "산타로사주"}, {"type": "province", "name": "레탈룰레우주"}, {"type": "province", "name": "수치테페케스주"}, {"type": "province", "name": "알타베라파스주"}, {"type": "province", "name": "바하베라파스주"}, {"type": "province", "name": "이사발주"}, {"type": "province", "name": "페텐주"}, {"type": "province", "name": "키체주"}],
-    "exception_areas": [{"type": "city", "name": "과테말라 시티"}, {"type": "city", "name": "안티과"}, {"type": "area", "name": "아티틀란 호수"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-026", "category": "region_malaria", "name": "말라리아 위험 국가: 니카라과", "keywords": ["말라리아", "아메리카", "니카라과", "마나과"], "continent": "아메리카", "description": "니카라과는 북/남 대서양자치구가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "북대서양자치구(RAAN)"}, {"type": "area", "name": "남대서양자치구(RAAS)"}], "exception_areas": [{"type": "city", "name": "마나과"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-027", "category": "region_malaria", "name": "말라리아 위험 국가: 도미니카 공화국", "keywords": ["말라리아", "아메리카", "도미니카공화국", "푼타카나", "산토도밍고"], "continent": "아메리카", "description": "도미니카 공화국은 아이티 국경 인근 주가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "아이티 국경 인근 주"}],
-    "exception_areas": [{"type": "city", "name": "푼타카나"}, {"type": "city", "name": "산토도밍고"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-028", "category": "region_malaria", "name": "말라리아 위험 국가: 멕시코", "keywords": ["말라리아", "아메리카", "멕시코", "칸쿤", "치아파스", "치와와"], "continent": "아메리카", "description": "멕시코는 치아파스, 치와와 주 등 일부가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "치아파스주"}, {"type": "province", "name": "치와와주"}, {"type": "province", "name": "두랑고주"}, {"type": "province", "name": "나야리트주"}, {"type": "province", "name": "시날로아주"}],
-    "exception_areas": [{"type": "city", "name": "칸쿤"}, {"type": "city", "name": "멕시코시티"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-029", "category": "region_malaria", "name": "말라리아 위험 국가: 베네수엘라", "keywords": ["말라리아", "아메리카", "베네수엘라", "카라카스"], "continent": "아메리카", "description": "베네수엘라는 고지대 및 일부 섬을 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 1,700m 이상 지역 제외 전 지역"}],
-    "exception_areas": [{"type": "city", "name": "카라카스"}, {"type": "island", "name": "마르가리타섬"}, {"type": "altitude", "name": "해발 1,700m 이상 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-030", "category": "region_malaria", "name": "말라리아 위험 국가: 벨리즈", "keywords": ["말라리아", "아메리카", "벨리즈", "키코커", "앰버그리스키"], "continent": "아메리카", "description": "벨리즈는 스탄크리크, 털리도 주가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "스탄크리크주"}, {"type": "province", "name": "털리도주"}],
-    "exception_areas": [{"type": "city", "name": "벨리즈시티"}, {"type": "island", "name": "키코커섬"}, {"type": "island", "name": "앰버그리스키섬"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-031", "category": "region_malaria", "name": "말라리아 위험 국가: 볼리비아", "keywords": ["말라리아", "아메리카", "볼리비아", "라파스", "수크레", "우유니"], "continent": "아메리카", "description": "볼리비아는 아마존 분지 저지대가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 2,500m 이하 아마존 분지 저지대"}],
-    "exception_areas": [{"type": "city", "name": "라파스"}, {"type": "city", "name": "수크레"}, {"type": "area", "name": "티티카카 호수"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-032", "category": "region_malaria", "name": "말라리아 위험 국가: 브라질", "keywords": ["말라리아", "아메리카", "브라질", "리우데자네이루", "상파울루", "이과수"], "continent": "아메리카", "description": "브라질은 아마존 분지에 속한 9개 주가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "아마존 분지 9개 주", "cities": ["아마조나스", "호라이마", "아크리", "혼도니아", "아마파", "파라", "토칸칭스", "마라냥", "마투그로수"]}],
-    "exception_areas": [{"type": "city", "name": "리우데자네이루"}, {"type": "city", "name": "상파울루"}, {"type": "area", "name": "이과수 폭포"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-033", "category": "region_malaria", "name": "말라리아 위험 국가: 수리남", "keywords": ["말라리아", "아메리카", "수리남", "파라마리보"], "continent": "아메리카", "description": "수리남은 내륙 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "내륙 지역"}], "exception_areas": [{"type": "city", "name": "파라마리보"}, {"type": "area", "name": "해안 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-034", "category": "region_malaria", "name": "말라리아 위험 국가: 아이티", "keywords": ["말라리아", "아메리카", "아이티"], "continent": "아메리카", "description": "아이티는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-035", "category": "region_malaria", "name": "말라리아 위험 국가: 에콰도르", "keywords": ["말라리아", "아메리카", "에콰도르", "키토", "갈라파고스"], "continent": "아메리카", "description": "에콰도르는 아마존 분지 저지대가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 1,500m 이하 아마존 분지 저지대"}],
-    "exception_areas": [{"type": "city", "name": "키토"}, {"type": "city", "name": "과야킬"}, {"type": "island", "name": "갈라파고스 제도"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-036", "category": "region_malaria", "name": "말라리아 위험 국가: 온두라스", "keywords": ["말라리아", "아메리카", "온두라스", "로아탄"], "continent": "아메리카", "description": "온두라스는 아틀란티다, 콜론 주 등 일부가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "아틀란티다주"}, {"type": "province", "name": "콜론주"}, {"type": "province", "name": "코르테스주"}, {"type": "province", "name": "요로주"}],
-    "exception_areas": [{"type": "city", "name": "테구시갈파"}, {"type": "city", "name": "산페드로술라"}, {"type": "area", "name": "코판 유적"}, {"type": "island", "name": "로아탄섬"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-037", "category": "region_malaria", "name": "말라리아 위험 국가: 콜롬비아", "keywords": ["말라리아", "아메리카", "콜롬비아", "보고타", "메데인", "카르타헤나"], "continent": "아메리카", "description": "콜롬비아는 아마존 분지 및 태평양 연안 저지대가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 1,700m 이하 저지대"}],
-    "exception_areas": [{"type": "city", "name": "보고타"}, {"type": "city", "name": "메데인"}, {"type": "city", "name": "칼리"}, {"type": "city", "name": "카르타헤나"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-038", "category": "region_malaria", "name": "말라리아 위험 국가: 파나마", "keywords": ["말라리아", "아메리카", "파나마", "파나마시티", "산블라스"], "continent": "아메리카", "description": "파나마는 동부 주들이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "province", "name": "다리엔주"}, {"type": "province", "name": "쿠나얄라주"}, {"type": "province", "name": "콜론주"}, {"type": "province", "name": "파나마주"}],
-    "exception_areas": [{"type": "city", "name": "파나마시티"}, {"type": "area", "name": "파나마 운하"}, {"type": "island", "name": "산블라스섬"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-039", "category": "region_malaria", "name": "말라리아 위험 국가: 페루", "keywords": ["말라리아", "아메리카", "페루", "리마", "쿠스코", "마추픽추"], "continent": "아메리카", "description": "페루는 아마존 분지 저지대가 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 2,000m 이하 아마존 분지 저지대"}],
-    "exception_areas": [{"type": "city", "name": "리마"}, {"type": "city", "name": "쿠스코"}, {"type": "area", "name": "마추픽추"}, {"type": "city", "name": "아레키파"}, {"type": "area", "name": "티티카카 호수"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-040", "category": "region_malaria", "name": "말라리아 위험 국가: 프랑스령 기아나", "keywords": ["말라리아", "아메리카", "프랑스령기아나", "기아나"], "continent": "아메리카", "description": "프랑스령 기아나는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-041", "category": "region_malaria", "name": "말라리아 위험 국가: 가나", "keywords": ["말라리아", "아프리카", "가나"], "continent": "아프리카", "description": "가나는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-042", "category": "region_malaria", "name": "말라리아 위험 국가: 가봉", "keywords": ["말라리아", "아프리카", "가봉"], "continent": "아프리카", "description": "가봉은 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-043", "category": "region_malaria", "name": "말라리아 위험 국가: 감비아", "keywords": ["말라리아", "아프리카", "감비아"], "continent": "아프리카", "description": "감비아는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-044", "category": "region_malaria", "name": "말라리아 위험 국가: 기니", "keywords": ["말라리아", "아프리카", "기니"], "continent": "아프리카", "description": "기니는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-045", "category": "region_malaria", "name": "말라리아 위험 국가: 기니비사우", "keywords": ["말라리아", "아프리카", "기니비사우"], "continent": "아프리카", "description": "기니비사우는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-046", "category": "region_malaria", "name": "말라리아 위험 국가: 나미비아", "keywords": ["말라리아", "아프리카", "나미비아", "빈트후크"], "continent": "아프리카", "description": "나미비아는 북부 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "북부 지역"}], "exception_areas": [{"type": "city", "name": "빈트후크"}, {"type": "area", "name": "남부 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-047", "category": "region_malaria", "name": "말라리아 위험 국가: 나이지리아", "keywords": ["말라리아", "아프리카", "나이지리아"], "continent": "아프리카", "description": "나이지리아는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-048", "category": "region_malaria", "name": "말라리아 위험 국가: 남수단", "keywords": ["말라리아", "아프리카", "남수단"], "continent": "아프리카", "description": "남수단은 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-049", "category": "region_malaria", "name": "말라리아 위험 국가: 니제르", "keywords": ["말라리아", "아프리카", "니제르"], "continent": "아프리카", "description": "니제르는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-050", "category": "region_malaria", "name": "말라리아 위험 국가: 라이베리아", "keywords": ["말라리아", "아프리카", "라이베리아"], "continent": "아프리카", "description": "라이베리아는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-051", "category": "region_malaria", "name": "말라리아 위험 국가: 마다가스카르", "keywords": ["말라리아", "아프리카", "마다가스카르"], "continent": "아프리카", "description": "마다가스카르는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-052", "category": "region_malaria", "name": "말라리아 위험 국가: 말라위", "keywords": ["말라리아", "아프리카", "말라위"], "continent": "아프리카", "description": "말라위는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-053", "category": "region_malaria", "name": "말라리아 위험 국가: 말리", "keywords": ["말라리아", "아프리카", "말리"], "continent": "아프리카", "description": "말리는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-054", "category": "region_malaria", "name": "말라리아 위험 국가: 모리타니", "keywords": ["말라리아", "아프리카", "모리타니"], "continent": "아프리카", "description": "모리타니는 북부 사막지역을 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area_except", "name": "북부 사막지역 제외 전 지역"}], "exception_areas": [{"type": "area", "name": "북부 사막지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-055", "category": "region_malaria", "name": "말라리아 위험 국가: 모잠비크", "keywords": ["말라리아", "아프리카", "모잠비크"], "continent": "아프리카", "description": "모잠비크는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-056", "category": "region_malaria", "name": "말라리아 위험 국가: 베냉", "keywords": ["말라리아", "아프리카", "베냉"], "continent": "아프리카", "description": "베냉은 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-057", "category": "region_malaria", "name": "말라리아 위험 국가: 보츠와나", "keywords": ["말라리아", "아프리카", "보츠와나", "가보로네"], "continent": "아프리카", "description": "보츠와나는 북부 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "북부 지역"}], "exception_areas": [{"type": "city", "name": "가보로네"}, {"type": "area", "name": "남동부 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-058", "category": "region_malaria", "name": "말라리아 위험 국가: 부룬디", "keywords": ["말라리아", "아프리카", "부룬디"], "continent": "아프리카", "description": "부룬디는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-059", "category": "region_malaria", "name": "말라리아 위험 국가: 부르키나파소", "keywords": ["말라리아", "아프리카", "부르키나파소"], "continent": "아프리카", "description": "부르키나파소는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-060", "category": "region_malaria", "name": "말라리아 위험 국가: 상투메 프린시페", "keywords": ["말라리아", "아프리카", "상투메프린시페"], "continent": "아프리카", "description": "상투메 프린시페는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-061", "category": "region_malaria", "name": "말라리아 위험 국가: 세네갈", "keywords": ["말라리아", "아프리카", "세네갈"], "continent": "아프리카", "description": "세네갈은 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-062", "category": "region_malaria", "name": "말라리아 위험 국가: 소말리아", "keywords": ["말라리아", "아프리카", "소말리아"], "continent": "아프리카", "description": "소말리아는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-063", "category": "region_malaria", "name": "말라리아 위험 국가: 수단", "keywords": ["말라리아", "아프리카", "수단"], "continent": "아프리카", "description": "수단은 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-064", "category": "region_malaria", "name": "말라리아 위험 국가: 시에라리온", "keywords": ["말라리아", "아프리카", "시에라리온"], "continent": "아프리카", "description": "시에라리온은 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-065", "category": "region_malaria", "name": "말라리아 위험 국가: 앙골라", "keywords": ["말라리아", "아프리카", "앙골라"], "continent": "아프리카", "description": "앙골라는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-066", "category": "region_malaria", "name": "말라리아 위험 국가: 에리트레아", "keywords": ["말라리아", "아프리카", "에리트레아", "아스마라"], "continent": "아프리카", "description": "에리트레아는 해안 평야 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "해안 평야 지역"}], "exception_areas": [{"type": "city", "name": "아스마라"}, {"type": "area", "name": "고원지대"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-067", "category": "region_malaria", "name": "말라리아 위험 국가: 에티오피아", "keywords": ["말라리아", "아프리카", "에티오피아", "아디스아바바"], "continent": "아프리카", "description": "에티오피아는 고지대를 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 2,000m 이상 지역 제외 전 지역"}],
-    "exception_areas": [{"type": "city", "name": "아디스아바바"}, {"type": "altitude", "name": "해발 2,000m 이상 지역"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-068", "category": "region_malaria", "name": "말라리아 위험 국가: 우간다", "keywords": ["말라리아", "아프리카", "우간다"], "continent": "아프리카", "description": "우간다는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-069", "category": "region_malaria", "name": "말라리아 위험 국가: 잠비아", "keywords": ["말라리아", "아프리카", "잠비아"], "continent": "아프리카", "description": "잠비아는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-070", "category": "region_malaria", "name": "말라리아 위험 국가: 적도 기니", "keywords": ["말라리아", "아프리카", "적도기니"], "continent": "아프리카", "description": "적도 기니는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-071", "category": "region_malaria", "name": "말라리아 위험 국가: 중앙아프리카공화국", "keywords": ["말라리아", "아프리카", "중앙아프리카공화국"], "continent": "아프리카", "description": "중앙아프리카공화국은 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-072", "category": "region_malaria", "name": "말라리아 위험 국가: 지부티", "keywords": ["말라리아", "아프리카", "지부티"], "continent": "아프리카", "description": "지부티는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-073", "category": "region_malaria", "name": "말라리아 위험 국가: 짐바브웨", "keywords": ["말라리아", "아프리카", "짐바브웨", "하라레"], "continent": "아프리카", "description": "짐바브웨는 잠베지강 유역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "잠베지강 유역"}], "exception_areas": [{"type": "city", "name": "하라레"}, {"type": "city", "name": "불라와요"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-074", "category": "region_malaria", "name": "말라리아 위험 국가: 차드", "keywords": ["말라리아", "아프리카", "차드"], "continent": "아프리카", "description": "차드는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-075", "category": "region_malaria", "name": "말라리아 위험 국가: 카메룬", "keywords": ["말라리아", "아프리카", "카메룬"], "continent": "아프리카", "description": "카메룬은 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-076", "category": "region_malaria", "name": "말라리아 위험 국가: 케냐", "keywords": ["말라리아", "아프리카", "케냐", "나이로비"], "continent": "아프리카", "description": "케냐는 서부, 해안 및 타나강 유역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "area", "name": "서부 지역"}, {"type": "area", "name": "해안 지역"}, {"type": "area", "name": "타나강 유역(해발 2,500m 이하)"}],
-    "exception_areas": [{"type": "city", "name": "나이로비"}, {"type": "area", "name": "고원지대"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-077", "category": "region_malaria", "name": "말라리아 위험 국가: 코모로", "keywords": ["말라리아", "아프리카", "코모로"], "continent": "아프리카", "description": "코모로는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-078", "category": "region_malaria", "name": "말라리아 위험 국가: 코트디부아르", "keywords": ["말라리아", "아프리카", "코트디부아르"], "continent": "아프리카", "description": "코트디부아르는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-079", "category": "region_malaria", "name": "말라리아 위험 국가: 콩고", "keywords": ["말라리아", "아프리카", "콩고"], "continent": "아프리카", "description": "콩고는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-080", "category": "region_malaria", "name": "말라리아 위험 국가: 콩고민주공화국", "keywords": ["말라리아", "아프리카", "콩고민주공화국", "민주콩고"], "continent": "아프리카", "description": "콩고민주공화국은 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-081", "category": "region_malaria", "name": "말라리아 위험 국가: 탄자니아", "keywords": ["말라리아", "아프리카", "탄자니아", "킬리만자로", "잔지바르", "다르에스살람"], "continent": "아프리카", "description": "탄자니아는 고지대 및 일부 지역을 제외한 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "altitude_except", "name": "해발 1,800m 이상 지역 제외 전 지역"}],
-    "exception_areas": [{"type": "mountain", "name": "킬리만자로"}, {"type": "island", "name": "잔지바르섬"}, {"type": "city", "name": "다르에스살람"}],
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
-  },
-  {
-    "id": "region-malaria-082", "category": "region_malaria", "name": "말라리아 위험 국가: 토고", "keywords": ["말라리아", "아프리카", "토고"], "continent": "아프리카", "description": "토고는 전 지역이 말라리아 위험 지역입니다. [헌혈제한: 여행 시 1년, 6개월 이상 거주 시 3년]",
-    "risk_areas": [{"type": "nationwide", "name": "전 지역"}], "exception_areas": null,
-    "allowable": false, "restriction": { "type": "period_multi", "periods": [{ "value": 1, "unit": "year", "condition": "여행(6개월 미만 체류) 시" },{ "value": 3, "unit": "year", "condition": "거주(6개월 이상 체류) 시" }] }
+    "restriction": { "type": "permanent" }
+  },
+  {
+    "id": "region-004",
+    "category": "region",
+    "name": "기타 해외 여행",
+    "keywords": ["해외", "여행", "외국"],
+    "description": "별도의 위험 지역으로 지정되지 않은 곳이라도, 모든 해외 여행 후에는 귀국일로부터 1개월이 경과해야 헌혈이 가능합니다. 이는 해외 유행 감염병의 잠복기를 고려한 조치입니다.",
+    "allowable": false,
+    "restriction": { "type": "period", "periodValue": 1, "periodUnit": "month" }
   }
 ]

@@ -110,100 +110,119 @@ function App() {
 
     return filteredData
       .map((item) => {
-        let matchInfo = null;
-        let isAllowableOverride = undefined;
-        let exceptionNote = null;
-
-        // Standard search (name, aliases, keywords)
-        const standardMatches = [];
-        if (item.name.toLowerCase().includes(lowerQuery)) {
-          standardMatches.push({ type: 'name', value: item.name });
-        }
-        (item.aliases || []).forEach((alias) => {
-          if (alias.toLowerCase().includes(lowerQuery)) {
-            standardMatches.push({ type: 'alias', value: alias });
+        const_standard_search_result = () => {
+          if (item.name.toLowerCase().includes(lowerQuery)) return true;
+          if (
+            (item.keywords || [])
+              .join(' ')
+              .toLowerCase()
+              .includes(lowerQuery)
+          ) {
+            return true;
           }
-        });
-        (item.keywords || []).forEach((keyword) => {
-          if (keyword.toLowerCase().includes(lowerQuery)) {
-            standardMatches.push({ type: 'keyword', value: keyword });
-          }
-        });
+          return false;
+        };
 
-        // Region-specific search
-        if (item.category === '지역' && item.countries && queryParts.length > 0) {
-          const countryMatch = item.countries.find((c) =>
-            queryParts.some((part) => c.countryName.toLowerCase().includes(part))
-          );
+        // region.json의 `malaria_international` 항목에 대한 특별 검색 로직
+        if (item.id === 'region-001' && queryParts.length > 0) {
+          let bestMatch = null;
 
-          if (countryMatch) {
-            const areaPart = queryParts.find(
-              (part) =>
-                part !== countryMatch.countryName.toLowerCase() &&
-                countryMatch.areas.some((area) =>
-                  area.toLowerCase().includes(part)
-                )
-            );
-            const areaInAreas = areaPart
-              ? countryMatch.areas.find((area) =>
-                  area.toLowerCase().includes(areaPart)
-                )
-              : null;
+          for (const country of item.countries) {
+            const countryNameLower = country.countryName.toLowerCase();
+            let countryMatchScore = 0;
+            let areaMatchScore = 0;
+            let matchedArea = '';
 
-            if (countryMatch.ruleType === 'all') {
-              isAllowableOverride = false;
-              matchInfo = [{ type: 'country', value: countryMatch.countryName }];
-            } else if (countryMatch.ruleType === 'inclusion') {
-              if (areaInAreas) {
-                // 위험 지역
-                isAllowableOverride = false;
-                matchInfo = [
-                  {
-                    type: 'country',
-                    value: `${countryMatch.countryName} ${areaInAreas}`,
-                  },
-                ];
-                exceptionNote = countryMatch.note;
+            // 1. 국가명 일치 확인
+            if (countryNameLower.includes(queryParts[0])) {
+              countryMatchScore = 1;
+            } else if (
+              queryParts.some((part) => countryNameLower.includes(part))
+            ) {
+              countryMatchScore = 1;
+            }
+
+            if (countryMatchScore > 0) {
+              // 2. 지역명 일치 확인
+              const remainingParts = queryParts.filter(
+                (part) => !countryNameLower.includes(part)
+              );
+              const areaQuery = remainingParts.join(' ');
+
+              if (areaQuery) {
+                for (const area of country.areas) {
+                  const areaLower = area.toLowerCase();
+                  if (areaLower.includes(areaQuery)) {
+                    areaMatchScore = 2; // 지역명까지 일치하면 더 높은 점수
+                    matchedArea = area;
+                    break;
+                  }
+                }
               }
-              // 포함 규칙인데 검색어가 지역에 없으면, 이 항목은 결과에 포함되지 않아야 함
-            } else if (countryMatch.ruleType === 'exclusion') {
-              if (areaInAreas) {
-                // 예외 지역 -> 헌혈 가능
-                isAllowableOverride = true;
-                matchInfo = [
-                  {
-                    type: 'country',
-                    value: `${countryMatch.countryName} ${areaInAreas}`,
-                  },
-                ];
-                exceptionNote = countryMatch.note;
-              } else {
-                // 예외 지역이 아닌 곳 -> 헌혈 불가
-                isAllowableOverride = false;
-                matchInfo = [
-                  { type: 'country', value: countryMatch.countryName },
-                ];
+
+              const totalScore = countryMatchScore + areaMatchScore;
+
+              if (!bestMatch || totalScore > bestMatch.score) {
+                bestMatch = {
+                  country: country,
+                  area: matchedArea,
+                  score: totalScore,
+                };
               }
             }
           }
-        }
 
-        if (standardMatches.length > 0 && !matchInfo) {
-          matchInfo = standardMatches;
-        }
+          if (bestMatch) {
+            const { country, area } = bestMatch;
+            const { ruleType, note } = country;
+            let isAllowable = false; // 기본적으로 헌혈 불가
+            let resultName = item.name;
 
-        if (matchInfo) {
-          const baseResult = { ...item, matchInfo, exceptionNote };
-          if (isAllowableOverride !== undefined) {
+            if (ruleType === 'all') {
+              isAllowable = false;
+              resultName = `${country.countryName} 전지역`;
+            } else if (ruleType === 'inclusion') {
+              // 포함된 지역을 검색한 경우 -> 위험 지역 -> 헌혈 불가
+              if (area) {
+                isAllowable = false;
+                resultName = `${country.countryName} - ${area}`;
+              } else {
+                // 포함 규칙인데 지역 검색 없이 국가만 검색 -> 헌혈 불가
+                isAllowable = false;
+                resultName = `${country.countryName} (일부 지역)`;
+              }
+            } else if (ruleType === 'exclusion') {
+              // 제외된 지역을 검색한 경우 -> 예외 지역 -> 헌혈 가능
+              if (area) {
+                isAllowable = true;
+                resultName = `${country.countryName} - ${area}`;
+              } else {
+                // 제외 규칙인데 지역 검색 없이 국가만 검색 -> 헌혈 불가
+                isAllowable = false;
+                resultName = `${country.countryName} (일부 지역 제외)`;
+              }
+            }
+
             return {
-              ...baseResult,
-              allowable: isAllowableOverride,
-              // '가능'으로 바뀔 때 기존 제한 정보를 초기화
-              restrictionType: isAllowableOverride ? 'none' : item.restrictionType,
-              restrictionPeriodDays: isAllowableOverride ? 0 : item.restrictionPeriodDays,
+              ...item,
+              name: resultName, // UI에 표시될 이름 변경
+              allowable: isAllowable,
+              restrictionType: isAllowable ? 'none' : item.restrictionType,
+              restrictionPeriodDays: isAllowable
+                ? 0
+                : item.restrictionPeriodDays,
+              exceptionNote: note,
             };
           }
-          return baseResult;
+          // `malaria_international`에 매칭되는 국가가 없으면, 일반 검색도 하지 않고 그냥 null 반환
+          return null;
+        }
+
+        // 일반 검색
+        if (const_standard_search_result()) {
+          // malaria_international이 일반 검색에 걸리지 않도록 함
+          if (item.id === 'region-001') return null;
+          return { ...item, allowable: item.allowable || false };
         }
 
         return null;
