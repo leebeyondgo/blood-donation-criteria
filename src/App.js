@@ -188,32 +188,35 @@ function App() {
         {/*
           카테고리 필터의 UI를 개선합니다.
           1. 'flex-wrap'을 사용해 버튼들이 화면 크기에 맞춰 자동으로 줄바꿈되도록 합니다.
+          2. 'justify-center'를 적용해 필터를 수평 중앙 정렬합니다.
         */}
-        <FormControl
-          size="small"
-          aria-label="카테고리 필터"
-          className={`flex-wrap ${
-            query ? 'invisible' : ''
-          } mt-3 sm:mt-0`}
-        >
-          <InputLabel shrink>카테고리 필터</InputLabel>
-          <ToggleButtonGroup
-            exclusive
+        <div className="flex justify-center">
+          <FormControl
             size="small"
-            value={filterType}
-            onChange={(e, newType) => {
-              setFilterType(newType || '');
-            }}
-            className="flex-wrap" // 버튼 그룹 자체도 줄바꿈을 허용합니다.
+            aria-label="카테고리 필터"
+            className={`flex-wrap ${
+              query ? 'invisible' : ''
+            } mt-3 sm:mt-0`}
           >
-            <ToggleButton value="">전체</ToggleButton>
-            <ToggleButton value="질병">질병</ToggleButton>
-            <ToggleButton value="지역">지역</ToggleButton>
-            <ToggleButton value="약물">약물</ToggleButton>
-            <ToggleButton value="백신">백신</ToggleButton>
-            <ToggleButton value="기타">기타</ToggleButton>
-          </ToggleButtonGroup>
-        </FormControl>
+            <InputLabel shrink>카테고리 필터</InputLabel>
+            <ToggleButtonGroup
+              exclusive
+              size="small"
+              value={filterType}
+              onChange={(e, newType) => {
+                setFilterType(newType || '');
+              }}
+              className="flex-wrap" // 버튼 그룹 자체도 줄바꿈을 허용합니다.
+            >
+              <ToggleButton value="">전체</ToggleButton>
+              <ToggleButton value="질병">질병</ToggleButton>
+              <ToggleButton value="지역">지역</ToggleButton>
+              <ToggleButton value="약물">약물</ToggleButton>
+              <ToggleButton value="백신">백신</ToggleButton>
+              <ToggleButton value="기타">기타</ToggleButton>
+            </ToggleButtonGroup>
+          </FormControl>
+        </div>
 
         <ResultList
           results={results}
