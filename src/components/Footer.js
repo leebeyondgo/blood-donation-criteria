@@ -41,8 +41,8 @@ const Footer = () => {
         {/* 이메일 피드백 링크 */}
         <div className="flex justify-center items-center space-x-1">
           <MailOutlineRounded sx={{ fontSize: '1rem' }} />
-          <a href="mailto:your-email@example.com" className="hover:underline">
-            your-email@example.com
+          <a href="mailto:won31080@gmail.com" className="hover:underline">
+            won31080@gmail.com
           </a>
         </div>
 
