@@ -39,15 +39,15 @@
 
 ### 기본 필드
 
-| 필드명      | 타입   | 설명                                                                 | 필수 여부 |
-| :---------- | :----- | :------------------------------------------------------------------- | :-------- |
-| `id`        | String | 각 항목을 식별하는 고유 ID (예: "medication-001")                    | 예        |
-| `category`  | String | 데이터의 분류 (예: "medication", "disease", "vaccination")           | 예        |
-| `name`      | String | 항목의 공식 명칭 (예: "타이레놀 (아세트아미노펜 계열)")               | 예        |
-| `keywords`  | Array  | 검색에 사용될 키워드 배열 (예: `["타이레놀", "아세트아미노펜"]`)      | 예        |
-| `description`| String | 항목에 대한 상세 설명                                                | 예        |
-| `allowable` | Boolean| 헌혈이 즉시 가능한지 여부 (`true`이면 가능, `false`이면 조건부 또는 불가) | 예        |
-| `restriction`| Object | 헌혈 제한 조건에 대한 상세 정보를 담는 객체. `allowable`이 `false`일 때 필수 | 아니요    |
+| 필드명      | 타입    | 설명                                                                 | 필수 여부 |
+| :---------- | :------ | :------------------------------------------------------------------- | :-------- |
+| `id`        | String  | 각 항목을 식별하는 고유 ID (예: "medication-001")                    | 예        |
+| `category`  | String  | 데이터의 분류 (예: "medication", "disease", "vaccination")           | 예        |
+| `name`      | String  | 항목의 공식 명칭 (예: "타이레놀 (아세트아미노펜 계열)")               | 예        |
+| `keywords`  | Array   | 검색에 사용될 키워드 배열 (예: `["타이레놀", "아세트아미노펜"]`)      | 예        |
+| `description`| String  | 항목에 대한 상세 설명                                                | 예        |
+| `allowable` | Boolean | 헌혈이 즉시 가능한지 여부 (`true`이면 가능, `false`이면 조건부 또는 불가) | 예        |
+| `restriction`| Object  | 헌혈 제한 조건에 대한 상세 정보를 담는 객체. `allowable`이 `false`일 때 필수 | 아니요    |
 
 <br>
 
@@ -64,8 +64,24 @@
 
 <br>
 
+### `region.json`의 추가 스키마
+
+`category`가 "region"으로 시작하는 데이터는 다음과 같은 추가 필드를 가질 수 있습니다.
+
+**`countries` 객체 필드**
+
+| 필드명        | 타입   | 설명                                                               |
+| :------------ | :----- | :----------------------------------------------------------------- |
+| `countryName` | String | 국가명 (예: "남아프리카공화국")                                    |
+| `ruleType`    | String | 규칙 유형. 'exclusion'(예외) 규칙 등을 명시                        |
+| `areas`       | Array  | `ruleType`이 'exclusion'일 때, 헌혈 제한에서 제외되는 지역 목록    |
+| `note`        | String | 해당 국가 규칙에 대한 추가 참고사항                                |
+
+<br>
+
 ### 데이터 예시
 
+**일반 데이터 예시 (`medication.json`)**
 ```json
 {
   "id": "medication-002",
@@ -82,6 +98,37 @@
   }
 }
 ```
+
+**지역 데이터 예시 (`region.json`)**
+```json
+{
+  "id": "region_malaria-002",
+  "category": "region_malaria",
+  "name": "아프리카 말라리아 관련 헌혈 제한 지역",
+  "keywords": ["아프리카", "말라리아"],
+  "description": "아프리카 국가에 거주/방문한 경우, 기간에 따라 헌혈이 제한될 수 있습니다.",
+  "allowable": false,
+  "restriction": {
+    "type": "period",
+    "periodValue": 3,
+    "periodUnit": "year",
+    "condition": "거주/복무 시 3년, 여행 시 1년"
+  },
+  "countries": [
+    {
+      "countryName": "남아프리카공화국",
+      "ruleType": "exclusion",
+      "areas": [
+        "해발 1,800m 이상 지역",
+        "웨스턴케이프 주",
+        "노던케이프 주"
+      ],
+      "note": "상기 예외 지역을 제외한 모든 지역은 말라리아 위험 지역입니다."
+    }
+  ]
+}
+```
+
 </details>
 <br/>
 
