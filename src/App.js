@@ -10,6 +10,10 @@ import {
   FormControl,
   InputLabel,
 } from '@mui/material';
+import {
+  Brightness7Rounded,
+  Brightness4Rounded,
+} from '@mui/icons-material';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
 import { ThemeContext } from './contexts/ThemeContext';
