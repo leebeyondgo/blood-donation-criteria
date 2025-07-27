@@ -1,39 +1,31 @@
 import React from 'react';
-import { Button, ButtonGroup } from '@mui/material';
+import { Pagination as MuiPagination, useTheme } from '@mui/material';
 
-const Pagination = ({
-  totalPages,
-  currentPage,
-  onPageChange,
-  itemsPerPage,
-}) => {
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
+const Pagination = ({ totalPages, currentPage, onPageChange }) => {
+  const theme = useTheme();
+
+  if (totalPages <= 1) {
+    return null;
   }
 
   return (
     <div className="flex justify-center mt-4">
-      <ButtonGroup variant="text" aria-label="outlined primary button group">
-        <Button disabled={currentPage === 1} onClick={() => onPageChange(currentPage - 1)}>
-          이전
-        </Button>
-        {pageNumbers.map((number) => (
-          <Button
-            key={number}
-            onClick={() => onPageChange(number)}
-            variant={currentPage === number ? "contained" : "text"}
-          >
-            {number}
-          </Button>
-        ))}
-        <Button
-          disabled={currentPage === totalPages}
-          onClick={() => onPageChange(currentPage + 1)}
-        >
-          다음
-        </Button>
-      </ButtonGroup>
+      <MuiPagination
+        count={totalPages}
+        page={currentPage}
+        onChange={(event, value) => onPageChange(value)}
+        color="primary"
+        sx={{
+          '& .MuiPaginationItem-root': {
+            color: theme.palette.text.secondary,
+          },
+          '& .Mui-selected': {
+            backgroundColor: 'transparent !important',
+            color: theme.palette.text.primary,
+            fontWeight: 'bold',
+          },
+        }}
+      />
     </div>
   );
 };

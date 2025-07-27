@@ -259,13 +259,11 @@ function App() {
         />
 
         <div className="mt-8">
-          {results.length > ITEMS_PER_PAGE && (
-            <Pagination
-              totalPages={Math.ceil(results.length / ITEMS_PER_PAGE)}
-              currentPage={currentPage}
-              onPageChange={setCurrentPage}
-            />
-          )}
+          <Pagination
+            totalPages={Math.ceil(results.length / ITEMS_PER_PAGE)}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+          />
         </div>
 
         <footer className="text-center text-sm text-gray-500 mt-8 py-4 border-t dark:border-gray-700">
