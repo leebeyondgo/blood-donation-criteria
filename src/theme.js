@@ -40,6 +40,8 @@ export const darkTheme = createTheme({
     },
     secondary: {
       main: '#ccc2dc',
+      dark: '#383838',
+      contrastText: '#ffffff',
     },
     background: {
       default: '#121212',
