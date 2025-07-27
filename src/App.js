@@ -12,6 +12,7 @@ import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
 import { ThemeContext } from './contexts/ThemeContext';
 import ResultList from './components/ResultList';
+import Pagination from './components/Pagination';
 import diseaseData from './data/disease.json';
 import regionData from './data/region.json';
 import medicationData from './data/medication.json';
@@ -115,7 +116,9 @@ function App() {
   const [baseDate, setBaseDate] = useState(() =>
     new Date().toISOString().split('T')[0]
   );
+  const [currentPage, setCurrentPage] = useState(1);
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const ITEMS_PER_PAGE = 20;
 
   const formatDate = (date) => {
     const yyyy = date.getFullYear();
@@ -144,6 +147,12 @@ function App() {
         : allData;
     }
   }, [query, filterType]);
+
+  const paginatedResults = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    return results.slice(startIndex, endIndex);
+  }, [results, currentPage]);
 
   return (
     <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
@@ -235,11 +244,20 @@ function App() {
         </div>
 
         <ResultList
-          results={results}
+          results={paginatedResults}
           query={query}
           baseDate={baseDate}
           formatDate={formatDate}
+          totalResultsCount={results.length}
         />
+
+        {results.length > ITEMS_PER_PAGE && (
+          <Pagination
+            totalPages={Math.ceil(results.length / ITEMS_PER_PAGE)}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+          />
+        )}
 
         <footer className="text-center text-sm text-gray-500 mt-8 py-4 border-t">
           <p>

@@ -1,8 +1,14 @@
 import React from 'react';
 import ResultItem from './ResultItem';
 
-const ResultList = ({ results, query, baseDate, formatDate }) => {
-  if (query && results.length === 0) {
+const ResultList = ({
+  results,
+  query,
+  baseDate,
+  formatDate,
+  totalResultsCount,
+}) => {
+  if (query && totalResultsCount === 0) {
     return <li className="no-result">검색 결과가 없습니다.</li>;
   }
 
