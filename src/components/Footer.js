@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, useTheme } from '@mui/material';
+import { MailOutlineRounded } from '@mui/icons-material'; // 이메일 아이콘 import
 
 const Footer = () => {
   const theme = useTheme();
@@ -20,12 +21,12 @@ const Footer = () => {
         </p>
         <div className="flex justify-center items-center space-x-4">
           <a
-            href="https://github.com/leebeyondgo/blood-donation-criteria"
+            href="https://github.com/leebeyondgo/blood-donation-criteria/issues"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
           >
-            피드백 및 기여
+            피드백 및 기능 제안
           </a>
           <a
             href="https://www.bloodinfo.net/main.do"
@@ -36,8 +37,18 @@ const Footer = () => {
             대한적십자사 혈액관리본부
           </a>
         </div>
-        <p>© 2025 Blood Donation Criteria. All rights reserved.</p>
-        <p>GPL-2.0 license</p>
+        
+        {/* 이메일 피드백 링크 */}
+        <div className="flex justify-center items-center space-x-1">
+          <MailOutlineRounded sx={{ fontSize: '1rem' }} />
+          <a href="mailto:your-email@example.com" className="hover:underline">
+            your-email@example.com
+          </a>
+        </div>
+
+        <p className="pt-2 text-xs"> {/* 저작권/라이선스 정보와 위쪽 여백 */}
+          © 2025 Blood Donation Criteria. GPL-2.0 License.
+        </p>
       </div>
     </Box>
   );
