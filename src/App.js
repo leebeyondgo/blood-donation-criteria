@@ -240,6 +240,20 @@ function App() {
           baseDate={baseDate}
           formatDate={formatDate}
         />
+
+        <footer className="text-center text-sm text-gray-500 mt-8 py-4 border-t">
+          <p>
+            <a
+              href="https://github.com/your-github/your-repo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              피드백 및 기여
+            </a>
+          </p>
+          <p>License: MIT</p>
+        </footer>
       </div>
     </MuiThemeProvider>
   );
