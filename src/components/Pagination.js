@@ -21,7 +21,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
           },
           '& .Mui-selected': {
             backgroundColor: 'transparent !important',
-            color: theme.palette.text.primary,
+            color: theme.palette.text.secondary,
             fontWeight: 'bold',
           },
         }}
