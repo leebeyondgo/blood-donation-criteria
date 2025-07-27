@@ -1,99 +1,158 @@
 import React, { useState } from 'react';
-import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
+import {
+  Box,
+  Card,
+  CardActionArea,
+  CardContent,
+  Chip,
+  Collapse,
+  Typography,
+} from '@mui/material';
+import {
+  EventAvailableOutlined,
+  CheckCircleOutline,
+  CancelOutlined,
+  InfoOutlined,
+  ExpandMore as ExpandMoreIcon,
+} from '@mui/icons-material';
 
 const ResultItem = ({ item, baseDate, formatDate }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const {
-    restrictionPeriodDays,
-    restrictionType,
     name,
+    category,
     description,
-    matchInfo,
     allowable,
     restriction,
-    category,
+    restrictionType,
+    restrictionPeriodDays,
     condition,
   } = item;
 
-  let periodText = '';
-  if (restrictionType === 'permanent') {
-    periodText = '영구 헌혈 불가';
-  } else if (restrictionPeriodDays > 0) {
-    periodText = `제한 기간: ${restriction.periodValue}${
-      restriction.periodUnit === 'day'
-        ? '일'
-        : restriction.periodUnit === 'week'
-        ? '주'
-        : restriction.periodUnit === 'month'
-        ? '개월'
-        : '년'
-    }`;
-  }
+  const getStatusInfo = () => {
+    if (allowable) {
+      return {
+        message: '가능',
+        color: 'success.main',
+        Icon: CheckCircleOutline,
+      };
+    }
+    if (restrictionType === 'permanent') {
+      return {
+        message: '영구 불가',
+        color: 'error.main',
+        Icon: CancelOutlined,
+      };
+    }
+    if (restrictionPeriodDays > 0) {
+      const eligibilityDate = new Date(baseDate);
+      eligibilityDate.setDate(
+        eligibilityDate.getDate() + restrictionPeriodDays
+      );
+      return {
+        message: `${formatDate(eligibilityDate)}부터 가능`,
+        color: 'warning.main',
+        Icon: EventAvailableOutlined,
+      };
+    }
+    return {
+      message: condition || '의사와의 상담 후 가능',
+      color: 'info.main',
+      Icon: InfoOutlined,
+    };
+  };
 
-  let eligibilityMessage;
-  let colorClass;
-
-  if (allowable) {
-    eligibilityMessage = '가능';
-    colorClass = 'text-green-500 dark:text-green-400';
-  } else if (restrictionType === 'permanent') {
-    eligibilityMessage = '불가';
-    colorClass = 'text-red-500 dark:text-red-400';
-  } else if (restrictionPeriodDays > 0) {
-    const eligibilityDate = new Date(baseDate);
-    eligibilityDate.setDate(eligibilityDate.getDate() + restrictionPeriodDays);
-    eligibilityMessage = `${formatDate(eligibilityDate)}부터 가능`;
-    colorClass = 'text-orange-500 dark:text-orange-400';
-  } else {
-    eligibilityMessage = condition || '의사와의 상담 후 가능';
-    colorClass = 'text-blue-500 dark:text-blue-400';
-  }
+  const status = getStatusInfo();
+  const periodText =
+    restriction && restriction.periodValue > 0
+      ? `제한 기간: ${restriction.periodValue}${
+          {
+            day: '일',
+            week: '주',
+            month: '개월',
+            year: '년',
+          }[restriction.periodUnit] || ''
+        }`
+      : null;
 
   return (
-    <li className="result-item flex flex-col p-4 rounded-lg shadow-md bg-white dark:bg-gray-800 w-full relative min-h-[5rem]">
-      <div className="flex justify-between items-start">
-        <div className="flex-grow text-left">
-          <strong className="font-bold text-base sm:text-lg">{name}</strong>
-          <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
-            ({category})
-          </span>
-        </div>
-        <div
-          className={`eligible-date ${colorClass} font-semibold whitespace-nowrap`}
-        >
-          {eligibilityMessage}
-        </div>
-      </div>
-      {description && (
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="absolute bottom-2 left-2 text-sm text-blue-500"
-          aria-expanded={isExpanded}
-        >
-          {isExpanded ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-        </button>
-      )}
-      {periodText && (
-        <div className="absolute bottom-2 right-2 text-sm text-gray-600 dark:text-gray-300">
-          {periodText}
-        </div>
-      )}
-      {isExpanded && description && (
-        <div className="description mt-2 text-left text-sm text-gray-600 dark:text-gray-300">
-          {description}
-        </div>
-      )}
-      {matchInfo && (
-        <div className="match-info mt-2 text-left">
-          {matchInfo.map((match, i) => (
-            <span key={i} className="match-tag">
-              {match.value}
-            </span>
-          ))}
-        </div>
-      )}
-    </li>
+    <Card
+      sx={{
+        width: '100%',
+        maxWidth: '100%',
+        boxSizing: 'border-box',
+        overflow: 'hidden',
+        border: '1px solid',
+        borderColor: 'divider',
+      }}
+      variant="outlined"
+    >
+      <CardActionArea onClick={() => setIsExpanded(!isExpanded)}>
+        <CardContent>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
+              gap: 1,
+            }}
+          >
+            <Box>
+              <Typography
+                variant="h6"
+                component="strong"
+                sx={{ fontWeight: 'bold' }}
+              >
+                {name}
+              </Typography>
+              <Chip
+                label={category}
+                size="small"
+                sx={{ ml: 1, verticalAlign: 'middle' }}
+              />
+            </Box>
+            <ExpandMoreIcon
+              sx={{
+                transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                transition: 'transform 0.2s',
+                color: 'text.secondary',
+              }}
+            />
+          </Box>
+
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              mt: 1.5,
+              color: status.color,
+            }}
+          >
+            <status.Icon sx={{ mr: 1 }} />
+            <Typography variant="body1" sx={{ fontWeight: 'medium' }}>
+              {status.message}
+            </Typography>
+          </Box>
+
+          {periodText && (
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ mt: 0.5 }}
+            >
+              {periodText}
+            </Typography>
+          )}
+        </CardContent>
+      </CardActionArea>
+      <Collapse in={isExpanded} timeout="auto" unmountOnExit>
+        <CardContent sx={{ pt: 0 }}>
+          <Typography variant="body2" color="text.secondary">
+            {description}
+          </Typography>
+        </CardContent>
+      </Collapse>
+    </Card>
   );
 };
 
