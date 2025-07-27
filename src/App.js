@@ -132,14 +132,29 @@ function App() {
         : allData;
     }
 
-    const filteredData = allData.filter((item) => {
-      const lowerName = item.name.toLowerCase();
-      const keywords = (item.keywords || []).map((k) => k.toLowerCase());
-      return (
-        lowerName.includes(lowerQuery) ||
-        keywords.some((k) => k.includes(lowerQuery))
-      );
-    });
+    const filteredData = allData
+      .map((item) => {
+        const lowerName = item.name.toLowerCase();
+        const keywords = (item.keywords || []).map((k) => k.toLowerCase());
+        let matchedKeyword = '';
+
+        if (lowerName.includes(lowerQuery)) {
+          matchedKeyword = item.name;
+        } else {
+          const foundKeyword = (item.keywords || []).find((k) =>
+            k.toLowerCase().includes(lowerQuery)
+          );
+          if (foundKeyword) {
+            matchedKeyword = foundKeyword;
+          }
+        }
+
+        if (matchedKeyword) {
+          return { ...item, matchedKeyword };
+        }
+        return null;
+      })
+      .filter(Boolean);
 
     return filterType
       ? filteredData.filter((item) => item.category === filterType)

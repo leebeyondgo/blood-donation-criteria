@@ -29,6 +29,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
     condition,
     isException,
     note,
+    matchedKeyword,
   } = item;
 
   const getStatusInfo = () => {
@@ -159,6 +160,15 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
           <Typography variant="body2" color="text.secondary">
             {description}
           </Typography>
+          {matchedKeyword && (
+            <Typography
+              variant="body2"
+              color="text.primary"
+              sx={{ mt: 1, fontWeight: 'medium' }}
+            >
+              ✔️ 일치 키워드: {matchedKeyword}
+            </Typography>
+          )}
           {note && (
             <Typography
               variant="body2"
