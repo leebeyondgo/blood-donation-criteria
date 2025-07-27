@@ -144,7 +144,9 @@ function App() {
           <div></div>
 
           {/* 2번(중앙) 컬럼: 제목을 중앙에 배치합니다. */}
-          <h1 className="text-xl font-bold text-center">헌혈 조건 검색</h1>
+          <h1 className="text-lg sm:text-xl font-bold text-center">
+            헌혈 조건 검색
+          </h1>
 
           {/* 3번(오른쪽) 컬럼: 버튼을 오른쪽 끝으로 보냅니다. */}
           <div className="flex justify-end">
@@ -157,8 +159,13 @@ function App() {
           </div>
         </header>
 
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-          <div className="flex items-center gap-3">
+        {/*
+          모바일 환경에서의 검색창과 날짜 선택창의 레이아웃을 개선합니다.
+          1. 'flex-wrap'을 추가해 내용이 넘칠 때 다음 줄로 자연스럽게 넘어가게 합니다.
+          2. 검색창('flex-grow')이 가능한 많은 공간을 차지하게 하고, 날짜 선택창은 기존 크기를 유지하게 합니다.
+        */}
+        <div className="flex flex-wrap justify-between items-center gap-3">
+          <div className="flex items-center gap-3 flex-grow">
             <FiSearch />
             <TextField
               variant="outlined"
@@ -166,6 +173,7 @@ function App() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               size="small"
+              className="flex-grow" // TextField가 남은 공간을 모두 차지하도록
             />
           </div>
           <TextField
@@ -177,28 +185,38 @@ function App() {
           />
         </div>
 
-        <FormControl
-          size="small"
-          aria-label="카테고리 필터"
-          className={query ? 'invisible mt-3 sm:mt-0' : 'mt-3 sm:mt-0'}
-        >
-          <InputLabel shrink>카테고리 필터</InputLabel>
-          <ToggleButtonGroup
-            exclusive
+        {/*
+          카테고리 필터의 UI를 개선합니다.
+          1. 'flex-wrap'을 사용해 버튼들이 화면 크기에 맞춰 자동으로 줄바꿈되도록 합니다.
+          2. 'justify-center'를 적용해 필터를 수평 중앙 정렬합니다.
+        */}
+        <div className="flex justify-center">
+          <FormControl
             size="small"
-            value={filterType}
-            onChange={(e, newType) => {
-              setFilterType(newType || '');
-            }}
+            aria-label="카테고리 필터"
+            className={`flex-wrap ${
+              query ? 'invisible' : ''
+            } mt-3 sm:mt-0`}
           >
-            <ToggleButton value="">전체</ToggleButton>
-            <ToggleButton value="질병">질병</ToggleButton>
-            <ToggleButton value="지역">지역</ToggleButton>
-            <ToggleButton value="약물">약물</ToggleButton>
-            <ToggleButton value="백신">백신</ToggleButton>
-            <ToggleButton value="기타">기타</ToggleButton>
-          </ToggleButtonGroup>
-        </FormControl>
+            <InputLabel shrink>카테고리 필터</InputLabel>
+            <ToggleButtonGroup
+              exclusive
+              size="small"
+              value={filterType}
+              onChange={(e, newType) => {
+                setFilterType(newType || '');
+              }}
+              className="flex-wrap" // 버튼 그룹 자체도 줄바꿈을 허용합니다.
+            >
+              <ToggleButton value="">전체</ToggleButton>
+              <ToggleButton value="질병">질병</ToggleButton>
+              <ToggleButton value="지역">지역</ToggleButton>
+              <ToggleButton value="약물">약물</ToggleButton>
+              <ToggleButton value="백신">백신</ToggleButton>
+              <ToggleButton value="기타">기타</ToggleButton>
+            </ToggleButtonGroup>
+          </FormControl>
+        </div>
 
         <ResultList
           results={results}

@@ -51,25 +51,16 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
   }
 
   return (
-    <li className="result-item flex flex-col p-4 rounded-lg shadow-md bg-white dark:bg-gray-800 w-full">
+    <li className="result-item flex flex-col p-4 rounded-lg shadow-md bg-white dark:bg-gray-800 w-full relative">
       <div className="flex justify-between items-start">
-        <div className="flex-grow text-left">
-          <strong className="font-bold text-lg">
-            {name}
-          </strong>
+        <div className="flex-grow text-left pr-10">
+          <strong className="font-bold text-lg">{name}</strong>
           <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
             ({category})
           </span>
-          {description && (
-            <button onClick={() => setIsExpanded(!isExpanded)} className="ml-2 text-sm text-blue-500">
-              {isExpanded ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-            </button>
-          )}
-          {periodText && (
-            <div className="period-text text-sm text-gray-600 dark:text-gray-300 mt-1">
-              {periodText}
-            </div>
-          )}
+          <div className="period-text text-sm text-gray-600 dark:text-gray-300 mt-1 min-h-[1.25rem]">
+            {periodText || '제한 없음'}
+          </div>
         </div>
         <div
           className={`eligible-date ${colorClass} font-semibold whitespace-nowrap`}
@@ -77,6 +68,15 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
           {eligibilityMessage}
         </div>
       </div>
+      {description && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="absolute bottom-2 right-2 text-sm text-blue-500"
+          aria-expanded={isExpanded}
+        >
+          {isExpanded ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+        </button>
+      )}
       {isExpanded && description && (
         <div className="description mt-2 text-left text-sm text-gray-600 dark:text-gray-300">
           {description}
