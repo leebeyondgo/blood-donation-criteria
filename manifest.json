@@ -1,6 +1,6 @@
 {
-  "short_name": "헌혈 DB",
-  "name": "헌혈 기준 데이터베이스",
+  "short_name": "헌혈 조건 검색",
+  "name": "헌혈 조건 검색",
   "icons": [
     {
       "src": "favicon.ico",
