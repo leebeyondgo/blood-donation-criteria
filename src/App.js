@@ -23,9 +23,10 @@ const categoryMap = {
   region: '지역',
   medication: '약물',
   vaccination: '백신',
-  malaria_domestic: '지역',
-  malaria_international: '지역',
-  vcjd: '지역',
+  region_travel: '지역',
+  region_domestic_malaria: '지역',
+  region_vcjd: '지역',
+  region_malaria: '지역',
   etc: '기타',
 };
 
