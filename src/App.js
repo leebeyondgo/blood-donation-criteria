@@ -144,7 +144,7 @@ function App() {
           <div></div>
 
           {/* 2번(중앙) 컬럼: 제목을 중앙에 배치합니다. */}
-          <h1 className="text-2xl font-bold text-center">헌혈 제한 조건 검색</h1>
+          <h1 className="text-xl font-bold text-center">헌혈 조건 검색</h1>
 
           {/* 3번(오른쪽) 컬럼: 버튼을 오른쪽 끝으로 보냅니다. */}
           <div className="flex justify-end">
