@@ -27,7 +27,6 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
     restrictionType,
     restrictionPeriodDays,
     condition,
-    exceptionNote, // App.js에서 전달된 예외 정보
   } = item;
 
   const getStatusInfo = () => {
@@ -65,7 +64,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
 
   const status = getStatusInfo();
   const periodText =
-    !allowable && restriction && restriction.periodValue > 0
+    restriction && restriction.periodValue > 0
       ? `제한 기간: ${restriction.periodValue}${
           {
             day: '일',
@@ -134,21 +133,6 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
               {status.message}
             </Typography>
           </Box>
-
-          {/* 예외 규칙에 대한 안내 메시지 추가 */}
-          {exceptionNote && allowable && (
-            <Typography
-              variant="caption"
-              sx={{
-                mt: 0.5,
-                display: 'block',
-                color: 'success.main',
-                fontWeight: 'bold',
-              }}
-            >
-              * {exceptionNote}
-            </Typography>
-          )}
 
           {periodText && (
             <Typography
