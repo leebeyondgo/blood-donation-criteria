@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/blood-donation-criteria/static/css/main.e487c5ec.css",
-    "main.js": "/blood-donation-criteria/static/js/main.12a14120.js",
+    "main.js": "/blood-donation-criteria/static/js/main.04ece8e2.js",
     "static/js/453.d45accfc.chunk.js": "/blood-donation-criteria/static/js/453.d45accfc.chunk.js",
     "index.html": "/blood-donation-criteria/index.html",
     "main.e487c5ec.css.map": "/blood-donation-criteria/static/css/main.e487c5ec.css.map",
-    "main.12a14120.js.map": "/blood-donation-criteria/static/js/main.12a14120.js.map",
+    "main.04ece8e2.js.map": "/blood-donation-criteria/static/js/main.04ece8e2.js.map",
     "453.d45accfc.chunk.js.map": "/blood-donation-criteria/static/js/453.d45accfc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e487c5ec.css",
-    "static/js/main.12a14120.js"
+    "static/js/main.04ece8e2.js"
   ]
 }
