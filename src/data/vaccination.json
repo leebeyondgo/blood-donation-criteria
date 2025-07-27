@@ -1,14 +1,10 @@
 [
   {
-    "id": "vac-001",
+    "id": "vaccination-001",
     "category": "vaccination",
-    "name": "사백신 또는 재조합 백신",
-    "keywords": [
-      "인플루엔자", "독감", "B형간염", "A형간염", "파상풍", "디프테리아", "백일해", 
-      "Tdap", "자궁경부암", "사람유두종바이러스", "HPV", "가다실", "서바릭스", 
-      "일본뇌염 사백신", "폐렴구균", "수막구균", "주사용 장티푸스", "콜레라"
-    ],
-    "description": "독감, B형/A형 간염, 파상풍, 자궁경부암 백신 등 일반적인 사백신 또는 재조합 백신을 접종한 경우, 접종 후 24시간이 경과하면 헌혈이 가능합니다.",
+    "name": "사백신 / 톡소이드 백신",
+    "keywords": ["독감", "인플루엔자", "A형간염", "파상풍", "디프테리아", "백일해", "DTaP", "자궁경부암", "HPV", "일본뇌염(사백신)", "폐렴구균", "뇌수막염"],
+    "description": "인플루엔자(독감), A형간염, 파상풍, 자궁경부암(HPV) 등 죽은 바이러스를 사용하는 사백신 또는 독소를 약화시킨 톡소이드 백신은 접종 후 24시간 동안 헌혈이 제한됩니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
@@ -18,48 +14,45 @@
     }
   },
   {
-    "id": "vac-002",
+    "id": "vaccination-002",
     "category": "vaccination",
-    "name": "생백신 (MMR, 수두, BCG 등)",
-    "keywords": [
-      "홍역", "유행성이하선염", "풍진", "MMR", "수두", "대상포진", "경구용 소아마비", 
-      "폴리오", "BCG", "결핵", "황열", "경구용 장티푸스"
-    ],
-    "description": "홍역, 풍진, 수두, BCG 등 약독화된 바이러스를 사용하는 생백신을 접종한 경우, 접종 후 4주가 경과해야 헌혈이 가능합니다.",
+    "name": "B형간염 및 기타 생백신",
+    "keywords": ["B형간염", "황열", "경구용 소아마비", "경구용 장티푸스"],
+    "description": "B형간염, 황열, 경구용 소아마비 등 일부 생백신은 접종 후 2주간 헌혈이 제한됩니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 4,
+      "periodValue": 2,
       "periodUnit": "week",
       "condition": "접종일로부터"
     }
   },
   {
-    "id": "vac-003",
+    "id": "vaccination-003",
     "category": "vaccination",
-    "name": "두창(천연두) 백신",
-    "keywords": ["두창", "천연두"],
-    "description": "두창(천연두) 백신을 접종한 경우, 접종 후 8주가 경과해야 헌혈이 가능합니다.",
+    "name": "홍역/수두 등 약독화 생백신",
+    "keywords": ["홍역", "유행성이하선염", "볼거리", "풍진", "MMR", "수두", "대상포진", "BCG", "결핵", "일본뇌염(생백신)"],
+    "description": "홍역/유행성이하선염/풍진(MMR), 수두, 대상포진, BCG(결핵) 등 독성을 약화시킨 살아있는 바이러스를 사용하는 생백신은 접종 후 4주(1개월)간 헌혈이 제한됩니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 8,
-      "periodUnit": "week",
+      "periodValue": 1,
+      "periodUnit": "month",
       "condition": "접종일로부터"
     }
   },
   {
-    "id": "vac-004",
+    "id": "vaccination-004",
     "category": "vaccination",
-    "name": "면역글로불린 또는 동물교상 후 접종",
-    "keywords": ["B형간염 면역글로불린", "HBIG", "광견병", "동물교상"],
-    "description": "B형간염 면역글로불린(HBIG)을 투여받았거나, 동물에게 물린 후 광견병 예방접종을 한 경우, 마지막 접종일로부터 1년이 경과해야 헌혈이 가능합니다.",
+    "name": "면역글로불린 / 특수 백신",
+    "keywords": ["광견병", "면역글로불린", "B형간염 면역글로불린", "HBIG"],
+    "description": "동물에게 물린 후 접종한 광견병 백신이나 B형간염 면역글로불린(HBIG) 주사를 맞은 경우 1년간 헌혈이 제한됩니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
       "periodValue": 1,
       "periodUnit": "year",
-      "condition": "마지막 접종일로부터"
+      "condition": "접종일로부터"
     }
   }
 ]

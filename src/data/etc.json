@@ -1,165 +1,156 @@
 [
   {
     "id": "etc-001",
-    "category": "etc",
-    "name": "전혈 헌혈을 한 경우",
-    "keywords": ["전혈"],
-    "description": "전혈 헌혈 후 8주(56일)가 지나야 다음 헌혈이 가능합니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 8,
-      "periodUnit": "week",
-      "condition": "마지막 전혈헌혈일로부터"
-    }
-  },
-  {
-    "id": "etc-002",
-    "category": "etc",
-    "name": "혈장/혈소판 성분헌혈을 한 경우",
-    "keywords": ["성분헌혈", "혈장", "혈소판", "혈장성분헌혈", "혈소판성분헌혈"],
-    "description": "혈장 또는 혈소판 성분헌혈 후 2주(14일)가 지나야 다음 헌혈이 가능합니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 2,
-      "periodUnit": "week",
-      "condition": "마지막 성분헌혈일로부터"
-    }
-  },
-  {
-    "id": "etc-003",
-    "category": "etc",
-    "name": "수혈을 받은 경험이 있는 경우",
-    "keywords": ["수혈"],
-    "description": "수혈(농축적혈구, 혈소판 등)을 받은 경우, 마지막 수혈일로부터 1년간 헌혈이 금지됩니다.",
+    "category": "etc_procedure",
+    "name": "치과 치료 (단순 충치, 보철)",
+    "keywords": ["치과", "충치", "보철", "크라운", "레진", "인레이"],
+    "description": "출혈이 없는 단순 충치 치료나 보철(크라운, 레진 등)의 경우, 치료 당일에만 헌혈이 제한됩니다. ",
     "allowable": false,
     "restriction": {
       "type": "period",
       "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "마지막 수혈일로부터"
+      "periodUnit": "day",
+      "condition": "치료일로부터"
     }
   },
   {
-    "id": "etc-004",
-    "category": "etc",
-    "name": "임신, 출산, 유산",
-    "keywords": ["임신", "출산", "분만", "유산", "모유수유"],
-    "description": "출산, 분만 또는 유산 후 6개월간 헌혈이 금지됩니다. 임신 중이거나 모유수유 중인 경우에도 헌혈할 수 없습니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "출산(분만) 또는 유산일로부터"
-    }
-  },
-  {
-    "id": "etc-005",
-    "category": "etc",
-    "name": "문신 또는 반영구 화장",
-    "keywords": ["문신", "타투", "반영구", "눈썹문신", "아이라인"],
-    "description": "문신이나 반영구 화장(눈썹, 아이라인 등)을 한 경우, 감염의 위험으로 인해 마지막 시술일로부터 6개월간 헌혈이 금지됩니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "마지막 시술일로부터"
-    }
-  },
-  {
-    "id": "etc-006",
-    "category": "etc",
-    "name": "피어싱 또는 귀 뚫기",
-    "keywords": ["피어싱", "귀뚫음"],
-    "description": "피어싱을 하거나 귀를 뚫은 경우, 감염의 위험으로 인해 마지막 시술일로부터 6개월간 헌혈이 금지됩니다. (단, 총기를 이용한 귀볼 뚫기는 1개월)",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "마지막 시술일로부터"
-    }
-  },
-  {
-    "id": "etc-007",
-    "category": "etc",
-    "name": "침, 부항 (의료기관 시술)",
-    "keywords": ["침", "부항", "한의원"],
-    "description": "한의원 등 면허가 있는 의료인이 일회용 도구를 사용하여 시술한 경우, 당일 헌혈이 가능합니다.",
-    "allowable": true,
-    "restriction": null
-  },
-  {
-    "id": "etc-008",
-    "category": "etc",
-    "name": "침, 부항 (비의료기관 또는 사혈)",
-    "keywords": ["불법시술", "사혈"],
-    "description": "비의료기관에서 시술받았거나, 시술 도구의 소독 여부가 불분명한 경우, 또는 피를 뽑는 사혈을 한 경우에는 6개월간 헌혈이 금지됩니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "마지막 시술일로부터"
-    }
-  },
-    {
-    "id": "etc-009",
-    "category": "etc",
-    "name": "간단한 치과 진료 (스케일링 등)",
-    "keywords": ["스케일링", "간단한 충치치료"],
-    "description": "스케일링이나 간단한 충치 치료 등 출혈이 거의 없는 치과 진료의 경우, 치료 후 3일간 헌혈이 금지됩니다.",
+    "id": "etc-002",
+    "category": "etc_procedure",
+    "name": "치과 치료 (스케일링, 발치, 신경치료)",
+    "keywords": ["치과", "스케일링", "발치", "사랑니", "신경치료", "잇몸치료", "임플란트"],
+    "description": "스케일링, 발치, 신경치료, 잇몸치료 등 출혈을 동반한 치과 시술을 받은 경우, 일시적인 균혈증 위험을 고려하여 시술 후 3일이 경과해야 헌혈이 가능합니다. ",
     "allowable": false,
     "restriction": {
       "type": "period",
       "periodValue": 3,
       "periodUnit": "day",
-      "condition": "치과 진료일로부터"
+      "condition": "시술일로부터"
     }
   },
   {
-    "id": "etc-010",
-    "category": "etc",
-    "name": "치과 치료 (발치, 신경치료)",
-    "keywords": ["발치", "사랑니", "신경치료", "잇몸치료"],
-    "description": "발치, 신경치료 등 출혈이나 염증 가능성이 있는 치과 치료를 받은 경우, 감염 예방을 위해 치료 후 7일간 헌혈이 금지됩니다. 항생제 복용 시에는 복용 종료 후 3일이 더 지나야 합니다.",
+    "id": "etc-003",
+    "category": "etc_procedure",
+    "name": "수혈",
+    "keywords": ["수혈", "혈액"],
+    "description": "다른 사람의 혈액을 수혈받은 경우, 잠재적 감염원의 전파 위험을 차단하기 위해 수혈일로부터 1년간 헌혈이 금지됩니다. [cite: 352]",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 7,
-      "periodUnit": "day",
-      "condition": "치과 치료일로부터"
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "수혈일로부터"
     }
   },
   {
-    "id": "etc-011",
-    "category": "etc",
-    "name": "치과 수술 (임플란트 등)",
-    "keywords": ["임플란트", "잇몸수술", "치주수술"],
-    "description": "임플란트 식립, 잇몸 수술 등 큰 규모의 치과 수술을 받은 경우, 수술일로부터 최소 1개월간 헌혈이 금지되며, 완전히 회복된 후에 가능합니다.",
+    "id": "etc-004",
+    "category": "etc_procedure",
+    "name": "태반 주사",
+    "keywords": ["태반", "주사", "라이넥"],
+    "description": "태반 주사를 맞은 경우, CJD 등 감염 위험을 고려하여 마지막 주사일로부터 1년간 헌혈이 금지됩니다. [cite: 353]",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "마지막 주사일로부터"
+    }
+  },
+  {
+    "id": "etc-005",
+    "category": "etc_procedure",
+    "name": "내시경 검사",
+    "keywords": ["내시경", "위내시경", "대장내시경", "조직검사", "생검"],
+    "description": "조직검사(생검) 여부와 관계없이 위 또는 대장 내시경 검사를 받은 경우, 시술 중 발생할 수 있는 균혈증 위험에 대비하여 검사일로부터 4주(1개월)간 헌혈이 금지됩니다. [cite: 356]",
     "allowable": false,
     "restriction": {
       "type": "period",
       "periodValue": 1,
       "periodUnit": "month",
-      "condition": "수술일로부터"
+      "condition": "검사일로부터"
     }
   },
   {
-    "id": "etc-012",
-    "category": "etc",
-    "name": "컨디션 난조",
-    "keywords": ["수면부족", "음주", "과음", "숙취", "피로", "설사"],
-    "description": "헌혈 전 5시간 미만 수면, 과도한 피로, 음주, 설사 등 컨디션이 좋지 않은 경우 헌혈자의 건강 보호를 위해 헌혈할 수 없습니다. 충분한 휴식을 취한 후 헌혈에 참여해주세요.",
+    "id": "etc-006",
+    "category": "etc_procedure",
+    "name": "문신 / 반영구 화장",
+    "keywords": ["문신", "타투", "반영구", "눈썹문신", "아이라인"],
+    "description": "비위생적인 기구 사용 시 C형 간염 등 혈액 매개 감염병의 위험이 있어, 시술 후 6개월간 헌혈이 금지됩니다. ",
     "allowable": false,
     "restriction": {
-      "type": "on_the_day",
-      "periodValue": 0,
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "시술일로부터"
+    }
+  },
+  {
+    "id": "etc-007",
+    "category": "etc_procedure",
+    "name": "피어싱",
+    "keywords": ["피어싱", "귀뚫음"],
+    "description": "의료기관에서 멸균된 일회용 기구로 시술받은 경우 4주(1개월) 후 헌혈이 가능합니다.  비의료기관에서 시술했거나 일회용 기구 사용이 불분명할 경우, 감염 위험을 고려하여 6개월간 헌혈이 제한됩니다. ",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "시술일로부터 (의료기관, 일회용 기구 사용 시)"
+    }
+  },
+  {
+    "id": "etc-008",
+    "category": "etc_procedure",
+    "name": "침술 / 부항",
+    "keywords": ["침", "부항", "사혈", "한의원"],
+    "description": "침술이나 부항(사혈 포함) 시술을 받은 경우, 시술 후 3일이 경과하면 헌혈이 가능합니다. [cite: 361]",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
       "periodUnit": "day",
-      "condition": "헌혈 당일 컨디션에 따라 제한"
+      "condition": "시술일로부터"
+    }
+  },
+  {
+    "id": "etc-009",
+    "category": "etc_procedure",
+    "name": "보톡스 주사",
+    "keywords": ["보톡스", "필러", "미용 시술"],
+    "description": "보톡스 등 미용 목적의 주사를 맞은 경우, 마지막 주사일로부터 1주일이 경과하면 헌혈이 가능합니다. [cite: 354]",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "마지막 주사일로부터"
+    }
+  },
+  {
+    "id": "etc-010",
+    "category": "etc_condition",
+    "name": "임신, 출산, 유산 (6개월 이내)",
+    "keywords": ["임신", "출산", "분만", "유산", "임산부", "산모"],
+    "description": "임신 중이거나, 분만 또는 유산 후 6개월이 경과하지 않은 경우, 산모의 건강 회복을 위해 모든 종류의 헌혈에 참여할 수 없습니다. [cite: 308]",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "분만/유산일로부터"
+    }
+  },
+  {
+    "id": "etc-011",
+    "category": "etc_condition",
+    "name": "임신 경험자 혈소판 헌혈",
+    "keywords": ["임신", "출산", "경험", "혈소판", "성분헌혈"],
+    "description": "과거에 임신 경험이 있는 여성은 혈소판 성분헌혈 및 혈소판혈장 성분헌혈에 영구적으로 참여할 수 없습니다. [cite: 309] 이는 임신 중 생성될 수 있는 항체(HLA 항체)로 인한 수혈 부작용(TRALI)을 예방하기 위함입니다. [cite: 312]",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "임신 경험이 있는 경우 (혈소판 헌혈만 해당)"
     }
   }
 ]
