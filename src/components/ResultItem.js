@@ -7,6 +7,7 @@ import {
   Chip,
   Collapse,
   Typography,
+  useTheme,
 } from '@mui/material';
 import {
   EventAvailableRounded,
@@ -18,6 +19,7 @@ import {
 } from '@mui/icons-material';
 
 const ResultItem = ({ item, baseDate, formatDate }) => {
+  const theme = useTheme();
   const [isExpanded, setIsExpanded] = useState(false);
   const {
     name,
@@ -95,7 +97,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
         overflow: 'hidden',
       }}
       variant="elevation"
-      elevation={0}
+      elevation={theme.palette.mode === 'light' ? 0 : 1}
     >
       <CardActionArea onClick={() => setIsExpanded(!isExpanded)}>
         <CardContent sx={{ p: 2 }}>
