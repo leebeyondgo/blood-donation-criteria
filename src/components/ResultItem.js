@@ -27,9 +27,18 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
     restrictionType,
     restrictionPeriodDays,
     condition,
+    isException,
+    note,
   } = item;
 
   const getStatusInfo = () => {
+    if (isException) {
+      return {
+        message: '예외적으로 가능',
+        color: 'success.main',
+        Icon: CheckCircleOutline,
+      };
+    }
     if (allowable) {
       return {
         message: '가능',
@@ -150,6 +159,15 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
           <Typography variant="body2" color="text.secondary">
             {description}
           </Typography>
+          {note && (
+            <Typography
+              variant="body2"
+              color="info.main"
+              sx={{ mt: 1, fontStyle: 'italic' }}
+            >
+              참고: {note}
+            </Typography>
+          )}
         </CardContent>
       </Collapse>
     </Card>

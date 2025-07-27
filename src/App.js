@@ -93,42 +93,126 @@ function App() {
   };
 
   const results = useMemo(() => {
-    const lower = query.toLowerCase();
-    let filteredData = allData;
-    if (filterType) {
-      filteredData = filteredData.filter((item) => item.category === filterType);
+    const lowerQuery = query.toLowerCase();
+    if (!lowerQuery) {
+      return filterType
+        ? allData.filter((item) => item.category === filterType)
+        : allData;
     }
-    if (!query) {
-      return filteredData.map((item) => ({ ...item, matchInfo: null }));
-    }
-    return filteredData
+
+    const filteredData = allData
       .map((item) => {
         const matchInfo = [];
-        if (item.name.toLowerCase().includes(lower)) {
+        const lowerName = item.name.toLowerCase();
+        const keywords = (item.keywords || []).map((k) => k.toLowerCase());
+
+        // 1. 기본 정보 검색 (name, keywords)
+        if (lowerName.includes(lowerQuery)) {
           matchInfo.push({ type: 'name', value: item.name });
         }
-        const matchingAliases = (item.aliases || []).filter((alias) =>
-          alias.toLowerCase().includes(lower)
-        );
-        if (matchingAliases.length > 0) {
-          matchingAliases.forEach((alias) =>
-            matchInfo.push({ type: 'alias', value: alias })
-          );
+        keywords.forEach((keyword) => {
+          if (keyword.includes(lowerQuery)) {
+            matchInfo.push({ type: 'keyword', value: keyword });
+          }
+        });
+
+        // 2. 지역(region) 데이터 특별 처리
+        if (item.category === '지역' && item.countries) {
+          const queryParts = lowerQuery.split(' ').filter(Boolean);
+          const countryQuery = queryParts[0] || '';
+          const areaQuery = queryParts.slice(1).join(' ') || queryParts[0];
+
+          item.countries.forEach((country) => {
+            const lowerCountryName = country.countryName.toLowerCase();
+            const lowerAreas = country.areas.map((a) => a.toLowerCase());
+
+            const countryMatch = lowerCountryName.includes(countryQuery);
+            const areaMatch = lowerAreas.some((area) =>
+              area.includes(areaQuery)
+            );
+
+            if (country.ruleType === 'exclusion') {
+              // Exclusion: 국가가 위험, 특정 지역만 안전
+              if (countryMatch && areaMatch) {
+                // "태국 방콕" -> 방콕은 예외 지역 -> 헌혈 가능
+                const newItem = {
+                  ...item,
+                  name: `${country.countryName} - ${
+                    country.areas.find((area) =>
+                      area.toLowerCase().includes(areaQuery)
+                    ) || areaQuery
+                  }`,
+                  allowable: true,
+                  isException: true,
+                  note: country.note,
+                  restriction: {},
+                };
+                matchInfo.push(newItem);
+              } else if (countryMatch && queryParts.length > 1 && !areaMatch) {
+                // "태국 시골" -> 시골은 예외 지역 아님 -> 헌혈 불가
+                matchInfo.push({ type: 'country', value: country.countryName });
+              } else if (
+                !countryMatch &&
+                lowerAreas.some((area) => area.includes(lowerQuery))
+              ) {
+                // "방콕" -> 방콕은 예외 지역 -> 헌혈 가능
+                const matchedArea = country.areas.find((area) =>
+                  area.toLowerCase().includes(lowerQuery)
+                );
+                const newItem = {
+                  ...item,
+                  name: `${country.countryName} - ${matchedArea}`,
+                  allowable: true,
+                  isException: true,
+                  note: country.note,
+                  restriction: {},
+                };
+                matchInfo.push(newItem);
+              } else if (countryMatch && queryParts.length === 1) {
+                // "태국" -> 전체가 위험함을 표시
+                matchInfo.push({ type: 'country', value: country.countryName });
+              }
+            } else if (country.ruleType === 'inclusion') {
+              // Inclusion: 국가 자체는 안전, 특정 지역만 위험
+              if (countryMatch && areaMatch) {
+                // "중국 윈난성" -> 윈난성은 위험 지역 -> 헌혈 불가
+                matchInfo.push({ type: 'country', value: country.countryName });
+              } else if (
+                !countryMatch &&
+                lowerAreas.some((area) => area.includes(lowerQuery))
+              ) {
+                // "윈난성" -> 위험 지역 -> 헌혈 불가
+                matchInfo.push({ type: 'country', value: country.countryName });
+              }
+            }
+          });
         }
-        const matchingKeywords = (item.keywords || []).filter((keyword) =>
-          keyword.toLowerCase().includes(lower)
-        );
-        if (matchingKeywords.length > 0) {
-          matchingKeywords.forEach((keyword) =>
-            matchInfo.push({ type: 'keyword', value: keyword })
-          );
+
+        const specialMatches = matchInfo.filter((m) => m.isException);
+        if (specialMatches.length > 0) {
+          return specialMatches;
         }
+
         if (matchInfo.length > 0) {
-          return { ...item, matchInfo };
+          return { ...item, matchInfo: 'default' };
         }
+
         return null;
       })
+      .flat() // 중첩된 배열을 평탄화
       .filter(Boolean);
+
+    // 중복 제거
+    const uniqueResults = filteredData.reduce((acc, current) => {
+      if (!acc.find((item) => item.id === current.id && item.name === current.name)) {
+        acc.push(current);
+      }
+      return acc;
+    }, []);
+
+    return filterType
+      ? uniqueResults.filter((item) => item.category === filterType)
+      : uniqueResults;
   }, [query, filterType]);
 
   return (
