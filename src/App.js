@@ -1,8 +1,10 @@
 import { useState, useMemo, useContext } from 'react';
-import { FiSearch, FiSun, FiMoon } from 'react-icons/fi';
+import { FiSearch } from 'react-icons/fi';
 import {
   TextField,
   IconButton,
+  Brightness7Rounded,
+  Brightness4Rounded,
   ToggleButton,
   ToggleButtonGroup,
   FormControl,
@@ -184,7 +186,7 @@ function App() {
               onClick={toggleTheme}
               aria-label="테마 토글"
             >
-              {theme === 'light' ? <FiMoon /> : <FiSun />}
+              {theme === 'light' ? <Brightness4Rounded /> : <Brightness7Rounded />}
             </IconButton>
           </div>
         </header>
