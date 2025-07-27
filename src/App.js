@@ -126,24 +126,23 @@ function App() {
 
   const results = useMemo(() => {
     const lowerQuery = query.toLowerCase();
-    if (!lowerQuery) {
+
+    if (lowerQuery) {
+      // 검색어가 있으면 카테고리 필터 없이 전체 데이터에서 검색
+      return allData.filter((item) => {
+        const lowerName = item.name.toLowerCase();
+        const keywords = (item.keywords || []).map((k) => k.toLowerCase());
+        return (
+          lowerName.includes(lowerQuery) ||
+          keywords.some((k) => k.includes(lowerQuery))
+        );
+      });
+    } else {
+      // 검색어가 없으면 기존 로직대로 카테고리 필터 적용
       return filterType
         ? allData.filter((item) => item.category === filterType)
         : allData;
     }
-
-    const filteredData = allData.filter((item) => {
-      const lowerName = item.name.toLowerCase();
-      const keywords = (item.keywords || []).map((k) => k.toLowerCase());
-      return (
-        lowerName.includes(lowerQuery) ||
-        keywords.some((k) => k.includes(lowerQuery))
-      );
-    });
-
-    return filterType
-      ? filteredData.filter((item) => item.category === filterType)
-      : filteredData;
   }, [query, filterType]);
 
   return (
