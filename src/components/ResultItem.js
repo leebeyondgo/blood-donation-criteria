@@ -163,8 +163,8 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
           {matchedKeyword && (
             <Typography
               variant="body2"
-              color="text.primary"
-              sx={{ mt: 1, fontWeight: 'medium' }}
+              color="text.secondary"
+              sx={{ mt: 1 }}
             >
               ✔️ 일치 키워드: {matchedKeyword}
             </Typography>

@@ -126,39 +126,31 @@ function App() {
 
   const results = useMemo(() => {
     const lowerQuery = query.toLowerCase();
-    if (!lowerQuery) {
+
+    if (lowerQuery) {
+      // 검색어가 있으면 카테고리 필터 없이 전체 데이터에서 검색
+      return allData.reduce((acc, item) => {
+        const lowerName = item.name.toLowerCase();
+        const keywords = (item.keywords || []).map((k) => k.toLowerCase());
+
+        if (lowerName.includes(lowerQuery)) {
+          acc.push({ ...item, matchedKeyword: item.name });
+        } else {
+          const matchedKeyword = (item.keywords || []).find((k) =>
+            k.toLowerCase().includes(lowerQuery)
+          );
+          if (matchedKeyword) {
+            acc.push({ ...item, matchedKeyword });
+          }
+        }
+        return acc;
+      }, []);
+    } else {
+      // 검색어가 없으면 기존 로직대로 카테고리 필터 적용
       return filterType
         ? allData.filter((item) => item.category === filterType)
         : allData;
     }
-
-    const filteredData = allData
-      .map((item) => {
-        const lowerName = item.name.toLowerCase();
-        const keywords = (item.keywords || []).map((k) => k.toLowerCase());
-        let matchedKeyword = '';
-
-        if (lowerName.includes(lowerQuery)) {
-          matchedKeyword = item.name;
-        } else {
-          const foundKeyword = (item.keywords || []).find((k) =>
-            k.toLowerCase().includes(lowerQuery)
-          );
-          if (foundKeyword) {
-            matchedKeyword = foundKeyword;
-          }
-        }
-
-        if (matchedKeyword) {
-          return { ...item, matchedKeyword };
-        }
-        return null;
-      })
-      .filter(Boolean);
-
-    return filterType
-      ? filteredData.filter((item) => item.category === filterType)
-      : filteredData;
   }, [query, filterType]);
 
   return (
@@ -234,7 +226,9 @@ function App() {
               size="small"
               value={filterType}
               onChange={(e, newType) => {
-                setFilterType(newType || '');
+                if (newType !== null) {
+                  setFilterType(newType);
+                }
               }}
               className="flex-wrap" // 버튼 그룹 자체도 줄바꿈을 허용합니다.
             >
@@ -254,6 +248,20 @@ function App() {
           baseDate={baseDate}
           formatDate={formatDate}
         />
+
+        <footer className="text-center text-sm text-gray-500 mt-8 py-4 border-t">
+          <p>
+            <a
+              href="https://github.com/your-github/your-repo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              피드백 및 기여
+            </a>
+          </p>
+          <p>License: MIT</p>
+        </footer>
       </div>
     </MuiThemeProvider>
   );
