@@ -30,13 +30,15 @@ const categoryMap = {
   etc: '기타',
 };
 
-const allData = [
+const baseData = [
   ...diseaseData,
   ...medicationData,
   ...vaccinationData,
   ...etcData,
   ...regionData,
-].map((item) => {
+];
+
+const processedData = baseData.map((item) => {
   const { restriction, category } = item;
   let restrictionType = 'default';
   let restrictionPeriodDays = 0;
@@ -78,6 +80,35 @@ const allData = [
   };
 });
 
+// 말라리아 예외 지역 데이터 미리 생성
+const malariaExceptionData = [];
+regionData.forEach((region) => {
+  if (region.id.includes('malaria') && region.countries) {
+    region.countries.forEach((country) => {
+      if (country.ruleType === 'exclusion') {
+        country.areas.forEach((area) => {
+          malariaExceptionData.push({
+            id: `${region.id}-${country.countryName}-${area}`,
+            category: '지역',
+            name: `${country.countryName} - ${area}`,
+            keywords: [country.countryName, area, '말라리아'],
+            description: `해당 국가는 말라리아 위험 지역이지만, ${area} 지역은 예외적으로 헌혈이 가능합니다.`,
+            allowable: true,
+            isException: true,
+            note: country.note,
+            restriction: {},
+            restrictionType: 'none',
+            restrictionPeriodDays: 0,
+            condition: '',
+          });
+        });
+      }
+    });
+  }
+});
+
+const allData = [...processedData, ...malariaExceptionData];
+
 function App() {
   const [query, setQuery] = useState('');
   const [filterType, setFilterType] = useState('');
@@ -101,119 +132,18 @@ function App() {
         : allData;
     }
 
-    const filteredData = allData
-      .map((item) => {
-        const matchInfo = [];
-        const lowerName = item.name.toLowerCase();
-        const keywords = (item.keywords || []).map((k) => k.toLowerCase());
-
-        // 1. 기본 정보 검색 (name, keywords)
-        if (lowerName.includes(lowerQuery)) {
-          matchInfo.push({ type: 'name', value: item.name });
-        }
-        keywords.forEach((keyword) => {
-          if (keyword.includes(lowerQuery)) {
-            matchInfo.push({ type: 'keyword', value: keyword });
-          }
-        });
-
-        // 2. 지역(region) 데이터 특별 처리
-        if (item.category === '지역' && item.countries) {
-          const queryParts = lowerQuery.split(' ').filter(Boolean);
-          const countryQuery = queryParts[0] || '';
-          const areaQuery = queryParts.slice(1).join(' ') || queryParts[0];
-
-          item.countries.forEach((country) => {
-            const lowerCountryName = country.countryName.toLowerCase();
-            const lowerAreas = country.areas.map((a) => a.toLowerCase());
-
-            const countryMatch = lowerCountryName.includes(countryQuery);
-            const areaMatch = lowerAreas.some((area) =>
-              area.includes(areaQuery)
-            );
-
-            if (country.ruleType === 'exclusion') {
-              // Exclusion: 국가가 위험, 특정 지역만 안전
-              if (countryMatch && areaMatch) {
-                // "태국 방콕" -> 방콕은 예외 지역 -> 헌혈 가능
-                const newItem = {
-                  ...item,
-                  name: `${country.countryName} - ${
-                    country.areas.find((area) =>
-                      area.toLowerCase().includes(areaQuery)
-                    ) || areaQuery
-                  }`,
-                  allowable: true,
-                  isException: true,
-                  note: country.note,
-                  restriction: {},
-                };
-                matchInfo.push(newItem);
-              } else if (countryMatch && queryParts.length > 1 && !areaMatch) {
-                // "태국 시골" -> 시골은 예외 지역 아님 -> 헌혈 불가
-                matchInfo.push({ type: 'country', value: country.countryName });
-              } else if (
-                !countryMatch &&
-                lowerAreas.some((area) => area.includes(lowerQuery))
-              ) {
-                // "방콕" -> 방콕은 예외 지역 -> 헌혈 가능
-                const matchedArea = country.areas.find((area) =>
-                  area.toLowerCase().includes(lowerQuery)
-                );
-                const newItem = {
-                  ...item,
-                  name: `${country.countryName} - ${matchedArea}`,
-                  allowable: true,
-                  isException: true,
-                  note: country.note,
-                  restriction: {},
-                };
-                matchInfo.push(newItem);
-              } else if (countryMatch && queryParts.length === 1) {
-                // "태국" -> 전체가 위험함을 표시
-                matchInfo.push({ type: 'country', value: country.countryName });
-              }
-            } else if (country.ruleType === 'inclusion') {
-              // Inclusion: 국가 자체는 안전, 특정 지역만 위험
-              if (countryMatch && areaMatch) {
-                // "중국 윈난성" -> 윈난성은 위험 지역 -> 헌혈 불가
-                matchInfo.push({ type: 'country', value: country.countryName });
-              } else if (
-                !countryMatch &&
-                lowerAreas.some((area) => area.includes(lowerQuery))
-              ) {
-                // "윈난성" -> 위험 지역 -> 헌혈 불가
-                matchInfo.push({ type: 'country', value: country.countryName });
-              }
-            }
-          });
-        }
-
-        const specialMatches = matchInfo.filter((m) => m.isException);
-        if (specialMatches.length > 0) {
-          return specialMatches;
-        }
-
-        if (matchInfo.length > 0) {
-          return { ...item, matchInfo: 'default' };
-        }
-
-        return null;
-      })
-      .flat() // 중첩된 배열을 평탄화
-      .filter(Boolean);
-
-    // 중복 제거
-    const uniqueResults = filteredData.reduce((acc, current) => {
-      if (!acc.find((item) => item.id === current.id && item.name === current.name)) {
-        acc.push(current);
-      }
-      return acc;
-    }, []);
+    const filteredData = allData.filter((item) => {
+      const lowerName = item.name.toLowerCase();
+      const keywords = (item.keywords || []).map((k) => k.toLowerCase());
+      return (
+        lowerName.includes(lowerQuery) ||
+        keywords.some((k) => k.includes(lowerQuery))
+      );
+    });
 
     return filterType
-      ? uniqueResults.filter((item) => item.category === filterType)
-      : uniqueResults;
+      ? filteredData.filter((item) => item.category === filterType)
+      : filteredData;
   }, [query, filterType]);
 
   return (
