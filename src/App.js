@@ -12,6 +12,7 @@ import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
 import { ThemeContext } from './contexts/ThemeContext';
 import ResultList from './components/ResultList';
+import Pagination from './components/Pagination';
 import diseaseData from './data/disease.json';
 import regionData from './data/region.json';
 import medicationData from './data/medication.json';
@@ -109,12 +110,15 @@ regionData.forEach((region) => {
 
 const allData = [...processedData, ...malariaExceptionData];
 
+const ITEMS_PER_PAGE = 20;
+
 function App() {
   const [query, setQuery] = useState('');
   const [filterType, setFilterType] = useState('');
   const [baseDate, setBaseDate] = useState(() =>
     new Date().toISOString().split('T')[0]
   );
+  const [currentPage, setCurrentPage] = useState(1);
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   const formatDate = (date) => {
@@ -124,7 +128,7 @@ function App() {
     return `${yyyy}년${mm}월${dd}일`;
   };
 
-  const results = useMemo(() => {
+  const filteredResults = useMemo(() => {
     const lowerQuery = query.toLowerCase();
     if (!lowerQuery) {
       return filterType
@@ -145,6 +149,14 @@ function App() {
       ? filteredData.filter((item) => item.category === filterType)
       : filteredData;
   }, [query, filterType]);
+
+  const totalPages = Math.ceil(filteredResults.length / ITEMS_PER_PAGE);
+
+  const results = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    return filteredResults.slice(startIndex, endIndex);
+  }, [currentPage, filteredResults]);
 
   return (
     <MuiThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
@@ -238,6 +250,11 @@ function App() {
           query={query}
           baseDate={baseDate}
           formatDate={formatDate}
+        />
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
         />
       </div>
     </MuiThemeProvider>
