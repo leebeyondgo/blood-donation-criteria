@@ -13,6 +13,7 @@ import { lightTheme, darkTheme } from './theme';
 import { ThemeContext } from './contexts/ThemeContext';
 import ResultList from './components/ResultList';
 import Pagination from './components/Pagination';
+import Footer from './components/Footer';
 import diseaseData from './data/disease.json';
 import regionData from './data/region.json';
 import medicationData from './data/medication.json';
@@ -268,22 +269,7 @@ function App() {
           )}
         </div>
 
-        <footer className="text-center text-sm text-gray-500 mt-8 py-4 border-t dark:border-gray-700">
-          <p>
-            <a
-              href="https://github.com/your-github/your-repo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              피드백 및 기여
-            </a>
-          </p>
-          <p>License: GPL-2.0</p>
-          <p className="mt-2">
-            본 서비스는 헌혈 조건에 대한 정보 제공을 목적으로 하며, 법적 또는 의학적 효력을 갖지 않습니다. 최종적인 헌혈 가능 여부는 반드시 헌혈의 집 현장 문진을 통해 확인해야 합니다.
-          </p>
-        </footer>
+        <Footer />
       </div>
     </MuiThemeProvider>
   );
