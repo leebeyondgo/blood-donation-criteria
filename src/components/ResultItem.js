@@ -9,10 +9,10 @@ import {
   Typography,
 } from '@mui/material';
 import {
-  EventAvailableOutlined,
-  CheckCircleOutline,
-  CancelOutlined,
-  InfoOutlined,
+  EventAvailableRounded,
+  CheckCircleRounded,
+  CancelRounded,
+  InfoRounded,
   ExpandMore as ExpandMoreIcon,
 } from '@mui/icons-material';
 
@@ -37,21 +37,21 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
       return {
         message: '예외적으로 가능',
         color: 'success.main',
-        Icon: CheckCircleOutline,
+        Icon: CheckCircleRounded,
       };
     }
     if (allowable) {
       return {
         message: '가능',
         color: 'success.main',
-        Icon: CheckCircleOutline,
+        Icon: CheckCircleRounded,
       };
     }
     if (restrictionType === 'permanent') {
       return {
         message: '영구 불가',
         color: 'error.main',
-        Icon: CancelOutlined,
+        Icon: CancelRounded,
       };
     }
     if (restrictionPeriodDays > 0) {
@@ -62,13 +62,13 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
       return {
         message: `${formatDate(eligibilityDate)}부터 가능`,
         color: 'warning.main',
-        Icon: EventAvailableOutlined,
+        Icon: EventAvailableRounded,
       };
     }
     return {
       message: condition || '의사와의 상담 후 가능',
       color: 'info.main',
-      Icon: InfoOutlined,
+      Icon: InfoRounded,
     };
   };
 
@@ -92,10 +92,9 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
         maxWidth: '100%',
         boxSizing: 'border-box',
         overflow: 'hidden',
-        border: '1px solid',
-        borderColor: 'divider',
       }}
-      variant="outlined"
+      variant="elevation"
+      elevation={1}
     >
       <CardActionArea onClick={() => setIsExpanded(!isExpanded)}>
         <CardContent sx={{ p: 2 }}>
@@ -118,7 +117,19 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
               <Chip
                 label={category}
                 size="small"
-                sx={{ ml: 1, verticalAlign: 'middle', fontSize: '0.75rem' }}
+                sx={{
+                  ml: 1,
+                  verticalAlign: 'middle',
+                  fontSize: '0.75rem',
+                  backgroundColor: (theme) =>
+                    theme.palette.mode === 'light'
+                      ? theme.palette.secondary.main
+                      : theme.palette.secondary.dark,
+                  color: (theme) =>
+                    theme.palette.mode === 'light'
+                      ? theme.palette.secondary.contrastText
+                      : theme.palette.secondary.contrastText,
+                }}
               />
             </Box>
             <ExpandMoreIcon

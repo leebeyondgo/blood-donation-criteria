@@ -1,5 +1,5 @@
 import { useState, useMemo, useContext } from 'react';
-import { FiSearch, FiSun, FiMoon } from 'react-icons/fi';
+import { FiSearch } from 'react-icons/fi';
 import {
   TextField,
   IconButton,
@@ -8,6 +8,10 @@ import {
   FormControl,
   InputLabel,
 } from '@mui/material';
+import {
+  Brightness7Rounded,
+  Brightness4Rounded,
+} from '@mui/icons-material';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from './theme';
 import { ThemeContext } from './contexts/ThemeContext';
@@ -184,7 +188,7 @@ function App() {
               onClick={toggleTheme}
               aria-label="테마 토글"
             >
-              {theme === 'light' ? <FiMoon /> : <FiSun />}
+              {theme === 'light' ? <Brightness4Rounded /> : <Brightness7Rounded />}
             </IconButton>
           </div>
         </header>
