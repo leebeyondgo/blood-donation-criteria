@@ -1,169 +1,146 @@
 [
   {
-    "id": "med-001",
+    "id": "medication-001",
     "category": "medication",
-    "name": "일반적인 허용 약물 (소화제, 비타민 등)",
-    "keywords": ["소화제", "비타민", "미네랄", "영양제", "혈압약", "고지혈증약", "당뇨약", "인슐린", "갑상선호르몬제"],
-    "description": "소화제, 비타민, 미네랄, 영양제 등은 헌혈이 가능합니다. 만성질환(고혈압, 당뇨병 등)으로 치료 중이더라도, 질병 자체가 안정적으로 조절되고 있다면 복용 당일 헌혈이 가능합니다. 단, 문진 시 복용 약물을 반드시 알려주세요.",
+    "name": "타이레놀 (아세트아미노펜)",
+    "keywords": ["타이레놀", "아세트아미노펜", "단순 진통제"],
+    "description": "아세트아미노펜 성분의 단순 진통제(타이레놀 등)는 혈소판 기능에 영향을 주지 않으므로 복용했더라도 헌혈이 가능합니다.",
     "allowable": true,
     "restriction": null
   },
   {
-    "id": "med-002",
+    "id": "medication-002",
     "category": "medication",
-    "name": "항히스타민제 계열 (알레르기, 비염약)",
-    "keywords": ["항히스타민제", "알레르기약", "비염약", "지르텍", "클라리틴", "알레그라"],
-    "description": "단순 알레르기나 비염 증상 완화를 위해 항히스타민제를 복용한 경우, 다른 증상이 없다면 당일 헌혈이 가능합니다.",
-    "allowable": true,
-    "restriction": null
+    "name": "비스테로이드성 소염진통제 (NSAIDs)",
+    "keywords": ["소염진통제", "이부프로펜", "덱시부프로펜", "나프록센", "케토프로펜", "부루펜", "애드빌"],
+    "description": "이부프로펜 등 비스테로이드성 소염진통제(NSAIDs)는 복용 후 1일(24시간)이 경과해야 헌혈이 가능합니다. 특히 혈소판 헌혈의 경우 48시간 동안 복용을 피해야 합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "마지막 복용일로부터"
+    }
   },
   {
-    "id": "med-003",
-    "category": "medication",
-    "name": "진통제, 해열제 (아스피린 제외)",
-    "keywords": ["진통제", "해열제", "두통약", "타이레놀", "부루펜", "게보린", "펜잘", "이지엔"],
-    "description": "예방적 또는 단순 통증 완화를 위해 아스피린 외의 진통·해열제를 복용한 경우 당일 헌혈이 가능합니다. 단, 현재 발열, 통증 등 증상이 있다면 증상이 사라진 후에 헌혈해야 합니다.",
-    "allowable": true,
-    "restriction": null
-  },
-  {
-    "id": "med-004",
+    "id": "medication-003",
     "category": "medication",
     "name": "아스피린",
     "keywords": ["아스피린"],
-    "description": "혈소판 기능에 영향을 줄 수 있으므로, 아스피린 복용 후 3일간은 혈소판성분헌혈을 할 수 없습니다. 전혈헌혈이나 혈장성분헌혈은 가능합니다.",
+    "description": "아스피린은 혈소판 기능을 저해하므로, 마지막 복용 후 3일이 경과해야 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
-      "type": "period_for_platelet",
+      "type": "period",
       "periodValue": 3,
       "periodUnit": "day",
-      "condition": "마지막 복용일로부터 (혈소판성분헌혈만 제한)"
-    }
-  },
-  {
-    "id": "med-005",
-    "category": "medication",
-    "name": "여드름 치료제 (이소트레티노인 계열)",
-    "keywords": ["이소트레티노인", "Isotretinoin", "로아큐탄", "니메겐", "레씨범", "핀플", "이소티논", "트레인", "아크네틴", "이소트렌", "오피큐탄", "제로큐탄", "트레논", "이소니플", "아키놀", "이소나", "이소탐", "트레티바"],
-    "description": "태아에 영향을 줄 수 있는 여드름 치료제(이소트레티노인 성분)는 복용 중이거나 복용 후 4주가 경과해야 헌혈이 가능합니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 4,
-      "periodUnit": "week",
       "condition": "마지막 복용일로부터"
     }
   },
   {
-    "id": "med-006",
+    "id": "medication-004",
     "category": "medication",
-    "name": "탈모증 치료제 (피나스테리드 계열)",
-    "keywords": ["피나스테리드", "Finasteride", "프로페시아", "피나pecia"],
-    "description": "태아에 영향을 줄 수 있는 탈모증 치료제(피나스테리드 성분)는 복용 중이거나 복용 후 4주가 경과해야 헌혈이 가능합니다.",
+    "name": "항생제",
+    "keywords": ["항생제", "항진균제"],
+    "description": "항생제 복용은 감염 질환 치료를 의미하므로, 마지막 복용 후 1주일이 경과해야 헌혈이 가능합니다. 단, 감기 치료 목적으로 경구용 항생제를 복용한 경우는 3일 경과 후 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 4,
-      "periodUnit": "week",
+      "periodValue": 7,
+      "periodUnit": "day",
       "condition": "마지막 복용일로부터"
     }
   },
   {
-    "id": "med-007",
+    "id": "medication-005",
     "category": "medication",
-    "name": "전립선비대증 치료제 (피나스테리드 계열)",
-    "keywords": ["피나스테리드", "Finasteride", "프로스카", "피나드론", "피나스타", "피나테드", "피나필", "네오페시아", "알파피나", "유로피나", "피나프로", "한올피나스테리드정", "대웅바이오피나스테리드정"],
-    "description": "태아에 영향을 줄 수 있는 전립선비대증 치료제(피나스테리드 성분)는 복용 중이거나 복용 후 4주가 경과해야 헌혈이 가능합니다.",
+    "name": "여드름 치료제 (이소트레티노인)",
+    "keywords": ["이소트레티노인", "로아큐탄", "이소티논", "아크날", "니메겐", "트레틴"],
+    "description": "이소트레티노인 성분의 여드름 치료제는 태아 기형 유발 위험이 있어, 복용 중지 후 4주(1개월)간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 4,
-      "periodUnit": "week",
-      "condition": "마지막 복용일로부터"
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "복용 중지 후"
     }
   },
   {
-    "id": "med-008",
+    "id": "medication-006",
     "category": "medication",
-    "name": "전립선비대증 치료제 (두타스테리드 계열)",
-    "keywords": ["두타스테리드", "Dutasteride", "아보다트", "두타스", "두테드", "두타놀", "두타케어", "두타윈", "듀타렉스", "아보니다", "아보타드", "아보테리드", "자이가드"],
-    "description": "태아에 영향을 줄 수 있는 전립선비대증 치료제(두타스테리드 성분)는 복용 중이거나 복용 후 6개월이 경과해야 헌혈이 가능합니다.",
+    "name": "탈모/전립선 치료제 (피나스테라이드)",
+    "keywords": ["피나스테라이드", "프로페시아", "프로스카", "피나스타"],
+    "description": "피나스테리드 성분의 탈모 및 전립선 비대증 치료제는 복용 중지 후 4주(1개월)간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "복용 중지 후"
+    }
+  },
+  {
+    "id": "medication-007",
+    "category": "medication",
+    "name": "탈모/전립선 치료제 (두타스테라이드)",
+    "keywords": ["두타스테라이드", "아보다트", "아보피나", "두테드"],
+    "description": "두타스테라이드 성분의 탈모 및 전립선 비대증 치료제는 피나스테라이드보다 체내에 더 오래 남아, 복용 중지 후 6개월간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
       "periodValue": 6,
       "periodUnit": "month",
-      "condition": "마지막 복용일로부터"
+      "condition": "복용 중지 후"
     }
   },
   {
-    "id": "med-009",
+    "id": "medication-008",
     "category": "medication",
-    "name": "손 습진 치료제 (알리트레티노인 계열)",
-    "keywords": ["알리트레티노인", "Alitretinoin", "알리톡"],
-    "description": "태아에 영향을 줄 수 있는 손 습진 치료제(알리트레티노인 성분)는 복용 중이거나 복용 후 1개월이 경과해야 헌혈이 가능합니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "마지막 복용일로부터"
-    }
-  },
-  {
-    "id": "med-010",
-    "category": "medication",
-    "name": "항암/면역억제제 (탈리도마이드 계열)",
-    "keywords": ["탈리도마이드", "Thalidomide", "세엘진탈리도마이드", "탈리도", "멀타덱스", "팜그루브", "밸케이드"],
-    "description": "태아에 심각한 기형을 유발할 수 있는 항암/면역억제제(탈리도마이드 성분)는 복용 중이거나 복용 후 1개월이 경과해야 헌혈이 가능합니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "마지막 복용일로부터"
-    }
-  },
-  {
-    "id": "med-011",
-    "category": "medication",
-    "name": "항암제 (비스모데깁 계열)",
-    "keywords": ["비스모데깁", "Vismodegib", "에리벳지"],
-    "description": "태아에 영향을 줄 수 있는 항암제(비스모데깁 성분)는 복용 중이거나 복용 후 24개월이 경과해야 헌혈이 가능합니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 24,
-      "periodUnit": "month",
-      "condition": "마지막 복용일로부터"
-    }
-  },
-  {
-    "id": "med-012",
-    "category": "medication",
-    "name": "건선 치료제 (아시트레틴 계열)",
-    "keywords": ["아시트레틴", "Acitretin", "네오티가손", "소리아탄"],
-    "description": "태아에 영향을 줄 수 있는 건선 치료제(아시트레틴 성분)는 복용 중이거나 복용 후 3년이 경과해야 헌혈이 가능하며, 이 기간 동안에는 다른 사람에게 수혈도 받아서는 안됩니다.",
+    "name": "건선 치료제 (아시트레틴)",
+    "keywords": ["아시트레틴", "네오티가손", "소리아탄"],
+    "description": "아시트레틴 성분의 건선 치료제는 복용 중지 후 3년간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
       "periodValue": 3,
       "periodUnit": "year",
-      "condition": "마지막 복용일로부터"
+      "condition": "복용 중지 후"
     }
   },
   {
-    "id": "med-013",
+    "id": "medication-009",
     "category": "medication",
-    "name": "건선 치료제 (에트레티네이트 계열)",
-    "keywords": ["에트레티네이트", "Etretinate", "티가손", "테지손"],
-    "description": "태아에 영향을 줄 수 있는 건선 치료제(에트레티네이트 성분)는 복용 시 영구적으로 헌혈에 참여할 수 없습니다. (현재 국내에서는 생산되지 않는 약물입니다.)",
+    "name": "건선 치료제 (에트레티네이트)",
+    "keywords": ["에트레티네이트", "티가손"],
+    "description": "에트레티네이트 성분의 건선 치료제는 체내에 매우 오랜 기간 잔류하여 영구적으로 헌혈이 금지됩니다. (현재 국내 허가 취소됨)",
     "allowable": false,
     "restriction": {
       "type": "permanent",
       "periodValue": -1,
       "periodUnit": "permanent",
-      "condition": "복용 시"
+      "condition": "복용한 적이 있는 경우"
     }
+  },
+  {
+    "id": "medication-010",
+    "category": "medication",
+    "name": "영구 헌혈 금지 약물/주사제",
+    "keywords": ["성장호르몬", "인슐린", "면역억제제", "뇌하수체"],
+    "description": "사람 뇌하수체 유래 성장호르몬 또는 소 유래 인슐린 투여 이력이 있거나, 특정 면역억제제를 복용하는 경우 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "투여 또는 복용한 적이 있는 경우"
+    }
+  },
+  {
+    "id": "medication-011",
+    "category": "medication",
+    "name": "기타 의약품 (당일 가능)",
+    "keywords": ["소화제", "위장약", "비타민", "미네랄", "한약", "감기약"],
+    "description": "일반적인 소화제, 비타민, 미네랄, 한약 등은 헌혈이 가능합니다. 단, 처방받은 약은 문진 시 의료진에게 확인받는 것이 안전합니다.",
+    "allowable": true,
+    "restriction": null
   }
 ]
