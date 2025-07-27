@@ -219,7 +219,9 @@ function App() {
               size="small"
               value={filterType}
               onChange={(e, newType) => {
-                setFilterType(newType || '');
+                if (newType !== null) {
+                  setFilterType(newType);
+                }
               }}
               className="flex-wrap" // 버튼 그룹 자체도 줄바꿈을 허용합니다.
             >
