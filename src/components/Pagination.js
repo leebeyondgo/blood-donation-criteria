@@ -14,7 +14,7 @@ const Pagination = ({
 
   return (
     <div className="flex justify-center mt-4">
-      <ButtonGroup variant="contained" aria-label="outlined primary button group">
+      <ButtonGroup variant="text" aria-label="outlined primary button group">
         <Button disabled={currentPage === 1} onClick={() => onPageChange(currentPage - 1)}>
           이전
         </Button>
@@ -22,7 +22,7 @@ const Pagination = ({
           <Button
             key={number}
             onClick={() => onPageChange(number)}
-            disabled={currentPage === number}
+            variant={currentPage === number ? "contained" : "text"}
           >
             {number}
           </Button>
