@@ -2,6 +2,7 @@ name: Deploy to GitHub Pages
 
 # main 브랜치에 push 이벤트가 발생했을 때 워크플로우를 실행합니다.
 on:
+  workflow_dispatch:  
   push:
     branches:
       - main  # 또는 'master' 등 기본 브랜치 이름
