@@ -135,23 +135,22 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
             </Typography>
           </Box>
 
-          {/* 예외 규칙에 대한 안내 메시지 */}
-          {allowable && exceptionNote && (
+          {/* 예외 규칙에 대한 안내 메시지 추가 */}
+          {exceptionNote && allowable && (
             <Typography
               variant="caption"
               sx={{
                 mt: 0.5,
                 display: 'block',
                 color: 'success.main',
-                fontWeight: 'medium',
+                fontWeight: 'bold',
               }}
             >
-              *{exceptionNote}
+              * {exceptionNote}
             </Typography>
           )}
 
-          {/* 기간 제한 정보 (헌혈 불가일 때만 표시) */}
-          {!allowable && periodText && (
+          {periodText && (
             <Typography
               variant="caption"
               color="text.secondary"
