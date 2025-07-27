@@ -14,14 +14,17 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
         count={totalPages}
         page={currentPage}
         onChange={(event, value) => onPageChange(value)}
-        color="primary"
+        color="secondary"
         sx={{
           '& .MuiPaginationItem-root': {
             color: theme.palette.text.secondary,
           },
           '& .Mui-selected': {
             backgroundColor: 'transparent !important',
-            color: theme.palette.text.secondary,
+            color:
+              theme.palette.mode === 'light'
+                ? theme.palette.common.black
+                : theme.palette.common.white,
             fontWeight: 'bold',
           },
         }}
