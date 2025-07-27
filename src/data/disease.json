@@ -2,36 +2,37 @@
   {
     "id": "disease-001",
     "category": "disease",
-    "name": "감기 (Common Cold)",
-    "keywords": [
-      "감기",
-      "몸살",
-      "인후통",
-      "기침",
-      "콧물"
-    ],
-    "description": "감기 증상(기침, 콧물, 인후통 등)이 완전히 사라진 후에 헌혈이 가능합니다. 이는 바이러스 전파 가능성을 차단하고 헌혈자의 신체 상태를 보호하기 위함입니다. [cite: 59, 60]",
+    "name": "감기",
+    "keywords": ["감기", "몸살", "인후통", "기침", "콧물", "편도선염"],
+    "description": "감기, 인후통, 몸살 등 호흡기 증상이 있는 동안에는 헌혈할 수 없으며, 증상이 완전히 사라지고 컨디션이 회복된 후 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "after_recovery",
       "periodValue": 0,
       "periodUnit": "day",
-      "condition": "증상 소실 후"
+      "condition": "증상 소실 등 완치 후"
     }
   },
   {
     "id": "disease-002",
     "category": "disease",
+    "name": "장염",
+    "keywords": ["장염", "설사", "구토", "복통"],
+    "description": "설사, 구토, 복통 등 위장관계 증상이 있는 동안에는 헌혈할 수 없으며, 증상이 완전히 사라지고 컨디션이 회복된 후 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "증상 소실 등 완치 후"
+    }
+  },
+  {
+    "id": "disease-003",
+    "category": "disease",
     "name": "기타 세균성 감염 질환",
-    "keywords": [
-      "방광염",
-      "신우신염",
-      "편도선염",
-      "기관지염",
-      "폐렴",
-      "세균감염"
-    ],
-    "description": "폐렴, 방광염 등 세균성 감염 치료를 위해 항생제를 복용한 경우, 일반적으로 복용 종료 후 1주일이 경과해야 헌혈이 가능합니다. [cite_start]이는 항생제 복용의 원인이 된 감염이 완치되었는지 확인하기 위한 조치입니다. [cite: 93, 94]",
+    "keywords": ["방광염", "신우신염", "기관지염", "폐렴", "세균감염"],
+    "description": "폐렴, 방광염 등 세균성 감염 치료를 위해 항생제를 복용한 경우, 감염의 완치 여부를 확인하기 위해 약 복용 종료 후 1주일이 경과해야 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
@@ -41,15 +42,11 @@
     }
   },
   {
-    "id": "disease-003",
+    "id": "disease-004",
     "category": "disease",
     "name": "코로나바이러스감염증-19 (COVID-19)",
-    "keywords": [
-      "코로나",
-      "코로나19",
-      "COVID-19"
-    ],
-    "description": "코로나19는 확진일과 증상 소실일 중 더 나중 날짜로부터 10일이 경과한 후(11일째부터) 헌혈이 가능합니다. [cite: 68]",
+    "keywords": ["코로나", "코로나19", "COVID-19"],
+    "description": "코로나19는 확진일과 증상 소실일 중 더 나중 날짜로부터 10일이 경과한 후(11일째부터) 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
@@ -59,86 +56,53 @@
     }
   },
   {
-    "id": "disease-004",
-    "category": "disease",
-    "name": "뎅기열/지카바이러스/치쿤구니야열 등",
-    "keywords": [
-      "뎅기열",
-      "지카바이러스",
-      "치쿤구니야열",
-      "웨스트나일열"
-    ],
-    "description": "뎅기열, 지카바이러스, 웨스트나일열, 치쿤구니야열은 완치 후 6개월간 헌혈할 수 없습니다. [cite: 77]",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "완치일로부터"
-    }
-  },
-  {
     "id": "disease-005",
     "category": "disease",
-    "name": "성매개감염병 (매독, 임질 등)",
-    "keywords": [
-      "매독",
-      "임질",
-      "클라미디아",
-      "연성하감",
-      "성기단순포진",
-      "첨규콘딜롬"
-    ],
-    "description": "매독, 임질, 클라미디아 등 성매개감염병은 완치 후 1년간 헌혈할 수 없습니다. [cite: 77]",
+    "name": "인플루엔자 (독감)",
+    "keywords": ["독감", "인플루엔자", "flu"],
+    "description": "독감(인플루엔자)은 완치 후 헌혈이 가능합니다. 단, 증상이 심했거나 합병증이 있었다면 신체 회복을 위해 일정 기간 추가적인 제한이 필요할 수 있습니다.",
     "allowable": false,
     "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
       "condition": "완치일로부터"
     }
   },
   {
     "id": "disease-006",
     "category": "disease",
-    "name": "급성 A형/B형 간염",
-    "keywords": [
-      "A형간염",
-      "급성B형간염"
-    ],
-    "description": "급성 A형 간염 또는 급성 B형 간염으로 진단받고 완치된 날로부터 1년간 헌혈할 수 없습니다. [cite: 77]",
+    "name": "다래끼 / 단순 눈의 염증",
+    "keywords": ["다래끼", "눈다래끼", "속다래끼", "눈의 염증"],
+    "description": "다래끼와 같이 국소적인 염증이 있는 경우, 완치될 때까지 헌혈할 수 없습니다. 이는 염증 반응 및 복용 약물의 영향을 고려하기 위함이며, 완치 후에는 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "완치일로부터"
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "완치 후"
     }
   },
   {
     "id": "disease-007",
     "category": "disease",
-    "name": "말라리아",
-    "keywords": [
-      "말라리아"
-    ],
-    "description": "말라리아로 진단받고 완치(치료 종료)된 날로부터 3년간 헌혈할 수 없습니다. [cite: 77]",
+    "name": "감염성 결막염 (유행성 눈병)",
+    "keywords": ["눈병", "결막염", "아폴로눈병", "유행성각결막염"],
+    "description": "유행성 각결막염 등 전염성이 강한 눈병은 완치 후 1개월이 경과해야 헌혈이 가능합니다. 단순 알레르기성 결막염은 증상이 없으면 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 3,
-      "periodUnit": "year",
-      "condition": "치료 종료일로부터"
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
     }
   },
   {
     "id": "disease-008",
     "category": "disease",
-    "name": "결핵",
-    "keywords": [
-      "결핵"
-    ],
-    "description": "결핵은 완치 후 1개월이 경과해야 헌혈이 가능합니다. [cite: 77]",
+    "name": "수두, 유행성이하선염(볼거리), 홍역, 풍진",
+    "keywords": ["수두", "볼거리", "유행성이하선염", "홍역", "풍진"],
+    "description": "수두, 유행성이하선염(볼거리), 홍역, 풍진은 완치 후 1개월이 경과해야 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
@@ -150,11 +114,51 @@
   {
     "id": "disease-009",
     "category": "disease",
+    "name": "뎅기열/지카바이러스/치쿤구니야열 등",
+    "keywords": ["뎅기열", "지카바이러스", "치쿤구니야열", "웨스트나일열"],
+    "description": "뎅기열, 지카바이러스, 웨스트나일열, 치쿤구니야열은 완치 후 6개월간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-010",
+    "category": "disease",
+    "name": "성매개감염병 (매독, 임질 등)",
+    "keywords": ["매독", "임질", "클라미디아", "연성하감", "성기단순포진", "첨규콘딜롬"],
+    "description": "매독, 임질, 클라미디아 등 성매개감염병은 완치 후 1년간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-011",
+    "category": "disease",
+    "name": "급성 A형/B형 간염",
+    "keywords": ["A형간염", "급성B형간염"],
+    "description": "급성 A형 간염 또는 급성 B형 간염으로 진단받고 완치된 날로부터 1년간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-012",
+    "category": "disease",
     "name": "브루셀라증",
-    "keywords": [
-      "브루셀라증"
-    ],
-    "description": "브루셀라증으로 진단받고 완치된 날로부터 2년간 헌혈할 수 없습니다. [cite: 77]",
+    "keywords": ["브루셀라증"],
+    "description": "브루셀라증으로 진단받고 완치된 날로부터 2년간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
@@ -164,102 +168,66 @@
     }
   },
   {
-    "id": "disease-010",
+    "id": "disease-013",
+    "category": "disease",
+    "name": "결핵",
+    "keywords": ["결핵"],
+    "description": "결핵은 완치 판정 후 2년이 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "year",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-014",
+    "category": "disease",
+    "name": "말라리아",
+    "keywords": ["말라리아"],
+    "description": "말라리아로 진단받고 완치(치료 종료)된 날로부터 3년간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "year",
+      "condition": "치료 종료일로부터"
+    }
+  },
+  {
+    "id": "disease-015",
+    "category": "disease",
+    "name": "골절",
+    "keywords": ["골절", "깁스", "골절 수술"],
+    "description": "단순 골절로 깁스만 한 경우, 완치 후 헌혈이 가능합니다. 골절로 수술을 받은 경우에는 수술 후 최소 6개월이 경과해야 하며, 이는 수술의 종류와 회복 상태에 따라 달라질 수 있습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "etc",
+      "condition": "완치 후"
+    }
+  },
+  {
+    "id": "disease-016",
+    "category": "disease",
+    "name": "비염/알레르기/건선 등",
+    "keywords": ["비염", "알레르기", "알러지", "아토피", "두드러기", "건선"],
+    "description": "알레르기, 건선 등의 증상이 심하지 않고 전신적인 불편감이 없다면 헌혈이 가능합니다. 단, 헌혈이 금지된 약물(스테로이드 등)을 복용/투여 중이라면 해당 약물 기준에 따라 헌혈이 제한됩니다.",
+    "allowable": true,
+    "restriction": null
+  },
+  {
+    "id": "disease-017",
     "category": "disease",
     "name": "영구 헌혈 금지 질병",
-    "keywords": [
-      "크로이츠펠트-야콥병",
-      "CJD",
-      "vCJD",
-      "한센병",
-      "후천성면역결핍증",
-      "AIDS",
-      "C형간염",
-      "만성B형간염",
-      "샤가스병",
-      "바베스열원충증",
-      "리슈만편모충증",
-      "톡소포자충증"
-    ],
-    "description": "만성 B형간염, C형간염, 후천성면역결핍증(AIDS), 크로이츠펠트-야콥병(CJD), 한센병, 샤가스병 등 특정 감염병 진단을 받은 경우 영구적으로 헌혈할 수 없습니다. [cite: 77, 172, 173, 174]",
+    "keywords": ["크로이츠펠트-야콥병", "CJD", "vCJD", "한센병", "나병", "후천성면역결핍증", "AIDS", "C형간염", "만성B형간염", "샤가스병", "바베스열원충증", "리슈만편모충증"],
+    "description": "만성 B형간염, C형간염, 후천성면역결핍증(AIDS), 크로이츠펠트-야콥병(CJD), 한센병, 샤가스병 등 특정 감염병 진단을 받은 경우 영구적으로 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
       "type": "permanent",
       "periodValue": -1,
       "periodUnit": "permanent",
       "condition": "진단 시 또는 해당 시"
-    }
-  },
-  {
-    "id": "disease-011",
-    "category": "disease",
-    "name": "비염/알레르기",
-    "keywords": [
-      "비염",
-      "알레르기",
-      "알러지",
-      "아토피",
-      "두드러기",
-      "건선"
-    ],
-    "description": "알레르기 증상이 심하지 않고, 헌혈에 지장이 없는 약(예: 일반 항히스타민제)을 복용한 경우 헌혈이 가능합니다. 단, 스테로이드 성분이 포함된 약을 복용하거나 주사를 맞은 경우 일정 기간 헌혈이 제한될 수 있으므로 문진 시 알려주세요.",
-    "allowable": true,
-    "restriction": null
-  },
-  {
-    "id": "disease-012",
-    "category": "disease",
-    "name": "인플루엔자 (독감)",
-    "keywords": [
-      "독감",
-      "인플루엔자",
-      "flu"
-    ],
-    "description": "독감(인플루엔자)과 같은 발열성 질환은 완치 후 1개월이 경과해야 헌혈이 가능합니다. [cite_start]이는 신체가 충분히 회복할 시간을 보장하기 위함입니다. [cite: 62, 77]",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "완치일로부터"
-    }
-  },
-  {
-    "id": "disease-013",
-    "category": "disease",
-    "name": "장염",
-    "keywords": [
-      "장염",
-      "설사",
-      "구토"
-    ],
-    "description": "설사, 구토 등 장염 증상이 있는 동안에는 헌혈할 수 없으며, 증상이 완전히 사라진 후 헌혈이 가능합니다. [cite: 65, 66]",
-    "allowable": false,
-    "restriction": {
-      "type": "after_recovery",
-      "periodValue": 0,
-      "periodUnit": "day",
-      "condition": "증상 소실 후"
-    }
-  },
-  {
-    "id": "disease-014",
-    "category": "disease",
-    "name": "수두, 유행성이하선염(볼거리), 홍역, 풍진",
-    "keywords": [
-      "수두",
-      "볼거리",
-      "유행성이하선염",
-      "홍역",
-      "풍진"
-    ],
-    "description": "수두, 유행성이하선염(볼거리), 홍역, 풍진은 완치 후 1개월이 경과해야 헌혈이 가능합니다. [cite: 77]",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "완치일로부터"
     }
   }
 ]
