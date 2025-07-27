@@ -3,15 +3,13 @@ import { FiSearch } from 'react-icons/fi';
 import {
   TextField,
   IconButton,
-  Brightness7Rounded,
-  Brightness4Rounded,
   ToggleButton,
   ToggleButtonGroup,
   FormControl,
   InputLabel,
-} from '@mui/material';
+} from '@mui/material'; // Brightness 아이콘 import 제거
 import {
-  Brightness7Rounded,
+  Brightness7Rounded, // 아이콘은 여기서만 가져옵니다.
   Brightness4Rounded,
 } from '@mui/icons-material';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
