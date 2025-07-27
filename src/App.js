@@ -129,14 +129,22 @@ function App() {
 
     if (lowerQuery) {
       // 검색어가 있으면 카테고리 필터 없이 전체 데이터에서 검색
-      return allData.filter((item) => {
+      return allData.reduce((acc, item) => {
         const lowerName = item.name.toLowerCase();
         const keywords = (item.keywords || []).map((k) => k.toLowerCase());
-        return (
-          lowerName.includes(lowerQuery) ||
-          keywords.some((k) => k.includes(lowerQuery))
-        );
-      });
+
+        if (lowerName.includes(lowerQuery)) {
+          acc.push({ ...item, matchedKeyword: item.name });
+        } else {
+          const matchedKeyword = (item.keywords || []).find((k) =>
+            k.toLowerCase().includes(lowerQuery)
+          );
+          if (matchedKeyword) {
+            acc.push({ ...item, matchedKeyword });
+          }
+        }
+        return acc;
+      }, []);
     } else {
       // 검색어가 없으면 기존 로직대로 카테고리 필터 적용
       return filterType
