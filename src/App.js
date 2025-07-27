@@ -266,7 +266,7 @@ function App() {
           />
         )}
 
-        <footer className="text-center text-sm text-gray-500 mt-8 py-4 border-t">
+        <footer className="text-center text-sm text-gray-500 mt-8 py-4 border-t dark:border-gray-700">
           <p>
             <a
               href="https://github.com/your-github/your-repo"
@@ -277,7 +277,7 @@ function App() {
               피드백 및 기여
             </a>
           </p>
-          <p>License: MIT</p>
+          <p>License: GPL-2.0</p>
         </footer>
       </div>
     </MuiThemeProvider>
