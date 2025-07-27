@@ -45,10 +45,17 @@ const baseData = [
 ];
 
 const processedData = baseData.map((item) => {
-  const { restriction, category } = item;
+  const { restriction, category, countries } = item;
   let restrictionType = 'default';
   let restrictionPeriodDays = 0;
   let condition = '';
+  let description = item.description || '';
+
+  // 국가 목록이 있는 경우, description에 국가명을 추가합니다.
+  if (countries && countries.length > 0) {
+    const countryNames = countries.map((c) => c.countryName).join(', ');
+    description += ` (대상 국가: ${countryNames})`;
+  }
 
   if (restriction) {
     restrictionType = restriction.type;
@@ -79,6 +86,7 @@ const processedData = baseData.map((item) => {
 
   return {
     ...item,
+    description,
     category: categoryMap[category] || '기타',
     restrictionType,
     restrictionPeriodDays,
