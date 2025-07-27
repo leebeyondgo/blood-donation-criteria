@@ -88,7 +88,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
       variant="outlined"
     >
       <CardActionArea onClick={() => setIsExpanded(!isExpanded)}>
-        <CardContent>
+        <CardContent sx={{ p: 2 }}>
           <Box
             sx={{
               display: 'flex',
@@ -99,7 +99,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
           >
             <Box>
               <Typography
-                variant="h6"
+                variant="body1"
                 component="strong"
                 sx={{ fontWeight: 'bold' }}
               >
@@ -108,7 +108,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
               <Chip
                 label={category}
                 size="small"
-                sx={{ ml: 1, verticalAlign: 'middle' }}
+                sx={{ ml: 1, verticalAlign: 'middle', fontSize: '0.75rem' }}
               />
             </Box>
             <ExpandMoreIcon
@@ -124,21 +124,21 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
             sx={{
               display: 'flex',
               alignItems: 'center',
-              mt: 1.5,
+              mt: 1,
               color: status.color,
             }}
           >
-            <status.Icon sx={{ mr: 1 }} />
-            <Typography variant="body1" sx={{ fontWeight: 'medium' }}>
+            <status.Icon sx={{ mr: 0.5, fontSize: '1rem' }} />
+            <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
               {status.message}
             </Typography>
           </Box>
 
           {periodText && (
             <Typography
-              variant="body2"
+              variant="caption"
               color="text.secondary"
-              sx={{ mt: 0.5 }}
+              sx={{ mt: 0.5, display: 'block' }}
             >
               {periodText}
             </Typography>
@@ -146,7 +146,7 @@ const ResultItem = ({ item, baseDate, formatDate }) => {
         </CardContent>
       </CardActionArea>
       <Collapse in={isExpanded} timeout="auto" unmountOnExit>
-        <CardContent sx={{ pt: 0 }}>
+        <CardContent sx={{ pt: 0, pb: 2, px: 2 }}>
           <Typography variant="body2" color="text.secondary">
             {description}
           </Typography>
