@@ -24,6 +24,7 @@ import medicationData from './data/medication.json';
 import vaccinationData from './data/vaccination.json';
 import etcData from './data/etc.json';
 
+
 const categoryMap = {
   disease: '질병',
   region: '지역',
