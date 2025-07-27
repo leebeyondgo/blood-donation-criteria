@@ -1,5 +1,6 @@
 import React from 'react';
 import ResultItem from './ResultItem';
+import SearchOffIcon from '@mui/icons-material/SearchOff';
 
 const ResultList = ({
   results,
@@ -9,7 +10,17 @@ const ResultList = ({
   totalResultsCount,
 }) => {
   if (query && totalResultsCount === 0) {
-    return <li className="no-result">검색 결과가 없습니다.</li>;
+    return (
+      <div className="no-result flex flex-col items-center justify-center p-8">
+        <SearchOffIcon style={{ fontSize: 60, color: '#9e9e9e' }} />
+        <p className="mt-4 text-lg font-bold text-gray-700">
+          일치하는 검색 결과가 없습니다.
+        </p>
+        <p className="mt-2 text-sm text-gray-500">
+          다른 검색어를 입력하거나 오타가 있는지 확인해보세요.
+        </p>
+      </div>
+    );
   }
 
   return (
