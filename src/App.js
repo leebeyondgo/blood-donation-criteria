@@ -93,39 +93,119 @@ function App() {
   };
 
   const results = useMemo(() => {
-    const lower = query.toLowerCase();
+    const lowerQuery = query.toLowerCase();
     let filteredData = allData;
+
     if (filterType) {
-      filteredData = filteredData.filter((item) => item.category === filterType);
+      filteredData = filteredData.filter(
+        (item) => item.category === filterType
+      );
     }
+
     if (!query) {
       return filteredData.map((item) => ({ ...item, matchInfo: null }));
     }
+
+    const queryParts = lowerQuery.split(' ').filter(Boolean);
+
     return filteredData
       .map((item) => {
-        const matchInfo = [];
-        if (item.name.toLowerCase().includes(lower)) {
-          matchInfo.push({ type: 'name', value: item.name });
+        let matchInfo = null;
+        let isAllowableOverride = undefined;
+        let exceptionNote = null;
+
+        // Standard search (name, aliases, keywords)
+        const standardMatches = [];
+        if (item.name.toLowerCase().includes(lowerQuery)) {
+          standardMatches.push({ type: 'name', value: item.name });
         }
-        const matchingAliases = (item.aliases || []).filter((alias) =>
-          alias.toLowerCase().includes(lower)
-        );
-        if (matchingAliases.length > 0) {
-          matchingAliases.forEach((alias) =>
-            matchInfo.push({ type: 'alias', value: alias })
+        (item.aliases || []).forEach((alias) => {
+          if (alias.toLowerCase().includes(lowerQuery)) {
+            standardMatches.push({ type: 'alias', value: alias });
+          }
+        });
+        (item.keywords || []).forEach((keyword) => {
+          if (keyword.toLowerCase().includes(lowerQuery)) {
+            standardMatches.push({ type: 'keyword', value: keyword });
+          }
+        });
+
+        // Region-specific search
+        if (item.category === '지역' && item.countries && queryParts.length > 0) {
+          const countryMatch = item.countries.find((c) =>
+            queryParts.some((part) => c.countryName.toLowerCase().includes(part))
           );
+
+          if (countryMatch) {
+            const areaPart = queryParts.find(
+              (part) =>
+                part !== countryMatch.countryName.toLowerCase() &&
+                countryMatch.areas.some((area) =>
+                  area.toLowerCase().includes(part)
+                )
+            );
+            const areaInAreas = areaPart
+              ? countryMatch.areas.find((area) =>
+                  area.toLowerCase().includes(areaPart)
+                )
+              : null;
+
+            if (countryMatch.ruleType === 'all') {
+              isAllowableOverride = false;
+              matchInfo = [{ type: 'country', value: countryMatch.countryName }];
+            } else if (countryMatch.ruleType === 'inclusion') {
+              if (areaInAreas) {
+                // 위험 지역
+                isAllowableOverride = false;
+                matchInfo = [
+                  {
+                    type: 'country',
+                    value: `${countryMatch.countryName} ${areaInAreas}`,
+                  },
+                ];
+                exceptionNote = countryMatch.note;
+              }
+              // 포함 규칙인데 검색어가 지역에 없으면, 이 항목은 결과에 포함되지 않아야 함
+            } else if (countryMatch.ruleType === 'exclusion') {
+              if (areaInAreas) {
+                // 예외 지역 -> 헌혈 가능
+                isAllowableOverride = true;
+                matchInfo = [
+                  {
+                    type: 'country',
+                    value: `${countryMatch.countryName} ${areaInAreas}`,
+                  },
+                ];
+                exceptionNote = countryMatch.note;
+              } else {
+                // 예외 지역이 아닌 곳 -> 헌혈 불가
+                isAllowableOverride = false;
+                matchInfo = [
+                  { type: 'country', value: countryMatch.countryName },
+                ];
+              }
+            }
+          }
         }
-        const matchingKeywords = (item.keywords || []).filter((keyword) =>
-          keyword.toLowerCase().includes(lower)
-        );
-        if (matchingKeywords.length > 0) {
-          matchingKeywords.forEach((keyword) =>
-            matchInfo.push({ type: 'keyword', value: keyword })
-          );
+
+        if (standardMatches.length > 0 && !matchInfo) {
+          matchInfo = standardMatches;
         }
-        if (matchInfo.length > 0) {
-          return { ...item, matchInfo };
+
+        if (matchInfo) {
+          const baseResult = { ...item, matchInfo, exceptionNote };
+          if (isAllowableOverride !== undefined) {
+            return {
+              ...baseResult,
+              allowable: isAllowableOverride,
+              // '가능'으로 바뀔 때 기존 제한 정보를 초기화
+              restrictionType: isAllowableOverride ? 'none' : item.restrictionType,
+              restrictionPeriodDays: isAllowableOverride ? 0 : item.restrictionPeriodDays,
+            };
+          }
+          return baseResult;
         }
+
         return null;
       })
       .filter(Boolean);
