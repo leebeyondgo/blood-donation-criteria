@@ -20,10 +20,13 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
             color: theme.palette.text.secondary,
           },
           '& .Mui-selected': {
-            backgroundColor: 'transparent !important',
+            backgroundColor:
+              theme.palette.mode === 'light'
+                ? `${theme.palette.secondary.main} !important`
+                : 'transparent !important',
             color:
               theme.palette.mode === 'light'
-                ? theme.palette.common.black
+                ? `${theme.palette.common.white} !important`
                 : theme.palette.common.white,
             fontWeight: 'bold',
           },
