@@ -1,4 +1,4 @@
-import { useState, useMemo, useContext } from 'react';
+import { useState, useMemo, useContext, useEffect } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import {
   TextField,
@@ -23,6 +23,7 @@ import regionData from './data/region.json';
 import medicationData from './data/medication.json';
 import vaccinationData from './data/vaccination.json';
 import etcData from './data/etc.json';
+
 
 const categoryMap = {
   disease: '질병',
@@ -132,6 +133,10 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const ITEMS_PER_PAGE = 20;
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [query, filterType]);
 
   const formatDate = (date) => {
     const yyyy = date.getFullYear();
