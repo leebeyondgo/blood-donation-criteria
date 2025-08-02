@@ -3,7 +3,11 @@
     "id": "medication-001",
     "category": "medication",
     "name": "타이레놀 (아세트아미노펜 계열)",
-    "keywords": ["타이레놀", "아세트아미노펜", "단순 진통제"],
+    "keywords": [
+      "타이레놀",
+      "아세트아미노펜",
+      "단순 진통제"
+    ],
     "description": "아세트아미노펜 성분의 진통제는 통증, 발열 등 증상 완화를 위해 복용하므로, 복용 당일에는 헌혈할 수 없습니다. 증상이 없다면 다음 날부터 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
@@ -17,7 +21,15 @@
     "id": "medication-002",
     "category": "medication",
     "name": "비스테로이드성 소염진통제 (NSAIDs)",
-    "keywords": ["소염진통제", "이부프로펜", "덱시부프로펜", "나프록센", "케토프로펜", "부루펜", "애드빌"],
+    "keywords": [
+      "소염진통제",
+      "이부프로펜",
+      "덱시부프로펜",
+      "나프록센",
+      "케토프로펜",
+      "부루펜",
+      "애드빌"
+    ],
     "description": "소염진통제(NSAIDs)는 마지막 복용 후 24시간(1일)이 경과해야 전혈 및 혈장성분헌혈이 가능합니다. 혈소판성분헌혈은 3일(72시간)이 경과해야 합니다.",
     "allowable": false,
     "restriction": {
@@ -31,7 +43,9 @@
     "id": "medication-003",
     "category": "medication",
     "name": "아스피린",
-    "keywords": ["아스피린"],
+    "keywords": [
+      "아스피린"
+    ],
     "description": "아스피린은 혈소판 기능을 저해하므로 마지막 복용 후 3일이 경과해야 전혈 및 혈장성분헌혈이 가능합니다. 혈소판성분헌혈은 5일이 경과해야 합니다.",
     "allowable": false,
     "restriction": {
@@ -45,7 +59,11 @@
     "id": "medication-004",
     "category": "medication",
     "name": "항생제/항진균제",
-    "keywords": ["항생제", "항진균제", "마이신"],
+    "keywords": [
+      "항생제",
+      "항진균제",
+      "마이신"
+    ],
     "description": "감염 질환 치료를 위한 항생제는 마지막 복용 후 7일이 경과해야 헌혈이 가능합니다. 단, 여드름 치료나 예방 목적(치과 치료 등)으로 복용한 경우 3일 경과 후 가능합니다.",
     "allowable": false,
     "restriction": {
@@ -73,7 +91,15 @@
     "id": "medication-006",
     "category": "medication",
     "name": "여드름 치료제 (이소트레티노인)",
-    "keywords": ["이소트레티노인", "로아큐탄", "이소티논", "아크날", "니메겐", "트레틴", "아큐네탄"],
+    "keywords": [
+      "이소트레티노인",
+      "로아큐탄",
+      "이소티논",
+      "아크날",
+      "니메겐",
+      "트레틴",
+      "아큐네탄"
+    ],
     "description": "이소트레티노인 성분의 여드름 치료제는 태아 기형 유발 위험이 있어, 복용 중지 후 4주(1개월)간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
@@ -87,7 +113,14 @@
     "id": "medication-007",
     "category": "medication",
     "name": "탈모/전립선 치료제 (피나스테라이드)",
-    "keywords": ["피나스테라이드", "프로페시아", "프로스카", "피나스타", "마이페시아", "바로피나"],
+    "keywords": [
+      "피나스테라이드",
+      "프로페시아",
+      "프로스카",
+      "피나스타",
+      "마이페시아",
+      "바로피나"
+    ],
     "description": "피나스테리드 성분의 탈모 및 전립선 비대증 치료제는 복용 중지 후 4주(1개월)간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
@@ -101,7 +134,14 @@
     "id": "medication-008",
     "category": "medication",
     "name": "탈모/전립선 치료제 (두타스테라이드)",
-    "keywords": ["두타스테라이드", "아보다트", "아보피나", "두테드", "두타스캔", "두타모린"],
+    "keywords": [
+      "두타스테라이드",
+      "아보다트",
+      "아보피나",
+      "두테드",
+      "두타스캔",
+      "두타모린"
+    ],
     "description": "두타스테라이드 성분의 탈모 및 전립선 비대증 치료제는 복용 중지 후 6개월간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
@@ -115,7 +155,11 @@
     "id": "medication-009",
     "category": "medication",
     "name": "건선 치료제 (아시트레틴)",
-    "keywords": ["아시트레틴", "네오티가손", "소리아탄"],
+    "keywords": [
+      "아시트레틴",
+      "네오티가손",
+      "소리아탄"
+    ],
     "description": "아시트레틴 성분의 건선 치료제는 복용 중지 후 3년간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
@@ -129,7 +173,10 @@
     "id": "medication-010",
     "category": "medication",
     "name": "건선 치료제 (에트레티네이트)",
-    "keywords": ["에트레티네이트", "티가손"],
+    "keywords": [
+      "에트레티네이트",
+      "티가손"
+    ],
     "description": "에트레티네이트 성분의 건선 치료제는 체내에 매우 오랜 기간 잔류하여 영구적으로 헌혈이 금지됩니다. (현재 국내 유통 안 됨)",
     "allowable": false,
     "restriction": {
@@ -143,7 +190,12 @@
     "id": "medication-011",
     "category": "medication",
     "name": "영구 헌혈 금지 약물/주사제",
-    "keywords": ["사람 뇌하수체 유래 성장호르몬", "소 유래 인슐린", "면역억제제", "뇌하수체"],
+    "keywords": [
+      "사람 뇌하수체 유래 성장호르몬",
+      "소 유래 인슐린",
+      "면역억제제",
+      "뇌하수체"
+    ],
     "description": "변종 크로이츠펠트-야코프병(vCJD) 전파 위험으로, 사람 뇌하수체에서 유래한 성장호르몬이나 소에서 유래한 인슐린을 투여받은 경우 영구적으로 헌혈이 금지됩니다.",
     "allowable": false,
     "restriction": {
@@ -157,7 +209,10 @@
     "id": "medication-012",
     "category": "medication",
     "name": "손 습진 치료제 (알리트레티노인)",
-    "keywords": ["알리트레티노인", "알리톡"],
+    "keywords": [
+      "알리트레티노인",
+      "알리톡"
+    ],
     "description": "알리트레티노인 성분의 손 습진 치료제는 복용 중지 후 1개월간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
@@ -171,7 +226,11 @@
     "id": "medication-013",
     "category": "medication",
     "name": "항악성종양/나성결절홍반 치료제 (탈리도마이드)",
-    "keywords": ["탈리도마이드", "탈리드", "달리코브"],
+    "keywords": [
+      "탈리도마이드",
+      "탈리드",
+      "달리코브"
+    ],
     "description": "탈리도마이드 성분의 치료제는 태아 기형 유발 위험이 매우 높아, 복용 중지 후 1개월간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
@@ -185,7 +244,10 @@
     "id": "medication-014",
     "category": "medication",
     "name": "항악성종양 치료제 (비스모데깁)",
-    "keywords": ["비스모데깁", "에리벳지"],
+    "keywords": [
+      "비스모데깁",
+      "에리벳지"
+    ],
     "description": "비스모데깁 성분의 항악성종양 치료제는 태아 기형 유발 위험이 있어, 복용 중지 후 24개월(2년)간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
@@ -199,7 +261,11 @@
     "id": "medication-015",
     "category": "medication",
     "name": "태반주사제",
-    "keywords": ["태반주사", "라이넥", "멜스몬"],
+    "keywords": [
+      "태반주사",
+      "라이넥",
+      "멜스몬"
+    ],
     "description": "태반주사제는 안전성 문제로 마지막 투여일로부터 6개월간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
@@ -213,7 +279,12 @@
     "id": "medication-016",
     "category": "medication",
     "name": "근육이완제",
-    "keywords": ["근육이완제", "근이완제", "담", "근육통"],
+    "keywords": [
+      "근육이완제",
+      "근이완제",
+      "담",
+      "근육통"
+    ],
     "description": "근육의 통증이나 경직 등 증상 완화를 위해 복용하므로, 복용 당일에는 헌혈할 수 없습니다. 증상이 없다면 다음 날부터 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
@@ -227,7 +298,13 @@
     "id": "medication-017",
     "category": "medication",
     "name": "구충제",
-    "keywords": ["구충제", "회충약", "기생충", "알벤다졸", "플루벤다졸"],
+    "keywords": [
+      "구충제",
+      "회충약",
+      "기생충",
+      "알벤다졸",
+      "플루벤다졸"
+    ],
     "description": "기생충 감염 치료를 위해 복용하는 약물이므로, 복용 당일에는 헌혈할 수 없습니다. 치료가 완료된 다음 날부터 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
@@ -241,9 +318,35 @@
     "id": "medication-018",
     "category": "medication",
     "name": "기타 의약품 (헌혈 가능)",
-    "keywords": ["비타민", "미네랄", "영양제", "한약", "인슐린", "성장호르몬"],
+    "keywords": [
+      "비타민",
+      "미네랄",
+      "영양제",
+      "한약",
+      "인슐린",
+      "성장호르몬"
+    ],
     "description": "단순 건강 증진 목적의 비타민, 미네랄, 영양제, 한약은 헌혈이 가능합니다. 현재 사용하는 유전자재조합 인슐린 및 성장호르몬(마지막 투여 후 1개월 경과)도 가능합니다. 단, 모든 처방 약은 문진 시 확인이 필요합니다.",
     "allowable": true,
     "restriction": null
+  },
+  {
+    "id": "medication-019",
+    "category": "medication",
+    "name": "갑상선 기능 조절제",
+    "keywords": [
+      "갑상선",
+      "항진증",
+      "저하증",
+      "메티마졸",
+      "씬지로이드",
+      "컴지로이드"
+    ],
+    "description": "갑상선 기능 항진증 치료제(메티마졸 등) 복용 시에는 헌혈할 수 없으며, 복용 중단 후 6개월이 경과해야 합니다. 갑상선 기능 저하증으로 인해 호르몬제(씬지로이드 등)를 복용하며 기능이 정상적으로 유지되는 경우에는 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "etc",
+      "condition": "항진증 치료제는 중단 후 6개월 경과, 저하증 조절제는 기능 정상 시 가능"
+    }
   }
 ]
