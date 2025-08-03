@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './firebase'; // Firebase 설정을 불러옵니다.
 import App from './App';
 import { ThemeProvider } from './contexts/ThemeContext';
 import reportWebVitals from './reportWebVitals';
