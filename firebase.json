@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "public",
+    "site": "blood-donor-guide",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
