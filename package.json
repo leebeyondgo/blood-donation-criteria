@@ -2,7 +2,6 @@
   "name": "blood-donation-criteria",
   "version": "0.5.0",
   "private": true,
-  "homepage": "https://leebeyondgo.github.io/blood-donation-criteria",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
