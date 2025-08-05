@@ -7,13 +7,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDWYE96JfhfsOIIBC8AMfuw2liWLJpXJs0",
-  authDomain: "blood-danation-criteria.firebaseapp.com",
-  projectId: "blood-danation-criteria",
-  storageBucket: "blood-danation-criteria.firebasestorage.app",
-  messagingSenderId: "429783794484",
-  appId: "1:429783794484:web:73153a87c6eb74a2255b61",
-  measurementId: "G-DZXGZMY9CV"
+  apiKey: "AIzaSyDrEnCiWOP88XOvrMMbtUEW9ATgITVFpoA",
+  authDomain: "blood-donation-criteria.firebaseapp.com",
+  projectId: "blood-donation-criteria",
+  storageBucket: "blood-donation-criteria.firebasestorage.app",
+  messagingSenderId: "309006109383",
+  appId: "1:309006109383:web:4e46773e174ddcf6914ce2",
+  measurementId: "G-11H29Y2Q64"
 };
 
 // Initialize Firebase
