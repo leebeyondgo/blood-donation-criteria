@@ -36,7 +36,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}> {/* 이 부분을 수정했어요 */}
       {children}
     </ThemeContext.Provider>
   );
