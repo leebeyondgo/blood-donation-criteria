@@ -21,12 +21,10 @@ const Footer = () => {
         </p>
         <div className="flex justify-center items-center space-x-4">
           <a
-            href="https://github.com/leebeyondgo/blood-donation-criteria"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:won31080@gmail.com"
             className="hover:underline"
           >
-            피드백 및 기능 제안
+            피드백
           </a>
           <a
             href="https://www.bloodinfo.net/main.do"
@@ -37,18 +35,6 @@ const Footer = () => {
             대한적십자사 혈액관리본부
           </a>
         </div>
-        
-        {/* 이메일 피드백 링크 */}
-        <div className="flex justify-center items-center space-x-1">
-          <MailOutlineRounded sx={{ fontSize: '1rem' }} />
-          <a href="mailto:won31080@gmail.com" className="hover:underline">
-            won31080@gmail.com
-          </a>
-        </div>
-
-        <p className="pt-2 text-xs"> {/* 저작권/라이선스 정보와 위쪽 여백 */}
-          © 2025 Blood Donation Criteria. GPL-2.0 License.
-        </p>
       </div>
     </Box>
   );
