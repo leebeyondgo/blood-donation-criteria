@@ -233,12 +233,12 @@
     "keywords": [
       "결핵"
     ],
-    "description": "결핵은 완치 판정 후 2년이 경과해야 헌혈이 가능합니다.",
+    "description": "결핵은 완치 판정 후 1개월이 경과해야 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 2,
-      "periodUnit": "year",
+      "periodValue": 1,
+      "periodUnit": "month",
       "condition": "완치일로부터"
     }
   },
