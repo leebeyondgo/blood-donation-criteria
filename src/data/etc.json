@@ -474,5 +474,95 @@
       "periodUnit": "day",
       "condition": "음주 후"
     }
+  },
+  {
+    "id": "etc-017",
+    "category": "etc_condition",
+    "name": "불특정(성적 성접촉 또는 남성의 경우 남성과 성접촉)",
+    "keywords": ["불특정", "성적 성접촉", "남성", "남성과 성접촉", "성적 이력 불명"],
+    "description": "불특정 이성 또는 과거병력(sexual history 포함)을 모르거나 대개를 지칭한 성행위 상대자 등은 1년간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "해당 접촉일로부터"}
+  },
+  {
+    "id": "etc-018",
+    "category": "etc_condition",
+    "name": "외국인",
+    "keywords": ["외국인", "국내거주", "의사소통"],
+    "description": "국내 1년 이상 거주, 의사소통 가능, 개인정보 및 과거력 확인 가능 등 3가지 모두 충족 시 채혈 가능.",
+    "allowable": true,
+    "restriction": null
+  },
+  {
+    "id": "etc-019",
+    "category": "etc_condition",
+    "name": "운전자, 높은 곳에서 작업하는 사람",
+    "keywords": ["운전자", "고소작업", "높은 곳", "휴식"],
+    "description": "채혈 후 12시간 이상 휴식이 가능한 경우에만 채혈 가능(화물·여객 운전자, 다이버, 높은 곳에서 작업하는 경우 등).",
+    "allowable": true,
+    "restriction": {"type": "period", "periodValue": 12, "periodUnit": "hour", "condition": "채혈 후 휴식"}
+  },
+  {
+    "id": "etc-020",
+    "category": "etc_condition",
+    "name": "조류인플루엔자 발생지역 대상자",
+    "keywords": ["조류인플루엔자", "AI", "발생지역", "농가", "방역"],
+    "description": "조류인플루엔자 발생지역(반경 3km 이내) 거주·근무·방문자, 방역요원 등은 2주간 헌혈이 금지됩니다. 타미플루 복용 시 투약 종료 후 2주간 경과해야 채혈 가능.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 2, "periodUnit": "week", "condition": "노출/투약 종료일로부터"}
+  },
+  {
+    "id": "etc-021",
+    "category": "etc_condition",
+    "name": "장애인",
+    "keywords": ["장애인", "의사소통", "이해능력"],
+    "description": "장애등급과 관계없이 문진항목을 이해하고 의사소통이 가능하면 채혈 가능. 이해/판단이 어려운 경우 보호자/의사 동의 필요.",
+    "allowable": true,
+    "restriction": null
+  },
+  {
+    "id": "etc-022",
+    "category": "etc_condition",
+    "name": "죄수, 수감자",
+    "keywords": ["죄수", "수감자", "교도소", "구치소"],
+    "description": "에이즈 등 감염에 노출되었을 위험성을 고려하여 1년간 채혈 금지.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "출소일로부터"}
+  },
+  {
+    "id": "etc-023",
+    "category": "etc_condition",
+    "name": "채혈 당시 알코올 섭취자",
+    "keywords": ["알코올", "음주", "채혈 당일"],
+    "description": "채혈 당일 음주자는 채혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 0, "periodUnit": "day", "condition": "채혈 당일"}
+  },
+  {
+    "id": "etc-024",
+    "category": "etc_condition",
+    "name": "채혈에 대한 심한 공포감",
+    "keywords": ["공포감", "채혈 공포", "심리적 요인"],
+    "description": "채혈에 대한 심한 공포감이 있는 경우 채혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": null
+  },
+  {
+    "id": "etc-025",
+    "category": "etc_condition",
+    "name": "항공기 조종사",
+    "keywords": ["항공기", "조종사", "비행", "휴식"],
+    "description": "항공기 조종사는 채혈 후 24시간 이상 휴식이 가능해야 합니다.",
+    "allowable": true,
+    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "채혈 후 휴식"}
+  },
+  {
+    "id": "etc-026",
+    "category": "etc_condition",
+    "name": "혈관이 특이한 경우",
+    "keywords": ["혈관", "특이 혈관", "혈관 구조"],
+    "description": "혈관이 특이한 경우에도 채혈이 가능합니다.",
+    "allowable": true,
+    "restriction": null
   }
 ]
