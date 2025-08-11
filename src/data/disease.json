@@ -425,5 +425,90 @@
       "periodUnit": "month",
       "condition": "완치일로부터"
     }
+  },
+  
+  {
+    "id": "disease-024",
+    "category": "disease",
+    "name": "뇌혈관질환",
+    "keywords": ["뇌경색", "뇌허혈", "뇌동맥류", "모야모야병"],
+    "description": "뇌경색, 일과성 뇌허혈, 뇌동맥류, 모야모야병 등 뇌혈관질환이 있는 경우 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "진단 시 또는 해당 시"
+    }
+  },
+  {
+    "id": "disease-025",
+    "category": "disease",
+    "name": "뇌출혈",
+    "keywords": ["뇌실질출혈", "지주막하출혈", "외상성출혈"],
+    "description": "뇌실질 및 지주막하 출혈, 외상에 의한 출혈 등 뇌출혈이 있는 경우 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "진단 시 또는 해당 시"
+    }
+  },
+  {
+    "id": "disease-026",
+    "category": "disease",
+    "name": "뇌종양",
+    "keywords": ["뇌종양", "뇌하수체종양"],
+    "description": "뇌하수체 종양을 포함한 뇌종양이 있는 경우 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "진단 시 또는 해당 시"
+    }
+  },
+  {
+    "id": "disease-027",
+    "category": "disease",
+    "name": "경련성 질환",
+    "keywords": ["뇌전증", "간질"],
+    "description": "뇌전증(간질) 등 경련성 질환이 있는 경우 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "진단 시 또는 해당 시"
+    }
+  },
+  {
+    "id": "disease-028",
+    "category": "disease",
+    "name": "퇴행성질환",
+    "keywords": ["알츠하이머", "파킨슨병"],
+    "description": "알츠하이머, 파킨슨병 등 퇴행성 뇌질환이 있는 경우 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "진단 시 또는 해당 시"
+    }
+  },
+  {
+    "id": "disease-029",
+    "category": "disease",
+    "name": "감염성 뇌질환",
+    "keywords": ["뇌막염", "뇌수막염"],
+    "description": "뇌막염(뇌수막염) 등 감염성 뇌질환은 치료 종료 후 4주가 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "치료 종료 후"
+    }
   }
 ]
