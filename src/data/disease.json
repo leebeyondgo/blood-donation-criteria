@@ -48,15 +48,18 @@
       "신우신염",
       "기관지염",
       "폐렴",
-      "세균감염"
+      "세균감염",
+      "다제내성균",
+      "MRSA",
+      "VRE"
     ],
-    "description": "폐렴, 방광염 등 세균성 감염 치료를 위해 항생제를 복용한 경우, 감염의 완치 여부를 확인하기 위해 약 복용 종료 후 1주일이 경과해야 헌혈이 가능합니다.",
+    "description": "폐렴, 방광염 등 세균성 감염 질환은 치료가 모두 종료될 때까지 헌혈할 수 없습니다. 만약, 치료를 위해 항생제를 복용한 경우, 항생제 복용이 완료된 후 7일이 경과해야 헌혈이 가능합니다.",
     "allowable": false,
     "restriction": {
-      "type": "period",
-      "periodValue": 7,
+      "type": "after_recovery",
+      "periodValue": 0,
       "periodUnit": "day",
-      "condition": "항생제 복용 완료일로부터"
+      "condition": "증상 소실 등 완치 후"
     }
   },
   {
@@ -366,5 +369,58 @@
     "description": "갑상선 기능 저하증으로 호르몬제를 복용하고 있더라도, 약물 복용으로 갑상선 기능이 완전히 정상으로 조절되고 다른 합병증이 없다면 헌혈이 가능합니다.",
     "allowable": true,
     "restriction": null
+  },
+  {
+    "id": "disease-021",
+    "category": "disease",
+    "name": "중증급성호흡기증후군 (SARS)",
+    "keywords": [
+      "사스",
+      "SARS",
+      "중증급성호흡기증후군"
+    ],
+    "description": "중증급성호흡기증후군(SARS)은 완치 후 3개월간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-022",
+    "category": "disease",
+    "name": "사상충증",
+    "keywords": [
+      "사상충",
+      "사상충증",
+      "Filariasis"
+    ],
+    "description": "사상충증은 완치 후 4개월간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-023",
+    "category": "disease",
+    "name": "포충증",
+    "keywords": [
+      "포충증",
+      "Echinococcosis"
+    ],
+    "description": "포충증은 완치 후 5개월간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 5,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
+    }
   }
 ]
