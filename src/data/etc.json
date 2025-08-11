@@ -2,39 +2,209 @@
   {
     "id": "etc-001",
     "category": "etc_procedure",
-    "name": "치과 치료 (당일 가능)",
-    "keywords": [
-      "치과",
-      "충치",
-      "레진",
-      "크라운",
-      "보철",
-      "단순치료"
-    ],
-    "description": "출혈이나 염증이 없는 단순 충치 치료, 보철물(크라운, 레진) 교체 등은 당일에도 헌혈이 가능합니다. 단, 치료 과정에서 출혈이 있었다면 3일간 헌혈이 제한됩니다.",
-    "allowable": true,
-    "restriction": null
+    "name": "소수술(국소마취나 마취가 없었던 수술)",
+    "keywords": ["소수술", "국소마취", "마취 없음", "라식", "라섹", "ICL", "렌즈삽입", "포경수술", "고막절개", "조직검사", "레이저수술", "치질수술", "편도선제거수술", "맹장수술", "백내장수술", "망막수술"],
+    "description": "국소마취 또는 마취 없이 시행된 소수술(라식, 라섹, ICL, 포경수술, 고막절개, 조직검사, 레이저수술, 치질수술, 편도선제거수술, 맹장수술, 백내장수술 등)은 1개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "month", "condition": "수술일로부터"}
   },
   {
     "id": "etc-002",
     "category": "etc_procedure",
-    "name": "치과 치료 (3일 후 가능)",
-    "keywords": [
-      "치과",
-      "스케일링",
-      "발치",
-      "사랑니",
-      "신경치료",
-      "잇몸치료"
-    ],
-    "description": "스케일링, 발치(사랑니 포함), 신경치료 등 출혈을 동반한 치과 시술을 받은 경우, 일시적인 균혈증 위험을 고려하여 시술 후 3일이 경과해야 헌혈이 가능합니다.",
+    "name": "대수술(수혈받지 않은 경우)",
+    "keywords": ["대수술", "전신마취", "복강경", "흉부수술", "관절경", "여성생식기수술", "디스크수술", "담낭적출술", "자궁수술", "관상동맥수술", "관절치환술"],
+    "description": "전신마취를 했거나 다수절개, 장기절제, 명칭이 대수술로 분류되는 수술(복강경, 흉부수술, 관절경, 여성생식기수술, 디스크수술, 담낭적출술, 자궁수술, 관상동맥수술, 관절치환술 등)은 6개월간 헌혈이 금지됩니다. 단, 수혈받지 않은 경우에 한함.",
     "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 3,
-      "periodUnit": "day",
-      "condition": "시술일로부터"
-    }
+    "restriction": {"type": "period", "periodValue": 6, "periodUnit": "month", "condition": "수술일로부터 (수혈받지 않은 경우)"}
+  },
+  {
+    "id": "etc-003",
+    "category": "etc_procedure",
+    "name": "자가이식",
+    "keywords": ["자가이식", "자가피부이식", "자가골이식", "자가치아이식"],
+    "description": "자신의 피부나 골, 치아 등을 이식한 경우, 시술에 따라 헌혈 가능 여부를 판단합니다.",
+    "allowable": false,
+    "restriction": {"type": "consultation", "condition": "시술 종류에 따라 헌혈 전 상담 필요"}
+  },
+  {
+    "id": "etc-004",
+    "category": "etc_procedure",
+    "name": "동종이식",
+    "keywords": ["동종이식", "타인장기이식", "타인피부이식", "타인골이식", "타인치아이식"],
+    "description": "타인의 장기, 피부, 골, 치아 등을 이식받은 경우 1년간 헌혈이 금지됩니다. 암 또는 자가면역질환 등으로 이식 후 면역억제제 투여 이력이 있으면 영구 금지.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "이식일로부터 (면역억제제 투여 시 영구 금지)"}
+  },
+  {
+    "id": "etc-005",
+    "category": "etc_procedure",
+    "name": "이종이식",
+    "keywords": ["이종이식", "돼지심장", "동물장기이식", "이종세포치료제", "홀로덤"],
+    "description": "돼지 등 동물 장기나 세포를 이식받은 경우, 또는 이종세포 치료제/제품을 투여받은 경우 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "permanent", "periodValue": -1, "periodUnit": "permanent", "condition": "이종이식 또는 이종세포치료제 투여"}
+  },
+  {
+    "id": "etc-006",
+    "category": "etc_procedure",
+    "name": "뇌수술",
+    "keywords": ["뇌수술", "뇌실질", "뇌혈관", "뇌하수체", "모야모야병"],
+    "description": "뇌실질, 뇌혈관, 뇌하수체 종양수술, 모야모야병 수술 등은 1년간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "수술일로부터"}
+  },
+  {
+    "id": "etc-007",
+    "category": "etc_procedure",
+    "name": "심장수술(판막수술 등)",
+    "keywords": ["심장수술", "판막수술", "심방중격결손", "동맥관개존증", "PDA"],
+    "description": "심장판막질환에 의한 수술은 영구 금지. 단, 심방중격결손, 동맥관개존증(PDA) 등은 치료 종료 후 헌혈 가능.",
+    "allowable": false,
+    "restriction": {"type": "permanent", "periodValue": -1, "periodUnit": "permanent", "condition": "심장판막질환 수술"}
+  },
+  {
+    "id": "etc-008",
+    "category": "etc_procedure",
+    "name": "비강접속술",
+    "keywords": ["비강접속술", "특별면역혈소판감소증"],
+    "description": "의사 소견 또는 특별한 면역혈소판감소증에 의한 경우는 헌혈의사의 판단에 따름.",
+    "allowable": false,
+    "restriction": {"type": "consultation", "condition": "의사 소견 필요"}
+  },
+  {
+    "id": "etc-009",
+    "category": "etc_procedure",
+    "name": "수혈",
+    "keywords": ["수혈", "혈액"],
+    "description": "수혈받은 경우 1년간 헌혈이 금지됩니다. 1980년 이후 영국, 프랑스에서 수혈받은 경험이 있으면 vCJD 감염 위험으로 영구 금지.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "수혈일로부터 (vCJD 위험 시 영구 금지)"}
+  },
+  {
+    "id": "etc-010",
+    "category": "etc_procedure",
+    "name": "장기기증(골수, 조혈모세포)",
+    "keywords": ["장기기증", "골수기증", "조혈모세포기증", "PBSC"],
+    "description": "골수기증자는 8주, 조혈모세포재채취(PBSC)는 14일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 8, "periodUnit": "week", "condition": "골수기증 8주, PBSC 14일"}
+  },
+  {
+    "id": "etc-011",
+    "category": "etc_procedure",
+    "name": "봉합술(suture)",
+    "keywords": ["봉합술", "suture", "상처봉합"],
+    "description": "치료(약복용) 종료 후 7일이 경과하면 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "치료 종료 후"}
+  },
+  {
+    "id": "etc-012",
+    "category": "etc_procedure",
+    "name": "체외용적 시술",
+    "keywords": ["체외용적", "배농", "발톱", "농양", "배농술"],
+    "description": "혈흔, 배농, 발톱 등의 증상이 없다면 치료 종료 후 7일이 경과하면 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "치료 종료 후"}
+  },
+  {
+    "id": "etc-013",
+    "category": "etc_procedure",
+    "name": "치과 치료(출혈-유)",
+    "keywords": ["치과", "출혈", "발치", "스케일링", "치주염", "신경치료"],
+    "description": "출혈을 동반한 치과치료(발치, 스케일링, 치주염, 신경치료 등)는 시술 후 3일이 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 3, "periodUnit": "day", "condition": "시술일로부터"}
+  },
+  {
+    "id": "etc-014",
+    "category": "etc_procedure",
+    "name": "치과 치료(출혈-무)",
+    "keywords": ["치과", "충치", "보철", "단순치료"],
+    "description": "출혈이 없는 단순 충치치료, 보철 등은 당일 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {"type": "period", "periodValue": 0, "periodUnit": "day", "condition": "당일 가능"}
+  },
+  {
+    "id": "etc-015",
+    "category": "etc_procedure",
+    "name": "치과 치료(자가골)",
+    "keywords": ["치과", "자가골", "자가치아"],
+    "description": "자신의 치아, 자가골(자신의 뼈) 이식은 시술 후 1개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "month", "condition": "시술일로부터"}
+  },
+  {
+    "id": "etc-016",
+    "category": "etc_procedure",
+    "name": "치과 치료(동종골)",
+    "keywords": ["치과", "동종골", "타인뼈"],
+    "description": "가공된 타인의 뼈 이식은 1년간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "이식일로부터"}
+  },
+  {
+    "id": "etc-017",
+    "category": "etc_procedure",
+    "name": "치과 치료(합성골)",
+    "keywords": ["치과", "합성골", "인공뼈", "탄산칼슘", "인산칼슘"],
+    "description": "인공적으로 만든 자로포스, 탄산칼슘, 인산칼슘 등은 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {"type": "period", "periodValue": 0, "periodUnit": "day", "condition": "당일 가능"}
+  },
+  {
+    "id": "etc-018",
+    "category": "etc_procedure",
+    "name": "치과 치료(이종골)",
+    "keywords": ["치과", "이종골", "동물뼈", "소뼈", "돼지뼈"],
+    "description": "동물 뼈를 이식받은 경우 영구적으로 헌혈이 금지됩니다. 단, 2015년 7월까지 영구 금지, 2015년 8월부터 1개월 후 가능. 국외 임플란트 치료 등 확인이 불가한 경우 영구 금지.",
+    "allowable": false,
+    "restriction": {"type": "permanent", "periodValue": -1, "periodUnit": "permanent", "condition": "동물뼈 이식(2015년 7월까지 영구, 8월부터 1개월 후 가능)"}
+  },
+  {
+    "id": "etc-019",
+    "category": "etc_procedure",
+    "name": "침술/부항/뜸(3일)",
+    "keywords": ["침술", "부항", "뜸", "사혈", "한의원", "일회용도구"],
+    "description": "일회용 도구를 사용한 침술, 부항(사혈 포함), 뜸 시술은 3일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 3, "periodUnit": "day", "condition": "시술일로부터"}
+  },
+  {
+    "id": "etc-020",
+    "category": "etc_procedure",
+    "name": "침술/부항/뜸(7일)",
+    "keywords": ["침술", "부항", "뜸", "사혈", "한의원", "일회용도구"],
+    "description": "일회용 도구를 사용한 약침(한약재 추출물 주입, 봉침 포함) 등은 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "시술일로부터"}
+  },
+  {
+    "id": "etc-021",
+    "category": "etc_procedure",
+    "name": "침술/부항/뜸(6개월)",
+    "keywords": ["침술", "부항", "뜸", "사혈", "한의원", "비일회용도구"],
+    "description": "일회용 도구를 사용하지 않은 침술, 부항(사혈 포함) 시술은 6개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 6, "periodUnit": "month", "condition": "시술일로부터"}
+  },
+  {
+    "id": "etc-022",
+    "category": "etc_procedure",
+    "name": "침술/부항/뜸(1년)",
+    "keywords": ["침술", "부항", "뜸", "사혈", "한의원", "태반성분약침"],
+    "description": "태반 성분 약침(예: 자하거 약침) 시술 시 1년간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "시술일로부터"}
+  },
+  {
+    "id": "etc-023",
+    "category": "etc_procedure",
+    "name": "핵의학검사-PET(양전자 단층촬영)",
+    "keywords": ["핵의학검사", "PET", "양전자단층촬영", "건강진단"],
+    "description": "핵의학검사(PET, 양전자 단층촬영)는 당일 배제를 원칙으로 하며 헌혈자 상태를 고려하여 판단합니다.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 0, "periodUnit": "day", "condition": "당일 배제"}
   },
   {
     "id": "etc-003",

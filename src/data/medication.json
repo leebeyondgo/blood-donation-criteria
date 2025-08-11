@@ -3,124 +3,57 @@
     "id": "medication-001",
     "category": "medication",
     "name": "타이레놀 (아세트아미노펜 계열)",
-    "keywords": [
-      "타이레놀",
-      "아세트아미노펜",
-      "단순 진통제"
-    ],
+    "keywords": ["타이레놀", "아세트아미노펜", "단순 진통제"],
     "description": "아세트아미노펜 성분의 진통제는 통증, 발열 등 증상 완화를 위해 복용하므로, 복용 당일에는 헌혈할 수 없습니다. 증상이 없다면 다음 날부터 헌혈이 가능합니다.",
     "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "day",
-      "condition": "복용 당일 헌혈 불가"
-    }
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "day", "condition": "복용 당일 헌혈 불가"}
   },
   {
     "id": "medication-002",
     "category": "medication",
     "name": "비스테로이드성 소염진통제 (NSAIDs)",
-    "keywords": [
-      "소염진통제",
-      "이부프로펜",
-      "덱시부프로펜",
-      "나프록센",
-      "케토프로펜",
-      "부루펜",
-      "애드빌"
-    ],
+    "keywords": ["소염진통제", "이부프로펜", "덱시부프로펜", "나프록센", "케토프로펜", "부루펜", "애드빌"],
     "description": "소염진통제(NSAIDs)는 마지막 복용 후 24시간(1일)이 경과해야 전혈 및 혈장성분헌혈이 가능합니다. 혈소판성분헌혈은 3일(72시간)이 경과해야 합니다.",
     "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "day",
-      "condition": "마지막 복용일로부터 (혈소판성분헌혈은 3일 경과)"
-    }
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "day", "condition": "마지막 복용일로부터 (혈소판성분헌혈은 3일 경과)"}
   },
   {
-    "id": "medication-003",
+    "id": "medication-012",
     "category": "medication",
-    "name": "아스피린",
-    "keywords": [
-      "아스피린"
-    ],
-    "description": "아스피린은 혈소판 기능을 저해하므로 마지막 복용 후 3일이 경과해야 헌혈이 가능합니다.",
+    "name": "손 습진 치료제 (알리트레티노인)",
+    "keywords": ["알리톡", "알리트레티노인", "손 습진", "치료제"],
+    "description": "알리트레티노인 성분의 손 습진 치료제는 복용 중지 후 1개월간 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 3,
-      "periodUnit": "day",
-      "condition": "마지막 복용일로부터"
-    }
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "month", "condition": "복용 중지 후"}
   },
   {
-    "id": "medication-004",
+    "id": "medication-023",
     "category": "medication",
-    "name": "항생제/항진균제",
-    "keywords": [
-      "항생제",
-      "항진균제",
-      "마이신"
-    ],
-    "description": "감염 질환 치료를 위한 항생제는 마지막 복용 후 7일이 경과해야 헌혈이 가능합니다. 단, 여드름 치료나 예방 목적(치과 치료 등)으로 복용한 경우 3일 경과 후 가능합니다.",
+    "name": "스테로이드제(부신피질호르몬제)",
+    "keywords": ["스테로이드", "부신피질호르몬제", "스테로이드제", "염증", "면역억제"],
+    "description": "스테로이드제(부신피질호르몬제)는 복용 또는 주사 후 7일간 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 7,
-      "periodUnit": "day",
-      "condition": "마지막 복용일로부터 (예방 목적 시 3일)"
-    }
-  },
-  {
-    "id": "medication-005",
-    "category": "medication",
-    "name": "소화제/위장약",
-    "keywords": [
-      "소화제",
-      "위장약",
-      "제산제"
-    ],
-    "description": "소화불량, 속쓰림 등 증상 완화를 위해 소화제, 제산제 등을 복용한 경우, 복용 당일에는 헌혈할 수 없습니다. 약물 자체가 제한 대상은 아니나, 증상이 있다는 것은 컨디션이 좋지 않다는 의미이므로 헌혈이 제한됩니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "day",
-      "condition": "복용 당일 헌혈 불가"
-    }
-  },
-  {
-    "id": "medication-006",
-    "category": "medication",
-    "name": "여드름 치료제 (이소트레티노인)",
-    "keywords": [
-      "이소트레티노인",
-      "로아큐탄",
-      "이소티논",
-      "아크날",
-      "니메겐",
-      "트레틴",
-      "아큐네탄"
-    ],
-    "description": "이소트레티노인 성분의 여드름 치료제는 태아 기형 유발 위험이 있어, 복용 중지 후 4주(1개월)간 헌혈할 수 없습니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "복용 중지 후"
-    }
-  },
-  {
-    "id": "medication-007",
-    "category": "medication",
-    "name": "탈모/전립선 치료제 (피나스테라이드)",
-    "keywords": [
-      "피나스테라이드",
-      "프로페시아",
-      "프로스카",
+    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "복용 또는 주사 후"}
+  }
+    {
+      "id": "medication-026",
+      "category": "medication",
+      "name": "항진균제(전신성 및 심재성 감염)",
+      "keywords": ["항진균제", "전신성 감염", "심재성 감염", "곰팡이"],
+      "description": "전신성 또는 심재성 감염 치료를 위한 항진균제는 복용 종료 후 4주간 헌혈이 제한됩니다.",
+      "allowable": false,
+      "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "복용 종료 후"}
+    },
+    {
+      "id": "medication-027",
+      "category": "medication",
+      "name": "혈소판 기능 저해 약물(아스피린 등)",
+      "keywords": ["아스피린", "디피리다몰", "인도메타신", "피록시캄", "클로피도그렐", "티클로피딘", "혈소판", "진통제", "항응고제"],
+      "description": "혈소판 기능에 영향을 주는 약물(아스피린, 디피리다몰, 인도메타신, 피록시캄, 클로피도그렐, 티클로피딘 등)은 약물별로 3일~2주간 혈소판헌혈이 제한됩니다.",
+      "allowable": false,
+  "restriction": {"type": "period", "periodValue": 3, "periodUnit": "day", "condition": "복용 종료 후(약물별 상이)"}
+  }
+]
       "피나스타",
       "마이페시아",
       "바로피나"
