@@ -76,9 +76,18 @@
     "category": "vaccination",
     "name": "수두",
     "keywords": ["수두"],
-    "description": "수두 백신 접종 후 4주간 헌혈이 제한됩니다. 수두환자와 접촉 시 1개월간 헌혈 금지.",
+    "description": "수두 백신 접종 후 4주간 헌혈 금지.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터 (접촉 시 1개월)"}
+    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터"}
+  },
+  {
+    "id": "vaccination-009b",
+    "category": "vaccination",
+    "name": "수두환자 접촉",
+    "keywords": ["수두", "접촉"],
+    "description": "수두환자와 접촉 시 1개월간 헌혈 금지.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "month", "condition": "접촉일로부터"}
   },
   {
     "id": "vaccination-010",
@@ -175,9 +184,18 @@
     "category": "vaccination",
     "name": "코로나19(COVID-19)",
     "keywords": ["코로나19", "COVID-19"],
-    "description": "코로나19(COVID-19) 백신 접종 후 7일간 헌혈이 제한됩니다. 매회 접종 시마다 접종일로부터 7일간 금지. 접종 후 이상증상 있을 시 증상 소실 후 7일간 추가 금지.",
+    "description": "코로나19 백신 접종 후 7일간 헌혈 금지.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "접종일로부터 (이상증상 시 증상 소실 후 7일)"}
+    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "접종일로부터"}
+  },
+  {
+    "id": "vaccination-020b",
+    "category": "vaccination",
+    "name": "코로나19 백신 이상증상",
+    "keywords": ["코로나19", "백신", "이상증상"],
+    "description": "코로나19 백신 접종 후 이상증상 있으면 증상 소실 후 7일간 헌혈 금지.",
+    "allowable": false,
+    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "증상 소실 후"}
   },
   {
     "id": "vaccination-021",
