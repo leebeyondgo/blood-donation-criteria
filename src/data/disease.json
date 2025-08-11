@@ -20,7 +20,7 @@
       "keywords": ["다제내성아시네토박터바우마니균", "MRAB", "감염증"],
       "description": "치료 종료 시까지 헌혈 금지.",
       "allowable": false,
-      "restriction": {"type": "until_cured", "condition": "치료 종료 시까지"}
+  "restriction": {"type": "after_recovery", "condition": "치료 종료 후"}
     },
     {
       "id": "disease-0408",
@@ -770,8 +770,6 @@
     "allowable": false,
     "restriction": {
       "type": "after_recovery",
-      "periodValue": 0,
-      "periodUnit": "day",
       "condition": "치료 종료 후"
     }
   },
@@ -931,8 +929,6 @@
     "allowable": true,
     "restriction": {
       "type": "after_recovery",
-      "periodValue": 0,
-      "periodUnit": "day",
       "condition": "무증상"
     }
   },
@@ -982,8 +978,6 @@
     "allowable": false,
     "restriction": {
       "type": "after_recovery",
-      "periodValue": 0,
-      "periodUnit": "day",
       "condition": "증상 소실 후"
     }
   },
@@ -995,10 +989,8 @@
     "description": "증상 소실 시 헌혈 가능. 성기 단순포진은 1년간 금지.",
     "allowable": true,
     "restriction": {
-      "type": "after_recovery",
-      "periodValue": 0,
-      "periodUnit": "day",
-      "condition": "증상 소실 후"
+    "type": "after_recovery",
+    "condition": "증상 소실 후"
     }
   },
   {
@@ -1037,8 +1029,8 @@
     "description": "소아기 아스피린 복용으로 인한 경우만 헌혈 가능.",
     "allowable": true,
     "restriction": {
-      "type": "etc",
-      "condition": "소아기 아스피린 복용만 해당"
+    "type": "etc",
+    "condition": "소아기 아스피린 복용"
     }
   },
   {
