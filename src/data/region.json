@@ -66,7 +66,7 @@
       { "countryName": "아프가니스탄", "ruleType": "exclusion", "note": "고지대를 제외한 전 지역이 위험하나, 수도 카불 및 해발 2,000m 이상은 헌혈 가능합니다.", "areas": ["카불", "해발 2,000m 이상"] },
       { "countryName": "예멘", "ruleType": "exclusion", "note": "고지대를 제외한 전 지역이 위험하나, 수도 사나 및 해발 2,000m 이상은 헌혈 가능합니다.", "areas": ["사나", "해발 2,000m 이상"] },
       { "countryName": "이란", "ruleType": "exclusion", "note": "동남부 지역이 위험하나, 주요 도시 지역은 헌혈 가능합니다.", "areas": ["주요 도시"] },
-      { "countryName": "인도", "ruleType": "exclusion", "note": "동북부 주 등이 위험하나, 일부 주는 헌혈 가능합니다.", "areas": ["히마찰프라데시주", "잠무 카슈미르주", "시킴주"] },
+      { "countryName": "인도", "ruleType": "inclusion", "note": "전 지역이 말라리아 위험 지역입니다.", "areas": ["인도 전역"] },
       { "countryName": "인도네시아", "ruleType": "exclusion", "note": "동부 지역이 위험하나, 자카르타, 발리 등 주요 관광지는 헌혈 가능합니다.", "areas": ["자카르타", "발리섬", "길리섬", "롬복섬"] },
       { "countryName": "중국", "ruleType": "inclusion", "note": "윈난성, 티베트 자치구 일부 지역만 위험 지역으로 분류됩니다.", "areas": ["윈난성", "티베트"] },
       { "countryName": "캄보디아", "ruleType": "exclusion", "note": "대부분 지역이 위험하나, 프놈펜, 시엠립(앙코르와트) 등은 헌혈 가능합니다.", "areas": ["프놈펜", "시엠립", "앙코르와트", "톤레삽 호수"] },
