@@ -1,1104 +1,426 @@
 [
   {
-    "id": "disease-033t",
+    "id": "disease-001",
     "category": "disease",
-    "name": "요관손상",
-    "keywords": ["요관손상", "요관질환"],
-    "description": "치료 종료 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "치료 종료 후"
-  }
-  },
-  {
-      "id": "disease-0407",
-      "category": "disease",
-      "name": "다제내성아시네토박터바우마니균(MRAB) 감염증",
-      "keywords": ["다제내성아시네토박터바우마니균", "MRAB", "감염증"],
-      "description": "치료 종료 시까지 헌혈 금지.",
-      "allowable": false,
-  "restriction": {"type": "after_recovery", "condition": "치료 종료 후"}
-    },
-    {
-      "id": "disease-0408",
-      "category": "disease",
-      "name": "뎅기열",
-      "keywords": ["뎅기열", "뎅기"],
-      "description": "치료 종료 후 6개월간 헌혈 금지.",
-      "allowable": false,
-      "restriction": {"type": "period", "periodValue": 6, "periodUnit": "month", "condition": "치료 종료 후"}
-    },
-    {
-      "id": "disease-0409",
-      "category": "disease",
-      "name": "동물인플루엔자 인체감염증",
-      "keywords": ["동물인플루엔자", "조류인플루엔자", "신종플루"],
-      "description": "치료 종료 후 1개월간 헌혈 금지.",
-      "allowable": false,
-      "restriction": {"type": "period", "periodValue": 1, "periodUnit": "month", "condition": "치료 종료 후"}
-    },
-  {
-    "id": "disease-033u",
-    "category": "disease",
-    "name": "요관이상",
-    "keywords": ["요관이상", "요관질환"],
-    "description": "수술 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033v",
-    "category": "disease",
-    "name": "요관종양",
-    "keywords": ["요관종양", "종양", "요관질환"],
-    "description": "치료 종료 후 5년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 5,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033w",
-    "category": "disease",
-    "name": "요관결손",
-    "keywords": ["요관결손", "요관질환"],
-    "description": "수술 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033x",
-    "category": "disease",
-    "name": "요관기형",
-    "keywords": ["요관기형", "요관질환"],
-    "description": "수술 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033y",
-    "category": "disease",
-    "name": "요관확장",
-    "keywords": ["요관확장", "요관질환"],
-    "description": "수술 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033o",
-    "category": "disease",
-    "name": "요관결석",
-    "keywords": ["요관결석", "요로결석", "신장결석"],
-    "description": "수술 후 1개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033p",
-    "category": "disease",
-    "name": "요관염",
-    "keywords": ["요관염", "요로감염"],
-    "description": "치료 종료 후 1개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033q",
-    "category": "disease",
-    "name": "요관암",
-    "keywords": ["요관암", "암", "요관질환"],
-    "description": "치료 종료 후 5년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 5,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033r",
-    "category": "disease",
-    "name": "요관협착",
-    "keywords": ["요관협착", "요관질환"],
-    "description": "수술 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033s",
-    "category": "disease",
-    "name": "요관폐색",
-    "keywords": ["요관폐색", "요관질환"],
-    "description": "수술 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-032x",
-    "category": "disease",
-    "name": "자궁경부암",
-    "keywords": ["자궁경부암", "자궁암", "암"],
-    "description": "치료 종료 후 5년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 5,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032y",
-    "category": "disease",
-    "name": "자궁근종",
-    "keywords": ["자궁근종", "근종", "자궁질환"],
-    "description": "수술 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-032z",
-    "category": "disease",
-    "name": "자궁내막증",
-    "keywords": ["자궁내막증", "자궁질환"],
-    "description": "치료 종료 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033a",
-    "category": "disease",
-    "name": "난소낭종",
-    "keywords": ["난소낭종", "난소질환"],
-    "description": "수술 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033b",
-    "category": "disease",
-    "name": "난소암",
-    "keywords": ["난소암", "암", "난소질환"],
-    "description": "치료 종료 후 5년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 5,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033c",
-    "category": "disease",
-    "name": "유방암",
-    "keywords": ["유방암", "암", "유방질환"],
-    "description": "치료 종료 후 5년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 5,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033d",
-    "category": "disease",
-    "name": "유방질환",
-    "keywords": ["유방질환", "유방염", "유방종양"],
-    "description": "치료 종료 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033e",
-    "category": "disease",
-    "name": "전립선암",
-    "keywords": ["전립선암", "암", "전립선질환"],
-    "description": "치료 종료 후 5년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 5,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033f",
-    "category": "disease",
-    "name": "전립선비대증",
-    "keywords": ["전립선비대증", "전립선질환"],
-    "description": "수술 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033g",
-    "category": "disease",
-    "name": "방광염",
-    "keywords": ["방광염", "요로감염", "방광질환"],
-    "description": "치료 종료 후 1개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033h",
-    "category": "disease",
-    "name": "신장질환",
-    "keywords": ["신장질환", "신부전", "신증후군", "신장암"],
-    "description": "신장질환은 완치 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "완치 후"
-    }
-  },
-  {
-    "id": "disease-033i",
-    "category": "disease",
-    "name": "요로감염",
-    "keywords": ["요로감염", "방광염", "신우신염"],
-    "description": "치료 종료 후 1개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033j",
-    "category": "disease",
-    "name": "요로결석",
-    "keywords": ["요로결석", "신장결석", "방광결석"],
-    "description": "수술 후 1개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033k",
-    "category": "disease",
-    "name": "요도염",
-    "keywords": ["요도염", "요로감염"],
-    "description": "치료 종료 후 1개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033l",
-    "category": "disease",
-    "name": "방광암",
-    "keywords": ["방광암", "암", "방광질환"],
-    "description": "치료 종료 후 5년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 5,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-033m",
-    "category": "disease",
-    "name": "방광결석",
-    "keywords": ["방광결석", "요로결석", "방광질환"],
-    "description": "수술 후 1개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "수술 후"
-    }
-  },
-  {
-    "id": "disease-033n",
-    "category": "disease",
-    "name": "요실금",
-    "keywords": ["요실금", "배뇨장애"],
-    "description": "치료 종료 후 1개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032r",
-    "category": "disease",
-    "name": "HIV/AIDS",
-    "keywords": ["HIV", "AIDS", "에이즈", "인체면역결핍바이러스"],
-    "description": "HIV/AIDS 진단 시 영구 헌혈 금지.",
+    "name": "감기",
+    "keywords": [
+      "감기",
+      "몸살",
+      "인후통",
+      "기침",
+      "콧물",
+      "편도선염"
+    ],
+    "description": "감기, 인후통, 몸살 등 호흡기 증상이 있는 동안에는 헌혈할 수 없으며, 증상이 완전히 사라지고 컨디션이 회복된 후 헌혈이 가능합니다.",
     "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "진단 시"
-    }
-  },
-  {
-    "id": "disease-032s",
-    "category": "disease",
-    "name": "매독",
-    "keywords": ["매독", "성병", "트레포네마"],
-    "description": "치료 종료 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032t",
-    "category": "disease",
-    "name": "임질",
-    "keywords": ["임질", "성병", "임균"],
-    "description": "치료 종료 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032u",
-    "category": "disease",
-    "name": "클라미디아",
-    "keywords": ["클라미디아", "성병", "Chlamydia"],
-    "description": "치료 종료 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032v",
-    "category": "disease",
-    "name": "헤르페스",
-    "keywords": ["헤르페스", "단순포진", "성병"],
-    "description": "치료 종료 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032w",
-    "category": "disease",
-    "name": "HPV",
-    "keywords": ["HPV", "인유두종바이러스", "성병"],
-    "description": "치료 종료 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032d",
-    "category": "disease",
-    "name": "간경변",
-    "keywords": ["간경변", "간경화", "간질환"],
-    "description": "간경변 진단 시 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "진단 시"
-    }
-  },
-  {
-    "id": "disease-032e",
-    "category": "disease",
-    "name": "간질환(기타)",
-    "keywords": ["간질환", "간기능장애", "간염"],
-    "description": "기타 간질환은 완치 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "완치 후"
-    }
-  },
-  {
-    "id": "disease-032f",
-    "category": "disease",
-    "name": "결핵",
-    "keywords": ["결핵", "폐결핵", "활동성결핵"],
-    "description": "치료 종료 후 2년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 2,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032g",
-    "category": "disease",
-    "name": "고혈압",
-    "keywords": ["고혈압", "혈압", "고혈압약"],
-    "description": "혈압이 정상 범위 내에 있고, 약물치료 중이 아니면 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "condition_check",
-      "condition": "혈압 정상, 약물치료 중 아님"
-    }
-  },
-  {
-    "id": "disease-032h",
-    "category": "disease",
-    "name": "고지혈증",
-    "keywords": ["고지혈증", "지질이상증", "콜레스테롤"],
-    "description": "고지혈증 치료 중에는 헌혈 불가, 치료 종료 후 1개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032i",
-    "category": "disease",
-    "name": "골수이형성증후군",
-    "keywords": ["골수이형성증후군", "MDS", "골수질환"],
-    "description": "골수이형성증후군 진단 시 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "진단 시"
-    }
-  },
-  {
-    "id": "disease-032j",
-    "category": "disease",
-    "name": "골수섬유증",
-    "keywords": ["골수섬유증", "골수질환"],
-    "description": "골수섬유증 진단 시 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "진단 시"
-    }
-  },
-  {
-    "id": "disease-032k",
-    "category": "disease",
-    "name": "골수증식질환",
-    "keywords": ["골수증식질환", "골수질환"],
-    "description": "골수증식질환 진단 시 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "진단 시"
-    }
-  },
-  {
-    "id": "disease-032l",
-    "category": "disease",
-    "name": "기생충감염",
-    "keywords": ["기생충감염", "기생충", "감염병"],
-    "description": "기생충감염 치료 종료 후 6개월 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 6,
-      "periodUnit": "month",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032m",
-    "category": "disease",
-    "name": "기타 감염병",
-    "keywords": ["감염병", "감염증", "기타 감염"],
-    "description": "감염병 치료 종료 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032n",
-    "category": "disease",
-    "name": "기타 만성질환",
-    "keywords": ["만성질환", "기타 만성질환"],
-    "description": "만성질환은 완치 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "완치 후"
-    }
-  },
-  {
-    "id": "disease-032o",
-    "category": "disease",
-    "name": "기타 신경질환",
-    "keywords": ["신경질환", "기타 신경질환"],
-    "description": "기타 신경질환은 완치 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "완치 후"
-    }
-  },
-  {
-    "id": "disease-032p",
-    "category": "disease",
-    "name": "기타 심장질환",
-    "keywords": ["심장질환", "기타 심장질환"],
-    "description": "기타 심장질환은 완치 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "완치 후"
-    }
-  },
-  {
-    "id": "disease-032q",
-    "category": "disease",
-    "name": "기타 혈액질환",
-    "keywords": ["혈액질환", "기타 혈액질환"],
-    "description": "기타 혈액질환은 완치 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "완치 후"
-    }
-  },
-  {
-    "id": "disease-031p",
-    "category": "disease",
-    "name": "임상종양",
-    "keywords": ["임상종양", "종양", "암", "악성종양"],
-    "description": "치료 종료 후 5년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 5,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-031q",
-    "category": "disease",
-    "name": "중앙/말초신경병",
-    "keywords": ["중앙신경병", "말초신경병", "신경병증"],
-    "description": "중앙/말초신경병은 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "진단 시"
-    }
-  },
-  {
-    "id": "disease-031r",
-    "category": "disease",
-    "name": "천식",
-    "keywords": ["천식", "기관지천식", "알레르기성천식"],
-    "description": "치료 종료 후 2주 경과, 증상 없으면 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 2,
-      "periodUnit": "week",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-031s",
-    "category": "disease",
-    "name": "치질",
-    "keywords": ["치질", "치핵", "항문질환"],
-    "description": "출혈이 없으면 헌혈 가능.",
-    "allowable": true,
-    "restriction": null
-  },
-  {
-    "id": "disease-031t",
-    "category": "disease",
-    "name": "크로이츠펠트-야콥병",
-    "keywords": ["크로이츠펠트-야콥병", "CJD", "vCJD"],
-    "description": "진단 시 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "진단 시"
-    }
-  },
-  {
-    "id": "disease-031u",
-    "category": "disease",
-    "name": "통풍",
-    "keywords": ["통풍", "요산", "관절염"],
-    "description": "통풍 통증 발작 치료 중에는 헌혈 불가.",
-    "allowable": false,
-    "restriction": {
-      "type": "after_recovery",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-031v",
-    "category": "disease",
-    "name": "특발성 혈소판 감소증",
-    "keywords": ["특발성 혈소판 감소증", "ITP", "혈소판감소증"],
-    "description": "치료 종료 후 5년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 5,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-031w",
-    "category": "disease",
-    "name": "피부병",
-    "keywords": ["피부병", "피부질환", "피부염"],
-    "description": "채혈 부위에 이상 없으면 헌혈 가능.",
-    "allowable": true,
-    "restriction": null
-  },
-  {
-    "id": "disease-031x",
-    "category": "disease",
-    "name": "혈액질환",
-    "keywords": ["혈액질환", "빈혈", "백혈병", "혈우병"],
-    "description": "혈액질환은 진단 시 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "진단 시"
-    }
-  },
-  {
-    "id": "disease-031y",
-    "category": "disease",
-    "name": "A형간염",
-    "keywords": ["A형간염", "간염", "급성간염"],
-    "description": "치료 종료 후 1년 경과 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-031z",
-    "category": "disease",
-    "name": "B형간염",
-    "keywords": ["B형간염", "간염", "HBV"],
-    "description": "B형간염 완치 후 1년 경과, 검사결과 정상 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032a",
-    "category": "disease",
-    "name": "C형간염",
-    "keywords": ["C형간염", "간염", "HCV"],
-    "description": "C형간염 완치 후 1년 경과, 검사결과 정상 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-032b",
-    "category": "disease",
-    "name": "HTLV",
-    "keywords": ["HTLV", "인체T세포바이러스", "바이러스"],
-    "description": "HTLV 양성자는 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "양성자"
-    }
-  },
-  {
-    "id": "disease-032c",
-    "category": "disease",
-    "name": "가족 중 B형간염, C형간염 보유자",
-    "keywords": ["B형간염 보유자", "C형간염 보유자", "가족력", "HBV", "HCV"],
-    "description": "가족 중 B형간염, C형간염 보유자는 검사결과 정상 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "condition_check",
-      "condition": "검사결과 정상 시"
-    }
-  },
-  {
-    "id": "disease-031h",
-    "category": "disease",
-    "name": "설사",
-    "keywords": ["설사", "diarrhea", "장염", "물설사"],
-    "description": "3일 이상 지속되는 설사는 3일간 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 3,
-      "periodUnit": "day",
-      "condition": "지속 시"
-    }
-  },
-  {
-    "id": "disease-031i",
-    "category": "disease",
-    "name": "성병",
-    "keywords": ["성병", "임질", "매독", "클라미디아", "성매개감염"],
-    "description": "치료 종료 후 1년간 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-031j",
-    "category": "disease",
-    "name": "식중독",
-    "keywords": ["식중독", "food poisoning", "구토", "설사"],
-    "description": "치료 종료 후 3일간 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 3,
-      "periodUnit": "day",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-031k",
-    "category": "disease",
-    "name": "신경섬유종",
-    "keywords": ["신경섬유종", "neurofibromatosis", "신경종"],
-    "description": "무증상 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "after_recovery",
-      "condition": "무증상"
-    }
-  },
-  {
-    "id": "disease-031l",
-    "category": "disease",
-    "name": "신경질환",
-    "keywords": ["신경질환", "신경병증", "신경계"],
-    "description": "악성 변화 시 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "악성 변화"
-    }
-  },
-  {
-    "id": "disease-031m",
-    "category": "disease",
-    "name": "심장질환",
-    "keywords": ["심장질환", "심부전", "심근경색", "부정맥", "심장수술"],
-    "description": "급성심장질환, 심장수술, 심부전 등은 영구 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "permanent",
-      "periodValue": -1,
-      "periodUnit": "permanent",
-      "condition": "진단 시"
-    }
-  },
-  {
-    "id": "disease-031n",
-    "category": "disease",
-    "name": "알레르기",
-    "keywords": ["알레르기", "비염", "두드러기", "아토피", "천식"],
-    "description": "일반적인 알레르기, 비염 등은 증상 없으면 헌혈 가능.",
-    "allowable": true,
-    "restriction": null
-  },
-  {
-    "id": "disease-031o",
-    "category": "disease",
-    "name": "음주/약물중독",
-    "keywords": ["음주", "알코올", "약물중독", "마약"],
-    "description": "음주, 약물중독 등은 증상 소실 시까지 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "after_recovery",
-      "condition": "증상 소실 후"
-    }
-  },
-  {
-    "id": "disease-031a",
-    "category": "disease",
-    "name": "단순포진",
-    "keywords": ["단순포진", "헤르페스", "입술포진", "생식기포진"],
-    "description": "증상 소실 시 헌혈 가능. 성기 단순포진은 1년간 금지.",
-    "allowable": true,
-    "restriction": {
-    "type": "after_recovery",
-    "condition": "증상 소실 후"
-    }
-  },
-  {
-    "id": "disease-031b",
-    "category": "disease",
-    "name": "성기 단순포진",
-    "keywords": ["성기포진", "생식기포진", "헤르페스"],
-    "description": "성기 단순포진은 1년간 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "year",
-      "condition": "증상 소실 후"
-    }
-  },
-  {
-    "id": "disease-031c",
-    "category": "disease",
-    "name": "대상포진",
-    "keywords": ["대상포진", "헤르페스", "신경통"],
-    "description": "무증상 시 헌혈 가능.",
-    "allowable": true,
     "restriction": {
       "type": "after_recovery",
       "periodValue": 0,
       "periodUnit": "day",
-      "condition": "무증상"
+      "condition": "증상 소실 등 완치 후"
     }
   },
   {
-    "id": "disease-031d",
+    "id": "disease-002",
     "category": "disease",
-    "name": "레이노증후군",
-    "keywords": ["레이노증후군", "혈관운동신경증", "손발저림"],
-    "description": "소아기 아스피린 복용으로 인한 경우만 헌혈 가능.",
-    "allowable": true,
+    "name": "장염",
+    "keywords": [
+      "장염",
+      "설사",
+      "구토",
+      "복통"
+    ],
+    "description": "설사, 구토, 복통 등 위장관계 증상이 있는 동안에는 헌혈할 수 없으며, 증상이 완전히 사라지고 컨디션이 회복된 후 헌혈이 가능합니다.",
+    "allowable": false,
     "restriction": {
-    "type": "etc",
-    "condition": "소아기 아스피린 복용"
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "증상 소실 등 완치 후"
     }
   },
   {
-    "id": "disease-031e",
+    "id": "disease-003",
     "category": "disease",
-    "name": "만성피로증후군",
-    "keywords": ["만성피로증후군", "CFS", "피로", "무기력"],
-    "description": "무기력, 피로 등 증상이 지속되는 경우 헌혈 불가.",
+    "name": "기타 세균성 감염 질환",
+    "keywords": [
+      "방광염",
+      "신우신염",
+      "기관지염",
+      "폐렴",
+      "세균감염",
+      "다제내성균",
+      "MRSA",
+      "VRE"
+    ],
+    "description": "폐렴, 방광염 등 세균성 감염 질환은 치료가 모두 종료될 때까지 헌혈할 수 없습니다. 만약, 치료를 위해 항생제를 복용한 경우, 항생제 복용이 완료된 후 7일이 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "증상 소실 등 완치 후"
+    }
+  },
+  {
+    "id": "disease-004",
+    "category": "disease",
+    "name": "코로나바이러스감염증-19 (COVID-19)",
+    "keywords": [
+      "코로나",
+      "코로나19",
+      "COVID-19"
+    ],
+    "description": "코로나19는 확진일과 증상 소실일 중 더 나중 날짜로부터 10일이 경과한 후(11일째부터) 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 10,
+      "periodUnit": "day",
+      "condition": "확진 및 증상 소실일로부터"
+    }
+  },
+  {
+    "id": "disease-005",
+    "category": "disease",
+    "name": "인플루엔자 (독감)",
+    "keywords": [
+      "독감",
+      "인플루엔자",
+      "flu"
+    ],
+    "description": "독감(인플루엔자)은 완치 후 헌혈이 가능합니다. 단, 증상이 심했거나 합병증이 있었다면 신체 회복을 위해 일정 기간 추가적인 제한이 필요할 수 있습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-006",
+    "category": "disease",
+    "name": "다래끼 / 단순 눈의 염증",
+    "keywords": [
+      "다래끼",
+      "눈다래끼",
+      "속다래끼",
+      "눈의 염증"
+    ],
+    "description": "다래끼와 같이 국소적인 염증이 있는 경우, 완치될 때까지 헌혈할 수 없습니다. 이는 염증 반응 및 복용 약물의 영향을 고려하기 위함이며, 완치 후에는 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "완치 후"
+    }
+  },
+  {
+    "id": "disease-007",
+    "category": "disease",
+    "name": "감염성 결막염 (유행성 눈병)",
+    "keywords": [
+      "눈병",
+      "결막염",
+      "아폴로눈병",
+      "유행성각결막염"
+    ],
+    "description": "유행성 각결막염 등 전염성이 강한 눈병은 완치 후 1개월이 경과해야 헌혈이 가능합니다. 단순 알레르기성 결막염은 증상이 없으면 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-008",
+    "category": "disease",
+    "name": "수두, 유행성이하선염(볼거리), 홍역, 풍진",
+    "keywords": [
+      "수두",
+      "볼거리",
+      "유행성이하선염",
+      "홍역",
+      "풍진"
+    ],
+    "description": "수두, 유행성이하선염(볼거리), 홍역, 풍진은 완치 후 1개월이 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-009",
+    "category": "disease",
+    "name": "뎅기열/지카바이러스/치쿤구니야열 등",
+    "keywords": [
+      "뎅기열",
+      "지카바이러스",
+      "치쿤구니야열",
+      "웨스트나일열"
+    ],
+    "description": "뎅기열, 지카바이러스, 웨스트나일열, 치쿤구니야열은 완치 후 6개월간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-010",
+    "category": "disease",
+    "name": "성매개감염병 (매독, 임질 등)",
+    "keywords": [
+      "매독",
+      "임질",
+      "클라미디아",
+      "연성하감",
+      "성기단순포진",
+      "첨규콘딜롬"
+    ],
+    "description": "매독, 임질, 클라미디아 등 성매개감염병은 완치 후 1년간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-011",
+    "category": "disease",
+    "name": "급성 A형/B형 간염",
+    "keywords": [
+      "A형간염",
+      "급성B형간염"
+    ],
+    "description": "급성 A형 간염 또는 급성 B형 간염으로 진단받고 완치된 날로부터 1년간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-012",
+    "category": "disease",
+    "name": "브루셀라증",
+    "keywords": [
+      "브루셀라증"
+    ],
+    "description": "브루셀라증으로 진단받고 완치된 날로부터 2년간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "year",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-013",
+    "category": "disease",
+    "name": "결핵",
+    "keywords": [
+      "결핵"
+    ],
+    "description": "결핵은 완치 판정 후 2년이 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "year",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-014",
+    "category": "disease",
+    "name": "말라리아",
+    "keywords": [
+      "말라리아"
+    ],
+    "description": "말라리아로 진단받고 완치(치료 종료)된 날로부터 3년간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "year",
+      "condition": "치료 종료일로부터"
+    }
+  },
+  {
+    "id": "disease-015",
+    "category": "disease",
+    "name": "골절",
+    "keywords": [
+      "골절",
+      "깁스",
+      "골절 수술"
+    ],
+    "description": "단순 골절로 깁스만 한 경우, 완치 후 헌혈이 가능합니다. 골절로 수술을 받은 경우에는 수술 후 최소 6개월이 경과해야 하며, 이는 수술의 종류와 회복 상태에 따라 달라질 수 있습니다.",
     "allowable": false,
     "restriction": {
       "type": "etc",
-      "condition": "무기력, 피로 지속 시"
+      "condition": "완치 후"
     }
   },
   {
-    "id": "disease-014b",
+    "id": "disease-016",
     "category": "disease",
-    "name": "말라리아(치료 종료 후)",
-    "keywords": ["말라리아", "치료 종료"],
-    "description": "치료 종료 후 3년간 헌혈 금지.",
+    "name": "비염/알레르기/건선 등",
+    "keywords": [
+      "비염",
+      "알레르기",
+      "알러지",
+      "아토피",
+      "두드러기",
+      "건선"
+    ],
+    "description": "알레르기, 건선 등의 증상이 심하지 않고 전신적인 불편감이 없다면 헌혈이 가능합니다. 단, 헌혈이 금지된 약물(스테로이드 등)을 복용/투여 중이라면 해당 약물 기준에 따라 헌혈이 제한됩니다.",
+    "allowable": true,
+    "restriction": null
+  },
+  {
+    "id": "disease-017",
+    "category": "disease",
+    "name": "영구 헌혈 금지 질병",
+    "keywords": [
+      "크로이츠펠트-야콥병",
+      "CJD",
+      "vCJD",
+      "한센병",
+      "나병",
+      "후천성면역결핍증",
+      "AIDS",
+      "C형간염",
+      "만성B형간염",
+      "샤가스병",
+      "바베스열원충증",
+      "리슈만편모충증"
+    ],
+    "description": "만성 B형간염, C형간염, 후천성면역결핍증(AIDS), 크로이츠펠트-야콥병(CJD), 한센병, 샤가스병 등 특정 감염병 진단을 받은 경우 영구적으로 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": -1,
+      "periodUnit": "permanent",
+      "condition": "진단 시 또는 해당 시"
+    }
+  },
+  {
+    "id": "disease-018",
+    "category": "disease",
+    "name": "빈혈 (저혈색소)",
+    "keywords": [
+      "빈혈",
+      "저혈색소",
+      "헤모글로빈",
+      "철분결핍"
+    ],
+    "description": "헌혈 전 혈색소(헤모글로빈) 수치 검사를 통해 헌혈 가능 여부를 판단합니다. 전혈 헌혈은 12.5g/dL 이상, 성분 헌혈은 12.0g/dL 이상이어야 합니다. 이 기준에 미치지 못하면 일시적으로 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "헌혈 전 혈색소 수치 검사 결과에 따름"
+    }
+  },
+  {
+    "id": "disease-019",
+    "category": "disease",
+    "name": "갑상선 기능 항진증",
+    "keywords": [
+      "갑상선",
+      "기능",
+      "항진증",
+      "그레이브스병"
+    ],
+    "description": "갑상선 기능 항진증으로 진단받고 치료 중인 경우 헌혈할 수 없습니다. 약물 치료 종료 후 6개월, 방사성 요오드 치료 후 2년이 경과해야 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "약물치료 종료 후 (방사성 요오드 치료 시 2년)"
+    }
+  },
+  {
+    "id": "disease-020",
+    "category": "disease",
+    "name": "갑상선 기능 저하증",
+    "keywords": [
+      "갑상선",
+      "기능",
+      "저하증",
+      "하시모토병"
+    ],
+    "description": "갑상선 기능 저하증으로 호르몬제를 복용하고 있더라도, 약물 복용으로 갑상선 기능이 완전히 정상으로 조절되고 다른 합병증이 없다면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": null
+  },
+  {
+    "id": "disease-021",
+    "category": "disease",
+    "name": "중증급성호흡기증후군 (SARS)",
+    "keywords": [
+      "사스",
+      "SARS",
+      "중증급성호흡기증후군"
+    ],
+    "description": "중증급성호흡기증후군(SARS)은 완치 후 3개월간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
       "periodValue": 3,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-031f",
-    "category": "disease",
-    "name": "탈모증",
-    "keywords": ["탈모증", "원형탈모", "탈모"],
-    "description": "현재 증상이 없고 치료 종료 시 헌혈 가능.",
-    "allowable": true,
-    "restriction": {
-      "type": "after_recovery",
-      "periodValue": 0,
-      "periodUnit": "day",
-      "condition": "치료 종료 후"
-    }
-  },
-  {
-    "id": "disease-031g",
-    "category": "disease",
-    "name": "백반증",
-    "keywords": ["백반증", "vitiligo", "피부질환"],
-    "description": "반복적 가려움, 염증, 탈모 등 증상 동반 시 치료 종료 후 1개월간 헌혈 금지.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
       "periodUnit": "month",
-      "condition": "치료 종료 후"
+      "condition": "완치일로부터"
     }
   },
   {
-    "id": "disease-012b",
+    "id": "disease-022",
     "category": "disease",
-    "name": "브루셀라증(치료 종료 후)",
-    "keywords": ["브루셀라증", "치료 종료"],
-    "description": "치료 종료 후 2년간 헌혈 금지.",
+    "name": "사상충증",
+    "keywords": [
+      "사상충",
+      "사상충증",
+      "Filariasis"
+    ],
+    "description": "사상충증은 완치 후 4개월간 헌혈할 수 없습니다.",
     "allowable": false,
     "restriction": {
       "type": "period",
-      "periodValue": 2,
-      "periodUnit": "year",
-      "condition": "치료 종료 후"
+      "periodValue": 4,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
+    }
+  },
+  {
+    "id": "disease-023",
+    "category": "disease",
+    "name": "포충증",
+    "keywords": [
+      "포충증",
+      "Echinococcosis"
+    ],
+    "description": "포충증은 완치 후 5개월간 헌혈할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 5,
+      "periodUnit": "month",
+      "condition": "완치일로부터"
     }
   }
 ]
