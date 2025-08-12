@@ -1,0 +1,3208 @@
+[
+  {
+    "category": "medication",
+    "name": "건선 치료제 (에트레티네이트)",
+    "keywords": [
+      "건선 치료제",
+      "티가손",
+      "네오티가손",
+      "소리아탄",
+      "에트레티네이트",
+      "psoriasis treatment",
+      "etretinate"
+    ],
+    "description": "태아에 영향을 미칠 위험이 있는 건선 치료제인 에트레티네이트 성분 약물 복용 시 헌혈이 영구적으로 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "건선 치료제 (아시트레틴)",
+    "keywords": [
+      "건선 치료제",
+      "네오티가손",
+      "소리아탄",
+      "아시트레틴",
+      "psoriasis treatment",
+      "acitretin"
+    ],
+    "description": "태아에 영향을 미칠 위험이 있는 건선 치료제인 아시트레틴 성분 약물 복용 시 3년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "year"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "전립선비대증 치료제 (두타스테라이드)",
+    "keywords": [
+      "전립선비대증 치료제",
+      "아보다트",
+      "두타스테라이드",
+      "prostate enlargement treatment",
+      "dutasteride"
+    ],
+    "description": "전립선비대증 치료제인 두타스테라이드 성분 약물 복용 시 6개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "전립선비대증 치료제 (피나스테라이드)",
+    "keywords": [
+      "전립선비대증 치료제",
+      "프로스카",
+      "피나스테라이드",
+      "prostate enlargement treatment",
+      "finasteride"
+    ],
+    "description": "전립선비대증 치료제인 피나스테라이드 성분 약물 복용 시 4주간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "탈모증 치료제 (피나스테라이드)",
+    "keywords": [
+      "탈모증 치료제",
+      "프로페시아",
+      "피나스테라이드",
+      "hair loss treatment",
+      "finasteride"
+    ],
+    "description": "탈모증 치료제인 피나스테라이드 성분 약물 복용 시 4주간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "여드름 치료제 (이소트레티노인)",
+    "keywords": [
+      "여드름 치료제",
+      "로아큐탄",
+      "아큐탄",
+      "이소티논",
+      "뉴티논",
+      "아큐네탄",
+      "이소트렌",
+      "이소티나",
+      "트레틴",
+      "핀플",
+      "이소트레티노인",
+      "acne treatment",
+      "isotretinoin"
+    ],
+    "description": "여드름 치료제인 이소트레티노인 성분 약물 복용 시 4주간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "손 습진 치료제 (알리트레티노인)",
+    "keywords": [
+      "손 습진 치료제",
+      "알리톡",
+      "알리트레티노인",
+      "hand eczema treatment",
+      "alitretinoin"
+    ],
+    "description": "손 습진 치료제인 알리트레티노인 성분 약물 복용 시 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "탈리도마이드",
+    "keywords": [
+      "항악성종양 치료제",
+      "나성결절홍반 치료제",
+      "ENL 치료제",
+      "세엘진탈리도마이드",
+      "탈로벨탈리도마이드",
+      "탈로마",
+      "탈리그로브",
+      "탈리도마이드",
+      "thalidomide",
+      "anti-malignant tumor",
+      "erythema nodosum leprosum"
+    ],
+    "description": "항악성종양 또는 나성결절홍반(ENL) 치료제인 탈리도마이드 성분 약물 복용 시 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항악성종양 치료제 (비스모데깁)",
+    "keywords": [
+      "항악성종양 치료제",
+      "에리벳지",
+      "비스모데깁",
+      "anti-malignant tumor",
+      "erivedge",
+      "vismodegib"
+    ],
+    "description": "항악성종양 치료제인 비스모데깁 성분 약물 복용 시 24개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 24,
+      "periodUnit": "month"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "사람뇌하수체 유래 성장호르몬",
+    "keywords": [
+      "사람뇌하수체 유래 성장호르몬",
+      "성장호르몬",
+      "human pituitary-derived growth hormone",
+      "growth hormone"
+    ],
+    "description": "사람뇌하수체 유래 성장호르몬 투여 시 헌혈이 영구적으로 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "소에서 추출한 인슐린",
+    "keywords": [
+      "소에서 추출한 인슐린",
+      "인슐린",
+      "bovine insulin",
+      "insulin"
+    ],
+    "description": "소에서 추출한 인슐린 투여 시 헌혈이 영구적으로 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "면역억제제",
+    "keywords": [
+      "면역억제제",
+      "immunosuppressant"
+    ],
+    "description": "면역억제제 복용/투여 시 헌혈이 영구적으로 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "변종 크로이츠펠트-야콥병 진단시약",
+    "keywords": [
+      "변종 크로이츠펠트-야콥병 진단시약",
+      "크로이츠펠트-야콥병",
+      "진단시약",
+      "vCJD diagnostic reagent",
+      "Creutzfeldt-Jakob disease"
+    ],
+    "description": "변종 크로이츠펠트-야콥병의 위험지역에서 채혈된 혈액의 혈장으로 제조된 진단시약 사용 시 헌혈이 영구적으로 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "태반주사제",
+    "keywords": [
+      "태반주사제",
+      "placenta injection"
+    ],
+    "description": "태반주사제 투여 시 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "혈액응고인자",
+    "keywords": [
+      "혈액응고인자",
+      "blood coagulation factor"
+    ],
+    "description": "혈액응고인자 투여 시 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "티클로피딘",
+    "keywords": [
+      "티클로피딘",
+      "ticlopidine"
+    ],
+    "description": "티클로피딘 복용 시 2주간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "week"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항생제 (주사 포함)",
+    "keywords": [
+      "항생제",
+      "주사 항생제",
+      "antibiotics",
+      "injection antibiotics"
+    ],
+    "description": "항생제(주사 포함) 복용/투여 시 1주간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "week"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항생제 (감기 치료 경구 복용)",
+    "keywords": [
+      "항생제",
+      "감기약",
+      "경구 항생제",
+      "antibiotics",
+      "cold medicine",
+      "oral antibiotics"
+    ],
+    "description": "감기 치료 목적으로 경구 항생제 복용 시 3일간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "day"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "스테로이드제 (주사 포함)",
+    "keywords": [
+      "스테로이드제",
+      "주사 스테로이드",
+      "steroids",
+      "injection steroids"
+    ],
+    "description": "스테로이드제(주사 포함) 복용/투여 시 1주간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "week"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "보톡스 (주사)",
+    "keywords": [
+      "보톡스",
+      "보툴리눔 독소",
+      "botox",
+      "botulinum toxin"
+    ],
+    "description": "보톡스 주사 시술 시 1주간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "week"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "클로피도그렐",
+    "keywords": [
+      "클로피도그렐",
+      "clopidogrel"
+    ],
+    "description": "클로피도그렐 복용 시 1주간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "week"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "아스피린",
+    "keywords": [
+      "아스피린",
+      "aspirin"
+    ],
+    "description": "아스피린 복용 시 3일간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "day"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "감기약, 두통약",
+    "keywords": [
+      "감기약",
+      "두통약",
+      "감기",
+      "두통",
+      "cold medicine",
+      "headache medicine",
+      "cold",
+      "headache"
+    ],
+    "description": "감기약, 두통약 복용 시 현재 증상이 없고 당일 복용이 아니면 헌혈이 가능합니다. 발열, 목감기는 3일 보류되며, 마른기침이나 콧물만 있는 기침은 헌혈 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "갑상선 대체호르몬제",
+    "keywords": [
+      "갑상선 대체호르몬제",
+      "thyroxine",
+      "갑상선",
+      "갑상선질환",
+      "thyroid hormone",
+      "thyroid disease"
+    ],
+    "description": "갑상선 대체호르몬제 복용 시 갑상선 기능이 정상이라면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "갑상선 기능이 정상인 경우"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "강심제",
+    "keywords": [
+      "강심제",
+      "digitalis",
+      "심장약",
+      "심장질환",
+      "cardiac stimulant",
+      "heart medicine"
+    ],
+    "description": "강심제 복용 시 헌혈자의 질환 자체가 중요하며, 구체적인 헌혈 가능 여부는 혈액원 의사의 진단에 따릅니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "헌혈자의 질환 및 혈액원 의사의 진단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "아시트레틴 (네오티가손, 소리아탄)",
+    "keywords": [
+      "아시트레틴",
+      "네오티가손",
+      "소리아탄",
+      "건선치료제",
+      "건선",
+      "만성피부질환",
+      "acitretin",
+      "neotigason",
+      "soriatan",
+      "psoriasis treatment",
+      "psoriasis",
+      "chronic skin disease"
+    ],
+    "description": "건선치료제 아시트레틴(네오티가손, 소리아탄) 복용 시 3년간 헌혈이 금지됩니다. 이 약물은 건선 외에 과각화증, 어린선 등 난치성 만성피부질환에도 사용될 수 있습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "year",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "에트레티네이트 (테기손 등)",
+    "keywords": [
+      "에트레티네이트",
+      "테기손",
+      "티가손",
+      "타가손",
+      "건선치료제",
+      "건선",
+      "etretinate",
+      "tegison",
+      "tigason",
+      "tagason",
+      "psoriasis treatment",
+      "psoriasis"
+    ],
+    "description": "건선치료제 에트레티네이트(테기손 등)는 1996년 4월 국내 허가가 취소되었으며, 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "국내 허가 취소된 약물"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "건강보조제",
+    "keywords": [
+      "건강보조제",
+      "글루코사민",
+      "비타민",
+      "인사돌",
+      "미네랄",
+      "태반추출영양제",
+      "health supplement",
+      "glucosamine",
+      "vitamin",
+      "insadol",
+      "mineral",
+      "placenta extract"
+    ],
+    "description": "글루코사민, 비타민, 인사돌, 미네랄, 태반추출영양제 등 일반적인 건강보조제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "고지혈증치료제",
+    "keywords": [
+      "고지혈증치료제",
+      "고지혈증",
+      "콜레스테롤약",
+      "hyperlipidemia treatment",
+      "hyperlipidemia",
+      "cholesterol medicine"
+    ],
+    "description": "고지혈증치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "고혈압약",
+    "keywords": [
+      "고혈압약",
+      "고혈압",
+      "혈압약",
+      "hypertension medicine",
+      "hypertension",
+      "blood pressure medicine"
+    ],
+    "description": "고혈압약 복용 시 혈압이 정상 범위(139/89mmHg 이하)이고 합병증이 없으면 헌혈이 가능합니다. 합병증이 있거나 증상이 있는 경우, 최근 4주 이내 처방 변경이 있는 경우, 또는 특정 혈압 수치(수축기 90mmHg 미만 또는 180mmHg 이상, 이완기 100mmHg 이상)인 경우 헌혈이 금지됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "약 복용으로 혈압이 정상 범위(139/89mmHg 이하)이고 합병증이 없는 경우. 합병증, 증상, 최근 4주 이내 처방 변경, 특정 혈압 수치(수축기 90mmHg 미만 또는 180mmHg 이상, 이완기 100mmHg 이상)인 경우 헌혈 금지."
+    }
+  },
+  {
+    "category": "medication",
+    "name": "감기약, 두통약",
+    "keywords": [
+      "감기약",
+      "두통약",
+      "감기",
+      "두통",
+      "cold medicine",
+      "headache medicine",
+      "cold",
+      "headache"
+    ],
+    "description": "감기약, 두통약 복용 시 현재 증상이 없고 당일 복용이 아니면 헌혈이 가능합니다. 발열, 목감기는 3일 보류되며, 마른기침이나 콧물만 있는 기침은 헌혈 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "갑상선 대체호르몬제",
+    "keywords": [
+      "갑상선 대체호르몬제",
+      "thyroxine",
+      "갑상선",
+      "갑상선질환",
+      "thyroid hormone",
+      "thyroid disease"
+    ],
+    "description": "갑상선 대체호르몬제 복용 시 갑상선 기능이 정상이라면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "갑상선 기능이 정상인 경우"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "강심제",
+    "keywords": [
+      "강심제",
+      "digitalis",
+      "심장약",
+      "심장질환",
+      "cardiac stimulant",
+      "heart medicine"
+    ],
+    "description": "강심제 복용 시 헌혈자의 질환 자체가 중요하며, 구체적인 헌혈 가능 여부는 혈액원 의사의 진단에 따릅니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "헌혈자의 질환 및 혈액원 의사의 진단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "아시트레틴 (네오티가손, 소리아탄)",
+    "keywords": [
+      "아시트레틴",
+      "네오티가손",
+      "소리아탄",
+      "건선치료제",
+      "건선",
+      "만성피부질환",
+      "acitretin",
+      "neotigason",
+      "soriatan",
+      "psoriasis treatment",
+      "psoriasis",
+      "chronic skin disease"
+    ],
+    "description": "건선치료제 아시트레틴(네오티가손, 소리아탄) 복용 시 3년간 헌혈이 금지됩니다. 이 약물은 건선 외에 과각화증, 어린선 등 난치성 만성피부질환에도 사용될 수 있습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "year",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "에트레티네이트 (테기손 등)",
+    "keywords": [
+      "에트레티네이트",
+      "테기손",
+      "티가손",
+      "타가손",
+      "건선치료제",
+      "건선",
+      "etretinate",
+      "tegison",
+      "tigason",
+      "tagason",
+      "psoriasis treatment",
+      "psoriasis"
+    ],
+    "description": "건선치료제 에트레티네이트(테기손 등)는 1996년 4월 국내 허가가 취소되었으며, 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "국내 허가 취소된 약물"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "건강보조제",
+    "keywords": [
+      "건강보조제",
+      "글루코사민",
+      "비타민",
+      "인사돌",
+      "미네랄",
+      "태반추출영양제",
+      "health supplement",
+      "glucosamine",
+      "vitamin",
+      "insadol",
+      "mineral",
+      "placenta extract"
+    ],
+    "description": "글루코사민, 비타민, 인사돌, 미네랄, 태반추출영양제 등 일반적인 건강보조제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "고지혈증치료제",
+    "keywords": [
+      "고지혈증치료제",
+      "고지혈증",
+      "콜레스테롤약",
+      "hyperlipidemia treatment",
+      "hyperlipidemia",
+      "cholesterol medicine"
+    ],
+    "description": "고지혈증치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "고혈압약",
+    "keywords": [
+      "고혈압약",
+      "고혈압",
+      "혈압약",
+      "hypertension medicine",
+      "hypertension",
+      "blood pressure medicine"
+    ],
+    "description": "고혈압약 복용 시 혈압이 정상 범위(139/89mmHg 이하)이고 합병증이 없으면 헌혈이 가능합니다. 합병증이 있거나 증상이 있는 경우, 최근 4주 이내 처방 변경이 있는 경우, 또는 특정 혈압 수치(수축기 90mmHg 미만 또는 180mmHg 이상, 이완기 100mmHg 이상)인 경우 헌혈이 금지됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "약 복용으로 혈압이 정상 범위(139/89mmHg 이하)이고 합병증이 없는 경우. 합병증, 증상, 최근 4주 이내 처방 변경, 특정 혈압 수치(수축기 90mmHg 미만 또는 180mmHg 이상, 이완기 100mmHg 이상)인 경우 헌혈 금지."
+    }
+  },
+  {
+    "category": "medication",
+    "name": "골다공증치료제",
+    "keywords": [
+      "골다공증치료제",
+      "골다공증",
+      "데노수맙",
+      "denosumab",
+      "osteoporosis treatment",
+      "osteoporosis"
+    ],
+    "description": "골다공증치료제 복용 시 헌혈이 가능하지만, 데노수맙 주사제 투여 시 6개월간 헌혈이 금지됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "데노수맙 주사제 투여 시 6개월간 채혈 금지"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "구충제 (치료목적)",
+    "keywords": [
+      "구충제",
+      "치료목적",
+      "회충약",
+      "기생충약",
+      "dewormer",
+      "anthelmintic"
+    ],
+    "description": "치료 목적으로 구충제 복용 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "구충제 (예방목적)",
+    "keywords": [
+      "구충제",
+      "예방목적",
+      "디스토마약",
+      "회충약",
+      "기생충약",
+      "dewormer",
+      "anthelmintic",
+      "prevention"
+    ],
+    "description": "예방 목적으로 구충제 복용 시 당일 헌혈이 금지됩니다. 특히 디스토마약의 경우 7일간 헌혈이 보류됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일 (디스토마약은 7일)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "근육강화제 (경구용)",
+    "keywords": [
+      "근육강화제",
+      "경구용",
+      "단백질 보충제",
+      "muscle enhancer",
+      "oral",
+      "protein supplement"
+    ],
+    "description": "경구용 단백질 보충제와 같은 경구용 근육강화제는 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "근육강화제 (주사제)",
+    "keywords": [
+      "근육강화제",
+      "주사제",
+      "muscle enhancer",
+      "injection"
+    ],
+    "description": "주사제 형태의 근육강화제는 약 성분 확인 후 혈액원 의사의 판단에 따라 헌혈 가능 여부가 결정됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "약 성분 확인 후 혈액원 의사의 판단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "근육이완제",
+    "keywords": [
+      "근육이완제",
+      "근육통약",
+      "muscle relaxant"
+    ],
+    "description": "근육이완제(약 또는 주사제) 복용/투여 시 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용/투여 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "금연보조제",
+    "keywords": [
+      "금연보조제",
+      "니코틴 패치",
+      "이침",
+      "금연침",
+      "챔픽스",
+      "smoking cessation aid",
+      "nicotine patch",
+      "varenicline"
+    ],
+    "description": "니코틴 패치, 이침(금연침 포함), 챔픽스 등 금연보조제 사용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "기미치료제",
+    "keywords": [
+      "기미치료제",
+      "기미",
+      "도란사민",
+      "melasma treatment",
+      "melasma",
+      "tranexamic acid"
+    ],
+    "description": "도란사민과 같은 기미치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "뇌하수체 유래 성장호르몬",
+    "keywords": [
+      "뇌하수체 유래 성장호르몬",
+      "성장호르몬",
+      "vCJD",
+      "프리온병",
+      "pituitary-derived growth hormone",
+      "growth hormone",
+      "prion disease"
+    ],
+    "description": "vCJD와 같은 프리온병 감염 예방을 위해 뇌하수체 유래 성장호르몬 투여 시 영구적으로 헌혈이 금지됩니다. 국내에서는 품목 허가된 적이 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "vCJD 감염 예방 목적"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "재조합 성장호르몬",
+    "keywords": [
+      "재조합 성장호르몬",
+      "성장호르몬",
+      "유트로핀",
+      "그로트로핀",
+      "소마트로핀",
+      "recombinant growth hormone",
+      "eutropin",
+      "growtropic",
+      "somatropin"
+    ],
+    "description": "유트로핀, 그로트로핀, 소마트로핀과 같은 재조합 성장호르몬 투여 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "당뇨약 (경구 혈당강하제)",
+    "keywords": [
+      "당뇨약",
+      "경구 혈당강하제",
+      "당뇨병",
+      "diabetes medicine",
+      "oral hypoglycemic agent",
+      "diabetes"
+    ],
+    "description": "경구 혈당강하제 복용 시 혈당 조절이 잘되고 합병증이 없으면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "혈당 조절이 잘되고 합병증이 없는 경우"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "기관지확장제",
+    "keywords": [
+      "기관지확장제",
+      "천식약",
+      "호흡기약",
+      "bronchodilator",
+      "asthma medicine"
+    ],
+    "description": "기관지확장제 복용 시 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "말라리아 예방약",
+    "keywords": [
+      "말라리아 예방약",
+      "말라리아",
+      "malaria prevention",
+      "malaria"
+    ],
+    "description": "말라리아 예방약 복용 시 어지러움, 오심 등의 부작용이 있을 수 있어 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "멀미약",
+    "keywords": [
+      "멀미약",
+      "멀미",
+      "motion sickness medicine",
+      "motion sickness"
+    ],
+    "description": "멀미약 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "메토트렉세이트",
+    "keywords": [
+      "메토트렉세이트",
+      "건선치료제",
+      "암치료제",
+      "자가면역질환",
+      "류마티스 관절염",
+      "methotrexate",
+      "psoriasis treatment",
+      "cancer treatment",
+      "autoimmune disease",
+      "rheumatoid arthritis"
+    ],
+    "description": "건선 치료 목적으로 메토트렉세이트 복용 시 복용 종료 후 4주간 헌혈이 금지됩니다. 암이나 자가면역질환(류마티스 관절염 등) 치료 목적으로 복용 시에는 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "건선 치료 목적 복용 종료 후 4주간 금지; 암, 자가면역질환 치료 목적 복용 시 영구 금지"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "면역억제제",
+    "keywords": [
+      "면역억제제",
+      "사이클로스포린",
+      "아토피 피부염",
+      "면역질환",
+      "immunosuppressant",
+      "cyclosporine",
+      "atopic dermatitis",
+      "immune disease"
+    ],
+    "description": "사이클로스포린 등 면역억제제 복용 시 영구적으로 헌혈이 금지됩니다. 다만, 아토피 피부염 등 일시적으로 복용하고 현재 증상이 없는 경우에는 혈액원 의사의 판단에 따라 헌혈 가능 여부가 결정됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "일시적 복용 및 증상 없는 경우 혈액원 의사 판단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "보톡스 주사제",
+    "keywords": [
+      "보톡스 주사제",
+      "보톡스",
+      "botox injection",
+      "botox"
+    ],
+    "description": "보톡스 주사제 투여 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "발기부전 치료제",
+    "keywords": [
+      "발기부전 치료제",
+      "발기부전",
+      "비아그라",
+      "시알리스",
+      "erectile dysfunction treatment",
+      "erectile dysfunction",
+      "viagra",
+      "cialis"
+    ],
+    "description": "비아그라, 시알리스 등 발기부전 치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "비스모데깁 (에리벳지)",
+    "keywords": [
+      "비스모데깁",
+      "에리벳지",
+      "항악성종양 치료제",
+      "vismodegib",
+      "erivedge",
+      "antineoplastic agent"
+    ],
+    "description": "항악성종양 치료제인 비스모데깁(에리벳지) 성분의 약물 복용 시 24개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 24,
+      "periodUnit": "month",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "소에서 유래한 인슐린",
+    "keywords": [
+      "소에서 유래한 인슐린",
+      "인슐린",
+      "bovine insulin",
+      "insulin"
+    ],
+    "description": "소에서 유래한 인슐린은 국내에서 품목 허가된 적이 없으며, 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "국내 미허가 약물"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "소화제",
+    "keywords": [
+      "소화제",
+      "digestive medicine"
+    ],
+    "description": "소화제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "감기약, 두통약",
+    "keywords": [
+      "감기약",
+      "두통약",
+      "감기",
+      "두통",
+      "cold medicine",
+      "headache medicine",
+      "cold",
+      "headache"
+    ],
+    "description": "감기약, 두통약 복용 시 현재 증상이 없고 당일 복용이 아니면 헌혈이 가능합니다. 발열, 목감기는 3일 보류되며, 마른기침이나 콧물만 있는 기침은 헌혈 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "갑상선 대체호르몬제",
+    "keywords": [
+      "갑상선 대체호르몬제",
+      "thyroxine",
+      "갑상선",
+      "갑상선질환",
+      "thyroid hormone",
+      "thyroid disease"
+    ],
+    "description": "갑상선 대체호르몬제 복용 시 갑상선 기능이 정상이라면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "갑상선 기능이 정상인 경우"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "강심제",
+    "keywords": [
+      "강심제",
+      "digitalis",
+      "심장약",
+      "심장질환",
+      "cardiac stimulant",
+      "heart medicine"
+    ],
+    "description": "강심제 복용 시 헌혈자의 질환 자체가 중요하며, 구체적인 헌혈 가능 여부는 혈액원 의사의 진단에 따릅니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "헌혈자의 질환 및 혈액원 의사의 진단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "아시트레틴 (네오티가손, 소리아탄)",
+    "keywords": [
+      "아시트레틴",
+      "네오티가손",
+      "소리아탄",
+      "건선치료제",
+      "건선",
+      "만성피부질환",
+      "acitretin",
+      "neotigason",
+      "soriatan",
+      "psoriasis treatment",
+      "psoriasis",
+      "chronic skin disease"
+    ],
+    "description": "건선치료제 아시트레틴(네오티가손, 소리아탄) 복용 시 3년간 헌혈이 금지됩니다. 이 약물은 건선 외에 과각화증, 어린선 등 난치성 만성피부질환에도 사용될 수 있습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "year",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "에트레티네이트 (테기손 등)",
+    "keywords": [
+      "에트레티네이트",
+      "테기손",
+      "티가손",
+      "타가손",
+      "건선치료제",
+      "건선",
+      "etretinate",
+      "tegison",
+      "tigason",
+      "tagason",
+      "psoriasis treatment",
+      "psoriasis"
+    ],
+    "description": "건선치료제 에트레티네이트(테기손 등)는 1996년 4월 국내 허가가 취소되었으며, 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "국내 허가 취소된 약물"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "건강보조제",
+    "keywords": [
+      "건강보조제",
+      "글루코사민",
+      "비타민",
+      "인사돌",
+      "미네랄",
+      "태반추출영양제",
+      "health supplement",
+      "glucosamine",
+      "vitamin",
+      "insadol",
+      "mineral",
+      "placenta extract"
+    ],
+    "description": "글루코사민, 비타민, 인사돌, 미네랄, 태반추출영양제 등 일반적인 건강보조제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "고지혈증치료제",
+    "keywords": [
+      "고지혈증치료제",
+      "고지혈증",
+      "콜레스테롤약",
+      "hyperlipidemia treatment",
+      "hyperlipidemia",
+      "cholesterol medicine"
+    ],
+    "description": "고지혈증치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "고혈압약",
+    "keywords": [
+      "고혈압약",
+      "고혈압",
+      "혈압약",
+      "hypertension medicine",
+      "hypertension",
+      "blood pressure medicine"
+    ],
+    "description": "고혈압약 복용 시 혈압이 정상 범위(139/89mmHg 이하)이고 합병증이 없으면 헌혈이 가능합니다. 합병증이 있거나 증상이 있는 경우, 최근 4주 이내 처방 변경이 있는 경우, 또는 특정 혈압 수치(수축기 90mmHg 미만 또는 180mmHg 이상, 이완기 100mmHg 이상)인 경우 헌혈이 금지됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "약 복용으로 혈압이 정상 범위(139/89mmHg 이하)이고 합병증이 없는 경우. 합병증, 증상, 최근 4주 이내 처방 변경, 특정 혈압 수치(수축기 90mmHg 미만 또는 180mmHg 이상, 이완기 100mmHg 이상)인 경우 헌혈 금지."
+    }
+  },
+  {
+    "category": "medication",
+    "name": "골다공증치료제",
+    "keywords": [
+      "골다공증치료제",
+      "골다공증",
+      "데노수맙",
+      "denosumab",
+      "osteoporosis treatment",
+      "osteoporosis"
+    ],
+    "description": "골다공증치료제 복용 시 헌혈이 가능하지만, 데노수맙 주사제 투여 시 6개월간 헌혈이 금지됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "데노수맙 주사제 투여 시 6개월간 채혈 금지"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "구충제 (치료목적)",
+    "keywords": [
+      "구충제",
+      "치료목적",
+      "회충약",
+      "기생충약",
+      "dewormer",
+      "anthelmintic"
+    ],
+    "description": "치료 목적으로 구충제 복용 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "구충제 (예방목적)",
+    "keywords": [
+      "구충제",
+      "예방목적",
+      "디스토마약",
+      "회충약",
+      "기생충약",
+      "dewormer",
+      "anthelmintic",
+      "prevention"
+    ],
+    "description": "예방 목적으로 구충제 복용 시 당일 헌혈이 금지됩니다. 특히 디스토마약의 경우 7일간 헌혈이 보류됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일 (디스토마약은 7일)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "근육강화제 (경구용)",
+    "keywords": [
+      "근육강화제",
+      "경구용",
+      "단백질 보충제",
+      "muscle enhancer",
+      "oral",
+      "protein supplement"
+    ],
+    "description": "경구용 단백질 보충제와 같은 경구용 근육강화제는 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "근육강화제 (주사제)",
+    "keywords": [
+      "근육강화제",
+      "주사제",
+      "muscle enhancer",
+      "injection"
+    ],
+    "description": "주사제 형태의 근육강화제는 약 성분 확인 후 혈액원 의사의 판단에 따라 헌혈 가능 여부가 결정됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "약 성분 확인 후 혈액원 의사의 판단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "근육이완제",
+    "keywords": [
+      "근육이완제",
+      "근육통약",
+      "muscle relaxant"
+    ],
+    "description": "근육이완제(약 또는 주사제) 복용/투여 시 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용/투여 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "금연보조제",
+    "keywords": [
+      "금연보조제",
+      "니코틴 패치",
+      "이침",
+      "금연침",
+      "챔픽스",
+      "smoking cessation aid",
+      "nicotine patch",
+      "varenicline"
+    ],
+    "description": "니코틴 패치, 이침(금연침 포함), 챔픽스 등 금연보조제 사용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "기미치료제",
+    "keywords": [
+      "기미치료제",
+      "기미",
+      "도란사민",
+      "melasma treatment",
+      "melasma",
+      "tranexamic acid"
+    ],
+    "description": "도란사민과 같은 기미치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "뇌하수체 유래 성장호르몬",
+    "keywords": [
+      "뇌하수체 유래 성장호르몬",
+      "성장호르몬",
+      "vCJD",
+      "프리온병",
+      "pituitary-derived growth hormone",
+      "growth hormone",
+      "prion disease"
+    ],
+    "description": "vCJD와 같은 프리온병 감염 예방을 위해 뇌하수체 유래 성장호르몬 투여 시 영구적으로 헌혈이 금지됩니다. 국내에서는 품목 허가된 적이 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "vCJD 감염 예방 목적"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "재조합 성장호르몬",
+    "keywords": [
+      "재조합 성장호르몬",
+      "성장호르몬",
+      "유트로핀",
+      "그로트로핀",
+      "소마트로핀",
+      "recombinant growth hormone",
+      "eutropin",
+      "growtropic",
+      "somatropin"
+    ],
+    "description": "유트로핀, 그로트로핀, 소마트로핀과 같은 재조합 성장호르몬 투여 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "당뇨약 (경구 혈당강하제)",
+    "keywords": [
+      "당뇨약",
+      "경구 혈당강하제",
+      "당뇨병",
+      "diabetes medicine",
+      "oral hypoglycemic agent",
+      "diabetes"
+    ],
+    "description": "경구 혈당강하제 복용 시 혈당 조절이 잘되고 합병증이 없으면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "혈당 조절이 잘되고 합병증이 없는 경우"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "기관지확장제",
+    "keywords": [
+      "기관지확장제",
+      "천식약",
+      "호흡기약",
+      "bronchodilator",
+      "asthma medicine"
+    ],
+    "description": "기관지확장제 복용 시 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "말라리아 예방약",
+    "keywords": [
+      "말라리아 예방약",
+      "말라리아",
+      "malaria prevention",
+      "malaria"
+    ],
+    "description": "말라리아 예방약 복용 시 어지러움, 오심 등의 부작용이 있을 수 있어 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "멀미약",
+    "keywords": [
+      "멀미약",
+      "멀미",
+      "motion sickness medicine",
+      "motion sickness"
+    ],
+    "description": "멀미약 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "메토트렉세이트",
+    "keywords": [
+      "메토트렉세이트",
+      "건선치료제",
+      "암치료제",
+      "자가면역질환",
+      "류마티스 관절염",
+      "methotrexate",
+      "psoriasis treatment",
+      "cancer treatment",
+      "autoimmune disease",
+      "rheumatoid arthritis"
+    ],
+    "description": "건선 치료 목적으로 메토트렉세이트 복용 시 복용 종료 후 4주간 헌혈이 금지됩니다. 암이나 자가면역질환(류마티스 관절염 등) 치료 목적으로 복용 시에는 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "건선 치료 목적 복용 종료 후 4주간 금지; 암, 자가면역질환 치료 목적 복용 시 영구 금지"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "면역억제제",
+    "keywords": [
+      "면역억제제",
+      "사이클로스포린",
+      "아토피 피부염",
+      "면역질환",
+      "immunosuppressant",
+      "cyclosporine",
+      "atopic dermatitis",
+      "immune disease"
+    ],
+    "description": "사이클로스포린 등 면역억제제 복용 시 영구적으로 헌혈이 금지됩니다. 다만, 아토피 피부염 등 일시적으로 복용하고 현재 증상이 없는 경우에는 혈액원 의사의 판단에 따라 헌혈 가능 여부가 결정됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "일시적 복용 및 증상 없는 경우 혈액원 의사 판단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "보톡스 주사제",
+    "keywords": [
+      "보톡스 주사제",
+      "보톡스",
+      "botox injection",
+      "botox"
+    ],
+    "description": "보톡스 주사제 투여 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "발기부전 치료제",
+    "keywords": [
+      "발기부전 치료제",
+      "발기부전",
+      "비아그라",
+      "시알리스",
+      "erectile dysfunction treatment",
+      "erectile dysfunction",
+      "viagra",
+      "cialis"
+    ],
+    "description": "비아그라, 시알리스 등 발기부전 치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "비스모데깁 (에리벳지)",
+    "keywords": [
+      "비스모데깁",
+      "에리벳지",
+      "항악성종양 치료제",
+      "vismodegib",
+      "erivedge",
+      "antineoplastic agent"
+    ],
+    "description": "항악성종양 치료제인 비스모데깁(에리벳지) 성분의 약물 복용 시 24개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 24,
+      "periodUnit": "month",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "소에서 유래한 인슐린",
+    "keywords": [
+      "소에서 유래한 인슐린",
+      "인슐린",
+      "bovine insulin",
+      "insulin"
+    ],
+    "description": "소에서 유래한 인슐린은 국내에서 품목 허가된 적이 없으며, 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "국내 미허가 약물"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "소화제",
+    "keywords": [
+      "소화제",
+      "digestive medicine"
+    ],
+    "description": "소화제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "두타스테라이드 (아보다트)",
+    "keywords": [
+      "두타스테라이드",
+      "아보다트",
+      "전립선 비대증 치료제",
+      "전립선 비대증",
+      "dutasteride",
+      "avodart",
+      "BPH treatment",
+      "benign prostatic hyperplasia"
+    ],
+    "description": "전립선 비대증 치료제인 두타스테라이드(아보다트) 성분의 약물 복용 시 6개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "피나스테라이드 (프로스카)",
+    "keywords": [
+      "피나스테라이드",
+      "프로스카",
+      "전립선염",
+      "전립선비대증 치료제",
+      "전립선비대증",
+      "finasteride",
+      "proscar",
+      "prostatitis",
+      "BPH treatment"
+    ],
+    "description": "전립선염, 전립선비대증 치료제인 피나스테라이드(프로스카) 성분의 약물 복용 시 4주간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "제산제",
+    "keywords": [
+      "제산제",
+      "속쓰림약",
+      "antacid",
+      "heartburn medicine"
+    ],
+    "description": "제산제 복용 시 현재 증상이 없으면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "현재 증상이 없는 경우"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "줄기세포주사",
+    "keywords": [
+      "줄기세포주사",
+      "줄기세포",
+      "자가줄기세포",
+      "관절염",
+      "stem cell injection",
+      "stem cell",
+      "autologous stem cell",
+      "arthritis"
+    ],
+    "description": "줄기세포 주사 시 자가줄기세포 주사는 7일 후 헌혈이 가능하며, 자가 여부 확인 불가 시 1년간 헌혈이 금지됩니다. 관절염으로 주사하는 경우 1개월 후 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "자가줄기세포 주사 시 7일 후 가능 (자가 여부 확인 불가 시 1년 금지), 관절염 주사 시 1개월 후 가능"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "지루성 피부염 치료제",
+    "keywords": [
+      "지루성 피부염",
+      "피부염",
+      "스테로이드",
+      "seborrheic dermatitis",
+      "dermatitis",
+      "steroid"
+    ],
+    "description": "지루성 피부염 치료제 복용 시 스테로이드에 준하여 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "지방분해주사제",
+    "keywords": [
+      "지방분해주사제",
+      "지방분해",
+      "fat dissolving injection",
+      "lipolysis"
+    ],
+    "description": "지방분해주사제 투여 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "진통소염제",
+    "keywords": [
+      "진통소염제",
+      "진통제",
+      "소염제",
+      "제니칼",
+      "리피다운",
+      "제로팻",
+      "가르시니아",
+      "스멜리스",
+      "painkiller",
+      "anti-inflammatory",
+      "xenical",
+      "lipydown",
+      "zerofat",
+      "garcinia",
+      "smelless"
+    ],
+    "description": "진통소염제 복용 시 헌혈이 가능합니다. 제니칼, 리피다운 등은 부작용이 없으면 당일 헌혈이 가능하며, 체중 감량 중인 경우 헌혈자의 상태를 고려하여 판정합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "부작용이 없으면 당일 채혈 가능 (체중 감량 중인 경우 헌혈자 상태 고려)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "진경제",
+    "keywords": [
+      "진경제",
+      "부스코판",
+      "암메파틴",
+      "펜디메트라진",
+      "antispasmodic",
+      "buscopan",
+      "ammepatin",
+      "phendimetrazine"
+    ],
+    "description": "부스코판, 암메파틴, 펜디메트라진 성분 등 진경제 복용 시 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "삭센다",
+    "keywords": [
+      "삭센다",
+      "비만치료제",
+      "saxenda",
+      "obesity treatment"
+    ],
+    "description": "삭센다 투여 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "탈리도마이드",
+    "keywords": [
+      "탈리도마이드",
+      "세엘진탈리도마이드",
+      "알보젠탈리도마이드",
+      "탈라이드",
+      "탈로마",
+      "탈리그로브",
+      "나성결절홍반",
+      "항악성종양 치료제",
+      "thalidomide",
+      "celgene thalidomide",
+      "albogen thalidomide",
+      "thalide",
+      "thaloma",
+      "thaligrove",
+      "erythema nodosum leprosum",
+      "antineoplastic agent"
+    ],
+    "description": "나성결절홍반 및 항악성종양 치료제인 탈리도마이드 성분의 약물 복용 시 1개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "피나스테라이드 (탈모치료제)",
+    "keywords": [
+      "피나스테라이드",
+      "프로페시아",
+      "탈모치료제",
+      "탈모",
+      "단백아미노산제제",
+      "마이녹실",
+      "판시딜",
+      "케라민",
+      "볼두민",
+      "트리암",
+      "finasteride",
+      "propecia",
+      "hair loss treatment",
+      "hair loss",
+      "protein amino acid preparation",
+      "minoxidil",
+      "pansidil",
+      "keramin",
+      "boldumin",
+      "triam"
+    ],
+    "description": "탈모치료제인 피나스테라이드(프로페시아) 복용 시 4주간 헌혈이 금지됩니다. 단백아미노산제제(마이녹실 등)만 복용 시 헌혈이 가능하며, 트리암 주사 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "피나스테라이드 복용 시 4주 금지; 단백아미노산제제만 복용 시 가능; 트리암 주사 시 7일 금지"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "태반주사제",
+    "keywords": [
+      "태반주사제",
+      "태반",
+      "자하거 약침",
+      "placenta injection",
+      "placenta"
+    ],
+    "description": "태반 성분 약물(자하거 약침 포함)인 태반주사제 투여 시 1년간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "피임약",
+    "keywords": [
+      "피임약",
+      "피임",
+      "생리주기 조절",
+      "피부과 자궁내 삽입 피임기구",
+      "임플라논",
+      "루프",
+      "사후피임약",
+      "contraceptive",
+      "birth control",
+      "menstrual cycle regulation",
+      "IUD",
+      "implanon",
+      "loop",
+      "emergency contraceptive"
+    ],
+    "description": "피임 또는 생리주기 조절을 위한 피임약 복용 시 헌혈이 가능합니다. 피부과 자궁내 삽입 피임기구(임플라논, 루프 등)는 시술 후 염증 및 부정출혈 등 부작용이 없으면 7일 후 헌혈이 가능하며, 사후피임약 복용 시 추가 확인 후 판정합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "피부과 자궁내 삽입 피임기구 시술 후 부작용 없으면 7일 후 가능; 사후피임약 복용 시 추가 확인 후 판정"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "케토티펜 (리자벤)",
+    "keywords": [
+      "케토티펜",
+      "비후성 반흔 치료제",
+      "Tranilast",
+      "리자벤",
+      "ketotifen",
+      "hypertrophic scar treatment",
+      "rizaben"
+    ],
+    "description": "케토티펜, 비후성 반흔 치료제인 트라닐라스트(리자벤) 성분의 약물 복용 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "감기약, 두통약",
+    "keywords": [
+      "감기약",
+      "두통약",
+      "감기",
+      "두통",
+      "cold medicine",
+      "headache medicine",
+      "cold",
+      "headache"
+    ],
+    "description": "감기약, 두통약 복용 시 현재 증상이 없고 당일 복용이 아니면 헌혈이 가능합니다. 발열, 목감기는 3일 보류되며, 마른기침이나 콧물만 있는 기침은 헌혈 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "갑상선 대체호르몬제",
+    "keywords": [
+      "갑상선 대체호르몬제",
+      "thyroxine",
+      "갑상선",
+      "갑상선질환",
+      "thyroid hormone",
+      "thyroid disease"
+    ],
+    "description": "갑상선 대체호르몬제 복용 시 갑상선 기능이 정상이라면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "갑상선 기능이 정상인 경우"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "강심제",
+    "keywords": [
+      "강심제",
+      "digitalis",
+      "심장약",
+      "심장질환",
+      "cardiac stimulant",
+      "heart medicine"
+    ],
+    "description": "강심제 복용 시 헌혈자의 질환 자체가 중요하며, 구체적인 헌혈 가능 여부는 혈액원 의사의 진단에 따릅니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "헌혈자의 질환 및 혈액원 의사의 진단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "아시트레틴 (네오티가손, 소리아탄)",
+    "keywords": [
+      "아시트레틴",
+      "네오티가손",
+      "소리아탄",
+      "건선치료제",
+      "건선",
+      "만성피부질환",
+      "acitretin",
+      "neotigason",
+      "soriatan",
+      "psoriasis treatment",
+      "psoriasis",
+      "chronic skin disease"
+    ],
+    "description": "건선치료제 아시트레틴(네오티가손, 소리아탄) 복용 시 3년간 헌혈이 금지됩니다. 이 약물은 건선 외에 과각화증, 어린선 등 난치성 만성피부질환에도 사용될 수 있습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "year",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "에트레티네이트 (테기손 등)",
+    "keywords": [
+      "에트레티네이트",
+      "테기손",
+      "티가손",
+      "타가손",
+      "건선치료제",
+      "건선",
+      "etretinate",
+      "tegison",
+      "tigason",
+      "tagason",
+      "psoriasis treatment",
+      "psoriasis"
+    ],
+    "description": "건선치료제 에트레티네이트(테기손 등)는 1996년 4월 국내 허가가 취소되었으며, 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "국내 허가 취소된 약물"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "건강보조제",
+    "keywords": [
+      "건강보조제",
+      "글루코사민",
+      "비타민",
+      "인사돌",
+      "미네랄",
+      "태반추출영양제",
+      "health supplement",
+      "glucosamine",
+      "vitamin",
+      "insadol",
+      "mineral",
+      "placenta extract"
+    ],
+    "description": "글루코사민, 비타민, 인사돌, 미네랄, 태반추출영양제 등 일반적인 건강보조제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "고지혈증치료제",
+    "keywords": [
+      "고지혈증치료제",
+      "고지혈증",
+      "콜레스테롤약",
+      "hyperlipidemia treatment",
+      "hyperlipidemia",
+      "cholesterol medicine"
+    ],
+    "description": "고지혈증치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "고혈압약",
+    "keywords": [
+      "고혈압약",
+      "고혈압",
+      "혈압약",
+      "hypertension medicine",
+      "hypertension",
+      "blood pressure medicine"
+    ],
+    "description": "고혈압약 복용 시 혈압이 정상 범위(139/89mmHg 이하)이고 합병증이 없으면 헌혈이 가능합니다. 합병증이 있거나 증상이 있는 경우, 최근 4주 이내 처방 변경이 있는 경우, 또는 특정 혈압 수치(수축기 90mmHg 미만 또는 180mmHg 이상, 이완기 100mmHg 이상)인 경우 헌혈이 금지됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "약 복용으로 혈압이 정상 범위(139/89mmHg 이하)이고 합병증이 없는 경우. 합병증, 증상, 최근 4주 이내 처방 변경, 특정 혈압 수치(수축기 90mmHg 미만 또는 180mmHg 이상, 이완기 100mmHg 이상)인 경우 헌혈 금지."
+    }
+  },
+  {
+    "category": "medication",
+    "name": "골다공증치료제",
+    "keywords": [
+      "골다공증치료제",
+      "골다공증",
+      "데노수맙",
+      "denosumab",
+      "osteoporosis treatment",
+      "osteoporosis"
+    ],
+    "description": "골다공증치료제 복용 시 헌혈이 가능하지만, 데노수맙 주사제 투여 시 6개월간 헌혈이 금지됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "데노수맙 주사제 투여 시 6개월간 채혈 금지"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "구충제 (치료목적)",
+    "keywords": [
+      "구충제",
+      "치료목적",
+      "회충약",
+      "기생충약",
+      "dewormer",
+      "anthelmintic"
+    ],
+    "description": "치료 목적으로 구충제 복용 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "구충제 (예방목적)",
+    "keywords": [
+      "구충제",
+      "예방목적",
+      "디스토마약",
+      "회충약",
+      "기생충약",
+      "dewormer",
+      "anthelmintic",
+      "prevention"
+    ],
+    "description": "예방 목적으로 구충제 복용 시 당일 헌혈이 금지됩니다. 특히 디스토마약의 경우 7일간 헌혈이 보류됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일 (디스토마약은 7일)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "근육강화제 (경구용)",
+    "keywords": [
+      "근육강화제",
+      "경구용",
+      "단백질 보충제",
+      "muscle enhancer",
+      "oral",
+      "protein supplement"
+    ],
+    "description": "경구용 단백질 보충제와 같은 경구용 근육강화제는 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "근육강화제 (주사제)",
+    "keywords": [
+      "근육강화제",
+      "주사제",
+      "muscle enhancer",
+      "injection"
+    ],
+    "description": "주사제 형태의 근육강화제는 약 성분 확인 후 혈액원 의사의 판단에 따라 헌혈 가능 여부가 결정됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "약 성분 확인 후 혈액원 의사의 판단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "근육이완제",
+    "keywords": [
+      "근육이완제",
+      "근육통약",
+      "muscle relaxant"
+    ],
+    "description": "근육이완제(약 또는 주사제) 복용/투여 시 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용/투여 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "금연보조제",
+    "keywords": [
+      "금연보조제",
+      "니코틴 패치",
+      "이침",
+      "금연침",
+      "챔픽스",
+      "smoking cessation aid",
+      "nicotine patch",
+      "varenicline"
+    ],
+    "description": "니코틴 패치, 이침(금연침 포함), 챔픽스 등 금연보조제 사용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "기미치료제",
+    "keywords": [
+      "기미치료제",
+      "기미",
+      "도란사민",
+      "melasma treatment",
+      "melasma",
+      "tranexamic acid"
+    ],
+    "description": "도란사민과 같은 기미치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "뇌하수체 유래 성장호르몬",
+    "keywords": [
+      "뇌하수체 유래 성장호르몬",
+      "성장호르몬",
+      "vCJD",
+      "프리온병",
+      "pituitary-derived growth hormone",
+      "growth hormone",
+      "prion disease"
+    ],
+    "description": "vCJD와 같은 프리온병 감염 예방을 위해 뇌하수체 유래 성장호르몬 투여 시 영구적으로 헌혈이 금지됩니다. 국내에서는 품목 허가된 적이 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "vCJD 감염 예방 목적"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "재조합 성장호르몬",
+    "keywords": [
+      "재조합 성장호르몬",
+      "성장호르몬",
+      "유트로핀",
+      "그로트로핀",
+      "소마트로핀",
+      "recombinant growth hormone",
+      "eutropin",
+      "growtropic",
+      "somatropin"
+    ],
+    "description": "유트로핀, 그로트로핀, 소마트로핀과 같은 재조합 성장호르몬 투여 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "당뇨약 (경구 혈당강하제)",
+    "keywords": [
+      "당뇨약",
+      "경구 혈당강하제",
+      "당뇨병",
+      "diabetes medicine",
+      "oral hypoglycemic agent",
+      "diabetes"
+    ],
+    "description": "경구 혈당강하제 복용 시 혈당 조절이 잘되고 합병증이 없으면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "혈당 조절이 잘되고 합병증이 없는 경우"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "기관지확장제",
+    "keywords": [
+      "기관지확장제",
+      "천식약",
+      "호흡기약",
+      "bronchodilator",
+      "asthma medicine"
+    ],
+    "description": "기관지확장제 복용 시 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "말라리아 예방약",
+    "keywords": [
+      "말라리아 예방약",
+      "말라리아",
+      "malaria prevention",
+      "malaria"
+    ],
+    "description": "말라리아 예방약 복용 시 어지러움, 오심 등의 부작용이 있을 수 있어 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "멀미약",
+    "keywords": [
+      "멀미약",
+      "멀미",
+      "motion sickness medicine",
+      "motion sickness"
+    ],
+    "description": "멀미약 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "메토트렉세이트",
+    "keywords": [
+      "메토트렉세이트",
+      "건선치료제",
+      "암치료제",
+      "자가면역질환",
+      "류마티스 관절염",
+      "methotrexate",
+      "psoriasis treatment",
+      "cancer treatment",
+      "autoimmune disease",
+      "rheumatoid arthritis"
+    ],
+    "description": "건선 치료 목적으로 메토트렉세이트 복용 시 복용 종료 후 4주간 헌혈이 금지됩니다. 암이나 자가면역질환(류마티스 관절염 등) 치료 목적으로 복용 시에는 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "건선 치료 목적 복용 종료 후 4주간 금지; 암, 자가면역질환 치료 목적 복용 시 영구 금지"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "면역억제제",
+    "keywords": [
+      "면역억제제",
+      "사이클로스포린",
+      "아토피 피부염",
+      "면역질환",
+      "immunosuppressant",
+      "cyclosporine",
+      "atopic dermatitis",
+      "immune disease"
+    ],
+    "description": "사이클로스포린 등 면역억제제 복용 시 영구적으로 헌혈이 금지됩니다. 다만, 아토피 피부염 등 일시적으로 복용하고 현재 증상이 없는 경우에는 혈액원 의사의 판단에 따라 헌혈 가능 여부가 결정됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "일시적 복용 및 증상 없는 경우 혈액원 의사 판단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "보톡스 주사제",
+    "keywords": [
+      "보톡스 주사제",
+      "보톡스",
+      "botox injection",
+      "botox"
+    ],
+    "description": "보톡스 주사제 투여 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "발기부전 치료제",
+    "keywords": [
+      "발기부전 치료제",
+      "발기부전",
+      "비아그라",
+      "시알리스",
+      "erectile dysfunction treatment",
+      "erectile dysfunction",
+      "viagra",
+      "cialis"
+    ],
+    "description": "비아그라, 시알리스 등 발기부전 치료제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "비스모데깁 (에리벳지)",
+    "keywords": [
+      "비스모데깁",
+      "에리벳지",
+      "항악성종양 치료제",
+      "vismodegib",
+      "erivedge",
+      "antineoplastic agent"
+    ],
+    "description": "항악성종양 치료제인 비스모데깁(에리벳지) 성분의 약물 복용 시 24개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 24,
+      "periodUnit": "month",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "소에서 유래한 인슐린",
+    "keywords": [
+      "소에서 유래한 인슐린",
+      "인슐린",
+      "bovine insulin",
+      "insulin"
+    ],
+    "description": "소에서 유래한 인슐린은 국내에서 품목 허가된 적이 없으며, 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "국내 미허가 약물"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "소화제",
+    "keywords": [
+      "소화제",
+      "digestive medicine"
+    ],
+    "description": "소화제 복용 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "두타스테라이드 (아보다트)",
+    "keywords": [
+      "두타스테라이드",
+      "아보다트",
+      "전립선 비대증 치료제",
+      "전립선 비대증",
+      "dutasteride",
+      "avodart",
+      "BPH treatment",
+      "benign prostatic hyperplasia"
+    ],
+    "description": "전립선 비대증 치료제인 두타스테라이드(아보다트) 성분의 약물 복용 시 6개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "피나스테라이드 (프로스카)",
+    "keywords": [
+      "피나스테라이드",
+      "프로스카",
+      "전립선염",
+      "전립선비대증 치료제",
+      "전립선비대증",
+      "finasteride",
+      "proscar",
+      "prostatitis",
+      "BPH treatment"
+    ],
+    "description": "전립선염, 전립선비대증 치료제인 피나스테라이드(프로스카) 성분의 약물 복용 시 4주간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "제산제",
+    "keywords": [
+      "제산제",
+      "속쓰림약",
+      "antacid",
+      "heartburn medicine"
+    ],
+    "description": "제산제 복용 시 현재 증상이 없으면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "현재 증상이 없는 경우"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "줄기세포주사",
+    "keywords": [
+      "줄기세포주사",
+      "줄기세포",
+      "자가줄기세포",
+      "관절염",
+      "stem cell injection",
+      "stem cell",
+      "autologous stem cell",
+      "arthritis"
+    ],
+    "description": "줄기세포 주사 시 자가줄기세포 주사는 7일 후 헌혈이 가능하며, 자가 여부 확인 불가 시 1년간 헌혈이 금지됩니다. 관절염으로 주사하는 경우 1개월 후 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "자가줄기세포 주사 시 7일 후 가능 (자가 여부 확인 불가 시 1년 금지), 관절염 주사 시 1개월 후 가능"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "지루성 피부염 치료제",
+    "keywords": [
+      "지루성 피부염",
+      "피부염",
+      "스테로이드",
+      "seborrheic dermatitis",
+      "dermatitis",
+      "steroid"
+    ],
+    "description": "지루성 피부염 치료제 복용 시 스테로이드에 준하여 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "지방분해주사제",
+    "keywords": [
+      "지방분해주사제",
+      "지방분해",
+      "fat dissolving injection",
+      "lipolysis"
+    ],
+    "description": "지방분해주사제 투여 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "진통소염제",
+    "keywords": [
+      "진통소염제",
+      "진통제",
+      "소염제",
+      "제니칼",
+      "리피다운",
+      "제로팻",
+      "가르시니아",
+      "스멜리스",
+      "painkiller",
+      "anti-inflammatory",
+      "xenical",
+      "lipydown",
+      "zerofat",
+      "garcinia",
+      "smelless"
+    ],
+    "description": "진통소염제 복용 시 헌혈이 가능합니다. 제니칼, 리피다운 등은 부작용이 없으면 당일 헌혈이 가능하며, 체중 감량 중인 경우 헌혈자의 상태를 고려하여 판정합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "부작용이 없으면 당일 채혈 가능 (체중 감량 중인 경우 헌혈자 상태 고려)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "진경제",
+    "keywords": [
+      "진경제",
+      "부스코판",
+      "암메파틴",
+      "펜디메트라진",
+      "antispasmodic",
+      "buscopan",
+      "ammepatin",
+      "phendimetrazine"
+    ],
+    "description": "부스코판, 암메파틴, 펜디메트라진 성분 등 진경제 복용 시 당일 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "삭센다",
+    "keywords": [
+      "삭센다",
+      "비만치료제",
+      "saxenda",
+      "obesity treatment"
+    ],
+    "description": "삭센다 투여 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "탈리도마이드",
+    "keywords": [
+      "탈리도마이드",
+      "세엘진탈리도마이드",
+      "알보젠탈리도마이드",
+      "탈라이드",
+      "탈로마",
+      "탈리그로브",
+      "나성결절홍반",
+      "항악성종양 치료제",
+      "thalidomide",
+      "celgene thalidomide",
+      "albogen thalidomide",
+      "thalide",
+      "thaloma",
+      "thaligrove",
+      "erythema nodosum leprosum",
+      "antineoplastic agent"
+    ],
+    "description": "나성결절홍반 및 항악성종양 치료제인 탈리도마이드 성분의 약물 복용 시 1개월간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "피나스테라이드 (탈모치료제)",
+    "keywords": [
+      "피나스테라이드",
+      "프로페시아",
+      "탈모치료제",
+      "탈모",
+      "단백아미노산제제",
+      "마이녹실",
+      "판시딜",
+      "케라민",
+      "볼두민",
+      "트리암",
+      "finasteride",
+      "propecia",
+      "hair loss treatment",
+      "hair loss",
+      "protein amino acid preparation",
+      "minoxidil",
+      "pansidil",
+      "keramin",
+      "boldumin",
+      "triam"
+    ],
+    "description": "탈모치료제인 피나스테라이드(프로페시아) 복용 시 4주간 헌혈이 금지됩니다. 단백아미노산제제(마이녹실 등)만 복용 시 헌혈이 가능하며, 트리암 주사 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "피나스테라이드 복용 시 4주 금지; 단백아미노산제제만 복용 시 가능; 트리암 주사 시 7일 금지"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "태반주사제",
+    "keywords": [
+      "태반주사제",
+      "태반",
+      "자하거 약침",
+      "placenta injection",
+      "placenta"
+    ],
+    "description": "태반 성분 약물(자하거 약침 포함)인 태반주사제 투여 시 1년간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "피임약",
+    "keywords": [
+      "피임약",
+      "피임",
+      "생리주기 조절",
+      "피부과 자궁내 삽입 피임기구",
+      "임플라논",
+      "루프",
+      "사후피임약",
+      "contraceptive",
+      "birth control",
+      "menstrual cycle regulation",
+      "IUD",
+      "implanon",
+      "loop",
+      "emergency contraceptive"
+    ],
+    "description": "피임 또는 생리주기 조절을 위한 피임약 복용 시 헌혈이 가능합니다. 피부과 자궁내 삽입 피임기구(임플라논, 루프 등)는 시술 후 염증 및 부정출혈 등 부작용이 없으면 7일 후 헌혈이 가능하며, 사후피임약 복용 시 추가 확인 후 판정합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "피부과 자궁내 삽입 피임기구 시술 후 부작용 없으면 7일 후 가능; 사후피임약 복용 시 추가 확인 후 판정"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "케토티펜 (리자벤)",
+    "keywords": [
+      "케토티펜",
+      "비후성 반흔 치료제",
+      "Tranilast",
+      "리자벤",
+      "ketotifen",
+      "hypertrophic scar treatment",
+      "rizaben"
+    ],
+    "description": "케토티펜, 비후성 반흔 치료제인 트라닐라스트(리자벤) 성분의 약물 복용 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "한약 (보약성)",
+    "keywords": [
+      "한약",
+      "보약성 한약",
+      "보약",
+      "한방",
+      "herbal medicine",
+      "tonic"
+    ],
+    "description": "보약성 한약 복용 시 헌혈이 가능하지만, 치료 목적의 한약은 질환에 따라 헌혈 가능 여부가 판정됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "치료 목적의 경우 질환에 따라 판정"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항부정맥제",
+    "keywords": [
+      "항부정맥제",
+      "부정맥",
+      "심장약",
+      "antiarrhythmic",
+      "arrhythmia",
+      "heart medicine"
+    ],
+    "description": "항부정맥제 복용 시 헌혈자의 질환 자체가 중요하며, 구체적인 헌혈 가능 여부는 혈액원 의사의 판단에 따릅니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "헌혈자의 질환 및 혈액원 의사의 진단에 따름"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항생제 (경구약)",
+    "keywords": [
+      "항생제",
+      "약",
+      "경구약",
+      "프로가무시 여드름약",
+      "독시사이클린",
+      "감기치료",
+      "antibiotic",
+      "oral medication",
+      "doxycycline",
+      "cold treatment"
+    ],
+    "description": "항생제(경구약) 복용 시 7일간 헌혈이 금지됩니다. 프로가무시 여드름약(독시사이클린)의 경우 7일간 금지되며, 감기 치료 목적이라면 3일 후 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "복용 후 (감기 치료 목적은 3일 후)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항생제 (연고)",
+    "keywords": [
+      "항생제",
+      "연고",
+      "antibiotic",
+      "ointment"
+    ],
+    "description": "항생제(연고) 사용 시 질환에 따라 헌혈 가능 여부가 판정됩니다 (경구약 복용하지 않는 경우).",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "질환에 따라 판정 (경구약 복용하지 않는 경우)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항생제 (주사제)",
+    "keywords": [
+      "항생제",
+      "주사제",
+      "antibiotic",
+      "injection"
+    ],
+    "description": "항생제(주사제) 투여 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항응고제",
+    "keywords": [
+      "항응고제",
+      "와파린",
+      "쿠마딘",
+      "헤파린",
+      "하루딘",
+      "장기이식",
+      "anticoagulant",
+      "warfarin",
+      "coumadin",
+      "heparin",
+      "hirudin",
+      "organ transplant"
+    ],
+    "description": "와파린, 쿠마딘, 헤파린, 하루딘 등 항응고제 복용 시 영구적으로 헌혈이 금지됩니다. 장기이식 환자 등에게 해당됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "장기이식 환자 등"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항응고제 (예방목적)",
+    "keywords": [
+      "항응고제",
+      "예방목적",
+      "anticoagulant",
+      "prevention"
+    ],
+    "description": "예방 목적으로 항응고제를 복용하는 경우, 약 복용 중단 후 7일간 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "약 복용 중단 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항진균제 (연고)",
+    "keywords": [
+      "항진균제",
+      "연고",
+      "antifungal",
+      "ointment"
+    ],
+    "description": "항진균제(연고) 사용 시 질환에 따라 헌혈 가능 여부가 판정됩니다 (경구약 복용하지 않는 경우).",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "질환에 따라 판정 (경구약 복용하지 않는 경우)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항진균제 (표재성 감염)",
+    "keywords": [
+      "항진균제",
+      "백선",
+      "무좀",
+      "완선",
+      "표재성 감염",
+      "두부백선",
+      "antifungal",
+      "tinea",
+      "athlete's foot",
+      "jock itch",
+      "superficial infection",
+      "tinea capitis"
+    ],
+    "description": "피부, 두발, 손톱 등 체표면에 감염되는 백선, 무좀, 완선 등 표재성 진균증 치료를 위한 항진균제 복용 시 치료 종료 및 약 복용 7일 경과 후 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "치료 종료 및 약 복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항진균제 (전신성/심재성 감염)",
+    "keywords": [
+      "항진균제",
+      "전신성 감염",
+      "심재성 감염",
+      "정진균증",
+      "antifungal",
+      "systemic infection",
+      "deep infection"
+    ],
+    "description": "정진균증 등 내장기 감염을 위한 항진균제 복용 시 4주간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "항히스타민제",
+    "keywords": [
+      "항히스타민제",
+      "항류코트리엔",
+      "알레르기약",
+      "antihistamine",
+      "antileukotriene",
+      "allergy medicine"
+    ],
+    "description": "항히스타민제 복용 시 헌혈이 가능합니다. 항류코트리엔제도 포함됩니다.",
+    "allowable": true,
+    "restriction": {}
+  },
+  {
+    "category": "medication",
+    "name": "해열진통소염제",
+    "keywords": [
+      "해열진통소염제",
+      "해열제",
+      "진통제",
+      "소염제",
+      "fever reducer",
+      "painkiller",
+      "anti-inflammatory"
+    ],
+    "description": "일반 해열진통소염제(경구투약, 주사제 포함) 복용/투여 시 당일 헌혈이 금지됩니다. 혈소판 기능에 영향을 주는 약물은 별도 참조가 필요합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "복용/투여 당일"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "혈액응고인자",
+    "keywords": [
+      "혈액응고인자",
+      "blood clotting factor"
+    ],
+    "description": "혈액응고인자 투여 시 1년간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "B형간염 면역글로불린",
+    "keywords": [
+      "B형간염 면역글로불린",
+      "B형간염",
+      "면역글로불린",
+      "hepatitis B immunoglobulin",
+      "hepatitis B",
+      "immunoglobulin"
+    ],
+    "description": "B형간염 면역글로불린 투여 시 1년간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "투여 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "vCJD 위험지역 혈액 유래 진단시약",
+    "keywords": [
+      "vCJD",
+      "변종크로이츠펠트-야콥병",
+      "진단시약",
+      "혈장",
+      "variant Creutzfeldt-Jakob disease",
+      "diagnostic reagent",
+      "plasma"
+    ],
+    "description": "vCJD(변종크로이츠펠트-야콥병) 위험지역에서 채혈된 혈액의 혈장으로 제조된 진단시약 투여 시 영구적으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "vCJD 위험지역 혈액 유래"
+    }
+  },
+    {
+    "category": "medication",
+    "name": "아스피린",
+    "keywords": [
+      "아스피린",
+      "Aspirin",
+      "해열제",
+      "진통제",
+      "아스세븐",
+      "이엔타스",
+      "트롬피린",
+      "fever reducer",
+      "painkiller"
+    ],
+    "description": "아스피린(해열, 진통제) 복용 시 3일간 헌혈이 금지됩니다. 이 기간 동안 전혈(삼중백, 사중백) 및 성분채혈(혈소판)은 금지되며, 이중백 전혈 및 혈장성분헌혈만 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "day",
+      "condition": "복용 후 (전혈(삼중백, 사중백) 및 혈소판 성분채혈 금지, 이중백 전혈 및 혈장 성분헌혈만 가능)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "디피리다몰",
+    "keywords": [
+      "디피리다몰",
+      "Dipyridamol",
+      "혈소판 응집억제",
+      "혈관확장",
+      "레드몰",
+      "리다몰",
+      "센타몰",
+      "페가몰",
+      "페르산친",
+      "platelet aggregation inhibitor",
+      "vasodilator"
+    ],
+    "description": "디피리다몰(혈소판 응집억제, 혈관확장제) 복용 시 3일간 헌혈이 금지됩니다. 이 기간 동안 전혈(삼중백, 사중백) 및 성분채혈(혈소판)은 금지되며, 이중백 전혈 및 혈장성분헌혈만 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "day",
+      "condition": "복용 후 (전혈(삼중백, 사중백) 및 혈소판 성분채혈 금지, 이중백 전혈 및 혈장 성분헌혈만 가능)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "인도메타신",
+    "keywords": [
+      "인도메타신",
+      "Indomethacin",
+      "해열제",
+      "진통제",
+      "소염제",
+      "류마메타신",
+      "인테반",
+      "스펜술",
+      "fever reducer",
+      "painkiller",
+      "anti-inflammatory"
+    ],
+    "description": "인도메타신(해열, 진통, 소염제) 복용 시 3일간 헌혈이 금지됩니다. 이 기간 동안 전혈(삼중백, 사중백) 및 성분채혈(혈소판)은 금지되며, 이중백 전혈 및 혈장성분헌혈만 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "day",
+      "condition": "복용 후 (전혈(삼중백, 사중백) 및 혈소판 성분채혈 금지, 이중백 전혈 및 혈장 성분헌혈만 가능)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "피록시캄",
+    "keywords": [
+      "피록시캄",
+      "Piroxicam",
+      "해열제",
+      "혈소판응집억제",
+      "진통제",
+      "항염제",
+      "제로캄",
+      "로캄",
+      "날시캄",
+      "유캄",
+      "로렉신",
+      "로시덴",
+      "뉴캄",
+      "fever reducer",
+      "platelet aggregation inhibitor",
+      "painkiller",
+      "anti-inflammatory"
+    ],
+    "description": "피록시캄(해열, 혈소판응집억제, 진통, 항염제) 복용 시 3일간 헌혈이 금지됩니다. 이 기간 동안 전혈(삼중백, 사중백) 및 성분채혈(혈소판)은 금지되며, 이중백 전혈 및 혈장성분헌혈만 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "day",
+      "condition": "복용 후 (전혈(삼중백, 사중백) 및 혈소판 성분채혈 금지, 이중백 전혈 및 혈장 성분헌혈만 가능)"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "클로피도그렐",
+    "keywords": [
+      "클로피도그렐",
+      "Clopidogrel",
+      "혈소판응집억제",
+      "항혈전제",
+      "크리빅스정",
+      "세레나데정",
+      "플라빅스정",
+      "platelet aggregation inhibitor",
+      "antithrombotic"
+    ],
+    "description": "클로피도그렐(혈소판 응집억제, 항혈전제) 복용 시 7일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "복용 후"
+    }
+  },
+  {
+    "category": "medication",
+    "name": "티클로피딘",
+    "keywords": [
+      "티클로피딘",
+      "Ticlopidine",
+      "Ticlid",
+      "혈소판응집억제",
+      "항혈전제",
+      "근화염산 티클로피딘정",
+      "대화염산 티클로피딘정",
+      "마미염 염산티클로피딘정",
+      "platelet aggregation inhibitor",
+      "antithrombotic"
+    ],
+    "description": "티클로피딘(혈소판 응집억제, 항혈전제) 복용 시 2주간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "week",
+      "condition": "복용 후"
+    }
+  }
+]
