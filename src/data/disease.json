@@ -21,6 +21,24 @@
     }
   },
   {
+    "category": "disease",
+    "name": "알레르기/비염",
+    "keywords": [
+      "알레르기",
+      "알레르기성 비염",
+      "allergy",
+      "allergic rhinitis"
+    ],
+    "description": "알레르기성 비염 등 호흡기 감염이 없는 일반적인 알레르기는 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "호흡기 감염이 없는 일반적인 알레르기"
+    }
+  },
+  {
     "id": "disease-002",
     "category": "disease",
     "name": "장염",
@@ -1131,24 +1149,6 @@
       "periodValue": 0,
       "periodUnit": "day",
       "condition": "완치 및 조절 시 (그 외 의사 판단)"
-    }
-  },
-  {
-    "category": "disease",
-    "name": "알레르기",
-    "keywords": [
-      "알레르기",
-      "알레르기성 비염",
-      "allergy",
-      "allergic rhinitis"
-    ],
-    "description": "알레르기성 비염 등 호흡기 감염이 없는 일반적인 알레르기는 헌혈이 가능합니다.",
-    "allowable": true,
-    "restriction": {
-      "type": "etc",
-      "periodValue": 0,
-      "periodUnit": "day",
-      "condition": "호흡기 감염이 없는 일반적인 알레르기"
     }
   },
   {
