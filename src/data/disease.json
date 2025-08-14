@@ -1,0 +1,2883 @@
+[
+  {
+    "category": "disease",
+    "name": "가와사키병",
+    "keywords": [
+      "가와사키병",
+      "Kawasaki",
+      "심장",
+      "합병증",
+      "증상"
+    ],
+    "description": "가와사키병은 치료 종료 후 5년이 경과하고 심장 관련 합병증 및 증상이 없으면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "period",
+      "periodValue": 5,
+      "periodUnit": "year",
+      "condition": "치료 종료 후 심장 관련 합병증 및 증상이 없을 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "간질환 (담석 황달)",
+    "keywords": [
+      "간질환",
+      "황달",
+      "담석",
+      "간염",
+      "간경화",
+      "간암",
+      "liver disease",
+      "jaundice"
+    ],
+    "description": "담석 등으로 인한 황달은 치료 종료 후 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "담석 등으로 인한 황달 치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "간질환 (원인불명 간염)",
+    "keywords": [
+      "간질환",
+      "황달",
+      "담석",
+      "간염",
+      "간경화",
+      "간암",
+      "liver disease",
+      "jaundice"
+    ],
+    "description": "원인불명 간염은 치료 종료 후 1년 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "원인불명 간염 치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "간질환 (원인불명 황달)",
+    "keywords": [
+      "간질환",
+      "황달",
+      "간염",
+      "간경화",
+      "간암",
+      "liver disease",
+      "jaundice"
+    ],
+    "description": "원인불명 황달 과거력이 있는 경우 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "원인불명 황달 과거력"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "간경화증",
+    "keywords": [
+      "간질환",
+      "황달",
+      "간염",
+      "간경화",
+      "간암",
+      "liver disease",
+      "cirrhosis"
+    ],
+    "description": "간경화증이 있는 경우 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "간경화증"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "악성 간질환",
+    "keywords": [
+      "간질환",
+      "황달",
+      "간염",
+      "간경화",
+      "간암",
+      "liver disease",
+      "liver cancer"
+    ],
+    "description": "악성 간질환이 있는 경우 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "악성 간질환"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "갑상선기능저하증 (약 복용)",
+    "keywords": [
+      "갑상선질환",
+      "갑상선",
+      "그레이브병",
+      "항진증",
+      "저하증",
+      "thyroid",
+      "graves disease",
+      "hyperthyroidism",
+      "hypothyroidism"
+    ],
+    "description": "갑상선기능저하증으로 대체호르몬을 복용 중이며 기능이 정상인 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "대체호르몬 복용 중 기능이 정상인 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "갑상선질환 (방사선 요오드)",
+    "keywords": [
+      "갑상선질환",
+      "갑상선",
+      "그레이브병",
+      "항진증",
+      "저하증",
+      "thyroid",
+      "graves disease",
+      "hyperthyroidism",
+      "hypothyroidism",
+      "방사선 요오드"
+    ],
+    "description": "갑상선질환으로 방사선 요오드 치료를 받은 경우 6개월 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "방사선 요오드 치료 시"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "갑상선질환 (항갑상선 약)",
+    "keywords": [
+      "갑상선질환",
+      "갑상선",
+      "그레이브병",
+      "항진증",
+      "저하증",
+      "thyroid",
+      "graves disease",
+      "hyperthyroidism",
+      "hypothyroidism",
+      "PTU",
+      "MMI"
+    ],
+    "description": "항갑상선 약(PTU, MMI 등) 복용 중단 후 2년 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "year",
+      "condition": "항갑상선 약(PTU, MMI 등) 복용 중단 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "갑상선 악성종양",
+    "keywords": [
+      "갑상선질환",
+      "갑상선",
+      "그레이브병",
+      "항진증",
+      "저하증",
+      "thyroid",
+      "graves disease",
+      "hyperthyroidism",
+      "hypothyroidism",
+      "악성종양",
+      "암"
+    ],
+    "description": "갑상선질환이 악성종양으로 판별된 경우 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "악성종양으로 판별된 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "활동성 결핵",
+    "keywords": [
+      "결핵",
+      "활동성 결핵",
+      "잠복 결핵",
+      "폐결핵",
+      "tuberculosis",
+      "TB"
+    ],
+    "description": "활동성 결핵은 치료 종료 후 1개월 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "잠복 결핵 (약 복용)",
+    "keywords": [
+      "결핵",
+      "활동성 결핵",
+      "잠복 결핵",
+      "폐결핵",
+      "tuberculosis",
+      "TB"
+    ],
+    "description": "잠복 결핵으로 약을 복용 중인 경우, 복용 중단 1개월 후 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "약 복용 중단 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "잠복 결핵 (약 미복용)",
+    "keywords": [
+      "결핵",
+      "활동성 결핵",
+      "잠복 결핵",
+      "폐결핵",
+      "tuberculosis",
+      "TB"
+    ],
+    "description": "잠복 결핵으로 약을 복용하지 않는 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "약 미복용 시"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "골수염",
+    "keywords": [
+      "골수염",
+      "osteomyelitis"
+    ],
+    "description": "골수염은 치료 종료 후 1년 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "골절",
+    "keywords": [
+      "골절",
+      "fracture",
+      "뼈 부러짐"
+    ],
+    "description": "골절은 치료 종료 시까지 헌혈이 금지됩니다. 골절로 인한 수술 시에는 해당 수술 기준에 따르며, 영구적인 핀 삽입자는 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 시까지 (수술 시 해당 수술 기준 따름, 영구 핀 삽입자 가능)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "소아/류마티스 관절염",
+    "keywords": [
+      "관절염",
+      "소아 특발성 관절염",
+      "류마티스성 관절염",
+      "arthritis",
+      "rheumatoid arthritis"
+    ],
+    "description": "소아 특발성 또는 류마티스성 관절염은 완치 후 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "완치 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "퇴행성 관절염",
+    "keywords": [
+      "관절염",
+      "퇴행성 관절염",
+      "arthritis",
+      "osteoarthritis"
+    ],
+    "description": "퇴행성 관절염 등 기타 관절염은 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "기타 관절염"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "기면증",
+    "keywords": [
+      "기면증",
+      "narcolepsy"
+    ],
+    "description": "기면증은 최근 1년 이내 증상이 없는 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "최근 1년 이내 증상이 없는 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "기흉",
+    "keywords": [
+      "기흉",
+      "pneumothorax"
+    ],
+    "description": "기흉은 치료 종료 후 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "뇌혈관질환",
+    "keywords": [
+      "뇌질환",
+      "뇌혈관질환",
+      "뇌경색",
+      "뇌동맥류",
+      "모야모야병",
+      "brain disease",
+      "cerebrovascular disease",
+      "stroke",
+      "aneurysm",
+      "moyamoya"
+    ],
+    "description": "뇌경색, 뇌동맥류, 모야모야병 등 뇌혈관질환은 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "뇌경색, 뇌동맥류, 모야모야병 등"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "뇌출혈",
+    "keywords": [
+      "뇌질환",
+      "뇌출혈",
+      "뇌좌상",
+      "지주막하 출혈",
+      "brain disease",
+      "cerebral hemorrhage",
+      "subarachnoid hemorrhage"
+    ],
+    "description": "뇌출혈(외상에 의한 뇌좌상, 지주막하 출혈 포함)은 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "외상에 의한 뇌좌상, 지주막하 출혈 포함"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "경련성 질환 (뇌전증)",
+    "keywords": [
+      "뇌질환",
+      "경련성 질환",
+      "뇌전증",
+      "간질",
+      "brain disease",
+      "seizure disorder",
+      "epilepsy"
+    ],
+    "description": "뇌전증(간질)과 같은 경련성 질환은 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "뇌전증(간질)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "퇴행성 뇌질환",
+    "keywords": [
+      "뇌질환",
+      "퇴행성 질환",
+      "알츠하이머",
+      "파킨슨병",
+      "brain disease",
+      "degenerative disease",
+      "alzheimer's",
+      "parkinson's"
+    ],
+    "description": "알츠하이머, 파킨슨병 등 퇴행성 뇌질환은 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "알츠하이머, 파킨슨병 등"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "감염성 눈병",
+    "keywords": [
+      "눈병",
+      "감염성 눈병",
+      "유행성 결막염",
+      "각막염",
+      "eye disease",
+      "conjunctivitis",
+      "keratitis"
+    ],
+    "description": "유행성 결막염, 각막염 등 감염성 눈병은 치료 종료 후 4주 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "녹내장",
+    "keywords": [
+      "눈병",
+      "녹내장",
+      "안통",
+      "두통",
+      "안압하강제",
+      "eye disease",
+      "glaucoma"
+    ],
+    "description": "녹내장은 안통, 두통 등 급성 증상이 없거나 안압하강제 점안만 하는 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "안통, 두통 등 급성 증상이 없거나 안압하강제 점안만 하는 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "황반변성",
+    "keywords": [
+      "눈병",
+      "황반변성",
+      "당뇨 합병증",
+      "눈 속 주사",
+      "eye disease",
+      "macular degeneration"
+    ],
+    "description": "황반변성은 당뇨 합병증인 경우 헌혈이 금지됩니다. 치료를 위한 눈 속 주사 시술 시 7일 경과 후 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "당뇨 합병증인 경우 금지, 치료를 위한 눈 속 주사 시술 시 7일 경과 후 가능"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "망막박리/등막혈종",
+    "keywords": [
+      "눈병",
+      "망막박리",
+      "등막혈종",
+      "eye disease",
+      "retinal detachment",
+      "subretinal hemorrhage"
+    ],
+    "description": "망막박리, 등막혈종은 관련 시술 및 수술 기준에 따라 헌혈 가능 여부가 결정됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "관련 시술 및 수술 기준에 따름"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "기타 눈질환",
+    "keywords": [
+      "눈병",
+      "단순 결막염",
+      "알러지성 눈병",
+      "다래끼",
+      "eye disease",
+      "conjunctivitis",
+      "allergy eye",
+      "stye"
+    ],
+    "description": "단순 결막염, 알러지성 눈병, 다래끼 등 기타 눈질환은 증상 소실 시까지 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "증상 소실 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "다한증",
+    "keywords": [
+      "다한증",
+      "hyperhidrosis",
+      "땀"
+    ],
+    "description": "다한증은 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "없음"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "단순포진",
+    "keywords": [
+      "단순포진",
+      "헤르페스",
+      "herpes simplex",
+      "입술 포진"
+    ],
+    "description": "단순포진은 증상 소실 시까지 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "증상 소실 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "성기 단순포진",
+    "keywords": [
+      "단순포진",
+      "성기 단순포진",
+      "헤르페스",
+      "genital herpes"
+    ],
+    "description": "성기 단순포진은 1년간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "담석증",
+    "keywords": [
+      "담석증",
+      "gallstones"
+    ],
+    "description": "담석증은 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "없음"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "당뇨병 (인슐린 주사)",
+    "keywords": [
+      "당뇨병",
+      "인슐린",
+      "diabetes",
+      "insulin"
+    ],
+    "description": "당뇨병으로 인슐린 주사를 사용하는 경우 헌혈이 영구적으로 금지됩니다. (일부 예외 있음)",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "인슐린 주사 사용 (일부 예외)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "당뇨병 (인슐린 일시 사용)",
+    "keywords": [
+      "당뇨병",
+      "인슐린",
+      "diabetes",
+      "insulin"
+    ],
+    "description": "당뇨병으로 인슐린을 일시 사용 후 4주 경과 및 혈당 조절이 양호한 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "인슐린 일시 사용 후 혈당 조절 양호 시"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "당뇨병 (경구약/식이요법)",
+    "keywords": [
+      "당뇨병",
+      "경구 혈당강하제",
+      "식이요법",
+      "diabetes",
+      "oral hypoglycemic",
+      "diet"
+    ],
+    "description": "경구 혈당강하제 또는 식이요법으로 혈당 조절 시 헌혈이 가능합니다. 단, 당뇨 합병증이 없는 경우에 한합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "경구 혈당강하제/식이요법으로 혈당 조절 시 (당뇨 합병증이 없는 경우)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "당뇨병 (소 유래 인슐린)",
+    "keywords": [
+      "당뇨병",
+      "소 유래 인슐린",
+      "diabetes",
+      "bovine insulin"
+    ],
+    "description": "소 유래 인슐린 사용 시 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "소 유래 인슐린 사용 시"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "대상포진",
+    "keywords": [
+      "대상포진",
+      "herpes zoster",
+      "shingles"
+    ],
+    "description": "대상포진은 병변, 수포, 통증이 완전히 회복되기 전까지 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "완치 시까지 (병변, 수포, 통증 회복)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "레이노증후군",
+    "keywords": [
+      "레이노증후군",
+      "Raynaud's syndrome"
+    ],
+    "description": "레이노증후군은 상황에 따라 헌혈 가능 여부가 판정됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "상황에 따라 판정"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "만성피로증후군",
+    "keywords": [
+      "만성피로증후군",
+      "chronic fatigue syndrome",
+      "CFS"
+    ],
+    "description": "의료기관에서 진단받은 만성피로증후군은 무기한 채혈이 보류됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "의료기관에서 진단받은 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "말라리아",
+    "keywords": [
+      "말라리아",
+      "malaria"
+    ],
+    "description": "말라리아는 치료 종료 후 3년 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "봉와직염",
+    "keywords": [
+      "봉와직염",
+      "cellulitis"
+    ],
+    "description": "봉와직염은 현재 증상이 없고 치료 종료 후 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "현재 증상이 없고 치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "발열질환 (독감 포함)",
+    "keywords": [
+      "발열질환",
+      "독감",
+      "감기",
+      "고열",
+      "오한",
+      "fever",
+      "flu",
+      "influenza"
+    ],
+    "description": "기간이 명시되지 않은 감염병으로 반복적인 고열, 오한 등이 있었던 발열질환(독감 포함)은 치료 종료 후 1개월 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "백반증/백피증",
+    "keywords": [
+      "백반증",
+      "백피증",
+      "vitiligo",
+      "albinism"
+    ],
+    "description": "백반증, 백피증은 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "없음"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "브루셀라증",
+    "keywords": [
+      "브루셀라증",
+      "brucellosis",
+      "수의사",
+      "농업 종사자"
+    ],
+    "description": "브루셀라증 진단을 받거나 관련 증상(지속적 발열, 두통 등)이 있는 고위험 직업군(수의사, 농업 종사자 등)은 치료 종료 후 2년 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "year",
+      "condition": "치료 종료 후 (진단받은 경우 또는 관련 증상이 있는 고위험 직업군)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "사마귀",
+    "keywords": [
+      "사마귀",
+      "wart",
+      "레이저 시술",
+      "블레오마이신"
+    ],
+    "description": "사마귀는 헌혈이 가능합니다. 레이저 시술 또는 블레오마이신 침투요법 후 7일이 경과하면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "레이저 시술 또는 블레오마이신 침투요법 7일 경과 후 가능"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "설사 (물설사)",
+    "keywords": [
+      "설사",
+      "물설사",
+      "diarrhea",
+      "watery diarrhea"
+    ],
+    "description": "하루 3회 이상 물설사를 한 경우 3일간 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "day",
+      "condition": "하루 3회 이상 물설사"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "설사 (과민성 대장증후군)",
+    "keywords": [
+      "설사",
+      "과민성 대장증후군",
+      "diarrhea",
+      "IBS"
+    ],
+    "description": "과민성 대장증후군에 의한 설사는 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "과민성 대장증후군에 의한 설사"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "성병",
+    "keywords": [
+      "성병",
+      "임질",
+      "매독",
+      "콘딜로마",
+      "클라미디아",
+      "연성하감",
+      "성기단순포진",
+      "STD",
+      "gonorrhea",
+      "syphilis",
+      "condyloma",
+      "chlamydia",
+      "chancroid",
+      "genital herpes"
+    ],
+    "description": "임질, 매독, 콘딜로마, 클라미디아, 연성하감, 성기단순포진 등 성병은 치료 종료 후 1년 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "식중독",
+    "keywords": [
+      "식중독",
+      "food poisoning"
+    ],
+    "description": "식중독은 증상이 사라지고 전신 상태가 호전될 때까지 치료 종료 후 3일 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "day",
+      "condition": "치료 종료 후 (증상 소실 및 전신 상태 호전)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "신결석 (요로결석)",
+    "keywords": [
+      "신결석",
+      "요로결석",
+      "kidney stones",
+      "urolithiasis"
+    ],
+    "description": "신결석(요로결석)은 무증상일 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "무증상일 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "신경섬유종",
+    "keywords": [
+      "신경섬유종",
+      "neurofibromatosis"
+    ],
+    "description": "신경섬유종은 악성으로 변화한 경우 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "악성으로 변화한 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "급성 신장질환",
+    "keywords": [
+      "신장질환",
+      "급성 신장질환",
+      "급성사구체신염",
+      "무증상 요로결석",
+      "kidney disease",
+      "acute kidney disease",
+      "acute glomerulonephritis"
+    ],
+    "description": "급성 신장질환(급성사구체신염 등) 및 무증상 요로결석은 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "급성 신장질환 (급성사구체신염 등), 무증상 요로결석"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "만성 신장질환",
+    "keywords": [
+      "신장질환",
+      "만성 신장질환",
+      "신부전",
+      "만성사구체신염",
+      "IgA신증",
+      "kidney disease",
+      "chronic kidney disease",
+      "renal failure",
+      "chronic glomerulonephritis",
+      "IgA nephropathy"
+    ],
+    "description": "만성 신장질환(신부전, 만성사구체신염, IgA신증 등)은 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "만성 신장질환 (신부전, 만성사구체신염, IgA신증 등)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "심장질환",
+    "keywords": [
+      "심장질환",
+      "심혈관계 질환",
+      "heart disease",
+      "cardiovascular disease"
+    ],
+    "description": "심혈관계 질환은 혈관수축 및 심장 부담 위험으로 헌혈이 영구적으로 금지됩니다. (일부 예외 있음)",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "심혈관계 질환 (일부 예외)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "선천성 심장질환",
+    "keywords": [
+      "심장질환",
+      "선천성 심실중격결손",
+      "심방중격결손",
+      "동맥관개존증",
+      "heart disease",
+      "VSD",
+      "ASD",
+      "PDA"
+    ],
+    "description": "선천성 심실/심방중격결손, 동맥관개존증(PDA)은 치료 후 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "부정맥",
+    "keywords": [
+      "심장질환",
+      "부정맥",
+      "arrhythmia"
+    ],
+    "description": "부정맥은 완치 및 조절 시 헌혈이 가능합니다. 그 외에는 의사의 판단에 따릅니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "완치 및 조절 시 (그 외 의사 판단)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "알레르기",
+    "keywords": [
+      "알레르기",
+      "알레르기성 비염",
+      "allergy",
+      "allergic rhinitis"
+    ],
+    "description": "알레르기성 비염 등 호흡기 감염이 없는 일반적인 알레르기는 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "호흡기 감염이 없는 일반적인 알레르기"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "알코올/마약 중독",
+    "keywords": [
+      "알코올 중독",
+      "마약 중독",
+      "alcoholism",
+      "drug addiction"
+    ],
+    "description": "알코올 중독 또는 마약 중독은 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "없음"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "어지럼증",
+    "keywords": [
+      "어지럼증",
+      "dizziness"
+    ],
+    "description": "어지럼증은 증상 소실 시까지 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "증상 소실 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "어지럼증 (잦은 호소)",
+    "keywords": [
+      "어지럼증",
+      "dizziness"
+    ],
+    "description": "평상시 어지럼증을 자주 호소하는 경우 다른 질환 가능성으로 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "평상시 어지럼증을 자주 호소하는 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "어지럼증 (헌혈 후 쓰러짐)",
+    "keywords": [
+      "어지럼증",
+      "헌혈 후 쓰러짐",
+      "dizziness",
+      "fainting after donation"
+    ],
+    "description": "헌혈 후 어지럼증으로 쓰러진 경험이 있거나, 헌혈 시마다 어지럼증을 느끼면 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "헌혈 후 어지럼증으로 쓰러진 경험 또는 헌혈 시마다 어지럼증"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "염증성장질환",
+    "keywords": [
+      "염증성장질환",
+      "크론병",
+      "궤양성대장염",
+      "inflammatory bowel disease",
+      "Crohn's disease",
+      "ulcerative colitis"
+    ],
+    "description": "크론병, 궤양성대장염과 같은 염증성장질환은 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "크론병, 궤양성대장염"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "옴 (scabies)",
+    "keywords": [
+      "옴",
+      "scabies"
+    ],
+    "description": "옴은 치료 종료 후 4주 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "위염/위궤양/역류성 식도염",
+    "keywords": [
+      "위염",
+      "위궤양",
+      "역류성 식도염",
+      "gastritis",
+      "gastric ulcer",
+      "reflux esophagitis",
+      "속쓰림",
+      "소화불량"
+    ],
+    "description": "위염, 위궤양, 역류성 식도염은 증상 소실 시까지 헌혈이 금지됩니다. 증상이 없으면 헌혈이 가능하며, 복용약 확인 후 판정됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "증상 소실 시까지 (증상 없으면 가능, 복용약 확인 후 판정)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "헬리코박터균 감염",
+    "keywords": [
+      "위염",
+      "위궤양",
+      "역류성 식도염",
+      "헬리코박터균",
+      "helicobacter pylori"
+    ],
+    "description": "헬리코박터균 치료 시, 치료 종료 7일 후 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "의식소실/경련 (뇌질환)",
+    "keywords": [
+      "의식소실",
+      "경련",
+      "뇌질환",
+      "전신경련",
+      "loss of consciousness",
+      "convulsion",
+      "seizure"
+    ],
+    "description": "뇌질환으로 인한 전신경련의 경우 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "뇌질환으로 인한 전신경련"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "의식소실/경련 (일시적 원인)",
+    "keywords": [
+      "의식소실",
+      "경련",
+      "일사병",
+      "loss of consciousness",
+      "convulsion",
+      "heatstroke"
+    ],
+    "description": "일사병 등 일시적인 원인으로 인한 의식소실과 경련은 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "일사병 등 일시적인 원인"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "임신/분만/유산",
+    "keywords": [
+      "임신",
+      "분만",
+      "유산",
+      "수유",
+      "신생아 수혈",
+      "pregnancy",
+      "childbirth",
+      "miscarriage",
+      "lactation"
+    ],
+    "description": "헌혈자 보호를 위해 임신, 분만 또는 유산 후 6개월간 헌혈이 금지됩니다. 수유 중이라도 출산 6개월 경과 시 가능하며, 본인의 신생아에게 수혈하는 경우는 예외적으로 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "임신, 분만 또는 유산 후 (수유 중이라도 출산 6개월 경과 시 가능, 본인 신생아 수혈 시 예외)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "자가면역 질환",
+    "keywords": [
+      "자가면역 질환",
+      "전신성경피증",
+      "쇼그렌증후군",
+      "SLE",
+      "베체트씨병",
+      "류마티스성 관절염",
+      "autoimmune disease",
+      "scleroderma",
+      "Sjogren's syndrome",
+      "lupus",
+      "Behcet's disease",
+      "rheumatoid arthritis"
+    ],
+    "description": "전신성경피증, 쇼그렌증후군, SLE, 베체트씨병, 류마티스성 관절염 등 자가면역 질환은 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "없음"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "정신건강의학과 질환 (안정)",
+    "keywords": [
+      "정신건강의학과 질환",
+      "불안장애",
+      "공황장애",
+      "기분장애",
+      "우울증",
+      "조울증",
+      "ADHD",
+      "psychiatric disorder",
+      "anxiety disorder",
+      "panic disorder",
+      "mood disorder",
+      "depression",
+      "bipolar disorder"
+    ],
+    "description": "불안장애(공황장애), 기분장애(우울증, 조울증), ADHD 등 감정 상태가 안정적인 정신건강의학과 질환은 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "감정 상태가 안정적인 경우"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "조현병",
+    "keywords": [
+      "정신건강의학과 질환",
+      "조현병",
+      "schizophrenia"
+    ],
+    "description": "조현병의 경우 혈액원 의사의 판단에 따라 헌혈 가능 여부가 결정됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "혈액원 의사의 판단에 의함"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "양성종양",
+    "keywords": [
+      "양성종양",
+      "benign tumor"
+    ],
+    "description": "양성종양은 치료 종료 후 헌혈이 가능합니다. 단, 결과를 관찰 중이면 보류됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 후 (결과 관찰 중이면 보류)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "암 (악성종양)",
+    "keywords": [
+      "암",
+      "악성종양",
+      "cancer",
+      "malignant tumor"
+    ],
+    "description": "암(악성종양)은 헌혈이 영구적으로 금지됩니다. (일부 예외 있음)",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "일부 예외"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "국소피부암/상피내암",
+    "keywords": [
+      "암",
+      "국소피부암",
+      "상피내암",
+      "자궁경부암",
+      "cancer",
+      "skin cancer",
+      "carcinoma in situ",
+      "cervical cancer"
+    ],
+    "description": "국소피부암, 상피내암(자궁경부암 등)은 치료 종료 5년 경과 시 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "period",
+      "periodValue": 5,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "천식",
+    "keywords": [
+      "천식",
+      "asthma"
+    ],
+    "description": "천식은 치료 종료 2주 경과 후 현재 증상이 없으면 헌혈이 가능합니다. 천식 발작 기왕력이 없는 경우는 의사의 판단에 따릅니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 2주 경과 후 현재 증상이 없으면 가능 (천식 발작 기왕력 없는 경우 의사 판단)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "치질",
+    "keywords": [
+      "치질",
+      "hemorrhoids"
+    ],
+    "description": "치질은 출혈이 없으면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "출혈이 없으면 가능"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "코로나바이러스감염증-19 (COVID-19)",
+    "keywords": [
+      "코로나바이러스감염증-19",
+      "COVID-19",
+      "코로나",
+      "감염"
+    ],
+    "description": "코로나바이러스감염증-19는 치료 종료 후 4주 동안 헌혈이 금지됩니다. 격리 해제일로부터 4주 경과 시 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "치료 종료 후 (격리 해제일로부터 4주 경과)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "크로이츠펠트-야콥병",
+    "keywords": [
+      "크로이츠펠트-야콥병",
+      "변형 크로이츠펠트-야콥병",
+      "CJD",
+      "vCJD",
+      "Creutzfeldt-Jakob disease"
+    ],
+    "description": "크로이츠펠트-야콥병(또는 변형 크로이츠펠트-야콥병) 또는 가족(혈연) 중에 진단받은 사람이 있으면 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "가족(혈연) 중에 진단받은 사람이 있으면 영구 채혈 금지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "통풍 (치료 중)",
+    "keywords": [
+      "통풍",
+      "gout",
+      "급성 통풍 발작"
+    ],
+    "description": "급성 통풍 발작 치료 중이면 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "etc",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "급성 통풍 발작 치료 중"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "통풍 (무증상)",
+    "keywords": [
+      "통풍",
+      "gout",
+      "요산저하치료"
+    ],
+    "description": "무증상으로 요산저하치료 중일 경우 헌혈이 가능합니다. 단, 병용 약물 기준에 따라 판정됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "무증상으로 요산저하치료 중일 경우 (병용 약물 기준에 따라 판정)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "특발성 혈소판 감소증",
+    "keywords": [
+      "특발성 혈소판 감소증",
+      "ITP",
+      "idiopathic thrombocytopenic purpura"
+    ],
+    "description": "특발성 혈소판 감소증은 치료 종료 후 5년 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 5,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "피부병",
+    "keywords": [
+      "피부병",
+      "skin disease"
+    ],
+    "description": "피부병은 채혈 부위에 이상이 없는 경우 헌혈이 가능합니다. 증상 정도, 치료 여부에 따라 혈액원 의사의 판단에 따릅니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "채혈 부위에 이상이 없는 경우 (증상 정도, 치료 여부에 따라 혈액원 의사의 판단)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "혈액관련질환",
+    "keywords": [
+      "혈액관련질환",
+      "백혈병",
+      "임파종",
+      "만성골수증식성질환",
+      "혈우병",
+      "호즈킨병",
+      "악성 림프종",
+      "적혈구증다증",
+      "만성골수성백혈병",
+      "blood disease",
+      "leukemia",
+      "lymphoma",
+      "myeloproliferative disorder",
+      "hemophilia",
+      "Hodgkin's disease",
+      "polycythemia vera",
+      "CML"
+    ],
+    "description": "백혈병, 임파종, 만성골수증식성질환, 혈우병, 호즈킨병(악성 림프종), 만성골수증식성 질환(적혈구증다증, 만성골수성백혈병 등)과 같은 혈액관련질환은 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "없음"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "A형간염",
+    "keywords": [
+      "A형간염",
+      "hepatitis A"
+    ],
+    "description": "A형간염은 치료 종료 후 1년 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "B형간염 (급성)",
+    "keywords": [
+      "B형간염",
+      "급성 B형간염",
+      "hepatitis B",
+      "acute hepatitis B"
+    ],
+    "description": "급성 B형간염은 치료 종료 1년 후 확인검사 결과에 따라 헌혈 가능 여부가 결정됩니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 1년 후 확인검사 결과에 따라 결정"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "B형간염 (만성)",
+    "keywords": [
+      "B형간염",
+      "만성 B형간염",
+      "hepatitis B",
+      "chronic hepatitis B"
+    ],
+    "description": "만성 B형간염은 원칙적으로 헌혈이 영구적으로 금지됩니다. 단, 특정 확인검사 후 예외적으로 가능할 수 있습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "원칙적으로 영구 금지 (특정 확인검사 후 예외 가능)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "C형간염",
+    "keywords": [
+      "C형간염",
+      "hepatitis C",
+      "anti-HCV"
+    ],
+    "description": "C형간염은 C형간염항체(anti-HCV) 양성은 과거 감염력을 의미하며, 혈중에 바이러스 존재 가능성이 높아 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "C형간염항체(anti-HCV) 양성"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "E형간염",
+    "keywords": [
+      "E형간염",
+      "hepatitis E"
+    ],
+    "description": "E형간염은 치료 종료 후 1년 동안 헌혈이 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "HTLV",
+    "keywords": [
+      "HTLV",
+      "human T-lymphotropic virus"
+    ],
+    "description": "HTLV는 헌혈이 영구적으로 금지됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "없음"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "가족 B형간염 (배우자)",
+    "keywords": [
+      "B형간염",
+      "배우자",
+      "가족",
+      "hepatitis B",
+      "spouse"
+    ],
+    "description": "배우자가 B형간염 보유자인 경우, 헌혈자가 B형간염 표면항체 양성이거나, 결혼 1년 경과 및 B형간염 검사결과가 정상인 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "헌혈자가 표면항체 양성이거나, 결혼 1년 경과 및 B형간염 검사결과 정상"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "가족 C형간염 (배우자)",
+    "keywords": [
+      "C형간염",
+      "배우자",
+      "가족",
+      "hepatitis C",
+      "spouse"
+    ],
+    "description": "배우자가 C형간염 보유자인 경우, 결혼 1년 경과 및 C형간염 검사결과가 정상인 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "결혼 1년 경과 및 C형간염 검사결과 정상"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "가족 B형간염 (어머니)",
+    "keywords": [
+      "B형간염",
+      "어머니",
+      "가족",
+      "hepatitis B",
+      "mother"
+    ],
+    "description": "어머니가 B형간염 보유자인 경우, 헌혈자가 B형간염 표면항체 양성인 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "헌혈자가 표면항체 양성"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "가족 C형간염 (어머니)",
+    "keywords": [
+      "C형간염",
+      "어머니",
+      "가족",
+      "hepatitis C",
+      "mother"
+    ],
+    "description": "어머니가 C형간염 보유자인 경우, 헌혈자의 C형간염 검사결과가 정상인 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "헌혈자의 C형간염 검사결과 정상"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "가족 B형간염 (아버지/형제)",
+    "keywords": [
+      "B형간염",
+      "아버지",
+      "형제",
+      "가족",
+      "hepatitis B",
+      "father",
+      "sibling"
+    ],
+    "description": "아버지, 형제 등 가족이 B형간염 보유자인 경우, 헌혈자의 B형간염 검사결과가 정상인 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "헌혈자의 B형간염 검사결과 정상"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "가족 C형간염 (아버지/형제)",
+    "keywords": [
+      "C형간염",
+      "아버지",
+      "형제",
+      "가족",
+      "hepatitis C",
+      "sibling"
+    ],
+    "description": "아버지, 형제 등 가족이 C형간염 보유자인 경우, 헌혈자의 C형간염 검사결과가 정상인 경우 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "헌혈자의 C형간염 검사결과 정상"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "웨스트나일열",
+    "keywords": [
+      "웨스트나일열",
+      "West Nile Fever",
+      "모기",
+      "발열",
+      "두통",
+      "근육통",
+      "뇌염"
+    ],
+    "description": "웨스트나일열은 모기에 의해 전파되는 감염병으로, 증상 발현 또는 진단 후 6개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "증상 발현 또는 진단 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "유비저",
+    "keywords": [
+      "유비저",
+      "Melioidosis",
+      "발열",
+      "폐렴",
+      "농양"
+    ],
+    "description": "유비저는 세균성 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "유행성이하선염(볼거리)",
+    "keywords": [
+      "유행성이하선염",
+      "볼거리",
+      "Mumps",
+      "이하선염",
+      "발열",
+      "두통",
+      "귀밑샘 부음"
+    ],
+    "description": "유행성이하선염(볼거리)은 바이러스성 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "인플루엔자",
+    "keywords": [
+      "인플루엔자",
+      "독감",
+      "Influenza",
+      "발열",
+      "기침",
+      "콧물",
+      "몸살"
+    ],
+    "description": "인플루엔자는 호흡기 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "일본뇌염",
+    "keywords": [
+      "일본뇌염",
+      "Japanese Encephalitis",
+      "모기",
+      "뇌염",
+      "발열",
+      "두통"
+    ],
+    "description": "일본뇌염은 모기에 의해 전파되는 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "임질",
+    "keywords": [
+      "임질",
+      "Gonorrhea",
+      "성병",
+      "성매개감염병",
+      "요도염",
+      "질염"
+    ],
+    "description": "임질은 성매개 감염병으로, 치료 종료 후 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "장관감염증",
+    "keywords": [
+      "장관감염증",
+      "장염",
+      "설사",
+      "구토",
+      "복통",
+      "세균성 장염",
+      "바이러스성 장염",
+      "원충성 장염",
+      "살모넬라",
+      "장염비브리오",
+      "로타바이러스",
+      "노로바이러스",
+      "이질아메바",
+      "람블편모충"
+    ],
+    "description": "장관감염증은 세균성, 바이러스성, 원충성 등 다양한 원인에 의해 발생하며, 치료 종료 시까지 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "장출혈성대장균감염증",
+    "keywords": [
+      "장출혈성대장균감염증",
+      "O157",
+      "대장균",
+      "설사",
+      "복통",
+      "용혈성요독증후군"
+    ],
+    "description": "장출혈성대장균감염증은 대장균에 의한 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "장티푸스",
+    "keywords": [
+      "장티푸스",
+      "Typhoid Fever",
+      "발열",
+      "두통",
+      "복통",
+      "설사"
+    ],
+    "description": "장티푸스는 살모넬라균에 의한 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "장흡충증",
+    "keywords": [
+      "장흡충증",
+      "흡충",
+      "기생충",
+      "복통",
+      "설사"
+    ],
+    "description": "장흡충증은 기생충 감염으로, 치료 종료 시까지 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "중동호흡기증후군(MERS)",
+    "keywords": [
+      "중동호흡기증후군",
+      "MERS",
+      "메르스",
+      "호흡기",
+      "발열",
+      "기침",
+      "폐렴"
+    ],
+    "description": "중동호흡기증후군(MERS)은 바이러스성 호흡기 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "중증급성호흡기증후군(SARS)",
+    "keywords": [
+      "중증급성호흡기증후군",
+      "SARS",
+      "사스",
+      "호흡기",
+      "발열",
+      "기침",
+      "폐렴"
+    ],
+    "description": "중증급성호흡기증후군(SARS)은 바이러스성 호흡기 감염병으로, 치료 종료 후 3개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "지카바이러스 감염증",
+    "keywords": [
+      "지카바이러스",
+      "Zika Virus",
+      "모기",
+      "발열",
+      "발진",
+      "관절통",
+      "소두증"
+    ],
+    "description": "지카바이러스 감염증은 모기에 의해 전파되는 감염병으로, 치료 종료 후 6개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "진드기매개뇌염",
+    "keywords": [
+      "진드기매개뇌염",
+      "진드기",
+      "뇌염",
+      "발열",
+      "두통",
+      "근육통"
+    ],
+    "description": "진드기매개뇌염은 진드기에 의해 전파되는 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "쯔쯔가무시병",
+    "keywords": [
+      "쯔쯔가무시병",
+      "쯔쯔가무시",
+      "진드기",
+      "발열",
+      "두통",
+      "발진",
+      "가피"
+    ],
+    "description": "쯔쯔가무시병은 진드기에 의해 전파되는 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "첨규콘딜롬",
+    "keywords": [
+      "첨규콘딜롬",
+      "곤지름",
+      "성병",
+      "성매개감염병",
+      "사마귀"
+    ],
+    "description": "첨규콘딜롬은 성매개 감염병으로, 치료 종료 후 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "치쿤구니야열",
+    "keywords": [
+      "치쿤구니야열",
+      "Chikungunya Fever",
+      "모기",
+      "발열",
+      "관절통",
+      "발진"
+    ],
+    "description": "치쿤구니야열은 모기에 의해 전파되는 감염병으로, 치료 종료 후 6개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "카바페넴내성장내세균속균종(CRE) 감염증",
+    "keywords": [
+      "카바페넴내성장내세균속균종",
+      "CRE",
+      "내성균",
+      "감염증",
+      "세균",
+      "항생제 내성"
+    ],
+    "description": "카바페넴내성장내세균속균종(CRE) 감염증은 항생제에 내성을 가진 세균에 의한 감염으로, 치료 종료 시까지 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "콜레라",
+    "keywords": [
+      "콜레라",
+      "Cholera",
+      "설사",
+      "구토",
+      "탈수",
+      "수양성 설사"
+    ],
+    "description": "콜레라는 수인성 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "큐열(Q열)",
+    "keywords": [
+      "큐열",
+      "Q열",
+      "Q Fever",
+      "발열",
+      "두통",
+      "근육통",
+      "폐렴"
+    ],
+    "description": "큐열(Q열)은 인수공통 감염병으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "크로이츠펠트-야콥병(CJD) 및 변종(vCJD)",
+    "keywords": [
+      "크로이츠펠트-야콥병",
+      "CJD",
+      "변종 CJD",
+      "vCJD",
+      "프리온",
+      "뇌질환",
+      "치매"
+    ],
+    "description": "크로이츠펠트-야콥병(CJD) 및 변종(vCJD)은 신경퇴행성 질환으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "크리미안콩고출혈열",
+    "keywords": [
+      "크리미안콩고출혈열",
+      "CCHF",
+      "출혈열",
+      "진드기",
+      "발열",
+      "출혈"
+    ],
+    "description": "크리미안콩고출혈열은 진드기에 의해 전파되는 출혈열로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "클라미디아감염증",
+    "keywords": [
+      "클라미디아감염증",
+      "클라미디아",
+      "성병",
+      "성매개감염병",
+      "요도염",
+      "자궁경부염"
+    ],
+    "description": "클라미디아감염증은 성매개 감염병으로, 치료 종료 후 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "탄저",
+    "keywords": [
+      "탄저",
+      "Anthrax",
+      "생물테러",
+      "피부 탄저",
+      "흡입 탄저",
+      "소화기 탄저"
+    ],
+    "description": "탄저는 세균성 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "파라티푸스",
+    "keywords": [
+      "파라티푸스",
+      "Paratyphoid Fever",
+      "발열",
+      "두통",
+      "복통",
+      "설사"
+    ],
+    "description": "파라티푸스는 살모넬라균에 의한 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "파상풍",
+    "keywords": [
+      "파상풍",
+      "Tetanus",
+      "근육 경련",
+      "턱 잠김",
+      "상처"
+    ],
+    "description": "파상풍은 세균성 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "페스트",
+    "keywords": [
+      "페스트",
+      "Plague",
+      "생물테러",
+      "림프절 부종",
+      "발열",
+      "폐렴"
+    ],
+    "description": "페스트는 세균성 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "편충증",
+    "keywords": [
+      "편충증",
+      "편충",
+      "기생충",
+      "복통",
+      "설사",
+      "빈혈"
+    ],
+    "description": "편충증은 기생충 감염으로, 치료 종료 시까지 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "폐흡충증",
+    "keywords": [
+      "폐흡충증",
+      "폐흡충",
+      "기생충",
+      "기침",
+      "객혈",
+      "흉통"
+    ],
+    "description": "폐흡충증은 기생충 감염으로, 치료 종료 시까지 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "폴리오",
+    "keywords": [
+      "폴리오",
+      "소아마비",
+      "Poliomyelitis",
+      "마비",
+      "발열",
+      "두통"
+    ],
+    "description": "폴리오는 바이러스성 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "풍진",
+    "keywords": [
+      "풍진",
+      "Rubella",
+      "발진",
+      "발열",
+      "림프절 부종"
+    ],
+    "description": "풍진은 바이러스성 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "한센병",
+    "keywords": [
+      "한센병",
+      "나병",
+      "Hansen's Disease",
+      "피부 병변",
+      "신경 손상"
+    ],
+    "description": "한센병은 만성 감염병으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "광동주혈선충증",
+    "keywords": [
+      "광동주혈선충증",
+      "기생충",
+      "뇌수막염",
+      "두통",
+      "발열"
+    ],
+    "description": "광동주혈선충증은 해외유입 기생충 감염으로, 치료 종료 후 2개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "리슈만편모충증",
+    "keywords": [
+      "리슈만편모충증",
+      "기생충",
+      "피부 리슈만증",
+      "내장 리슈만증",
+      "발열",
+      "체중 감소"
+    ],
+    "description": "리슈만편모충증은 해외유입 기생충 감염으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "메디나충증",
+    "keywords": [
+      "메디나충증",
+      "기생충",
+      "메디나충",
+      "피부 궤양",
+      "물집"
+    ],
+    "description": "메디나충증은 해외유입 기생충 감염으로, 치료 종료 시까지 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "바베스열원충증",
+    "keywords": [
+      "바베스열원충증",
+      "기생충",
+      "진드기",
+      "발열",
+      "빈혈",
+      "황달"
+    ],
+    "description": "바베스열원충증은 해외유입 기생충 감염으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "사상충증",
+    "keywords": [
+      "사상충증",
+      "기생충",
+      "림프부종",
+      "코끼리피부병",
+      "모기"
+    ],
+    "description": "사상충증은 해외유입 기생충 감염으로, 치료 종료 후 4개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "샤가스병",
+    "keywords": [
+      "샤가스병",
+      "기생충",
+      "트리파노소마",
+      "심장병",
+      "소화기 질환"
+    ],
+    "description": "샤가스병은 해외유입 기생충 감염으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "아프리카수면병",
+    "keywords": [
+      "아프리카수면병",
+      "기생충",
+      "체체파리",
+      "수면 장애",
+      "발열",
+      "두통"
+    ],
+    "description": "아프리카수면병은 해외유입 기생충 감염으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "약구충증",
+    "keywords": [
+      "약구충증",
+      "구충",
+      "기생충",
+      "빈혈",
+      "복통",
+      "설사"
+    ],
+    "description": "약구충증은 해외유입 기생충 감염으로, 치료 종료 후 3개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "주혈흡충증",
+    "keywords": [
+      "주혈흡충증",
+      "흡충",
+      "기생충",
+      "간 비대",
+      "비장 비대",
+      "혈뇨"
+    ],
+    "description": "주혈흡충증은 해외유입 기생충 감염으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "톡소포자충증",
+    "keywords": [
+      "톡소포자충증",
+      "톡소포자충",
+      "기생충",
+      "림프절염",
+      "발열",
+      "근육통"
+    ],
+    "description": "톡소포자충증은 해외유입 기생충 감염으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "포충증",
+    "keywords": [
+      "포충증",
+      "포충",
+      "기생충",
+      "낭종",
+      "간 낭종",
+      "폐 낭종"
+    ],
+    "description": "포충증은 해외유입 기생충 감염으로, 치료 종료 후 5개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 5,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "홍역",
+    "keywords": [
+      "홍역",
+      "Measles",
+      "발진",
+      "발열",
+      "기침",
+      "콧물",
+      "눈곱"
+    ],
+    "description": "홍역은 바이러스성 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "황열",
+    "keywords": [
+      "황열",
+      "Yellow Fever",
+      "모기",
+      "발열",
+      "황달",
+      "출혈"
+    ],
+    "description": "황열은 모기에 의해 전파되는 감염병으로, 치료 종료 후 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "회충증",
+    "keywords": [
+      "회충증",
+      "회충",
+      "기생충",
+      "복통",
+      "설사",
+      "영양실조"
+    ],
+    "description": "회충증은 기생충 감염으로, 치료 종료 시까지 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "치료 종료 시까지"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "후천성면역결핍증(AIDS)",
+    "keywords": [
+      "후천성면역결핍증",
+      "AIDS",
+      "에이즈",
+      "HIV",
+      "면역결핍",
+      "성병"
+    ],
+    "description": "후천성면역결핍증(AIDS)은 면역 체계를 손상시키는 질병으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "A형간염",
+    "keywords": [
+      "A형간염",
+      "Hepatitis A",
+      "간염",
+      "황달",
+      "피로",
+      "식욕부진"
+    ],
+    "description": "A형간염은 바이러스성 간염으로, 치료 종료 후 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "B형간염 (급성)",
+    "keywords": [
+      "B형간염",
+      "급성 B형간염",
+      "Hepatitis B",
+      "간염",
+      "황달",
+      "피로",
+      "확인검사"
+    ],
+    "description": "급성 B형간염은 바이러스성 간염으로, 치료 종료 후 1년간 헌혈이 제한되며, 확인검사 결과에 따라 최종 결정됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후 (확인검사 결과에 따라 결정)"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "B형간염 (만성)",
+    "keywords": [
+      "B형간염",
+      "만성 B형간염",
+      "Hepatitis B",
+      "간염",
+      "간경변",
+      "간암"
+    ],
+    "description": "만성 B형간염은 바이러스성 간염으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "C형간염",
+    "keywords": [
+      "C형간염",
+      "Hepatitis C",
+      "간염",
+      "만성 간염",
+      "간경변",
+      "간암"
+    ],
+    "description": "C형간염은 바이러스성 간염으로, 영구적으로 헌혈이 불가합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "영구 헌혈 불가"
+    }
+  },
+  {
+    "category": "disease",
+    "name": "E형간염",
+    "keywords": [
+      "E형간염",
+      "Hepatitis E",
+      "간염",
+      "수인성",
+      "황달",
+      "피로"
+    ],
+    "description": "E형간염은 바이러스성 간염으로, 치료 종료 후 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "치료 종료 후"
+    }
+  }
+]

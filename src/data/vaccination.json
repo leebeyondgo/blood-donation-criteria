@@ -1,335 +1,483 @@
 [
   {
-    "id": "vaccination-001",
     "category": "vaccination",
     "name": "뇌수막염",
-    "keywords": ["뇌수막염", "수막구균"],
-    "description": "뇌수막염 백신 접종 후 24시간간 헌혈이 제한됩니다. (수막구균 포함)",
+    "keywords": ["뇌수막염", "수막구균", "예방접종", "백신"],
+    "description": "뇌수막염 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다. 수막구균 백신을 포함합니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-002",
     "category": "vaccination",
     "name": "대상포진",
-    "keywords": ["대상포진"],
-    "description": "대상포진 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "keywords": ["대상포진", "shingles", "예방접종", "백신"],
+    "description": "대상포진 예방접종 후 4주 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-003",
     "category": "vaccination",
-    "name": "광견병(동물에 물린 후)",
-    "keywords": ["광견병", "공수병", "동물에 물림"],
-    "description": "동물에 물린 후 광견병(공수병) 예방접종 시 1년간 헌혈이 제한됩니다.",
+    "name": "동물에게 물린 후 광견병",
+    "keywords": ["동물 물림", "광견병", "공수병", "rabies", "예방접종", "백신"],
+    "description": "동물에게 물린 후 광견병 예방접종을 받은 경우 1년 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-004",
     "category": "vaccination",
     "name": "디프테리아",
-    "keywords": ["디프테리아"],
-    "description": "디프테리아 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "keywords": ["디프테리아", "diphtheria", "예방접종", "백신"],
+    "description": "디프테리아 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-005",
     "category": "vaccination",
-    "name": "발진티푸스(typhus)",
-    "keywords": ["발진티푸스", "typhus"],
-    "description": "발진티푸스 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "name": "발진티푸스",
+    "keywords": ["발진티푸스", "typhus", "예방접종", "백신"],
+    "description": "발진티푸스 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-006",
     "category": "vaccination",
-    "name": "백일해(pertussis)",
-    "keywords": ["백일해", "pertussis"],
-    "description": "백일해 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "name": "백일해",
+    "keywords": ["백일해", "pertussis", "예방접종", "백신"],
+    "description": "백일해 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-007",
     "category": "vaccination",
     "name": "소아마비(경구용)",
-    "keywords": ["소아마비", "경구용 소아마비"],
-    "description": "경구용 소아마비 백신 접종 후 2주간 헌혈이 제한됩니다.",
+    "keywords": ["소아마비", "경구용 소아마비", "polio", "예방접종", "백신"],
+    "description": "경구용 소아마비 예방접종 후 2주 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 2, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-008",
     "category": "vaccination",
     "name": "소아마비(주사용)",
-    "keywords": ["소아마비", "주사용 소아마비"],
-    "description": "주사용 소아마비 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "keywords": ["소아마비", "주사용 소아마비", "polio", "예방접종", "백신"],
+    "description": "주사용 소아마비 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-009",
     "category": "vaccination",
     "name": "수두",
-    "keywords": ["수두"],
-    "description": "수두 백신 접종 후 4주간 헌혈 금지.",
+    "keywords": ["수두", "chickenpox", "예방접종", "백신"],
+    "description": "수두 예방접종 후 4주 동안 헌혈이 제한됩니다. 수두환자와 접촉한 경우 1개월간 헌혈이 금지됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-009b",
     "category": "vaccination",
-    "name": "수두환자 접촉",
-    "keywords": ["수두", "접촉"],
-    "description": "수두환자와 접촉 시 1개월간 헌혈 금지.",
+    "name": "예방목적의 광견병",
+    "keywords": ["광견병", "공수병", "rabies", "예방접종", "백신"],
+    "description": "예방목적의 광견병(공수병) 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "month", "condition": "접촉일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-010",
-    "category": "vaccination",
-    "name": "예방목적의 광견병(공수병)",
-    "keywords": ["공수병", "광견병", "예방접종"],
-    "description": "예방목적의 광견병(공수병) 백신 접종 후 1년간 헌혈이 제한됩니다.",
-    "allowable": false,
-    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "접종일로부터"}
-  },
-  {
-    "id": "vaccination-011",
     "category": "vaccination",
     "name": "유행성이하선염",
-    "keywords": ["유행성이하선염", "MMR", "볼거리"],
-    "description": "유행성이하선염(MMR 포함) 백신 접종 후 4주간 헌혈이 제한됩니다.",
+    "keywords": ["유행성이하선염", "볼거리", "mumps", "MMR", "예방접종", "백신"],
+    "description": "유행성이하선염 예방접종 후 4주 동안 헌혈이 제한됩니다. 단독 백신은 없으며, MMR(홍역, 볼거리, 풍진) 혼합백신으로 적용됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-012",
+    "category": "vaccination",
+    "name": "유행성출혈열-신증후군 출혈열",
+    "keywords": ["유행성출혈열", "신증후군 출혈열", "HFRS", "예방접종", "백신"],
+    "description": "유행성출혈열-신증후군 출혈열 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
+  },
+  {
     "category": "vaccination",
     "name": "인플루엔자(사백신)",
-    "keywords": ["인플루엔자", "독감", "사백신"],
-    "description": "인플루엔자(사백신) 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "keywords": ["인플루엔자", "사백신", "독감", "flu", "예방접종", "백신"],
+    "description": "인플루엔자(사백신) 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-013",
     "category": "vaccination",
     "name": "인플루엔자(생백신)",
-    "keywords": ["인플루엔자", "독감", "생백신", "FluMist"],
-    "description": "인플루엔자(생백신, FluMist 등) 백신 접종 후 4주간 헌혈이 제한됩니다.",
+    "keywords": ["인플루엔자", "생백신", "독감", "FluMist", "플루미스트", "flu", "예방접종", "백신"],
+    "description": "인플루엔자(생백신) 예방접종 후 4주 동안 헌혈이 제한됩니다. 비강흡입 방식의 FluMist(플루미스트) 등이 해당됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-014",
     "category": "vaccination",
     "name": "일본뇌염(사백신)",
-    "keywords": ["일본뇌염", "사백신"],
-    "description": "일본뇌염(사백신) 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "keywords": ["일본뇌염", "사백신", "Japanese encephalitis", "예방접종", "백신"],
+    "description": "일본뇌염(사백신) 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-015",
     "category": "vaccination",
     "name": "일본뇌염(생백신)",
-    "keywords": ["일본뇌염", "생백신"],
-    "description": "일본뇌염(생백신) 백신 접종 후 4주간 헌혈이 제한됩니다.",
+    "keywords": ["일본뇌염", "생백신", "Japanese encephalitis", "예방접종", "백신"],
+    "description": "일본뇌염(생백신) 예방접종 후 4주 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-016",
     "category": "vaccination",
-    "name": "자궁경부암(가다실, 서바릭스)",
-    "keywords": ["자궁경부암", "가다실", "서바릭스"],
-    "description": "자궁경부암(가다실, 서바릭스 등) 백신 접종 후 24시간간 헌혈이 제한됩니다. (유전자 재조합 백신)",
+    "name": "자궁경부암",
+    "keywords": ["자궁경부암", "가다실", "서바릭스", "HPV", "예방접종", "백신"],
+    "description": "자궁경부암(가다실, 서바릭스 등 유전자 재조합 백신) 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-017",
     "category": "vaccination",
     "name": "장티푸스(경구용)",
-    "keywords": ["장티푸스", "경구용"],
-    "description": "경구용 장티푸스 백신 접종 후 2주간 헌혈이 제한됩니다.",
+    "keywords": ["장티푸스", "경구용 장티푸스", "typhoid", "예방접종", "백신"],
+    "description": "경구용 장티푸스 예방접종 후 2주 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 2, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-018",
     "category": "vaccination",
     "name": "장티푸스(주사용)",
-    "keywords": ["장티푸스", "주사용"],
-    "description": "주사용 장티푸스 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "keywords": ["장티푸스", "주사용 장티푸스", "typhoid", "예방접종", "백신"],
+    "description": "주사용 장티푸스 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-019",
     "category": "vaccination",
     "name": "천연두",
-    "keywords": ["천연두"],
-    "description": "천연두 백신 접종 후 1년간 헌혈이 제한됩니다.",
+    "keywords": ["천연두", "smallpox", "예방접종", "백신"],
+    "description": "천연두 예방접종 후 2개월 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "month",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-020",
     "category": "vaccination",
-    "name": "코로나19(COVID-19)",
-    "keywords": ["코로나19", "COVID-19"],
-    "description": "코로나19 백신 접종 후 7일간 헌혈 금지.",
+    "name": "코로나19 (COVID-19)",
+    "keywords": ["코로나19", "COVID-19", "코로나", "예방접종", "백신"],
+    "description": "코로나19 예방접종은 매 접종일로부터 7일간 헌혈이 제한됩니다. 접종 후 이상증상이 발생한 경우, 증상이 사라진 날로부터 7일간 추가로 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-020b",
-    "category": "vaccination",
-    "name": "코로나19 백신 이상증상",
-    "keywords": ["코로나19", "백신", "이상증상"],
-    "description": "코로나19 백신 접종 후 이상증상 있으면 증상 소실 후 7일간 헌혈 금지.",
-    "allowable": false,
-    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "증상 소실 후"}
-  },
-  {
-    "id": "vaccination-021",
     "category": "vaccination",
     "name": "콜레라",
-    "keywords": ["콜레라"],
-    "description": "콜레라 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "keywords": ["콜레라", "cholera", "예방접종", "백신"],
+    "description": "콜레라 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다. 사백신이나 톡소이드 접종 후 발열 등 이상증상이 없는 경우 24시간 후 채혈 가능합니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-022",
     "category": "vaccination",
-    "name": "탄저병(anthrax)",
-    "keywords": ["탄저병", "anthrax"],
-    "description": "탄저병 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "name": "탄저병",
+    "keywords": ["탄저병", "anthrax", "예방접종", "백신"],
+    "description": "탄저병 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다. 사백신이나 톡소이드 접종 후 발열 등 이상증상이 없는 경우 24시간 후 채혈 가능합니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-023",
     "category": "vaccination",
-    "name": "파라티푸스",
-    "keywords": ["파라티푸스"],
-    "description": "파라티푸스 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "name": "파라티포이드",
+    "keywords": ["파라티포이드", "paratyphoid", "예방접종", "백신"],
+    "description": "파라티포이드 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다. 사백신이나 톡소이드 접종 후 발열 등 이상증상이 없는 경우 24시간 후 채혈 가능합니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-024",
     "category": "vaccination",
-    "name": "파상풍(tetanus)",
-    "keywords": ["파상풍", "tetanus"],
-    "description": "파상풍 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "name": "파상풍",
+    "keywords": ["파상풍", "tetanus", "예방접종", "백신"],
+    "description": "파상풍 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다. 사백신이나 톡소이드 접종 후 발열 등 이상증상이 없는 경우 24시간 후 채혈 가능합니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-025",
     "category": "vaccination",
-    "name": "페스트(plague)",
-    "keywords": ["페스트", "plague"],
-    "description": "페스트 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "name": "파상풍 (상처, 못에 찔림 등)",
+    "keywords": ["파상풍", "상처", "못 찔림", "tetanus", "예방접종", "백신"],
+    "description": "상처나 못에 찔린 후 파상풍 예방접종을 받은 경우 4주 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-026",
     "category": "vaccination",
-    "name": "폐렴(폐구균 등)",
-    "keywords": ["폐렴", "폐구균"],
-    "description": "폐렴(폐구균 등) 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "name": "페스트",
+    "keywords": ["페스트", "plague", "예방접종", "백신"],
+    "description": "페스트 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다. 사백신이나 톡소이드 접종 후 발열 등 이상증상이 없는 경우 24시간 후 채혈 가능합니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-027",
+    "category": "vaccination",
+    "name": "폐렴",
+    "keywords": ["폐렴", "폐구균", "pneumonia", "예방접종", "백신"],
+    "description": "폐렴(폐구균 등) 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다. 사백신이나 톡소이드 접종 후 발열 등 이상증상이 없는 경우 24시간 후 채혈 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
+  },
+  {
     "category": "vaccination",
     "name": "풍진",
-    "keywords": ["풍진", "MMR"],
-    "description": "풍진(MMR 포함) 백신 접종 후 4주간 헌혈이 제한됩니다.",
+    "keywords": ["풍진", "rubella", "예방접종", "백신"],
+    "description": "풍진 예방접종 후 4주 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-028",
     "category": "vaccination",
     "name": "홍역",
-    "keywords": ["홍역", "MMR"],
-    "description": "홍역(MMR 포함) 백신 접종 후 4주간 헌혈이 제한됩니다.",
+    "keywords": ["홍역", "measles", "MMR", "예방접종", "백신"],
+    "description": "홍역 예방접종 후 4주 동안 헌혈이 제한됩니다. 단독 백신은 없으며, MMR(홍역, 볼거리, 풍진) 혼합백신으로 적용됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-029",
     "category": "vaccination",
     "name": "황열",
-    "keywords": ["황열"],
-    "description": "황열 백신 접종 후 2주간 헌혈이 제한됩니다.",
+    "keywords": ["황열", "yellow fever", "예방접종", "백신"],
+    "description": "황열 예방접종 후 2주 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 2, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-030",
     "category": "vaccination",
     "name": "A형간염",
-    "keywords": ["A형간염"],
-    "description": "A형간염 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "keywords": ["A형간염", "hepatitis A", "예방접종", "백신"],
+    "description": "A형간염 예방접종 후 24시간(1일) 동안 헌혈이 제한됩니다. 사백신이나 톡소이드 접종 후 발열 등 이상증상이 없는 경우 24시간 후 채혈 가능합니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-031",
     "category": "vaccination",
     "name": "B형간염(예방목적)",
-    "keywords": ["B형간염", "예방목적"],
-    "description": "B형간염(예방목적) 백신 접종 후 24시간간 헌혈이 제한됩니다.",
+    "keywords": ["B형간염", "예방접종", "hepatitis B", "백신"],
+    "description": "예방목적의 B형간염 예방접종 후 2주 동안 헌혈이 제한됩니다. 이는 B형간염표면항원 검사의 위양성 가능성 때문입니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 24, "periodUnit": "hour", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-032",
     "category": "vaccination",
     "name": "B형간염 면역글로불린(HBIG)",
-    "keywords": ["B형간염 면역글로불린", "HBIG"],
-    "description": "B형간염 면역글로불린(HBIG) 접종 시 1년간 헌혈이 제한됩니다.",
+    "keywords": ["B형간염", "면역글로불린", "HBIG", "hepatitis B", "예방접종", "백신"],
+    "description": "B형간염 면역글로불린(HBIG) 접종 후 1년 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-033",
     "category": "vaccination",
     "name": "BCG접종",
-    "keywords": ["BCG", "결핵"],
-    "description": "BCG(결핵) 백신 접종 후 4주간 헌혈이 제한됩니다.",
+    "keywords": ["BCG", "결핵", "예방접종", "백신"],
+    "description": "BCG 접종 후 4주 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-034",
     "category": "vaccination",
     "name": "MMR",
-    "keywords": ["MMR", "홍역", "유행성이하선염", "풍진"],
-    "description": "MMR(홍역, 유행성이하선염, 풍진 혼합백신) 접종 후 4주간 헌혈이 제한됩니다.",
+    "keywords": ["MMR", "홍역", "유행성이하선염", "풍진", "Measles", "Mumps", "Rubella", "예방접종", "백신"],
+    "description": "MMR(홍역, 유행성이하선염, 풍진 혼합백신) 접종 후 4주 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 4, "periodUnit": "week", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
   },
   {
-    "id": "vaccination-035",
     "category": "vaccination",
-    "name": "국내에서 허가받지 않은 예방접종(여행 등)",
-    "keywords": ["국내 미승인 백신", "해외 예방접종", "여행 백신"],
-    "description": "국내에서 허가받지 않은 예방접종(여행 등)은 1년간 헌혈이 제한됩니다.",
+    "name": "국내에서 허가받지 않은 예방접종",
+    "keywords": ["국내 미허가 백신", "Q열", "예방접종", "백신"],
+    "description": "국내에서 허가받지 않은 예방접종(Q열 등)을 받은 경우 1년 동안 헌혈이 제한됩니다.",
     "allowable": false,
-    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "year", "condition": "접종일로부터"}
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "접종 후"
+    }
   }
 ]

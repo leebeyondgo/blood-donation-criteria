@@ -1,0 +1,422 @@
+[
+  {
+    "category": "etc",
+    "name": "귀뚫음(피어싱) (1회용 도구 사용)",
+    "keywords": [
+      "귀뚫음",
+      "피어싱",
+      "piercing",
+      "귀걸이",
+      "악세사리",
+      "1회용 도구",
+      "레이저"
+    ],
+    "description": "1회용 도구(레이저 포함)를 사용하여 귀를 뚫은 경우 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "1회용 도구(레이저 포함) 사용 후"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "귀뚫음(피어싱) (비위생적 시술)",
+    "keywords": [
+      "귀뚫음",
+      "피어싱",
+      "piercing",
+      "귀걸이",
+      "악세사리",
+      "비위생",
+      "무균 미확인"
+    ],
+    "description": "1회용 도구를 사용하지 않거나 무균 여부가 확인되지 않은 귀뚫음(피어싱) 시술의 경우 6개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "1회용 도구 미사용 또는 무균 여부 미확인 시"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "사람에게 물림",
+    "keywords": [
+      "사람에게 물림",
+      "물림",
+      "human bite",
+      "상처",
+      "피부 손상"
+    ],
+    "description": "다른 사람에게 물려 피부가 손상된 경우 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "피부 손상 후"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "주사침 찔림 사고",
+    "keywords": [
+      "주사침",
+      "주사바늘",
+      "찔림",
+      "사고",
+      "날카로운 기구",
+      "needle stick"
+    ],
+    "description": "다른 사람이 사용한 주사침이나 날카로운 기구에 찔린 경우 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "사고 발생 후"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "문신 (의료기관 시술)",
+    "keywords": [
+      "문신",
+      "반영구화장",
+      "타투",
+      "tattoo",
+      "의료기관"
+    ],
+    "description": "의료기관에서 문신(반영구화장 포함) 시술을 받은 경우 1개월 후 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "의료기관 시술 후"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "문신 (비의료기관 시술)",
+    "keywords": [
+      "문신",
+      "반영구화장",
+      "타투",
+      "tattoo",
+      "비의료기관"
+    ],
+    "description": "비의료기관에서 문신(반영구화장 포함) 시술을 받은 경우 6개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "비의료기관 시술 후"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "헤나 문신",
+    "keywords": [
+      "헤나 문신",
+      "헤나",
+      "henna",
+      "문신"
+    ],
+    "description": "헤나 문신은 피부병이 없으면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "condition": "피부병이 없을 시"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "타인 혈액 접촉",
+    "keywords": [
+      "타인 혈액",
+      "혈액 접촉",
+      "점막 손상",
+      "피부 손상",
+      "blood exposure"
+    ],
+    "description": "손상된 점막이나 피부에 타인의 혈액이 접촉된 경우 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "접촉 후"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "벌침",
+    "keywords": [
+      "벌침",
+      "벌",
+      "bee sting"
+    ],
+    "description": "벌침은 염증이 발생하지 않은 경우에 한해 당일 헌혈이 배제됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "etc",
+      "condition": "당일 배제 (염증 없을 시)"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "동물 물림 (접종 애완동물)",
+    "keywords": [
+      "동물 물림",
+      "공수병",
+      "예방접종",
+      "애완동물",
+      "rabies",
+      "물림"
+    ],
+    "description": "공수병 예방접종을 받은 애완동물에게 물린 경우, 상처가 치유되면 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "after_recovery",
+      "condition": "상처 치유 후"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "동물 물림 (미접종 동물)",
+    "keywords": [
+      "동물 물림",
+      "공수병",
+      "예방접종",
+      "미접종 동물",
+      "rabies",
+      "물림"
+    ],
+    "description": "공수병 예방접종을 받지 않은 동물에게 물린 경우 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "물린 후"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "불특정 이성/동성 성접촉",
+    "keywords": [
+      "불특정 이성과 성접촉",
+      "남성과 성접촉",
+      "성접촉",
+      "성관계",
+      "대가성 성관계",
+      "성매매"
+    ],
+    "description": "과거 병력을 모르거나 대가를 지불한 성행위 상대 등을 의미하며, 에이즈 등 감염 노출 위험성을 고려하여 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "최종 성접촉일로부터"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "외국인",
+    "keywords": [
+      "외국인",
+      "외국 국적",
+      "외국인 헌혈"
+    ],
+    "description": "외국인은 국내 1년 이상 거주, 한국어 의사소통 가능, 신분증 소지 등 3가지 조건을 모두 만족해야 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "국내 1년 이상 거주 (단, 최근 1년간 해외 체류 90일 이상 시 최종 입국일로부터 1년간 보류), 한국어 의사소통 가능 (또는 제3자 통역 대동), 신분증 소지 (외국인등록증, 국내거소신고증 등) 시 가능"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "운전자, 고소 작업자 등",
+    "keywords": [
+      "운전자",
+      "고소 작업자",
+      "다이버",
+      "화물 운전자",
+      "여객 운전자",
+      "특수 직업",
+      "헌혈 후 휴식"
+    ],
+    "description": "운전자, 고소 작업자 등은 근무 상태를 고려하여 헌혈 가능 여부가 판정됩니다. 채혈 후 12시간 이상 휴식 가능 시에만 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "근무 상태를 고려하여 판정하며, 채혈 후 12시간 이상 휴식 가능 시에만 가능"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "조류인플루엔자 발생지역 대상자",
+    "keywords": [
+      "조류인플루엔자",
+      "AI",
+      "조류독감",
+      "발생지역",
+      "가금류 농장",
+      "살처분",
+      "방역요원",
+      "타미플루"
+    ],
+    "description": "조류인플루엔자 발생지역 반경 3km 내 가금류 농장주/종사자 및 동거가족, 살처분자 및 방역요원 등은 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "week",
+      "condition": "위험지역 해제 후 2주 경과 시 가능. 타미플루 복용 시, 복용 종료 2주 경과 후 가능"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "장애인",
+    "keywords": [
+      "장애인",
+      "뇌성마비",
+      "지체 장애",
+      "헌혈 가능"
+    ],
+    "description": "문진 항목을 이해할 수 있으면 헌혈이 가능하며, 뇌성마비 등의 경우 헌혈자의 안전성이 보장되면 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "문진 항목을 이해할 수 있으면 가능 (제3자 의사소통 도움 권장). 뇌성마비 등은 헌혈자의 안전성이 보장되면 가능"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "죄수, 수감자",
+    "keywords": [
+      "죄수",
+      "수감자",
+      "교도소",
+      "구치소",
+      "재소자"
+    ],
+    "description": "에이즈 등 감염 노출 위험성을 고려하여 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "최종 출소일로부터"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "채혈 당시 알코올 섭취자",
+    "keywords": [
+      "알코올 섭취",
+      "음주",
+      "술",
+      "음주 후 헌혈"
+    ],
+    "description": "채혈 당시 알코올을 섭취한 경우 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "당일 헌혈 불가"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "채혈에 대한 심한 공포감",
+    "keywords": [
+      "채혈 공포",
+      "주사 공포",
+      "헌혈 공포",
+      "공포감"
+    ],
+    "description": "채혈에 대한 심한 공포감을 느끼는 경우 헌혈이 영구적으로 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "심한 공포감으로 인해 헌혈 불가"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "항공기 조종사",
+    "keywords": [
+      "항공기 조종사",
+      "조종사",
+      "파일럿",
+      "특수 직업",
+      "헌혈 후 휴식"
+    ],
+    "description": "항공기 조종사는 채혈 후 24시간 이상 휴식 가능 시에만 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "condition_check",
+      "condition": "채혈 후 24시간 이상 휴식 가능 시에만 가능"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "혈관이 특히 가는 경우",
+    "keywords": [
+      "혈관",
+      "가는 혈관",
+      "혈관 찾기 어려움"
+    ],
+    "description": "혈관이 특히 가는 경우에도 헌혈이 가능합니다.",
+    "allowable": true,
+    "restriction": {
+      "type": "etc",
+      "condition": "헌혈 가능"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "전혈헌혈 주기",
+    "keywords": [
+      "전혈헌혈",
+      "헌혈 주기",
+      "8주",
+      "다음 헌혈"
+    ],
+    "description": "전혈헌혈을 한 경우, 8주 후 같은 요일부터 다음 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 8,
+      "periodUnit": "week",
+      "condition": "8주 후 같은 요일부터 가능"
+    }
+  },
+  {
+    "category": "etc",
+    "name": "성분헌혈 주기",
+    "keywords": [
+      "성분헌혈",
+      "헌혈 주기",
+      "2주",
+      "다음 헌혈"
+    ],
+    "description": "성분헌혈을 한 경우, 2주 후 같은 요일부터 다음 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "week",
+      "condition": "2주 후 같은 요일부터 가능"
+    }
+  }
+]
