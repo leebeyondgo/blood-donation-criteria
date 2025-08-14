@@ -27,6 +27,14 @@
   },
   {
     "category": "medication",
+    "name": "타이레놀 (아세트아미노펜 계열)",
+    "keywords": ["타이레놀", "아세트아미노펜", "단순 진통제"],
+  "description": "아세트아미노펜 성분 진통제 복용 당일 헌혈 불가, 다음 날부터 가능.",
+  "allowable": false,
+  "restriction": {"type": "period", "periodValue": 1, "periodUnit": "day", "condition": "복용 당일"}
+  },
+  {
+    "category": "medication",
     "name": "갑상선 대체호르몬제",
     "keywords": [
       "갑상선 대체호르몬제",

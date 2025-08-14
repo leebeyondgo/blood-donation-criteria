@@ -1,6 +1,5 @@
 [
     {
-    "id": "disease-001",
     "category": "disease",
     "name": "감기",
     "keywords": [
@@ -39,7 +38,6 @@
     }
   },
   {
-    "id": "disease-002",
     "category": "disease",
     "name": "장염",
     "keywords": [
