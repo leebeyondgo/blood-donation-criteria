@@ -26,24 +26,6 @@
     "allowable": false,
     "restriction": {"type": "period", "periodValue": 3, "periodUnit": "day", "condition": "마지막 복용 후(혈소판헌혈)"}
     },
-  {
-    "id": "medication-012",
-    "category": "medication",
-    "name": "손 습진 치료제 (알리트레티노인)",
-    "keywords": ["알리톡", "알리트레티노인", "손 습진", "치료제"],
-    "description": "알리트레티노인 성분의 손 습진 치료제는 복용 중지 후 1개월간 헌혈이 제한됩니다.",
-    "allowable": false,
-    "restriction": {"type": "period", "periodValue": 1, "periodUnit": "month", "condition": "복용 중지 후"}
-    },
-  {
-    "id": "medication-023",
-    "category": "medication",
-    "name": "스테로이드제(부신피질호르몬제)",
-    "keywords": ["스테로이드", "부신피질호르몬제", "스테로이드제", "염증", "면역억제"],
-    "description": "스테로이드제(부신피질호르몬제)는 복용 또는 주사 후 7일간 헌혈이 제한됩니다.",
-    "allowable": false,
-    "restriction": {"type": "period", "periodValue": 7, "periodUnit": "day", "condition": "복용 또는 주사 후"}
-    },
     {
       "id": "medication-026",
       "category": "medication",
