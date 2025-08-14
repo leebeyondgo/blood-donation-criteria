@@ -204,6 +204,6 @@ const ResultItem = React.memo(({ item, baseDate, formatDate }) => {
       </Collapse>
     </Card>
   );
-};
+});
 
 export default ResultItem;
