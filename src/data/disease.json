@@ -1,4 +1,44 @@
 [
+    {
+    "id": "disease-001",
+    "category": "disease",
+    "name": "감기",
+    "keywords": [
+      "감기",
+      "몸살",
+      "인후통",
+      "기침",
+      "콧물",
+      "편도선염"
+    ],
+    "description": "감기, 인후통, 몸살 등 호흡기 증상이 있는 동안에는 헌혈할 수 없으며, 증상이 완전히 사라지고 컨디션이 회복된 후 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "증상 소실 등 완치 후"
+    }
+  },
+  {
+    "id": "disease-002",
+    "category": "disease",
+    "name": "장염",
+    "keywords": [
+      "장염",
+      "설사",
+      "구토",
+      "복통"
+    ],
+    "description": "설사, 구토, 복통 등 위장관계 증상이 있는 동안에는 헌혈할 수 없으며, 증상이 완전히 사라지고 컨디션이 회복된 후 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "after_recovery",
+      "periodValue": 0,
+      "periodUnit": "day",
+      "condition": "증상 소실 등 완치 후"
+    }
+  },
   {
     "category": "disease",
     "name": "가와사키병",
