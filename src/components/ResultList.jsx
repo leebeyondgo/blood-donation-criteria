@@ -38,7 +38,7 @@ const ResultList = ({
     <ul className="result-list list-none mt-8 flex flex-col items-center space-y-4">
       {results.map((item) => (
         <ResultItem
-          key={item.id}
+          key={item.name}
           item={item}
           baseDate={baseDate}
           formatDate={formatDate}

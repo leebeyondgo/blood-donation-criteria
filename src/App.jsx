@@ -23,13 +23,14 @@ import regionData from './data/region.json';
 import medicationData from './data/medication.json';
 import vaccinationData from './data/vaccination.json';
 import etcData from './data/etc.json';
-
+import procedureData from './data/procedure.json';
 
 const categoryMap = {
   disease: '질병',
   region: '지역',
   medication: '약물',
   vaccination: '백신',
+  procedure: '시술',
   region_travel: '지역',
   region_domestic_malaria: '지역',
   region_vcjd: '지역',
@@ -37,12 +38,49 @@ const categoryMap = {
   etc: '기타',
 };
 
+const processedRegionData = regionData.flatMap((region) => {
+  if (region.countries) {
+    // Handle malaria risk countries with specific areas
+    return region.countries.flatMap((country) => {
+      if (country.ruleType === 'exclusion' && country.areas) {
+        return country.areas.map((area) => ({
+          category: 'region',
+          name: `${country.countryName} - ${area}`,
+          keywords: [country.countryName, area, '말라리아', region.name],
+          description: `해당 국가는 말라리아 위험 지역이지만, ${area} 지역은 예외적으로 헌혈이 가능합니다. ${country.note ? `(${country.note})` : ''}`,
+          allowable: true,
+          isException: true,
+          restriction: { type: 'none', periodValue: 0, periodUnit: 'day', condition: '' },
+        }));
+      } else if (country.ruleType === 'inclusion') {
+        // Handle inclusion type, where the whole country is a risk area
+        return [{
+          category: 'region',
+          name: country.countryName,
+          keywords: [country.countryName, '말라리아', region.name],
+          description: `${country.countryName} 전 지역이 말라리아 위험 지역입니다. ${country.note ? `(${country.note})` : ''}`,
+          allowable: false,
+          restriction: region.restriction, // Use the region's restriction for inclusion
+        }];
+      }
+      return [];
+    });
+  } else {
+    // Handle general region items (e.g., general overseas travel, domestic malaria)
+    return [{
+      ...region,
+      category: 'region', // Ensure category is explicitly set
+    }];
+  }
+});
+
 const baseData = [
   ...diseaseData,
   ...medicationData,
   ...vaccinationData,
+  ...procedureData,
   ...etcData,
-  ...regionData,
+  ...processedRegionData, // Use the pre-processed region data
 ];
 
 const processedData = baseData.map((item) => {
@@ -53,7 +91,9 @@ const processedData = baseData.map((item) => {
   let description = item.description || '';
 
   // 국가 목록이 있는 경우, description에 국가명을 추가합니다.
-  if (countries && countries.length > 0) {
+  // This part might need adjustment if 'countries' is no longer directly on 'item' for all types
+  // For region data, 'countries' is now handled in processedRegionData
+  if (countries && countries.length > 0 && category !== 'region') { // Only add country names if not a region item
     const countryNames = countries.map((c) => c.countryName).join(', ');
     description += ` (대상 국가: ${countryNames})`;
   }
@@ -95,34 +135,7 @@ const processedData = baseData.map((item) => {
   };
 });
 
-// 말라리아 예외 지역 데이터 미리 생성
-const malariaExceptionData = [];
-regionData.forEach((region) => {
-  if (region.id.includes('malaria') && region.countries) {
-    region.countries.forEach((country) => {
-      if (country.ruleType === 'exclusion') {
-        country.areas.forEach((area) => {
-          malariaExceptionData.push({
-            id: `${region.id}-${country.countryName}-${area}`,
-            category: '지역',
-            name: `${country.countryName} - ${area}`,
-            keywords: [country.countryName, area, '말라리아'],
-            description: `해당 국가는 말라리아 위험 지역이지만, ${area} 지역은 예외적으로 헌혈이 가능합니다.`,
-            allowable: true,
-            isException: true,
-            note: country.note,
-            restriction: {},
-            restrictionType: 'none',
-            restrictionPeriodDays: 0,
-            condition: '',
-          });
-        });
-      }
-    });
-  }
-});
-
-const allData = [...processedData, ...malariaExceptionData];
+const allData = [...processedData]; // malariaExceptionData is now integrated into processedRegionData
 
 function App() {
   const [query, setQuery] = useState('');
@@ -263,6 +276,7 @@ function App() {
               <ToggleButton value="지역">지역</ToggleButton>
               <ToggleButton value="약물">약물</ToggleButton>
               <ToggleButton value="백신">백신</ToggleButton>
+              <ToggleButton value="시술">시술</ToggleButton>
               <ToggleButton value="기타">기타</ToggleButton>
             </ToggleButtonGroup>
           </FormControl>
