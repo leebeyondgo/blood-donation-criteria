@@ -1,4 +1,4 @@
-import { useState, useMemo, useContext, useEffect } from 'react';
+import { useState, useMemo, useContext, useEffect, useCallback } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import {
   TextField,
