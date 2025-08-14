@@ -573,5 +573,33 @@
     "description": "혈관이 특이한 경우에도 채혈이 가능합니다.",
     "allowable": true,
     "restriction": null
+  },
+  {
+    "id": "etc-027",
+    "category": "etc_donation_type",
+    "name": "전혈 헌혈",
+    "keywords": ["전혈", "헌혈", "전혈헌혈"],
+    "description": "전혈 헌혈 후 8주간은 다른 헌혈을 할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 8,
+      "periodUnit": "week",
+      "condition": "헌혈일로부터"
+    }
+  },
+  {
+    "id": "etc-028",
+    "category": "etc_donation_type",
+    "name": "성분 헌혈",
+    "keywords": ["성분", "헌혈", "성분헌혈", "혈소판", "혈장", "혈소판혈장"],
+    "description": "성분 헌혈 후 2주간은 다른 헌혈을 할 수 없습니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 2,
+      "periodUnit": "week",
+      "condition": "헌혈일로부터"
+    }
   }
 ]
