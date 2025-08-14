@@ -44,7 +44,7 @@ To set up and run the project locally, follow these steps:
 *   **Theming**: Supports light and dark modes, managed via `src/contexts/ThemeContext.jsx` and applied using MUI's `ThemeProvider`.
 *   **Data Handling**: Blood donation criteria data is stored in JSON files within `src/data/`. These files are loaded and processed in `src/App.jsx`.
 *   **Code Quality**: ESLint is configured for code linting, as indicated by the `eslintConfig` in `package.json`.
-*   **Performance Monitoring**: `reportWebVitals` is included, suggesting an intention for performance tracking.
+*   **Performance Monitoring**: `reportWebVitals` is included, suggesting an intention for performance tracking. (Updated: 2025년 8월 14일 목요일)
 
 ## Project Structure
 
