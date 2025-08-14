@@ -45,7 +45,6 @@ const ResultList = React.memo(({
         />
       ))}
     </ul>
-  );
-};
+  });
 
 export default ResultList;
