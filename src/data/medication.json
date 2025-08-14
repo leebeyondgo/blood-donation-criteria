@@ -129,23 +129,6 @@
     }
   },
   {
-    "id": "medication-012",
-    "category": "medication",
-    "name": "손 습진 치료제 (알리트레티노인)",
-    "keywords": [
-      "알리트레티노인",
-      "알리톡"
-    ],
-    "description": "알리트레티노인 성분의 손 습진 치료제는 복용 중지 후 1개월간 헌혈할 수 없습니다.",
-    "allowable": false,
-    "restriction": {
-      "type": "period",
-      "periodValue": 1,
-      "periodUnit": "month",
-      "condition": "복용 중지 후"
-    }
-  },
-  {
     "id": "medication-013",
     "category": "medication",
     "name": "항악성종양/나성결절홍반 치료제 (탈리도마이드)",
