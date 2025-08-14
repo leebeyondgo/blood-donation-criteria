@@ -151,12 +151,12 @@ function App() {
     setCurrentPage(1);
   }, [query, filterType]);
 
-  const formatDate = (date) => {
+  const formatDate = useCallback((date) => {
     const yyyy = date.getFullYear();
     const mm = String(date.getMonth() + 1).padStart(2, '0');
     const dd = String(date.getDate()).padStart(2, '0');
     return `${yyyy}년${mm}월${dd}일`;
-  };
+  }, []);
 
   const results = useMemo(() => {
     const lowerQuery = query.toLowerCase();

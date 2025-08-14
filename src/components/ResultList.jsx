@@ -3,7 +3,7 @@ import ResultItem from './ResultItem';
 import { Box, Typography } from '@mui/material';
 import SearchOffRoundedIcon from '@mui/icons-material/SearchOffRounded';
 
-const ResultList = ({
+const ResultList = React.memo(({
   results,
   query,
   baseDate,

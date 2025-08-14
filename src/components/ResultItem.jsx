@@ -18,7 +18,7 @@ import {
   LabelImportantRounded,
 } from '@mui/icons-material';
 
-const ResultItem = ({ item, baseDate, formatDate }) => {
+const ResultItem = React.memo(({ item, baseDate, formatDate }) => {
   const theme = useTheme();
   const [isExpanded, setIsExpanded] = useState(false);
   const {
