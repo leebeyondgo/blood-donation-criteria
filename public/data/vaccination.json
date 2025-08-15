@@ -1,0 +1,116 @@
+[
+  {
+    "category": "vaccination",
+    "name": "B형간염 예방접종",
+    "keywords": [
+      "B형간염",
+      "예방접종",
+      "백신",
+      "hepatitis B",
+      "vaccine"
+    ],
+    "description": "B형간염 예방접종(단독 또는 혼합 백신) 후 24시간이 경과하면 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 24,
+      "periodUnit": "hour",
+      "condition": "접종 후"
+    }
+  },
+  {
+    "category": "vaccination",
+    "name": "인플루엔자(독감) 예방접종",
+    "keywords": [
+      "인플루엔자",
+      "독감",
+      "예방접종",
+      "백신",
+      "flu",
+      "influenza",
+      "vaccine"
+    ],
+    "description": "인플루엔자(독감) 예방접종 후 24시간이 경과하면 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 24,
+      "periodUnit": "hour",
+      "condition": "접종 후"
+    }
+  },
+  {
+    "category": "vaccination",
+    "name": "A형간염/파상풍/자궁경부암 등 사백신",
+    "keywords": [
+      "A형간염",
+      "파상풍",
+      "백일해",
+      "디프테리아",
+      "자궁경부암",
+      "폐렴구균",
+      "일본뇌염(사백신)",
+      "콜레라",
+      "예방접종",
+      "백신",
+      "사백신"
+    ],
+    "description": "A형간염, 파상풍, 백일해, 디프테리아, 자궁경부암, 폐렴구균, 일본뇌염(사백신), 콜레라 등 사백신 또는 유전자재조합 백신 접종 후 24시간이 경과하면 헌혈이 가능합니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 24,
+      "periodUnit": "hour",
+      "condition": "접종 후"
+    }
+  },
+  {
+    "category": "vaccination",
+    "name": "홍역/유행성이하선염/풍진(MMR) 등 생백신",
+    "keywords": [
+      "홍역",
+      "유행성이하선염",
+      "볼거리",
+      "풍진",
+      "MMR",
+      "수두",
+      "대상포진",
+      "일본뇌염(생백신)",
+      "황열",
+      "예방접종",
+      "백신",
+      "생백신"
+    ],
+    "description": "홍역, 유행성이하선염(볼거리), 풍진(MMR), 수두, 대상포진, 일본뇌염(생백신), 황열 등 생백신 접종 후 4주(1개월)간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 4,
+      "periodUnit": "week",
+      "condition": "접종 후"
+    }
+  },
+  {
+    "category": "vaccination",
+    "name": "코로나19 예방접종",
+    "keywords": [
+      "코로나19",
+      "COVID-19",
+      "예방접종",
+      "백신",
+      "화이자",
+      "모더나",
+      "아스트라제네카",
+      "얀센",
+      "노바백스"
+    ],
+    "description": "코로나19 예방접종(mRNA, 바이러스벡터, 유전자재조합 등 모든 종류) 후 7일간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "접종 후"
+    }
+  }
+]

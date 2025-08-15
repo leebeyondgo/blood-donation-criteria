@@ -1,0 +1,211 @@
+[
+  {
+    "category": "procedure",
+    "name": "수혈",
+    "keywords": [
+      "수혈",
+      "전혈",
+      "농축적혈구",
+      "혈장",
+      "혈소판",
+      "자가수혈",
+      "blood transfusion"
+    ],
+    "description": "전혈, 농축적혈구, 혈장, 혈소판 등 타인의 혈액을 수혈받은 경우 1년간 헌혈이 제한됩니다. 자가수혈의 경우 해당 질환의 기준에 따릅니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "타인 혈액 수혈 후 (자가수혈은 질환 기준 따름)"
+    }
+  },
+  {
+    "category": "procedure",
+    "name": "장기이식/조직이식",
+    "keywords": [
+      "장기이식",
+      "조직이식",
+      "각막이식",
+      "골수이식",
+      "신장이식",
+      "간이식",
+      "organ transplant",
+      "tissue transplant"
+    ],
+    "description": "장기, 조직, 골수 등을 이식받은 경우 영구적으로 헌혈이 금지됩니다. 단, 자가조직 이식은 해당 질환 기준에 따릅니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "permanent",
+      "condition": "장기, 조직, 골수 등 이식 (자가조직 이식은 질환 기준 따름)"
+    }
+  },
+  {
+    "category": "procedure",
+    "name": "내시경 (수면/일반)",
+    "keywords": [
+      "내시경",
+      "위내시경",
+      "대장내시경",
+      "수면내시경",
+      "endoscopy"
+    ],
+    "description": "내시경 검사(수면/일반)를 받은 경우 1개월간 헌혈이 제한됩니다. 조직검사나 용종 제거를 한 경우에도 동일하게 적용됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "검사 후 (조직검사, 용종 제거 포함)"
+    }
+  },
+  {
+    "category": "procedure",
+    "name": "수술 (대수술)",
+    "keywords": [
+      "수술",
+      "대수술",
+      "전신마취",
+      "입원",
+      "surgery"
+    ],
+    "description": "수혈받지 않은 대수술(전신마취, 3일 이상 입원)의 경우 퇴원일로부터 6개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "퇴원일로부터 (수혈받지 않은 경우)"
+    }
+  },
+  {
+    "category": "procedure",
+    "name": "수술 (소수술)",
+    "keywords": [
+      "수술",
+      "소수술",
+      "국소마취",
+      "당일퇴원",
+      "surgery"
+    ],
+    "description": "소수술(국소마취, 당일퇴원)의 경우 1개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "month",
+      "condition": "수술 후"
+    }
+  },
+  {
+    "category": "procedure",
+    "name": "수술 (수혈 동반)",
+    "keywords": [
+      "수술",
+      "수혈",
+      "surgery",
+      "blood transfusion"
+    ],
+    "description": "수혈을 동반한 수술의 경우, 최종 수혈일로부터 1년간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 1,
+      "periodUnit": "year",
+      "condition": "최종 수혈일로부터"
+    }
+  },
+  {
+    "category": "procedure",
+    "name": "치과 치료 (스케일링, 충치)",
+    "keywords": [
+      "치과",
+      "스케일링",
+      "충치치료",
+      "레진",
+      "dental care",
+      "scaling",
+      "cavity treatment"
+    ],
+    "description": "스케일링, 충치치료(레진) 등 출혈이 경미한 치과 치료는 3일간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 3,
+      "periodUnit": "day",
+      "condition": "치료 후"
+    }
+  },
+  {
+    "category": "procedure",
+    "name": "치과 치료 (발치, 신경치료, 임플란트)",
+    "keywords": [
+      "치과",
+      "발치",
+      "신경치료",
+      "임플란트",
+      "잇몸치료",
+      "dental care",
+      "tooth extraction",
+      "root canal",
+      "implant"
+    ],
+    "description": "발치, 신경치료, 임플란트, 잇몸치료 등 출혈이 동반되는 치과 치료는 7일간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 7,
+      "periodUnit": "day",
+      "condition": "치료 후"
+    }
+  },
+  {
+    "category": "procedure",
+    "name": "침술/부항 (한의원)",
+    "keywords": [
+      "침",
+      "부항",
+      "사혈",
+      "한의원",
+      "acupuncture",
+      "cupping"
+    ],
+    "description": "한의원에서 일회용 도구를 사용한 침술, 부항(사혈 제외)은 3일간 헌혈이 제한됩니다. 사혈(피를 뽑는 부항)을 한 경우 6개월간 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period_multi",
+      "periods": [
+        {
+          "value": 3,
+          "unit": "day",
+          "condition": "일회용 도구 사용, 사혈 제외 시"
+        },
+        {
+          "value": 6,
+          "unit": "month",
+          "condition": "사혈(피 뽑는 부항) 시"
+        }
+      ]
+    }
+  },
+  {
+    "category": "procedure",
+    "name": "침술/부항 (비의료기관)",
+    "keywords": [
+      "침",
+      "부항",
+      "사혈",
+      "비의료기관",
+      "acupuncture",
+      "cupping"
+    ],
+    "description": "비의료기관에서 시술받은 경우 6개월간 헌혈이 제한됩니다.",
+    "allowable": false,
+    "restriction": {
+      "type": "period",
+      "periodValue": 6,
+      "periodUnit": "month",
+      "condition": "시술 후"
+    }
+  }
+]
